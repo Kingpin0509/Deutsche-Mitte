@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Deutsche Mitte",
+    "description": "Kein Ministerressort ist ohne schwere Fehlentwicklungen daher entwickeln wir ein politisches Programm, das sich durch sämtliche Ressorts zieht.",
+    "version": "0.1.0",
+    "app": {
+        "background": {
+            "scripts": [
+                "background.js"
+            ]
+        }
+    },
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": [],
+    "short_name": "Deutsche Mitte",
+    "offline_enabled": false,
+    "optional_permissions": [],
+    "externally_connectable": {
+        "ids": [],
+        "matches": [],
+        "accepts_tls_channel_id": false
+    }
+}
