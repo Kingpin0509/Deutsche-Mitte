@@ -9,6 +9,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         fade: true,
+        infinite: false,
         draggable: false,
         adaptiveHeight: true,
         asNavFor: '.slider-nav'

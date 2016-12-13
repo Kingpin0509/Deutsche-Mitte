@@ -22,11 +22,10 @@
     "external_plugins": [
         "cordova-plugin-whitelist@1.2.2",
         "cordova-plugin-splashscreen@4.0.0",
-        "cordova-custom-config@3.1.2",
-        "cordova-custom-config@2.0.3"
+        "cordova-custom-config@3.1.2"
     ],
     "title-ja": "",
-    "title-en": "Deutsche Mitte",
+    "title-en": "Deutsch-Mitte",
     "description-ja": "",
     "description-en": "",
     "category": "User Template",
@@ -36,5 +35,5 @@
         "winrt",
         "chrome"
     ],
-    "name": "generated-1481385797-583824227e2193c166b5ca93"
+    "name": "generated-1481537538-583824227e2193c166b5ca93"
 }

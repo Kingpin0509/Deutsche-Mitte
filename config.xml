@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="com.die.deutschemitte" version="2.0.74">
+<widget xmlns="http://www.w3.org/ns/widgets" id="com.die.deutschemitte" version="2.0.75">
   <name>Deutsche Mitte</name>
-  <!--<widget xmlns="http://www.w3.org/ns/widgets" id="com.ie.deutschemitte" version="2.0.73">
-  <name>Wir</name>-->
   <description>In dieser App finden sie ein kleines Resumé der "Deutschen Mitte". Klar und deutlich ist der Standpunkt dieser politischen Partei in der Bundesrepublik. Kein Ministerressort ist ohne schwere Fehlentwicklungen daher werden wir sämtliche Ressorts ausmisten.</description>
   <author>Michael Humann - West Weedtze Development</author>
   <content src="index.html"/>
@@ -88,18 +86,18 @@
   <platform name="chrome">
     <icon src="/platforms/chrome/icon.png" width="128" height="128"/>
   </platform>
-  <preference name="KeepRunning" value="true"/>
-  <preference name="monaca:AndroidIsPackageNameSeparate" value="false"/>
-  <preference name="Orientation" value="default"/>
-  <preference name="SplashScreenDelay" value="3000"/>
-  <preference name="Fullscreen" value="false"/>
   <preference name="ios-XCBuildConfiguration-TARGETED_DEVICE_FAMILY" value="1,2"/>
   <preference name="AutoHideSplashScreen" value="true"/>
   <preference name="FadeSplashScreen" value="true"/>
   <preference name="ShowSplashScreenSpinner" value="false"/>
+  <preference name="EnableViewportScale" value="true"/>
   <access origin="*"/>
+  <preference name="KeepRunning" value="true"/>
+  <preference name="monaca:AndroidIsPackageNameSeparate" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
-  <preference name="EnableViewportScale" value="false"/>
+  <preference name="Orientation" value="default"/>
+  <preference name="SplashScreenDelay" value="3000"/>
+  <preference name="Fullscreen" value="false"/>
   <preference name="WindowsStorePublisherName" value="West Weedtze Development - Michael Humann"/>
-  <preference name="WindowsStoreIdentityName" value="17701WestWeedtzeDevelopme.DieDeutscheMitte"/>
+  <preference name="WindowsStoreIdentityName" value="17701WestWeedtzeDevelopme.DeutscheMitte"/>
 </widget>
