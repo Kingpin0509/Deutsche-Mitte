@@ -1,0 +1,792 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<script src="components/loader.js"></script>
+<link rel="stylesheet" href="components/loader.css">
+<title>Deutsche Mitte</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" class="switch_style" href="styles/skin.css">
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link rel="stylesheet" type="text/css" href="styles/ionicons.min.css">
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+</head>
+
+<body>
+<div id="page-transitions">
+    
+<div class="page-preloader page-preloader-dark">
+    <div class="spinner"></div>
+</div>
+    
+<div id="header">
+    <a href="#" class="open-left-sidebar"><i class="ion-navicon"></i></a>
+    <a href="index.html" class="page-logo"></a>
+    <a href="#" class="open-right-sidebar"><i class="ion-ios-more"></i></a>
+</div>
+
+    
+<div id="sidebar-tap-close"></div>
+
+<div id="sidebar-left">
+    <div class="sidebar-scroll">
+        <a href="index.html" class="sidebar-logo sidebar-item"></a><a href="#" class="sidebar-item sidebar-close"><i class="ion-ios-close-empty"></i></a>
+        <a href="#" class="sidebar-item sidebar-close"><i class="ion-ios-close-empty"></i></a>
+        <div class="sidebar-item sidebar-divider"></div>
+        <div class="sidebar-menu">
+        
+            <a class="sidebar-item active-item" href="index.html"><i class="ion-ios-star-outline"></i>Willkommen<i class="ion-record"></i></a>
+            <a class="sidebar-item" href="dm-kurzprogramm-2016.html"><i class="ion-ios-list-outline"></i>Das Kurzprogramm<i class="ion-record"></i></a>
+            <a class="sidebar-item" href="yt-stammtisch-videos.html"><i class="ion-ios-videocam-outline"></i>Stammtisch Videos<i class="ion-record"></i></a>
+            
+            <a class="sidebar-item" data-sub="sub-1" href="#"><i class="ion-log-in"></i>Politik</a>
+            <div id="sub-1" class="submenu">
+            	<a class="sidebar-item" href="standpunkte.html">Standpunkte</a>
+            	<a class="sidebar-item" href="alleinstellungsmerkmale.html">Alleinstellungsmerkmale</a>
+            	<a class="sidebar-item" href="freundschaftderu.html">Freundschaft DE/RU</a>
+            	<a class="sidebar-item" href="freundschaftdeir.html">Nahostkonflikt</a>
+            	<a class="sidebar-item" href="spenden.html">Spenden</a>
+            </div>
+            
+            <a class="sidebar-item" data-sub="sub-2" href="#"><i class="ion-ios-people-outline"></i>Mitglieder</a>
+            <div id="sub-2" class="submenu">
+            	<a class="sidebar-item" href="aktiv-werden.html">Verantwortung</a>
+            	<a class="sidebar-item" href="beitrag.html">Mitgliedsbeitrag</a>
+            	<a class="sidebar-item" href="politikerkriterienliste.html">Kriterien f. Führungskräfte</a>
+            </div>
+            
+            <a class="sidebar-item" data-sub="sub-3" href="#"><i class="ion-arrow-expand"></i>Programm</a>
+            <div id="sub-3" class="submenu">
+				<a class="sidebar-item" href="vimeo-videos.html"><i class="ion-ios-videocam-outline"></i>Videos<i class="ion-record"></i></a>
+				<a class="sidebar-item" href="flugblatt201501.html">Flugblatt 2015-1</a>
+				<a class="sidebar-item" href="finanzierung.html">Finanzierung</a>
+                <a class="sidebar-item" href="programm-aussenpolitik.html">Aussenpolitik</a>
+            </div>
+            
+            <a class="sidebar-item" data-sub="sub-4" href="#"><i class="ion-iphone"></i>App</a>
+            <div id="sub-4" class="submenu">
+				<a class="sidebar-item" href="splash-screen.html">Splash Screen</a>
+                <a class="sidebar-item" href="countdown.html">Countdown</a>
+                <a class="sidebar-item" href="countdown2017.html">Countdown Wahl 2017</a>
+                <a class="sidebar-item" href="menu.html">Menü</a>
+                <a class="sidebar-item" href="page-sitemap.html">Sitemap</a>
+                <a class="sidebar-item" href="pageapp-map.html">Map</a>
+            </div>
+            
+            <a class="sidebar-item" href="faq.html"><i class="ion-ios-list-outline"></i>FAQ<i class="ion-record"></i></a>
+            <a class="sidebar-item" href="kontakt.html"><i class="ion-ios-email-outline"></i>Kontakt<i class="ion-record"></i></a>
+            
+        </div>
+        <div class="sidebar-item sidebar-divider"></div>
+        <div class="sidebar-item sidebar-copyright">
+            <em>Copyright <span class="copyright-year"></span>. All rights reserved.</em>
+        </div>
+        <div class="sidebar-item sidebar-divider"></div>
+    </div>
+</div>
+
+<div id="sidebar-right">
+    <div class="sidebar-scroll">
+        <div class="sidebar-small-menu">
+        	<a href="https://deutsche-mitte.de" class="sidebar-item"><i class="ion-ios-home-outline"></i><em>DM-Homepage</em></a>
+            <a href="http://dm-stammtisch.de/" class="sidebar-item"><i class="ion-ios-chatbubble-outline"></i><em>DM-Stammtisch</em></a>
+            <a href="https://www.youtube.com/channel/UCLC_9zmyYs5wFX46KBJz95w" class="sidebar-item"><i class="ion-social-youtube-outline"></i><em>YouTube</em></a>
+            <a href="https://www.facebook.com/pg/hoersteldeutschemitte/" class="sidebar-item"><i class="ion-social-facebook-outline"></i><em>Facebook</em></a>
+            <a href="https://twitter.com/DeutscheMitte" class="sidebar-item"><i class="ion-social-twitter-outline"></i><em>Twitter</em></a>
+            <a href="https://hangouts.google.com/call/gsbr2gwwq5aepvxjscaxuqxfuqa" class="sidebar-item"><i class="ion-social-googleplus-outline"></i><em>G+ Hangout</em></a>
+            <a href="http://jotform.com/form/52177179285364/" class="sidebar-item"><i class="ion-ios-email-outline"></i><em>Mitgliedsantrag</em></a>
+        </div>
+    </div>
+</div>
+
+<div id="page-content" class="header-clear">
+    <div class="heading-strip bg-1">
+        <h3 class="thin">Programm</h3>
+        <p>Außenpolitik</p>
+        <i class="ion-edit"></i>
+        <div class="overlay dark-overlay"></div>
+    </div>
+    <div class="decoration decoration-margins"></div>
+        <div class="content">
+            <div class="one-half-responsive">
+                <h3>Aussenpolitik</h3>
+                <p><a title="Außenpolitik" href="http://www.deutsche-mitte.de/aussenpolitik/">Die Deutsche Mitte steht für Freundschaft mit allen Völkern. Schluss mit der Abenteuer-Politik bei Euro, Finanzen und fernen Auslandseinsätzen unserer Bundeswehr. Schluss mit Einmischungspolitik, Sanktionen und Drohungen.</a></p>
+                <div class="responsive-video full-bottom">
+                    <iframe src="https://player.vimeo.com/video/74293746"></iframe>
+                </div> 
+            </div>
+            <div class="decoration hide-if-responsive"></div>
+    	</div>
+    <div class="heading-strip bg-2">
+        <h4 class="center-text thin">Kurzübersicht</h4>
+        <p class="center-text">Mit Augenmaß, gut abgestimmt mit Partnern und Freunden und ohne großen Wirbel verlässt Deutschland die Euro-Gruppe – nicht als erstes Land, um Missstimmung zu vermeiden.Der Vertrag von Lissabon, über den die Bevölkerung nicht abstimmen durfte, wird nachträglich einem Volksentscheid unterworfen und im Ablehnungsfalle selbstverständlich aufgekündigt.
+Gleichzeitig legt die Bundesregierung abgesprochene Vorschläge für eine umfassende EU-Reform vor. Europa wird gestärkt und deutlich demokratisiert, mit mehr Mitbestimmung durch die Euro-Völker, Wahl aller Gremien, Beendigung der Entscheidungsmacht der jetzigen EU-Kommission.
+Die Deutsche Mitte fördert die Sanierungskraft hoch verschuldeter Euro-Länder. Zahlungen an verschuldete Euro-Länder erfolgen nur noch gegen dreifache Sicherheitsleistung und ab Förderbeträgen von insgesamt mehr als 20% des betreffenden Bundeshaushalts ausschließlich nach Zustimmung der eigenen und der Empfänger-Bevölkerung.
+
+Mit der Förderung internationaler Gewerkschaftspolitik gehen wir auf die große Mehrzahl der Menschen in aller Welt zu.
+Keine Abenteuer-Politik bei Regierungswechseln in anderen Ländern (Libyen, Syrien), grundsätzliche Beachtung der Nichteinmischung in die inneren Angelegenheiten anderer Länder.
+
+Die Deutsche Mitte tritt weltweit für gerechten Frieden ein.Gerechten Frieden in Nahost fördern wir, eine deutsche Staatsräson für die Sicherheit Israels kann und wird es nicht geben. Ungerechte und sinnlose Sanktionen werden beendet.
+Deutsche Soldaten werden aus dem Nicht-Nato-Ausland („out of area“) abgezogen und verbleiben fortan ausschließlich im Nato-Gebiet. Gleichzeitig werden schrittweise binnen fünf Jahren alle ausländischen Truppen aus Deutschland abgezogen. Zur Friedenssicherung wird Deutschland seine Truppen aus der Nato-Struktur so lange herausziehen, bis die Nato sämtliche Einsätze außerhalb des Nato-Gebiets beendet hat. Sollten jedoch einzelne Nato-Partner ohne Zustimmung des UN-Sicherheitsrates noch weitere Völker überfallen und Kriege anzetteln, wird sich die Deutsche Mitte für einen Austritt aus der Nato einsetzen.
+Truppeneinsätze benötigen künftig bessere Strategien.
+
+Wir sind und bleiben enge Freunde und Verbündete unserer EU-Nachbarn und Nato-Partner, diese Beziehungen wollen wir vorrangig besonders pflegen, vor allem im Interesse der Völker – doch deutsche Außenpolitik kann mehr als nur Bündnis- oder EU-Politik.Mit Russland und anderen Staaten oder Staatengruppen werden friedenswahrende Rückversicherungsverträge abgeschlossen.
+</p>
+        <div class="overlay dark-overlay"></div>
+    </div>	
+    <div id="page-content" class="header-clear">
+	<div class="decoration decoration-margins"></div>
+    
+    <div class="heading-block bg-3">
+        <h2 class="thin no-bottom animate-zoom">Außenpolitik</h2>
+        <h5 class="small-text animate-fade">Schwerpunkte deutscher Außenpolitik</h5>
+        <p class="larger-text thin half-top full-bottom animate-fade">
+		Deutsche Mitte – Programm Außenpolitik, Stand: August 2014</p>
+        <a href="http://deutsche-mitte.de/wp-content/uploads/2014/08/2014_august_DM-AA-1neu.pdf" class="button-ghost button-center-large button-bold button-round animate-bottom">Programm als PDF</a>
+        <div class="overlay dark-overlay"></div>
+    </div>
+
+    <div class="decoration decoration-margins"></div>
+    <div class="heading-strip bg-3">
+        <h3>1. Grundsätze</h3>
+        <p>Vollständige internationale Souveränität Deutschlands herstellen</p>
+        <i class="ion-android-more-horizontal"></i>
+        <div class="overlay dark-overlay"></div>
+    </div>
+    <div class="decoration decoration-margins"></div>
+
+    <div class="content">
+		<h4>1. Grundsätze</h4>
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="tabs-1">1. Grundsätze</li>
+            <li class="tab-link" data-tab="tabs-2">...</li>
+            <li class="tab-link" data-tab="tabs-3">...</li>
+            <li class="tab-link" data-tab="tabs-4">...</li>
+        </ul>
+
+        <div id="tabs-1" class="tab-content current">
+            <div class="tab-elements">
+Eine ethisch ausgerichtete deutsche Außenpolitik muss zunächst die vollständige
+internationale Souveränität Deutschlands im guten Einvernehmen mit allen
+Völkern zurückerlangen. Einer dritten Generation nach dem II. Weltkrieg sind
+weitere Sonderdienste nicht zuzumuten. Die deutsche Verantwortung vor der
+Geschichte wird betont. Erinnerung bleibt das beste Mittel gegen Wiederholung
+von Fehlern oder Fehlverhalten.<br>
+Grundsätzlich ist deutsche Außenpolitik werteorientiert, weitgehend offen
+einsehbar und richtet sich aus an den gemeinsamen Interessen aller Völker und
+Menschen. Die Umsetzung der UN-Millenniumsziele ist dabei unverzichtbar
+(Refinanzierung: Tobin- und Luxussteuer). Die Freiheit aller Völker und der ihnen
+verpflichteten Regierungen von globalen Mächten der Konzerne und
+Superreichen ist ein hohes Ziel, vor allem bei Finanz-, Medien-, Energie- und
+Gesundheitsfragen.<br>
+Deshalb darf nach dem Willen der Deutschen Mitte keine nationale Währung den
+Charakter einer Weltwährung annehmen, vielmehr ist eine tatsächlich und
+kontrolliert neutrale Welt-Austauschwährung unter Aufsicht öffentlicher
+Notenbanken anzustreben. Diese Notenbanken sollen ihrerseits von der
+staatlichen Politik stets und grundsätzlich unabhängig handeln können. Dabei
+müssen alle Staaten bei Entscheidungen internationaler Organisationen weit
+demokratischer eingebunden und beteiligt werden als bisher, eine
+Machtkonzentration in wenigen Händen lehnt die Deutsche Mitte ab.<br>
+Dies gilt auch für internationale und weltweit tätige Einrichtungen wie den
+Weltwährungsfonds und die Weltbank sowie die tiefgreifend zu reformierende
+internationale Gerichtsbarkeit (derzeit noch mit Sitz in den Haag), der sich alle
+Staaten der Welt ausnahmslos unterzuordnen haben.<br>
+Daraus leiten sich verschiedene vorrangige Ziele ab:
+Deutsche Außenpolitik nimmt selbstverständlich Rücksicht auf gewachsene
+Beziehungen nach dem II. Weltkrieg, entwickelt sich jedoch vorrangig zu einer
+Nachbarschaftspolitik im weitesten Sinne. Diesem Ziel dient die Schaffung einer
+europäisch-nachbarschaftlichen Sicherheitsdoktrin starker Nationalstaaten mit
+allen Nachbarn und Freunden in- und außerhalb Europas.<br>
+Die Deutsche Mitte strebt einen Friedensvertrag für Deutschland an, dafür sucht
+sie das Miteinander mit allen Völkern; dazu gehört für die Deutsche Mitte auch
+der Abzug aller fremden Truppen von deutschem Territorium, einschließlich aller
+Nuklearwaffen.<br>
+Die Deutsche Mitte strebt einen Austritt Deutschlands aus der Euro-Zone an,
+nicht als erstes, jedoch als zweites Land.<br>
+Die Globalisierung muss allen Menschen, vor allem den notleidenden, zugute
+kommen – ebenso wie die Regionalisierung. Extreme bei arm und reich sind
+wieder anzunähern, auch durch bessere globale Gewerkschaftsbeziehungen und
+Bindungen der Friedensbewegung. Demokratische Teilhabe ist zu ermutigen.
+Außenpolitik als Friedenspolitik, Europa und seine Nachbarn, allen voran
+Russland und die islamischen Länder, stehen im Mittelpunkt unseres Interesses –
+ebenso wie die neuen globalen Kraftzentren.<br>
+Eine besondere Freundschaft zum amerikanischen Volk ist für Deutschland
+ebenso unverzichtbar wie eine besondere Verantwortung für ganz Palästina.
+Die Freundschaft zu Frankreich, Russland und Polen wird Kern der neuen
+nachbarschaftlich aufgebauten Freundschafts- und Sicherheitsarchitektur.
+            </div>
+        </div>
+
+        <div id="tabs-2" class="tab-content">
+            <div class="tab-elements">
+
+			</div>
+        </div>
+        
+        
+        <div id="tabs-3" class="tab-content">
+            <div class="tab-elements">
+
+            </div>
+        </div>
+        <div id="tabs-4" class="tab-content">
+            <div class="tab-elements">            
+
+            </div>
+        </div>
+    </div>
+
+    <div class="decoration decoration-margins"></div>
+    <div class="heading-strip bg-4">
+        <h3>2. Europa</h3>
+        <p>Europa und dessen gesunde Entwicklung ist das Fundament deutscher Außenpolitik</p>
+        <i class="ion-android-more-horizontal"></i>
+        <div class="overlay dark-overlay"></div>
+    </div>
+
+    <div class="content">
+    <h4>2. Europa</h4>
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="tabs-20">2.0</li>
+            <li class="tab-link" data-tab="tabs-21">2.1</li>
+            <li class="tab-link" data-tab="tabs-22">2.2</i></li>
+            <li class="tab-link" data-tab="tabs-23">2.3</li>
+            <li class="tab-link" data-tab="tabs-24">2.4</li>
+        </ul>
+
+        <div id="tabs-20" class="tab-content current">
+            <div class="tab-elements">
+		<h5>2.0</h5>
+Europa und dessen gesunde Entwicklung ist das Fundament deutscher
+Außenpolitik – und benötigt einen Neustart. Die Deutsche Mitte fördert das
+gerechte und soziale Zusammenwachsen Europas. Gesunde Nationalstaaten und
+die politische Teilhabe aller Bürger und Parlamente bei wichtigen Entscheidungen
+und Personalfragen sind als Ausgangsbasis dafür unerlässlich. Sinnvolle
+Hochtechnologie und verantwortliche Wirtschafts- und Finanzstrukturen müssen
+im Dienst der Menschen stehen, auf der festen Grundlage sozialer Gerechtigkeit.
+Europa ist eine christlich geprägte Kultur- und Wertegemeinschaft, die sich
+kraftvoll für andere Einflüsse öffnen kann: Heimat, Sprache und Kultur sind hohe
+Güter und unverzichtbar.
+            </div>
+        </div>
+        <div id="tabs-21" class="tab-content">
+            <div class="tab-elements">
+		<h5>2.1. Schuldenkrise</h5>
+In der aktuellen Schuldenkrise fordert die Deutsche Mitte die uneingeschränkte
+und sofortige Beachtung sämtlicher Verhaltensregeln, die die Bundesregierungen
+den deutschen Steuerzahlern bei Einführung der Währungsunion versprochen
+haben:<br>
+- keine Finanz-Unterstützung für marode Euro- oder EU-Partner<br>
+- keine ungesicherten Transferleistungen (Besicherung heute nur noch
+bestenfalls in dreifacher Nominalhöhe)<br>
+- strikte Stabilitätspolitik<br>
+- Kontrolle gewählter Parlamente und Führungspersönlichkeiten über die
+Politik, ohne Ausnahmen und Sonderregelungen<br>
+Bisher eingegangene Verpflichtungen sind rechtswidrig erfolgt und werden
+einvernehmlich zurückgenommen. Sollte darüber die Währungsunion zerbrechen,
+soll dies gerade auch für die besonders in Not geratenen Völker der Beginn
+gemeinsam zu vereinbarender, nachhaltig tatsächlich rettender Reformen sein
+– ohne Sonderrücksichten auf Krisengewinnler.
+            </div>
+        </div>
+        <div id="tabs-22" class="tab-content">
+            <div class="tab-elements">
+		<h5>2.2. Frankreich, Russland, Polen</h5>
+Die freundschaftlichen Beziehungen zu Frankreich bedürfen wieder erhöhter
+Aufmerksamkeit und Pflege, hier darf nicht zu lange auf den höchst erfreulichen
+Errungenschaften vergangener Jahrzehnte ausgeruht werden.<br>
+Die Beziehungen zu Polen sollen sich weiter verbessern, auch im "Weimarer
+Dreieck" aus Frankreich, Polen und Deutschland sowie in der trilateralen
+Zusammenarbeit zwischen Russland, Polen und Deutschland.<br>
+Mit Russland werden ganz erheblich und unumkehrbar freundschaftliche
+Beziehungen nach dem Vorbild der Verbindung zu Frankreich angestrebt, gerade
+auch zwischen den Zivilgesellschaften, die nicht zu Lasten anderer Beziehungen
+gehen. Russische Sprache und Kultur erhalten dabei viel mehr Gewicht.
+Sämtliche Sanktionen gegen Russland sind zu streichen und werden von
+Deutschland nicht weiter aufrechterhalten.
+            </div>
+        </div>
+        <div id="tabs-23" class="tab-content">
+            <div class="tab-elements">
+        <h5>2.3. Sicherheit</h5>
+Die Deutsche Mitte will die gemeinsame Sicherheits- und Verteidigungspolitik der
+EU ausbauen, diese jedoch insgesamt ethischer, defensiver und stärker an den
+nationalen und nachbarschaftlichen Bedürfnissen ausrichten. Wichtig wird die
+Bekämpfung korrupter und einseitig machtpolitisch ausgerichteter Einflüsse auf
+die Sicherheitspolitik. Whistleblower sind überall zu schützen – hier sind sie
+besonders wertvoll.<br>
+Im Konfliktfall Ukraine fordert die Deutsche Mitte ein Ende der Einmischung in
+die inneren Verhältnisse des Landes, humanitäre Hilfe für die Zivilbevölkerung
+sowie eine einvernehmliche Lösung des Konflikts unter fairer Beteiligung aller
+relevanten Kräfte einschließlich Russlands an einer geeigneten
+Friedenskonferenz.<br>
+Zivil-militärische Verknüpfungen entfallen, Planungs- und Führungsfähigkeiten
+der EU dürfen keine Fähigkeiten erlangen, demokratisch ungenügend legitimierte
+EU-Politik zum Nachteil der Völker und Menschen durchzusetzen. Der Einsatz
+fremder und deutscher Truppen in Deutschland ist grundsätzlich zu verbieten
+– außer für nicht-militärische Notfälle wie z. B. Flutkatastrophen.
+            </div>
+        </div>
+        <div id="tabs-24" class="tab-content">
+            <div class="tab-elements">
+		<h5>2.4. Auswärtiges Amt und Politik</h5>
+Deutschland und Europa benötigen für die Erreichung dieser Ziele einen
+leistungsfähigen Auswärtigen Dienst mit leicht erhöhtem Budget (Refinanzierung:
+Verteidigungsbudget). Einflusspolitik soll sich zur Freundschaftspolitik wandeln,
+die alle gemeinsamen Interessen der Völker fördert – vorrangig gegenüber
+Osteuropa und den Umbruchstaaten südlich des Mittelmeers.
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="decoration decoration-margins"></div>
+    <div class="heading-strip bg-4">
+        <h3>3. Deutsche Außenpolitik ist Friedens- und Aufbaupolitik</h3>
+        <p>Militärpolitik kann nicht die Fortsetzung von Außenpolitik mit anderen Mitteln sein.</p>
+        <i class="ion-android-more-horizontal"></i>
+        <div class="overlay dark-overlay"></div>
+    </div>
+
+    <div class="content">
+    <h4>3. Friedens- und Aufbaupolitik</h4>
+
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="tabs-30">3.0</li>
+            <li class="tab-link" data-tab="tabs-31">3.1</li>
+            <li class="tab-link" data-tab="tabs-32">3.2</li>
+            <li class="tab-link" data-tab="tabs-33">3.3</li>
+            <li class="tab-link" data-tab="tabs-34">3.4</li>
+			<li class="tab-link" data-tab="tabs-35">3.5</li>
+			<li class="tab-link" data-tab="tabs-36">3.6</li>
+            <li class="tab-link" data-tab="tabs-37">3.7</li>
+            <li class="tab-link" data-tab="tabs-38">3.8</li>
+            <li class="tab-link" data-tab="tabs-39">3.9</li>
+            <li class="tab-link" data-tab="tabs-310">3.10</li>
+            <li class="tab-link" data-tab="tabs-311">3.11</li>
+        </ul>
+
+        <div id="tabs-30" class="tab-content current">
+            <div class="tab-elements">
+<h5>3.0</h5>
+Militärpolitik kann nicht die Fortsetzung von Außenpolitik mit anderen Mitteln
+sein. Die Bekämpfung von Hunger, Not, Bildungsmangel und wirtschaftlicher
+Benachteiligung in der Welt bekommt hohe Priorität. Fortschritt und Wohlstand
+lassen sich global nur gemeinsam erreichen – ebenso wie Sicherheit.
+            </div>
+        </div>
+        <div id="tabs-31" class="tab-content">
+            <div class="tab-elements">
+<h5>3.1. UNO</h5>
+Die neue UN-Politik internationaler Schutzverantwortung („right to protect“ –
+r2p) hat einzelne UN-Mitglieder veranlasst, eine Notwendigkeit zu ihrem Einsatz
+künstlich erzeugen zu helfen. Diese Politik ist deshalb grundsätzlich und global
+sowohl gleichberechtigt wie partnerschaftlich zu reformieren.<br>
+Die am 23. September 2008 erfolgte Gemeinsame Erklärung über die
+Zusammenarbeit der UN-Nato-Sekretariate (Joint Declaration on UN/NATO
+Secretariat Cooperation) ist baldmöglichst ersatzlos zu streichen, weil sie
+geeignet sein könnte, die Unabhängigkeit der UNO zu ihrem Nachteil zu
+untergraben.<br>
+Der UN-Sicherheitsrat sollte niemals vor Ablauf einer vollen Woche nach
+Antragstellung den Einsatz militärischer Mittel genehmigen dürfen.
+Deutschland bewirbt sich weiterhin und gemeinsam mit anderen Staaten um
+einen Ständigen Sitz im UN-Sicherheitsrat.
+            </div>
+        </div>
+        <div id="tabs-32" class="tab-content">
+            <div class="tab-elements">
+<h5>3.2. Nato und Sicherheit</h5>
+In der Konsequenz einer seit dem Zufall der Sowjetunion immer unverhohlener
+ausgreifenden Nato und auf der Grundlage mehrerer öffentlicher Erklärungen,
+sah sich die Deutsche Mitte gezwungen, sich für den Austritt Deutschlands aus
+der Nato einzusetzen, mit klaren Maßgaben für einen möglichen Wiedereintritt
+entlang den neuen, ethisch gegründeten, deutsch-europäischen außenpolitischen
+Prinzipien: Dieser Austritt könnte zu einem späteren Zeitpunkt nach unserer
+festen Überzeugung erst dann rückgängig gemacht werden, wenn die Nato außer
+dem oben erwähnten Rückzug aller ihrer Soldaten aus allen Ländern außerhalb
+ihres Verteidigungsraumes vier weitere wichtige Bedingungen erfüllt:<br>
+1. Die Nato muss ihren Ausdehnungsraum in Mittel- und Mittelosteuropa
+zurücknehmen auf den Stand, der zum Zeitpunkt nach der politischen
+Öffnungserklärung des damaligen letzten sowjetischen Staats- und Parteichefs
+Gorbatschow im Oktober 1988 und vor dem Truppenrückzug der Sowjetunion
+aus Mittel- und Mittelosteuropa erreicht war. Als Stichtag dafür soll der 1. Januar
+1989 gelten.<br>
+Hintergrund für diese Entscheidung der Deutschen Mitte ist, dass Nato-Mitglieder
+durch einzelne Regierungsmitglieder auch schriftlich zugesichert hatten, dass ein
+Rückzug der Sowjetunion aus ihren früheren Stationierungsorten in den Ländern
+des Warschauer Paktes nicht für ein Vordringen der Nato genutzt werden sollte;
+an diese Zusicherungen hat sich die Nato seitdem jedoch niemals gehalten – und
+von Anfang an begonnen, auf die betroffenen Länder, deren Regierungen und
+Bevölkerungen sowohl heimlich als auch offen auf allen nur denkbaren Wegen
+Einfluss zu nehmen.<br>
+Der Deutschen Mitte geht es darum, dass die Nato wieder das wird, wozu sie
+ursprünglich bei ihrer Gründung gedacht war: ein verlässliches
+Verteidigungsbündnis, das die Souveränität anderer Völker achtet und auf
+rechtlich einwandfreiem Boden steht. Das heißt nunmehr auch: Die gegenüber
+der damaligen Sowjetunion eingegangenen Verpflichtungen werden beachtet und
+eingehalten, auch wenn sie zum Zeitpunkt ihrer Eingehung nicht durch
+völkerrechtlich bindende, ratifizierte Verträge untermauert wurden.<br>
+Alle Staaten, die demnach seit 1989 absprachewidrig in die Nato aufgenommen
+wurden, erhalten nach eigenem Gutdünken und dem Willen der Deutschen Mitte
+dreiseitig erarbeitete Sicherheitslösungen, die Regierungen und Völkern in ihrem
+Friedenswillen und ihrer Sehnsucht nach Freiheit, Selbstverwirklichung und
+gesichertem Wohlstand dienen. Die drei Verhandlungspartner sind jeweils: Nato,
+Russland und das betroffene Volk, für das eine Regelung getroffen werden soll.
+Übergangsweise, bis zur Erreichung dieser neuen europäischen Friedensordnung,
+erlegen sich alle Beteiligten höchste politische und militärische Zurückhaltung
+auf.<br>
+2. Die am 23. September 2008 geschlossene UNO-Nato-Vereinbarung, die
+ungerechtfertigt, unrechtmäßig und gefährlich der Nato eine Sonderrolle in
+internationalen Konflikten zuweist, wird gestrichen und gilt nicht mehr. Die Nato
+soll nach dem Willen der Deutschen Mitte keinerlei Vorrangrolle in der Welt
+einnehmen, die sich auf finanzielle und militärische Macht ihrer Mitglieder stützt.
+Die Ausrüstung der UNO mit Sicherheitskräften für angemessene Einsätze, die
+durch ihre Mitglieder rechtmäßig beschlossen wurden, wird nach dem Willen der
+Deutschen Mitte künftig weltweit einvernehmlich, fair und gerecht geregelt.<br>
+3. Eine Doktrin, die, als “responsibility to protect – r2p” getarnt, dazu dienen
+kann, andere Staaten anzugreifen, die ohne die Existenz dieser Doktrin nicht
+angegriffen oder in deren innere Verhältnisse keine Eingriffe zulässig werden
+könnten, darf in der jetzigen Form und Gestaltungsweise keinen Bestand haben
+und ist durch einen Kanon fairer, friedlicher Verhandlungsschritte im Sinne und
+zum Nutzen aller Menschen und durch Maßnahmen sinnvoller und korrekter
+Öffentlichkeitsarbeit zu ersetzen – unter maßvoller Mitwirkung der Nato.<br>
+4. Die Sicherung von Rohstoffbeschaffung und -versorgung sowie
+wirtschaftlichen Wohlstands und wirtschaftlicher Entwicklung ist nur insoweit
+Gegenstand der Verteidigungspolitik, als faire und gerechte politische und
+diplomatische Schritte, die stets die Souveränität anderer Völker achten, die
+Grundlage deutscher Außenpolitik bilden.<br>
+Diese Standpunkte bezieht die Deutsche Mitte in der Hoffnung, dass dadurch der
+weltweite Frieden, das gesunde und glückliche Miteinander der Völker und
+Menschen weltweit gestärkt werden möge.<br>
+Der formelle Akt des Nato-Austritts soll nach einer angemessenen Frist von etwa
+zwei Jahren erfolgen, wenn mit allen bisherigen Verbündeten eindeutig und klar
+feststeht, dass die Nato sich nicht auf den Weg begibt, die oben genannten Ziele
+unverzüglich und tatsächlich anzugehen und umzusetzen. Innerhalb dieser Frist
+wird Deutschland nach dem Willen der Deutschen Mitte:<br>
+1. nach früherem französischem Vorbild seine Streitkräfte umgehend aus der
+Nato-Kommandostruktur herausnehmen – jedoch unter Beachtung von
+freundschaftlich erreichten Übergangsregelungen.<br>
+2. eine neue Sicherheitsarchitektur für Deutschland und Europa anstreben, die
+ihren Kern in Europa trägt, dessen festen und integralen Bestandteil auch unsere
+russischen Nachbarn bilden.<br>
+Die Deutsche Mitte betreibt ab sofort und grundsätzlich keine Außenpolitik, zu
+deren Durchsetzung deutsche oder Nato-Streitkräfte das gemeinsame
+Verteidigungsgebiet ohne Vorhandensein eines UN-genehmigten
+Verteidigungsfalles (Sicherheitsrat) verlassen müssten. Bei Anforderung
+deutscher Truppen oder sonstiger Unterstützungsleistungen durch einzelne oder
+mehrere Nato-Partnerländer ist vorher glaubwürdig zu prüfen, ob diese NatoMitglieder
+zuvor friedensstörend gewirkt haben.<br>
+Sicherheit gelingt glaubwürdig, gemeinschaftlich und global am besten – dies vor
+allem dann, wenn soziale Aufgaben gelöst sind. Deutschland erwachsen hier auf
+Grund seiner Mittellage innerhalb Europas und darüber hinaus besondere
+friedenswahrende politische Aufgaben und Chancen.<br>
+Vor allem mit Russland – aber in der Zukunftsperspektive auch mit anderen in
+Frage kommenden Partnerländern und Staatengruppen in Asien, Südamerika
+(Alba) und Afrika – sind in Ergänzung zu anderen Vertragswerken in Europa
+und/oder mit der Nato ein oder mehrere Rückversicherungsverträge und –
+partnerschaften anzustreben mit Wirkung für den Fall, dass einzelne NatoPartner
+in der Friedensausrichtung ihrer Politik nachlassen.<br>
+Mit Russland ist unter Wahrung sicherheitspolitischer Erwägungen eine sofortige
+Visafreiheit einzurichten, um die Menschen im Interesse von Frieden und
+Demokratie schnell und freundschaftlich zusammenzubringen. Außerdem sind
+nach dem Vorbild der unverzichtbaren deutsch-französischen Freundschaft
+intensive zivilgesellschaftliche Kontakte einzurichten.
+            </div>
+        </div>
+        <div id="tabs-33" class="tab-content">
+            <div class="tab-elements">
+<h5>3.3. Rüstungs-, Atom- und Weiterverbreitungspolitik</h5>
+Deutschland setzt sich für das langfristige Ziel einer Welt ohne Nuklearwaffen
+ein. Nukleare Abrüstung ist eine Aufgabe aller Staaten, vorrangig solcher mit
+Nuklearwaffen. Der Besitz dieser Waffen darf nicht dazu führen, andere Länder
+gewaltsam von deren Erwerb abzuhalten. Vielmehr ist eine freundschaftliche
+Sicherheits- und Wirtschaftspartnerschaft so anzulegen, dass die Notwendigkeit
+für eine Nuklearrüstung entfallen kann. In jüngster Zeit haben
+Bundesregierungen zunehmend das Kriegswaffenkontrollgesetz gebrochen
+– diese Praxis ist umgehend zu beenden.<br>
+Deutschland ist weltweit ein wichtiger Rüstungsexporteur. Diese Strategie ist
+anzupassen: Künftig soll Deutschland verstärkt auf defensive Waffentechnik und
+eine verringerte Abhängigkeit vom Rüstungsexport achten. Grundlage bleibt die
+hier in Umrissen vorgestellte neue deutsche und europäische Sicherheitsdoktrin.
+            </div>
+        </div>
+        <div id="tabs-34" class="tab-content">
+            <div class="tab-elements">
+<h5>3.4. Bisherige Bündniseinsätze</h5>
+In Afghanistan, auf dem Westlichen Balkan oder bei der Piraterie-Bekämpfung
+am Horn von Afrika hat sich Deutschland militärisch engagiert – zur Umsetzung
+von Beschlüssen der Vereinten Nationen. Sämtliche Einsätze werden überprüft
+und gegebenenfalls angepasst.
+            </div>
+        </div>
+                <div id="tabs-35" class="tab-content">
+            <div class="tab-elements">
+<h5>3.4.1. Afghanistan</h5>
+Deutschland wird sein militärisches Engagement in Afghanistan mit geeigneten
+Übergangsregelungen für Nato-Partner, afghanische Mitarbeiter und die bisherige
+Aufbauhilfe umgehend und vollständig beenden. Afghanistan ist mit zivilen
+Mitteln und einer internationalen Sicherheitspartnerschaft regionaler und
+überregionaler Staaten so zu stärken, dass es in der Zukunft eine größere,
+jedoch strikt defensive, Unabhängigkeit von seinen Nachbarn erlangen kann als
+bisher. Hierfür übernimmt Deutschland, wenn und soweit dies von Afghanistan
+gewünscht und für sinnvoll erachtet wird, eine besondere, friedensorientierte
+Patenrolle, die der historischen Freundschaft und der damals zwischen beiden
+Völkern gewachsenen, gegenseitigen Zuneigung entspricht.
+            </div>
+        </div>
+                    <div id="tabs-36" class="tab-content">
+            <div class="tab-elements">
+    <h5>3.4.2. Balkan</h5>
+Auf dem Balkan wird Deutschland nach afghanischem Muster seine Truppen
+ebenfalls unter allen notwendigen Übergangsregeln kurzfristig zurückziehen. Hier
+sind insbesondere gegenüber Serbien, jedoch darüber hinaus auch mit mehreren
+anderen Völkern, auf verschiedene Weise unterschiedliche Verpflichtungen
+entstanden. Die dabei beförderte, grassierende Korruption ist umgehend
+zurückzudrängen – auch innerhalb Deutschlands, vor allem in Hamburg.
+Gerechter Friede in enger nachbarschaftlicher Verbindung der Balkanstaaten
+untereinander soll eine selbsttragende, gemeinsame Sicherheit frei von
+überregionaler Bevormundung etablieren. Grundlage dafür sind die berechtigten
+Wünsche und Leistungen der betroffenen Staaten. Die Deutsche Mitte setzt sich
+dafür ein, dass alle bisherigen Nato-Truppensteller und maßgeblichen
+Wirkungskräfte übergangsweise in uneigennütziger finanzieller und
+wirtschaftlicher Form diese neuen, nachhaltigen Schritte unterstützen.
+            </div>
+        </div>
+                    <div id="tabs-37" class="tab-content">
+            <div class="tab-elements">
+<h5>3.4.3. Horn von Afrika – Piraterie</h5>
+Die Piraterie am Horn von Afrika sieht die Deutsche Mitte als Symptom
+internationaler Ausbeutungspolitik – reine Symptombekämpfung lehnen wir ab.
+Gegenmaßnahmen sind deshalb möglichst global und gemeinschaftlich mit allen
+interessierten Staaten zu organisieren – und mit sinnvollen und uneigennützigen
+Hilfsmaßnahmen in den Herkunftsländern der Piraten zu begleiten.
+            </div>
+        </div>
+                    <div id="tabs-38" class="tab-content">
+            <div class="tab-elements">
+<h5>3.5. Nahostkonflikt</h5>
+Auch dem Nahostkonflikt widmet die Deutsche Mitte besondere Aufmerksamkeit.
+Neben der Unterstützung beim Aufbau staatlicher Strukturen in den
+palästinensischen Gebieten unterstützt Deutschland die Anstrengungen des
+Nahost-Quartetts, direkte Verhandlungen der Konfliktparteien in Gang zu
+bringen. Grundlage dafür ist die Unterstützung der Einheit aller Palästinenser
+ohne Benachteiligung des Gazastreifens und der demokratisch gewählten HamasRegierung
+und unter Respektierung der derzeitigen Strukturen im
+Westjordanland. Eine deutsche Sonderverpflichtung für Israels „Sicherheit“
+besteht nicht.<br>
+Die Deutsche Mitte bekennt sich jedoch ausdrücklich zu einer
+Verantwortungspartnerschaft mit allen Menschen jüdischen Glaubens weltweit.
+Diese Partnerschaft setzt ein politisch verantwortungsvolles, ethisches, nichtaggressives
+Verhalten von Angehörigen dieser Minderheit voraus. Im Gegenzug
+setzt sich die Deutsche Mitte ein für eine vorrangige, rasche und unbürokratische
+Gewährung der deutschen Staatsangehörigkeit an solche jüdische Bürger Israels,
+die keine Kapitalverbrechen begangen haben, insbesondere nicht an
+Palästinensern, bis zu einer sinnvollen jährlichen Höchstgrenze.
+Grundsätzlich ist bis 2015 eine Frist für die Erreichung der so genannten „ZweiStaaten-Lösung“
+zu gewähren. Danach wird sich die Deutsche Mitte für eine
+international vor allem im Sicherheitsbereich einvernehmlich garantierte EinStaaten-Lösung
+einsetzen: unter vollem Rückkehrrecht für alle Palästinenser und
+völliger innenpolitischer Gleichberechtigung („one man – one vote“). Den
+besonderen Sicherheitsbedürfnissen der jüdischen Bevölkerung ist dabei
+gemeinschaftlich Sorge zu tragen.<br>
+Der Einsatz für eine Ein-Staaten-Lösung richtet sich keineswegs gegen eine
+mögliche künftige Zweistaatenlösung. Vielmehr geht es darum, den Druck für
+gerechte und faire Lösungen in Nahost grundsätzlich weiter zu erhöhen.
+Als Nach dem Massaker im Gaza-Streifen durch israelische Truppen im Sommer
+2014 setzt sich die Deutsche Mitte für die deutsche und weltweite Teilnahme am
+Programm BDS (= Boykott, Desinvestment, Sanktionen) ein. Diese Teilnahme
+soll gelten, bis:<br>
+– zum Ende der rechtswidrigen israelischen Blockade des Gaza-Streifens<br>
+– zum Ende der wirtschaftlichen Schädigung des Gaza-Streifens<br>
+– zur Freilassung aller Kinder in israelischer Haft<br>
+– zur Freilassung aller Palästinenser, deren Inhaftierung in oder durch Israel
+nach zweifelhaften Verfahren erfolgt ist<br>
+– zur vollständigen und rückhaltlosen, zweifelsfreien Aufklärung der TeenagerMorde
+vom 12. Juni 2014<br>
+- Ende der wirtschaftlichen Schädigung Palästinas durch Beschneidung von
+Fischereirechten und rechtmäßigen Anteilen an der Ausbeutung von
+Bodenschätzen wie Öl und Gas, ungerechter Wassernutzung und vieles mehr<br>
+- Ende der unberechtigten Siedlungstätigkeit Israels auf palästinensischem Land
+            </div>
+        </div>
+                    <div id="tabs-39" class="tab-content">
+            <div class="tab-elements">
+<h5>3.6. Iran</h5>
+Beim Thema des iranischen Nuklearprogramms bemüht sich Deutschland in
+engem Schulterschluss mit Frankreich, Großbritannien und den USA um eine
+deutliche und einheitliche Haltung gegenüber Iran: Sämtliche Embargos gegen
+Iran sind unverzüglich aufzuheben, Deutschland kann sich grundsätzlich an
+einseitigen internationalen Benachteiligungen nicht mehr beteiligen. Dem Iran
+wird das Recht auf die Entwicklung eines friedlichen Atomprogramms
+zugesichert. Gleichzeitig erhält Iran sehr umfangreiche Zusicherungen und
+Sofort-Lieferungen gewünschter Güter für den Verzicht auf weiteren Ausbau
+– aus Gründen des regionalen Umweltschutzes.<br>
+Iran wird freundschaftlich ermuntert, bei Einsetzen der positiven Wirkungen der
+oben erwähnten Politik stärker als bisher gegen Menschenrechtsverletzungen und
+Jugendarbeitslosigkeit zu wirken.
+            </div>
+        </div>
+                    <div id="tabs-310" class="tab-content">
+            <div class="tab-elements">
+<h5>3.7. Syrien</h5>
+Vorrang für deutsche Politik erhält die Sicherheit aller Menschen, insbesondere
+der christlichen Minderheit. Dies ist nur gemeinsam mit der syrischen Regierung
+zu erreichen. Deutschland wird sich nach dem Willen der Deutschen Mitte an
+weiteren Maßnahmen zur Destabilisierung Syriens nicht beteiligen und im
+Rahmen seiner Möglichkeiten auch auf alle Freunde einwirken, dies künftig zu
+unterlassen. Sämtliche Embargos gegen Syrien sind gegen freundschaftlich
+vereinbarte menschliche Erleichterungen sofort aufzuheben. Waffen- und
+Ausrüstungs- oder Logistikhilfe jeder Art, die geeignet sein könnte, die regionale
+Lage zu verschärfen, ist nach verfassungsmäßiger und gesetzlicher Maßgabe
+sofort einzustellen.
+            </div>
+        </div>
+                    <div id="tabs-311" class="tab-content">
+            <div class="tab-elements">
+<h5>3.8. Irak</h5>
+Im Irak sind alle Schritte zu unterlassen, die geeignet sind oder sein könnten, die
+bestehenden Staaten und ihre Ordnungen weiter zu untergraben.<br>
+Waffenlieferungen sind gemäß deutschem Außenwirtschaftsgesetz zu
+unterlassen. Unterstützungen sind entweder rein humanitär oder an staatliche
+Organisationen zu leisten, jedoch stets in gutem und fairem Einvernehmen mit
+allen beteiligten Regierungen.
+            </div>
+        </div>
+    </div>
+    
+    <div class="decoration decoration-margins"></div>
+    <div class="heading-strip bg-4">
+    <h3>4. Neue Kraftzentren und die Gestaltung der Globalisierung</h3>
+        <p>Handelsabkommen wie TTIP, TISA und CETA sind nach Form und Inhalt aus vielen grundsätzlichen Erwägungen heraus dringend abzulehnen</p>
+        <i class="ion-android-more-horizontal"></i>
+        <div class="overlay dark-overlay"></div>
+    </div>
+
+    <div class="content">
+    	<h4>4. Gestaltung der Globalisierung</h4>
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="tabs-41">4.1</li>
+            <li class="tab-link" data-tab="tabs-42">4.2</li>
+            <li class="tab-link" data-tab="tabs-43">4.3</li>
+            <li class="tab-link" data-tab="tabs-44">4.4</li>
+        </ul>
+        
+            <div id="tabs-41" class="tab-content current">
+            <div class="tab-elements">
+<h5>4.1. Gerechte Globalisierung</h5>
+Die Deutsche Mitte setzt sich dafür ein, die Chancen der Globalisierung zu nutzen
+und ihre Risiken zu minimieren. Es geht um verbindliche Regeln für sozialen
+Ausgleich, gerechte Rohstoffnutzung, Natur- und Umweltschutz, Wasser- und
+Ernährungsfragen, gerechte Bildungs- und Wirtschaftschancen sowie Migration
+und Internetfreiheit. Handelsabkommen wie TTIP, TISA und CETA sind nach
+Form und Inhalt aus vielen grundsätzlichen Erwägungen heraus dringend
+abzulehnen. Neugestaltungen von Rechts-, Sozial- und Wirtschaftsordnungen
+durch internationale Handelsverträge werden grundsätzlich nicht akzeptiert.
+Diese Entscheidungsmacht darüber steht nach dem Willen der Deutschen Mitte
+einzig und allein dem Souverän zu, dem deutschen Volk.
+            </div>
+        </div>
+        <div id="tabs-42" class="tab-content">
+            <div class="tab-elements">
+<h5>4.2. Missbräuchliche Spekulation</h5>
+Internationale Spekulation mit Rohstoffen und Nahrungsmitteln ist
+schnellstmöglich unter Strafe zu stellen und wirksam zu unterbinden.
+Rohstoffe gehören grundsätzlich den auf ihnen lebenden Völkern und Menschen
+– und sind nach UN-überwachten Grundsätzen von Gerechtigkeit und
+Nachhaltigkeit weltweit offen anzubieten.
+            </div>
+        </div>
+        <div id="tabs-43" class="tab-content">
+            <div class="tab-elements">
+<h5>4.3. Neue Partnerschaften</h5>
+Auch wenn Europa und die transatlantische Partnerschaft sowie globale
+vertragliche Ergänzungen Grundpfeiler deutscher Außenpolitik bleiben und
+werden, nimmt die deutsche Außenpolitik zusätzlich den Auf- und Ausbau von
+Partnerschaften mit den neuen Kraftzentren wie China, Indien und Brasilien in
+den Blick. Auch mit Afrika sollen engere Partner- und Freundschaften begründet
+werden. Bestehende Regionalkonzepte werden entsprechend angepasst oder neu
+erstellt.
+            </div>
+        </div>
+        <div id="tabs-44" class="tab-content">
+            <div class="tab-elements">
+<h5>4.4. Verschiedenes</h5>
+Eingebettet in die "Strategischen Partnerschaften" der EU – jedoch auch darüber
+hinaus – verfolgt Deutschland einen umfassenden Ansatz, der auf die
+Instrumente der Auswärtigen Kultur- und Bildungspolitik, verstärkte
+Wirtschaftsförderung und Regierungskonsultationen - wie sie 2011 erstmals mit
+China und Indien stattgefunden haben - setzt.<br>
+Der Dialog mit dem wichtigen Partner Türkei wird fortgesetzt, Regionalkonzepte
+für Lateinamerika und Afrika sind zu überarbeiten.<br>
+Deutschland lebt von seiner Offenheit und Vernetzung. Die Bundesregierung hat
+daher erste Schritte zu einer weniger bürokratischen Visapolitik eingeleitet.
+Der Respekt für Menschenrechte ist die beste Friedenspolitik. Werben für die
+unveräußerlichen und universellen Menschenrechte ist wichtiger Teil einer
+wertorientierten Außenpolitik.<br>
+Deutsche humanitäre Hilfe wird fortgesetzt und dafür das technische Hilfswerk
+besser gefördert (Refinanzierung: Geldschöpfung der öffentlichen Hand).
+        	</div>
+        </div>
+    <div class="decoration decoration-margins"></div>
+<p class="center-text">***</p>
+</div>
+
+    <div class="decoration decoration-margins"></div>
+    <div class="footer footer-dark">
+        <a href="index.html" class="footer-logo scale-hover"></a>
+        <p>
+            Simplicity and complexity packed into a beautiful, 
+            feature filled, powerful, gorgeous mobile template.
+        </p>
+        <div class="footer-socials">
+            <a href="#" class="icon icon-round icon-xs facebook-bg"><i class="ion-social-facebook"></i></a>
+            <a href="#" class="icon icon-round icon-xs twitter-bg"><i class="ion-social-twitter"></i></a>
+            <a href="#" class="icon icon-round icon-xs google-bg"><i class="ion-social-googleplus"></i></a>
+            <a href="#" class="icon icon-round icon-xs phone-bg"><i class="ion-ios-telephone"></i></a>
+            <a href="#" class="icon icon-round icon-xs show-share-bottom bg-blue-light"><i class="ion-android-share"></i></a>
+        </div>
+        <div class="decoration"></div>
+        <p class="copyright-text">Copyright <span id="copyright-year"></span>. All Rights Reserved.</p>
+    </div>
+</div>
+    
+<div class="share-bottom share-dark">
+    <h3>Share Page</h3>
+    <div class="share-socials-bottom">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.themeforest.net/">
+            <i class="ion-social-facebook-outline facebook-bg"></i>
+            Facebook
+        </a>
+        <a href="https://twitter.com/home?status=Check%20out%20ThemeForest%20http://www.themeforest.net">
+            <i class="ion-social-twitter-outline twitter-bg"></i>
+            Twitter
+        </a>
+        <a href="https://plus.google.com/share?url=http://www.themeforest.net">
+            <i class="ion-social-googleplus-outline google-bg"></i>
+            Google
+        </a>
+        <a href="https://pinterest.com/pin/create/button/?url=http://www.themeforest.net/&media=https://0.s3.envato.com/files/63790821/profile-image.jpg&description=Themes%20and%20Templates">
+            <i class="ion-social-pinterest-outline pinterest-bg"></i>
+            Pinterest
+        </a>
+        <a href="sms:">
+            <i class="ion-ios-chatboxes-outline sms-bg"></i>
+            Text
+        </a>
+        <a href="mailto:?&subject=Check this page out!&body=http://www.themeforest.net">
+            <i class="ion-ios-email-outline mail-bg"></i>
+            Email
+        </a>
+        <div class="clear"></div>
+    </div>
+</div>
+ 
+    
+</div>
+</body>
