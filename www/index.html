@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html lang="de">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,6 +9,14 @@
 <title>Die Deutsche Mitte - Politik geht anders ...! | Wir bringen Ethik zurück in die Regierung!</title>
 
 <script src="components/loader.js"></script>
+ 
+ 
+ 
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+
+ 
 
 <link rel="stylesheet" href="components/loader.css">
 <link rel="stylesheet" href="css/style.css">
@@ -16,43 +24,11 @@
 <link rel="stylesheet" type="text/css" class="switch_style" href="styles/skin.css">
 <link rel="stylesheet" type="text/css" href="styles/framework.css">
 <link rel="stylesheet" type="text/css" href="styles/ionicons.min.css">
-<link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
-<link rel="stylesheet" href="assets/lib/nivo-lightbox/nivo-lightbox.css">
-<link rel="stylesheet" href="assets/lib/nivo-lightbox/nivo-lightbox-theme.css">
 
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-
-<script src="lib/angular/angular.min.js"></script>
-<script src="lib/onsenui/js/onsenui.min.js"></script>
-<script src="lib/onsenui/js/angular-onsenui.min.js"></script>
-
-<script type="text/javascript" src="scripts/jquery.js"></script>
-<script type="text/javascript" src="scripts/plugins.js"></script>
-<script type="text/javascript" src="scripts/custom.js"></script>
-<script type="text/javascript" src="assets/js/jquery.mixitup.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.hoverdir.js"></script>
-<script type="text/javascript" src="assets/js/jquery.browser.min.js"></script>
-<script type="text/javascript" src="assets/js/modernizr.custom.97074.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/slick.min.js"></script>
-<script type="text/javascript" src="assets/lib/nivo-lightbox/nivo-lightbox.min.js"></script>
-<script type="text/javascript" src="assets/js/wow.min.js"></script>
-<script type="text/javascript" src="assets/js/script.js"></script>
-
-<!--
-	<script type="text/javascript" src="assets/js/jquery.js"></script>
-	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/pe-icon-7-stroke.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
--->
 </head>
 
 <body>
+
 <div id="page-transitions">
     
 <div class="page-preloader page-preloader-dark">
@@ -106,18 +82,13 @@
             <a class="sidebar-item" data-sub="sub-4" href="#"><i class="ion-iphone"></i>App</a>
             <div id="sub-4" class="submenu">
 				<a class="sidebar-item" href="splash-screen.html">Splash Screen</a>
-                <a class="sidebar-item" href="countdown.html">Countdown</a>
                 <a class="sidebar-item" href="countdown2017.html">Countdown Wahl 2017</a>
-                <a class="sidebar-item" href="menu.html">Menü</a>
-                <a class="sidebar-item" href="page-sitemap.html">Sitemap</a>
-                <a class="sidebar-item" href="pageapp-map.html">Map</a>
             </div>
             
             <a class="sidebar-item" href="faq.html"><i class="ion-ios-list-outline"></i>FAQ<i class="ion-record"></i></a>
             <a class="sidebar-item" href="kontakt.html"><i class="ion-ios-email-outline"></i>Kontakt<i class="ion-record"></i></a>
-            <a class="sidebar-item" href="pageapp-error.html"><i class="ion-ios-email-outline"></i>Error<i class="ion-record"></i></a>
-
         </div>
+        
         <div class="sidebar-item sidebar-divider"></div>
         <div class="sidebar-item sidebar-copyright">
             <em>Copyright <span class="copyright-year"></span>. All rights reserved.</em>
@@ -139,88 +110,6 @@
         </div>
     </div>
 </div>
-
-			<!--<a class="sidebar-item" data-sub="sub-5" href="#"><i class="ion-ios-gear-outline"></i>Features</a>
-            <div id="sub-5" class="submenu">
-                <a class="sidebar-item" href="features-typography.html">Typography</a>
-                <a class="sidebar-item" href="features-headings.html">Headings</a>
-                <a class="sidebar-item" href="features-tabs.html">Tabs</a>
-                <a class="sidebar-item" href="features-toggles.html">Toggles</a>
-                <a class="sidebar-item" href="features-dropdown.html">Dropdowns</a>
-                <a class="sidebar-item" href="features-accordion.html">Accordions</a>
-                <a class="sidebar-item" href="features-menu-bars.html">Menu Bars</a>
-                <a class="sidebar-item" href="features-notifications.html">Notifications</a>
-                <a class="sidebar-item" href="features-detection.html">Page Dividers</a>
-                <a class="sidebar-item" href="features-buttons.html">Buttons & Icons</a>
-                <a class="sidebar-item" href="features-inputs.html">Input Elements</a>
-                <a class="sidebar-item" href="features-detection.html">Device Detection</a>
-            </div>                       
-            
-            <a class="sidebar-item" data-sub="sub-6" href="#"><i class="ion-ios-camera-outline"></i>Galleries</a>
-            <div id="sub-6" class="submenu">
-                <a class="sidebar-item" href="gallery-round.html">Rounded</a>
-                <a class="sidebar-item" href="gallery-square.html">Squared</a>
-                <a class="sidebar-item" href="gallery-blocks.html">Blocks</a>
-                <a class="sidebar-item" href="gallery-adaptive.html">Adaptive</a>
-                <a class="sidebar-item" href="gallery-masonry.html">Masonry</a>
-                <a class="sidebar-item" href="gallery-collections.html">Collections</a>
-            </div>
-            
-            
-            <a class="sidebar-item" data-sub="sub-7" href="#"><i class="ion-ios-analytics-outline"></i>Portfolios</a>
-            <div id="sub-7" class="submenu">
-                <a class="sidebar-item" href="portfolio-one.html">One</a>
-                <a class="sidebar-item" href="portfolio-two.html">Two</a>
-                <a class="sidebar-item" href="portfolio-fluid.html">Fluid</a>
-                <a class="sidebar-item" href="portfolio-cards.html">Cards</a>
-                <a class="sidebar-item" href="portfolio-adaptive.html">Adaptive</a>
-                <a class="sidebar-item" href="portfolio-wide.html">WideScreen</a>
-            </div>
-            
-            <a class="sidebar-item" data-sub="sub-8" href="#"><i class="ion-ios-copy-outline"></i>Site Pages</a>
-            <div id="sub-8" class="submenu">
-                <a class="sidebar-item" href="page-error.html">404 Error</a>
-                <a class="sidebar-item" href="page-soon.html">Coming Soon</a>
-                <a class="sidebar-item" href="page-login.html">Login Page</a>
-                <a class="sidebar-item" href="page-register.html">Register Page</a>
-                <a class="sidebar-item" href="page-reviews.html">Reviews Page</a>
-                <a class="sidebar-item" href="page-profile-1.html">User Profile 1</a>
-                <a class="sidebar-item" href="page-profile-2.html">User Profile 2</a>
-                <a class="sidebar-item" href="page-timeline-1.html">Timeline Feed 1</a>
-                <a class="sidebar-item" href="page-timeline-2.html">Timeline Feed 2</a>
-                <a class="sidebar-item" href="page-price-table.html">Pricing Tables</a>
-                <a class="sidebar-item" href="page-status.html">System Status</a>
-            </div>
-            
-            <a class="sidebar-item" data-sub="sub-9" href="#"><i class="ion-ios-star-outline"></i>App Styled</a>
-            <div id="sub-9" class="submenu">
-                <a class="sidebar-item" href="pageapp-chat.html">Chat</a>
-                <a class="sidebar-item" href="pageapp-error.html">Error</a>
-                <a class="sidebar-item" href="pageapp-soon.html">Soon</a>
-                <a class="sidebar-item" href="pageapp-login.html">Login</a>
-                <a class="sidebar-item" href="pageapp-register.html">Register</a>
-                <a class="sidebar-item" href="pageapp-tasklist.html">Tasklist</a>
-                <a class="sidebar-item" href="pageapp-checklist.html">Checklist</a>
-                <a class="sidebar-item" href="pageapp-interests.html">Interests</a>
-                <a class="sidebar-item" href="pageapp-calendar.html">Calendar</a>
-                <a class="sidebar-item" href="pageapp-coverpage.html">Coverpage</a>
-                <a class="sidebar-item" href="pageapp-users.html">User Lists</a>
-                <a class="sidebar-item" href="pageapp-users.html">Fullscreen Map</a>
-            </div>    
-            <a class="sidebar-item" href="page-blog.html"><i class="ion-ios-compose-outline"></i>Blog<i class="ion-record"></i></a>
-            <a class="sidebar-item" href="page-contact.html"><i class="ion-ios-email-outline"></i>Contact<i class="ion-record"></i></a>
-            
-            <a class="sidebar-item" data-sub="sub-10" href="#"><i class="ion-ios-home-outline"></i>Home</a>
-            <div id="sub-10" class="submenu">
-                <a class="sidebar-item" href="index-classic.html">Classic</a>
-                <a class="sidebar-item" href="index-round.html">Rounded</a>
-                <a class="sidebar-item" href="index-cover.html">Coverpage</a>
-                <a class="sidebar-item" href="index-no-slider.html">No Slider</a>
-                <a class="sidebar-item" href="index-splash.html">Splash Screen</a>
-                <a class="sidebar-item" href="index-login.html">Signin Screen</a>
-                <a class="sidebar-item" href="index-register.html">Signup Sreen</a>
-                <a class="sidebar-item" href="index-landing.html">Landing Screen</a>
-            </div>-->
     
 <div id="page-content" class="header-clear-large">
     <div id="page-content-scroll"><!--Enables this element to be scrolled -->
@@ -249,21 +138,6 @@
                 </div>
             </div>
         
-        <!--<div class="content center-boxed-content">
-            <div class="home-fader animate-top animate-time-1000">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="images/slider1.png" class="responsive-image" alt="img">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/slider2.png" class="responsive-image" alt="img">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/slider3.png" class="responsive-image" alt="img">
-                    </div>
-                </div>
-            </div>-->
-
             <div class="animate-fade">
                 <h3 class="center-text thin small-bottom half-top">Politik geht anders ...!</h3>
                 <p class="animate-delay-750 center-boxed-text center-text">
@@ -273,8 +147,6 @@
             <div class="content-center-buttons full-bottom">
                 <a href="flugblatt201501.html" 			class="button button-dm button-round button-bold button-xs animate-left animate-delay-450 animate-5000">FLUGBLATT</a>
                 <a href="alleinstellungsmerkmale.html" 	class="button button-dm button-round button-bold button-xs animate-right animate-delay-450 animate-5000">MERKMALE</a>
-                <a href="slideshow.html" id="videoBtn"  class="button button-dm button-round button-bold button-xs animate-right animate-delay-450 animate-5000">SLIDESHOW FRAME</a>
-                <a href="slideshow.html" class="button button-dm button-round button-bold button-xs animate-right animate-delay-450 animate-5000">SLIDESHOW FULL</a>
 				<div class="clear"></div>
             </div>
             <div class="decoration"></div>
@@ -445,39 +317,6 @@
             <a href="dm-kurzprogramm-2016.html" class="button button-blue button-center button-round button-bold button-xs full-bottom animate-zoom animate-delay-300">Kurzprogramm 2016</a>
         
         <div class="decoration decoration-margins"></div>
-
-
-<!--
- <div id="page-content" class="header-clear">
-    <div class="heading-strip bg-1">
-        <h4>Gallery Masonry</h4>
-        <p>Essential Features for your Page</p>
-        <i class="ion-image"></i>
-        <div class="overlay dark-overlay"></div>
-    </div>
-<div class="decoration decoration-margins"></div>
-    <div class="gallery-justified content-fullscreen">
-        <a href="images/pictures/1.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/1.jpg"></a>
-        <a href="images/pictures/2.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/2ww.jpg"></a>
-        <a href="images/pictures/3.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/3w.jpg"></a>
-        <a href="images/pictures/5.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/5t.jpg"></a>
-        <a href="images/pictures/7.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/7ww.jpg"></a>
-        <a href="images/pictures/8.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/8w.jpg"></a>
-        <a href="images/pictures/1.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/1t.jpg"></a>
-        <a href="images/pictures/2.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/2.jpg"></a>
-        <a href="images/pictures/1.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/1.jpg"></a>
-        <a href="images/pictures/3.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/3ww.jpg"></a>
-        <a href="images/pictures/4.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/4w.jpg"></a>
-        <a href="images/pictures/6.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/6t.jpg"></a>
-        <a href="images/pictures/5.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/5ww.jpg"></a>
-        <a href="images/pictures/1.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/1w.jpg"></a>
-        <a href="images/pictures/2.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/2t.jpg"></a>
-        <a href="images/pictures/2.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/3ww.jpg"></a>
-        <a href="images/pictures/2.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/4w.jpg"></a>
-        <a href="images/pictures/2.jpg" class="show-gallery" title="Your Caption Here"><img alt="" src="images/pictures/5w.jpg"></a>
-    </div>
-        <div class="decoration decoration-margins"></div>
--->
         
         <div class="heading-strip bg-1">
             <h4>Bundesvorstand</h4>
@@ -622,5 +461,5 @@
     </div>
 </div>
 
-</div>
 </body>
+</html>

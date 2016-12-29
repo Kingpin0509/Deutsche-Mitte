@@ -5,20 +5,59 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<title>Die Deutsche Mitte - Politik geht anders ...! | Wir bringen Ethik zurück in die Regierung!</title>
+
 <script src="components/loader.js"></script>
+ 
+ 
+ 
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+
+ 
+
 <link rel="stylesheet" href="components/loader.css">
-<title>Deutsche Mitte</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 <link rel="stylesheet" type="text/css" class="switch_style" href="styles/skin.css">
 <link rel="stylesheet" type="text/css" href="styles/framework.css">
 <link rel="stylesheet" type="text/css" href="styles/ionicons.min.css">
-<script type="text/javascript" src="scripts/jquery.js"></script>
-<script type="text/javascript" src="scripts/plugins.js"></script>
-<script type="text/javascript" src="scripts/custom.js"></script>
+
+ 
+<link rel="stylesheet" href="assets/lib/nivo-lightbox/nivo-lightbox.css">
+<link rel="stylesheet" href="assets/lib/nivo-lightbox/nivo-lightbox-theme.css">
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+	<script>
+    ons.bootstrap()
+      .controller('AppController', function() {
+        this.pushes = 0;
+        this.pops = 0;
+      });
+    ons.ready(function() {
+        console.log("Onsen UI is ready!");
+    });
+	</script>
+
+<!--
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+-->
+
 </head>
 
 <body>
+
 <div id="page-transitions">
     
 <div class="page-preloader page-preloader-dark">
@@ -41,7 +80,7 @@
         <div class="sidebar-item sidebar-divider"></div>
         <div class="sidebar-menu">
         
-            <a class="sidebar-item active-item" href="index.html"><i class="ion-ios-star-outline"></i>Willkommen<i class="ion-record"></i></a>
+            <a class="sidebar-item" href="index.html"><i class="ion-ios-star-outline"></i>Willkommen<i class="ion-record"></i></a>
             <a class="sidebar-item" href="dm-kurzprogramm-2016.html"><i class="ion-ios-list-outline"></i>Das Kurzprogramm<i class="ion-record"></i></a>
             <a class="sidebar-item" href="yt-stammtisch-videos.html"><i class="ion-ios-videocam-outline"></i>Stammtisch Videos<i class="ion-record"></i></a>
             
@@ -72,17 +111,28 @@
             <a class="sidebar-item" data-sub="sub-4" href="#"><i class="ion-iphone"></i>App</a>
             <div id="sub-4" class="submenu">
 				<a class="sidebar-item" href="splash-screen.html">Splash Screen</a>
-                <a class="sidebar-item" href="countdown.html">Countdown</a>
                 <a class="sidebar-item" href="countdown2017.html">Countdown Wahl 2017</a>
-                <a class="sidebar-item" href="menu.html">Menü</a>
-                <a class="sidebar-item" href="page-sitemap.html">Sitemap</a>
-                <a class="sidebar-item" href="pageapp-map.html">Map</a>
             </div>
+            
+            <!--
+            <a class="sidebar-item" data-sub="sub-5" href="#"><i class="ion-iphone"></i>App</a>
+            <div id="sub-4" class="submenu">
+            	<a class="sidebar-item" id="videoBtn" href="slideshow.html">Experimentell</a>
+                <a class="sidebar-item" href="slideshow.html">Slider</a>
+                <a class="sidebar-item" id="videoBtn" href="slideshow.html">SliderFrame</a>
+                <a class="sidebar-item" href="countdown.html">Countdown</a>
+                <a class="sidebar-item active-item" href="menu.html">Menü</a>
+                <a class="sidebar-item" href="sitemap.html">Sitemap</a>
+                <a class="sidebar-item" href="pageapp-map.html">Map</a>
+                <a class="sidebar-item" href="error-bg.html"><i class="ion-ios-email-outline"></i>Error<i class="ion-record"></i></a>
+                <a class="sidebar-item" href="error-bl.html"><i class="ion-ios-email-outline"></i>Error<i class="ion-record"></i></a>
+            </div>
+            -->
             
             <a class="sidebar-item" href="faq.html"><i class="ion-ios-list-outline"></i>FAQ<i class="ion-record"></i></a>
             <a class="sidebar-item" href="kontakt.html"><i class="ion-ios-email-outline"></i>Kontakt<i class="ion-record"></i></a>
-            
         </div>
+        
         <div class="sidebar-item sidebar-divider"></div>
         <div class="sidebar-item sidebar-copyright">
             <em>Copyright <span class="copyright-year"></span>. All rights reserved.</em>

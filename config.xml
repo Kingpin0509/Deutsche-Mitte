@@ -13,9 +13,9 @@
   <preference name="SplashScreen" value="screen"/>
   <preference name="AllowInlineMediaPlayback" value="false"/>
   <preference name="BackupWebStorage" value="cloud"/>
-  <preference name="FadeSplashScreenDuration" value="250"/>
+  <preference name="FadeSplashScreenDuration" value="2"/>
   <preference name="KeyboardDisplayRequiresUserAction" value="true"/>
-  <preference name="MediaPlaybackRequiresUserAction" value="false"/>
+  <preference name="MediaPlaybackRequiresUserAction" value="true"/>
   <preference name="SuppressesIncrementalRendering" value="false"/>
   <preference name="TopActivityIndicator" value="gray"/>
   <preference name="GapBetweenPages" value="0"/>
@@ -69,35 +69,35 @@
     <icon src="/res/android/icon/xhdpi.png" density="xhdpi"/>
     <icon src="/res/android/icon/xxhdpi.png" density="xxhdpi"/>
     <icon src="/res/android/icon/xxxhdpi.png" density="xxxhdpi"/>
+    <splash src="/res/android/screen/splash-port-xxxhdpi.png" density="port-xxxhdpi"/>
     <splash src="/res/android/screen/splash-port-xxhdpi.png" density="port-xxhdpi"/>
     <splash src="/res/android/screen/splash-port-xhdpi.png" density="port-xhdpi"/>
     <splash src="/res/android/screen/splash-port-hdpi.png" density="port-hdpi"/>
     <splash src="/res/android/screen/splash-port-mdpi.png" density="port-mdpi"/>
     <splash src="/res/android/screen/splash-port-ldpi.png" density="port-ldpi"/>
-    <splash src="/res/android/screen/splash-port-xxxhdpi.png" density="port-xxxhdpi"/>
   </platform>
   <platform name="windows">
-    <icon src="/res/winrt/icon/app_small_logo_winrt.png" target="Square30x30Logo"/>
     <icon src="/res/winrt/icon/app_tile_wide_logo_winrt.png" target="Wide315x150Logo"/>
     <splash src="/res/winrt/screen/app_splash_screen_winrt.png" width="620" height="300"/>
     <icon src="/res/winrt/icon/app_logo_winrt.png" target="Square150x150Logo"/>
     <icon src="/res/winrt/icon/package_logo_winrt.png" target="StoreLogo"/>
+    <icon src="/res/winrt/icon/app_small_logo_winrt.png" target="Square30x30Logo"/>
   </platform>
   <platform name="chrome">
     <icon src="/platforms/chrome/icon.png" width="128" height="128"/>
   </platform>
-  <preference name="KeepRunning" value="true"/>
-  <preference name="monaca:AndroidIsPackageNameSeparate" value="true"/>
-  <preference name="Orientation" value="default"/>
-  <preference name="SplashScreenDelay" value="3000"/>
-  <preference name="Fullscreen" value="false"/>
   <preference name="ios-XCBuildConfiguration-TARGETED_DEVICE_FAMILY" value="1,2"/>
   <preference name="AutoHideSplashScreen" value="true"/>
   <preference name="FadeSplashScreen" value="true"/>
   <preference name="ShowSplashScreenSpinner" value="true"/>
-  <access origin="*"/>
-  <preference name="DisallowOverscroll" value="false"/>
   <preference name="EnableViewportScale" value="true"/>
+  <access origin="*"/>
+  <preference name="KeepRunning" value="false"/>
+  <preference name="monaca:AndroidIsPackageNameSeparate" value="true"/>
+  <preference name="DisallowOverscroll" value="false"/>
+  <preference name="Orientation" value="default"/>
+  <preference name="SplashScreenDelay" value="3000"/>
+  <preference name="Fullscreen" value="true"/>
   <preference name="WindowsStorePublisherName" value="West Weedtze Development - Michael Humann"/>
   <preference name="WindowsStoreIdentityName" value="17701WestWeedtzeDevelopme.DeutscheMitte"/>
 </widget>
