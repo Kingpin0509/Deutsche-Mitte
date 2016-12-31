@@ -17,15 +17,21 @@
         },
         "mobi.monaca.plugins.Monaca": {
             "variables": []
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "variables": [
+                "XWALK_VERSION=18.48.477.13"
+            ]
         }
     },
     "external_plugins": [
         "cordova-plugin-whitelist@1.2.2",
         "cordova-plugin-splashscreen@4.0.1",
-        "cordova-custom-config@2.0.1"
+        "cordova-custom-config@2.0.1",
+        "cordova-plugin-crosswalk-webview@1.7.2"
     ],
     "title-ja": "",
-    "title-en": "29122016",
+    "title-en": "Deutsche Mitte",
     "description-ja": "",
     "description-en": "",
     "category": "User Template",
@@ -35,5 +41,5 @@
         "winrt",
         "chrome"
     ],
-    "name": "generated-1483041420-583824227e2193c166b5ca93"
+    "name": "generated-1483071790-583824227e2193c166b5ca93"
 }
