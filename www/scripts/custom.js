@@ -4,9 +4,9 @@ $(document).ready(function () {
         //Class is vital to run AJAX Pages 
         
         var scroll_animations = 1; //1 = Auatomatic //2 = Disabled //3 = Manual Classes
-        var sidebar_left_width = 250
-        var sidebar_right_width = 90
-        var transition_speed = 750 
+        var sidebar_left_width = 300
+        var sidebar_right_width = 100
+        var transition_speed = 1500 
         var position_closed = 0 
         var position_hidden_left = -50
         var position_hidden_right = 50

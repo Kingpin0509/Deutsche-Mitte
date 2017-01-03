@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="de">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,6 +17,18 @@
 <script type="text/javascript" src="scripts/custom.js"></script>
 
  
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCmbF6uYFf7VtnKF3u0h7AqIs7gnEmzEds",
+    authDomain: "politik-geht-anders.firebaseapp.com",
+    databaseURL: "https://politik-geht-anders.firebaseio.com",
+    storageBucket: "politik-geht-anders.appspot.com",
+    messagingSenderId: "343364984323"
+  };
+  firebase.initializeApp(config);
+</script>
 
 <link rel="stylesheet" href="components/loader.css">
 <link rel="stylesheet" href="css/style.css">
@@ -113,9 +125,8 @@
     
 <div id="page-content" class="header-clear-large">
     <div id="page-content-scroll"><!--Enables this element to be scrolled -->
-        
         <div class="content center-boxed-content">
-            <div class="home-fader animate-top animate-time-4000">
+            <div class="home-fader animate-top animate-time-2000">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="images/slider2.png" class="responsive-image" alt="img">
@@ -140,19 +151,66 @@
         
             <div class="animate-fade">
                 <h3 class="center-text thin small-bottom half-top">Politik geht anders ...!</h3>
-                <p class="animate-delay-750 center-boxed-text center-text">
-				Die selbstangemaßte Machtvollkommenheit der etablierten Apparate in Deutschland hat die Demokratie wesentlich beschädigt
+                <p class="animate-delay-500 center-boxed-text center-text">
+                Die selbstangemaßte Machtvollkommenheit der etablierten Apparate in Deutschland hat die Demokratie wesentlich beschädigt
                 </p>
             </div>
-            <div class="content-center-buttons full-bottom">
-                <a href="flugblatt201501.html" 			class="button button-dm button-round button-bold button-xs animate-left animate-delay-450 animate-5000">FLUGBLATT</a>
-                <a href="alleinstellungsmerkmale.html" 	class="button button-dm button-round button-bold button-xs animate-right animate-delay-450 animate-5000">MERKMALE</a>
-				<div class="clear"></div>
-            </div>
             <div class="decoration"></div>
+            <div class="content-center-buttons full-bottom">
+                <a href="standpunkte.html" class="button button-dm button-round button-bold button-xs animate-left animate-delay-500 animate-time-1000">STANDPUNKTE</a>
+                <a href="alleinstellungsmerkmale.html"	class="button button-dm button-round button-bold button-xs animate-right animate-delay-500 animate-time-1000">MERKMALE</a>
+            <div class="clear"></div>
             </div>
         </div>
         
+    <div class="decoration decoration-margins"></div>
+    
+<!--    <div class="heading-strip bg-2">
+        <h4 class="center-text">Feature Filled</h4>
+        <p class="center-text">Everything you need, is here for you!</p>
+        <div class="overlay dark-overlay"></div>
+    </div>
+
+    <div class="decoration decoration-margins"></div>
+
+    <div class="content-fullscreen">
+        <div class="column-half-image-left one-half-responsive">
+            <img class="preload-image" data-original="images/pictures/1t.jpg" alt="img">
+            <h4>Sieben Tage lang</h4>
+            <p>
+            Dabei gibt es keinen „politischen Rabatt“, kein Nachlassen im Qualitätsstreben bei Politik und Satzung: „Deutsche Mitte light“ hat keine Zukunft, wird nicht gewinnen, wird es nicht geben.
+            </p>
+        </div>
+        <div class="decoration hide-if-responsive"></div>
+        <div class="column-half-image-right one-half-responsive last-column">
+            <img class="preload-image" data-original="images/pictures/2t.jpg" alt="img">
+            <h4>Gerade & Aufrecht</h4>
+            <p>
+            Kein Schielen nach taktischen Vorteilen, Winkelzügen und Anbiederungen – und schlicht nach vorn zu gehen, mit allem was da und in uns ist: rückhaltlos, fristlos, – FURCHTLOS.
+            </p>
+        </div>
+        <div class="decoration hide-if-responsive"></div>
+        <div class="column-half-image-left one-half-responsive">
+            <img class="preload-image" data-original="images/pictures/3t.jpg" alt="img">
+            <h4>Jetzt oder nie!</h4>
+            <p>
+            Jeden Tag hinlangen, als ob’s der letzte wäre: umsichtig, verbindlich, gemeinschaftlich! Kein „hätte“, „könnte“, „wollte“, „würde“, kein „wenn“ und kein „aber“!
+            </p>
+        </div>
+        <div class="decoration hide-if-responsive"></div>
+        <div class="column-half-image-right one-half-responsive last-column">
+            <img class="preload-image" data-original="images/pictures/4t.jpg" alt="img">
+            <h4>Offene Worte</h4>
+            <p>
+            Das multikriminelle System, das wir bekämpfen, ist nicht nur viel mörderischer als alles was die Menschheitsgeschichte hergibt; vor allem aber unendlich viel morscher als es die Sowjetunion je war.
+            </p>
+        </div>
+        </div>
+        <div class="clear"></div>
+        <div class="decoration decoration-margins"></div>
+            <a href="flyer120816.html" class="button button-dm button-center button-round button-bold full-bottom animate-zoom animate-time-1000 animate-delay-100">FLYER</a>
+            <div class="clear"></div>
+    </div>-->
         <div class="heading-block bg-5">
             <h2 class="thin no-bottom animate-zoom">Revolution!</h2>
             <h5 class="small-text animate-fade">Von der Neuzeit bis zu den Anfängen der Französischen Revolution, 
@@ -163,20 +221,15 @@
             und dabei die Tugend (virtus) verloren geht, welche das eigene Wohl mit dem Gemeinwohl vereinigen soll.<br>
             In einer solchen Situation ist es geboten:<br>
             Unordnung wieder in Ordnung zurückzuführen.</p>
-
             <div class="decoration"></div>
-
             <p>Ritorno ai principi (Niccolò Machiavelli)</p>
             <div class="overlay dark-overlay"></div>
         </div>
-        
         <div class="content no-bottom">
-            <div class="decoration"></div>
             <h2 class="center-text thin small-bottom">Wir halten was wir sagen - auch nach der Wahl</h2>
-            <p class="center-text larger-text thin">
-                Wir ordnen unser Programm als einzige Partei direkt nach Ministerien. So gilt:<br>
-                <h4 class="center-text">Parteiprogramm = Wahlprogramm = Regierungsprogramm</h4>
-            </p>
+            <div class="decoration"></div>
+            <p class="center-text larger-text thin">Wir ordnen unser Programm als einzige Partei direkt nach Ministerien. So gilt:</p>
+            <h4 class="center-text">Parteiprogramm = Wahlprogramm = Regierungsprogramm</h4>
             
             <div class="decoration deco-0 decoration-small animate-zoom"></div>
             
@@ -193,24 +246,24 @@
                 </div>
             </div>
             <div class="one-half-responsive last-column">
-                <div class="column-home-center one-half animate-left animate-delay-100">
+                <div class="column-home-center one-half animate-left animate-delay-250">
                     <i class="ion-gear-a color-blue-dark"></i>
                     <h5 class="thin">Wirtschafts</h5>
                     <p>Förderung von ethischer Unternehmenskultur</p>
                 </div>
-                <div class="column-home-center one-half last-column animate-right  animate-delay-100">
+                <div class="column-home-center one-half last-column animate-right  animate-delay-250">
                     <i class="ion-ios-medkit-outline color-orange-dark"></i>
                     <h5 class="thin">Gesundheit</h5>
                     <p>Aufbau ganzheitlicher Gesundheitszentren</p>
                 </div>
             </div>
             
-            <div class="decoration deco-0 decoration-small animate-zoom"></div>
+            <div class="decoration deco-0 decoration-small animate-zoom animate-delay-250"></div>
             
             <p class="center-text larger-text bold">
-                Beste kurze Übersicht über unsere Politik bietet das Flugblatt „Flyer“
+                Kurze Übersicht der politischen Ziele der DM bietet das zweiseitige Flugblatt.
             </p>
-            <a href="flugblatt201501.html" class="button button-dmo button-center button-round button-bold button-xs full-bottom animate-zoom animate-delay-300">DM-FLUGBLATT</a>
+            <a href="flugblatt201501.html" class="button button-dmo button-center button-round button-bold button-xs full-bottom animate-zoom animate-delay-100">DM-FLUGBLATT</a>
             <div class="decoration"></div>
         </div>
         
@@ -272,8 +325,7 @@
                         <div class="review-3">
                             <i class="color-yellow-dark review-icon ion-quote"></i>
                             <p>
-                            ...und ehrlich gesagt, genau das möchte ich. Ich möchte dass der Teufel aus diesem Land ‚rausgeht. Wir wollen ihn zusammen rausjagen. 
-
+                            ...und ehrlich gesagt, genau das möchte ich. Ich möchte dass der Teufel aus diesem Land ‚rausgeht. Wir wollen ihn zusammen rausjagen.
                             </p>
                             <div class="review-stars">
                                 <i class="ion-ios-star"></i>
@@ -289,8 +341,8 @@
                         <div class="review-3">
                             <i class="color-yellow-dark review-icon ion-quote"></i>
                             <p>
-                            	Wir werden aufstehen, uns gerade hinstellen und die Prinzipien nennen für die wir gemeinsam stehen und notfalls sterben wollen.
-                            	</p>
+                            Wir werden aufstehen, uns gerade hinstellen und die Prinzipien nennen für die wir gemeinsam stehen und notfalls sterben wollen.
+                            </p>
                             <div class="review-stars">
                                 <i class="ion-ios-star"></i>
                                 <i class="ion-ios-star"></i>
@@ -306,13 +358,13 @@
             <a href="yt-stammtisch-videos.html" class="button-ghost button-center-large button-bold button-round animate-zoom animate-delay-300">VORTÄGE + FRAGERUNDEN</a>
             <div class="overlay dark-overlay"></div>
         </div>
-
+        
         <div class="decoration decoration-margins"></div>
             <h3 class="thin center-text">Das Kurzprogramm</h3>
-            <p class="small-text center-text">6-Seitig </p>            
-            <img class="responsive-image animate-fade animate-delay-100" src="images/2.png" alt="img">
+            <p class="small-text center-text">6-Seitig </p>
+            <img class="responsive-image animate-fade animate-delay-100" src="images/2.gif" alt="img">
             <p class="center-boxed-text center-text animate-fade animate-delay-200">
-            	Nach dem Flyer kommt in der Hierarchie unserer Programm-Gestaltung das sechsseitige Kurzprogramm
+            	In der Herarchie der Programm-Gestaltung folgt dem zweiseitigen Flugblatt das sechsseitige Kurzprogramm.
             </p>
             <a href="dm-kurzprogramm-2016.html" class="button button-blue button-center button-round button-bold button-xs full-bottom animate-zoom animate-delay-300">Kurzprogramm 2016</a>
         
@@ -340,7 +392,7 @@
                             <p class="half-bottom">
                                 Experte für Zentral- & Südasien, Nah- & Mittelost, Sicherheitsfragen - Geboren 1956 in Bremen, verheiratet, vier Kinder.<br>
                                 Nach dem Wehrdienst Ausbildung bei der Deutschen Bank und Studium in München: Sinologie und Romanistik. Ab 1985 Mitarbeit beim ARD-Fernsehen als Sonderkorrespondent, Nachrichtenmoderator (2.500 live Sendungen) und Chef vom Dienst.
-                            </p>                            
+                            </p>
                             <div class="two-column-icons no-bottom">
                                 <a href="http://www.deutsche-mitte.de/wp-content/uploads/2015/11/ho%CC%88rstel-selbstvorstellung.pdf" class="icon icon-round icon-s dm-bg"><i class="ion-ios-person"></i></a>
                                 <a href="http://dm-stammtisch.de/index.php?r=user%2Fprofile&uguid=f613a591-a6cf-4d81-81b9-e2ffcdb12870" class="icon icon-round icon-s dmo-bg"><i class="ion-disc"></i></a>
