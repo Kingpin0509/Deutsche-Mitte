@@ -318,13 +318,18 @@ $(document).ready(function () {
             sr.reveal('.animate-fade',  {origin:'top',   easing:'ease-in-out'  });
             sr.reveal('.animate-zoom',  {origin:'top',   scale: 1.3, easing:'cubic-bezier(0.1, 0.2, 0.1, 1)'  });
 
+            sr.reveal('.animate-time-250',  {duration: 250 });
             sr.reveal('.animate-time-500',  {duration: 500 });
+            sr.reveal('.animate-time-750',  {duration: 750 });
             sr.reveal('.animate-time-1000',  {duration: 1000 });
+            sr.reveal('.animate-time-1250',  {duration: 1250 });
+            sr.reveal('.animate-time-1500',  {duration: 1500 });
+            sr.reveal('.animate-time-1750',  {duration: 1750 });
             sr.reveal('.animate-time-2000',  {duration: 2000 });
             sr.reveal('.animate-time-3000',  {duration: 3000 });
             sr.reveal('.animate-time-4000',  {duration: 4000 });
             sr.reveal('.animate-time-5000',  {duration: 5000 });
-            sr.reveal('.animate-time-6000',  {duration: 6000 });     
+            sr.reveal('.animate-time-6000',  {duration: 6000 });    
 
             sr.reveal('.animate-delay-50',  {delay: 50 });
             sr.reveal('.animate-delay-100',  {delay: 100 });
@@ -355,7 +360,8 @@ $(document).ready(function () {
             sr.reveal('.animate-delay-1350',  {delay: 1350 });   
             sr.reveal('.animate-delay-1400',  {delay: 1400 });   
             sr.reveal('.animate-delay-1450',  {delay: 1450 });   
-            sr.reveal('.animate-delay-1500',  {delay: 1500 });  
+            sr.reveal('.animate-delay-1500',  {delay: 1500 });   
+            sr.reveal('.animate-delay-2000',  {delay: 2000 });   
         };
         
         //Page Animations 
