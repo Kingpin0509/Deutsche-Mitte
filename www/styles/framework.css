@@ -968,13 +968,13 @@ ol ol ol{list-style-type:disc;}
     z-index:99999999;
     opacity:0;
     pointer-events:none;
-    -webkit-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
-    -ms-transition: all 250ms ease;
-    -o-transition: all 250ms ease;
-    transition: all 250ms ease;
-    transition-delay:250ms;
-    -webkit-transition-delay:250ms;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    transition-delay:500ms;
+    -webkit-transition-delay:500ms;
 }
 
 .page-preloader-light{background-color:rgba(255,255,255,0.5);}
@@ -983,7 +983,7 @@ ol ol ol{list-style-type:disc;}
 .show-preloader{
     opacity:1!important;
     pointer-events:all!important;
-    transition:all 250ms ease;
+    transition:all 500ms ease;
 }
 
 .page-preloader img{
