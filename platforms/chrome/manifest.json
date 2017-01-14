@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
     "name": "Die Deutsche Mitte",
-    "description": "Kein Ministerressort ist ohne schwere Fehlentwicklungen daher entwickeln wir ein politisches Programm, das sich durch sämtliche Ressorts zieht.",
-    "version": "1.0.0",
+    "description": "Politik geht anders!",
+    "version": "5.0.0",
     "app": {
         "background": {
             "scripts": [
@@ -19,7 +19,7 @@
         "http://dm-stammtisch.de/*",
         "https://dm-stammtisch.de/*"
     ],
-    "short_name": "Deutsche Mitte",
+    "short_name": "DeutschMitte",
     "offline_enabled": false,
     "optional_permissions": [],
     "externally_connectable": {

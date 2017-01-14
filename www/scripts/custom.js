@@ -6,7 +6,7 @@ $(document).ready(function () {
         var scroll_animations = 1; //1 = Auatomatic //2 = Disabled //3 = Manual Classes
         var sidebar_left_width = 300
         var sidebar_right_width = 100
-        var transition_speed = 1000 
+        var transition_speed = 750 
         var position_closed = 0 
         var position_hidden_left = -50
         var position_hidden_right = 50
@@ -207,7 +207,7 @@ $(document).ready(function () {
         //Preload Image
         $(function() {
             $(".preload-image").lazyload({
-                threshold : 3000
+                threshold : 2000
             });
         });
         
@@ -747,14 +747,14 @@ $(document).ready(function () {
         var swiper = new Swiper('.home-slider',{autoplay:4000, loop:true});
         var swiper = new Swiper('.home-round-slider',{autoplay:4000, loop:true});
         var swiper = new Swiper('.home-fader',{
-        	autoplay:500,
+        	autoplay:1500,
         	autoplayDisableOnInteraction: false,
-        	speed: 2000, 
+        	speed: 1000, 
         	autoHeight:true, 
         	loop:true, 
         	effect:'fade', 
         	preloadImages:true, 
-        	lazyLoading:false,
+        	lazyLoading:true,
         });
         var swiper = new Swiper('.home-cube', {
 
@@ -971,7 +971,7 @@ $(document).ready(function () {
             // Restart your animation
             smoothState.restartCSSAnimations();
             $('.page-preloader').addClass('show-preloader');
-            $('#page-transitions').css({"opacity":"0", "transition":"all 500ms ease"});
+            $('#page-transitions').css({"opacity":"0", "transition":"all 750ms ease-in-out"});
             $('#sidebar-left').removeClass('active-sidebar');
             $('#sidebar-right').removeClass('active-sidebar');
             $('#page-content, #sidebar-tap-close, #header').css({
@@ -995,7 +995,7 @@ $(document).ready(function () {
             $container.html($newContent);
             $('html, body').animate({ scrollTop: 0 }, 0);
             $('.page-preloader').addClass('show-preloader');
-            $('#page-transitions').css({"opacity":"1", "transition":"all 1000ms ease"});
+            $('#page-transitions').css({"opacity":"1", "transition":"all 750ms ease-in-out"});
             $('#page-transitions').removeClass('page-fade');
             $('#sidebar-left').removeClass('active-sidebar');
             $('#sidebar-right').removeClass('active-sidebar');
@@ -1016,7 +1016,7 @@ $(document).ready(function () {
             $('.page-preloader').removeClass('show-preloader');
             $('#page-content').css({
                 "opacity":"1",
-                "transition":"all 50ms ease"
+                "transition":"all 750ms ease-out"
             });   
         }
       };

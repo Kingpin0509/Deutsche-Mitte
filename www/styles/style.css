@@ -9,7 +9,7 @@ body{
 
 #sidebar-left{
     background-image:url(../images/pictures_vertical/bg1.png);
-    transform:translateX(-250px);
+    transform:translateX(-300px);
 }
 
 #sidebar-right{
@@ -52,13 +52,13 @@ body{
 
 .page-fade{ 
     opacity:0;
-    transition:all 750ms ease;
-    transition-delay:100ms;
+    transition:all 1000ms ease-in-out;
+    transition-delay:150ms;
 }
 
 .page-show{
     opacity:1;
-    transition:all 750ms ease;
+    transition:all 1000ms ease-in-out;
 }
 
 .active-sidebar{transform:translateX(0px)!important;}
@@ -124,7 +124,7 @@ body{
 }
 
 .sidebar-menu a .ion-record{
-    font-size:3px;
+    font-size:2px;
     position:absolute;
     right:32px;
 }

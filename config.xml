@@ -81,8 +81,8 @@
     <icon src="/res/winrt/icon/app_logo_winrt.png" target="Square150x150Logo"/>
     <icon src="/res/winrt/icon/package_logo_winrt.png" target="StoreLogo"/>
     <icon src="/res/winrt/icon/app_small_logo_winrt.png" target="Square30x30Logo"/>
-    <icon src="/res/winrt/icon/app_tile_wide_logo_winrt.png" target="Wide315x150Logo"/>
     <splash src="/res/winrt/screen/app_splash_screen_winrt.png" width="620" height="300"/>
+    <icon src="/res/winrt/icon/app_tile_wide_logo_winrt.png" target="Wide315x150Logo"/>
   </platform>
   <platform name="chrome">
     <icon src="/platforms/chrome/icon.png" width="128" height="128"/>

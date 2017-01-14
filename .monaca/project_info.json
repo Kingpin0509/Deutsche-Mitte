@@ -20,7 +20,7 @@
         },
         "cordova-plugin-crosswalk-webview": {
             "variables": [
-                "XWALK_VERSION=18.48.477.13"
+                "XWALK_VERSION=19.49.514.5"
             ]
         }
     },
@@ -28,7 +28,7 @@
         "cordova-plugin-whitelist@1.2.2",
         "cordova-plugin-splashscreen@4.0.1",
         "cordova-custom-config@2.0.1",
-        "cordova-plugin-crosswalk-webview@1.7.2",
+        "cordova-plugin-crosswalk-webview@1.8.0",
         "cordova-custom-config@2.0.3"
     ],
     "title-ja": "",
