@@ -120,6 +120,7 @@
                 </div>
             </div>
         </div>
+        
         <div id="page-content" class="header-clear">
             <div id="page-content-scroll">
                 <!--Enables this element to be scrolled -->
@@ -159,7 +160,7 @@
 
 
                         <div class="animate-fade">
-                            <p class="animate-bottom animate-delay-1000 center-boxed-text center-text">
+                            <p class="animate-bottom half-top animate-delay-1000 center-boxed-text center-text">
                                 Der Wähler kann sich darauf Verlassen, WIR setzen genau das um was wir vor der Wahl versprechen. Die selbstangemaßte Machtvollkommenheit der etablierten Apparate in Deutschland hat die Demokratie schon wesentlich beschädigt, das muss aufhören.
                             </p>
                         </div>
@@ -173,16 +174,15 @@
                     </div>
                 </div>
 
-                <div class="heading-block bg-5 animate-fade animate-delay-1000">
+                <div class="heading-block bg-5 animate-fade animate-delay-100">
                     <h2 class="thin no-bottom animate-zoom">Wir von der Deutschen Mitte wissen:</h2>
                     <h5 class="small-text animate-fade">verzweifeln, zögern, debattieren: Das können wir uns gar mehr nicht leisten!</h5>
-                    <div class="decoration deco-dmo decoration-small animate-zoom"></div>
+                    <div class="decoration decoration animate-zoom animate-delay-500 deco-dmo"></div>
                     <p class="larger-text thin half-top full-bottom animate-fade">
                         Ausschließlich eine durch alle politischen Fragestellungen und Herausforderungen kompromisslos durchdeklinierte ethische Politik-Ausrichtung bietet noch eine letzte Chance, die blitzschnelle Reise in die Sackgasse vor dem unausweichlichen Crash zu bremsen und womöglich rechtzeitig zu stoppen.</p>
+                    <div class="decoration decoration-zig-zag animate-zoom animate-delay-500 deco-dmo"></div>
                     <div class="overlay dark-overlay"></div>
                 </div>
-
-                <div class="decoration decoration-margins"></div>
 
                 <div class="content-fullscreen">
                     <div class="column-half-image-left one-half-responsive">
@@ -224,7 +224,7 @@
                 </p>
                 <a href="flyer120816.html" class="button button-dm button-center button-round button-bold button-xs full-bottom animate-zoom animate-delay-100">FLYER</a>
                 <div class="clear"></div>
-                <div class="decoration decoration-margins"></div>
+                <div class="decoration deco-dmo animate-zoom decoration-zig-zag"></div>
 
                 <div class="heading-strip bg-2">
                     <h4 class=" center-text no-bottom animate-zoom">Wir werden halten was wir sagen - auch nach der Wahl</h4>
@@ -240,24 +240,24 @@
                     <div class="one-half-responsive">
                         <div class="column-home-center one-half animate-left animate-delay-250">
                             <i class="ion-social-euro-outline color-green-dark"></i>
-                            <h5 class="color-dmo-dark thin">Finanzen</h5>
+                            <h5 class="color-dmo-light thin">Finanzen</h5>
                             <p class="color-dm-dark">Beendigung der Zinssklaverei durch Finanzoligarchen</p>
                         </div>
                         <div class="column-home-center one-half last-column animate-right animate-delay-250">
                             <i class="ion-jet color-red-dark"></i>
-                            <h5 class="color-dmo-dark thin">Verteidigung</h5>
+                            <h5 class="color-dmo-light thin">Verteidigung</h5>
                             <p class="color-dm-dark">Aufrüstung der BW - Full Spectrum Defence</p>
                         </div>
                     </div>
                     <div class="one-half-responsive last-column">
                         <div class="column-home-center one-half animate-left animate-delay-250">
                             <i class="ion-gear-a color-blue-dark"></i>
-                            <h5 class="color-dmo-dark thin">Wirtschafts</h5>
+                            <h5 class="color-dmo-light thin">Wirtschafts</h5>
                             <p class="color-dm-dark">Förderung von ethischer Unternehmenskultur</p>
                         </div>
                         <div class="column-home-center one-half last-column animate-right animate-delay-250">
                             <i class="ion-ios-medkit-outline color-orange-dark"></i>
-                            <h5 class="color-dmo-dark thin">Gesundheit</h5>
+                            <h5 class="color-dmo-light thin">Gesundheit</h5>
                             <p class="color-dm-dark">Aufbau ganzheitlicher Gesundheitszentren</p>
                         </div>
                     </div>
@@ -381,8 +381,8 @@
                 <div class="clear"></div>
 
 
-                <div class="heading-strip center-text deco-dmo">
-                    <i class="ion-person-stalker color-dmo-dark"></i>
+                <div class="heading-strip bg-6 center-text deco-dmo">
+                    <i class="ion-person-stalker color-dmo-light"></i>
                     <h4>Bundesvorstand</h4>
                     <p>Zusammen überwinden wir das System!</p>
                     <div class="overlay dark-overlay"></div>
@@ -553,5 +553,16 @@
     </div>
 
 </body>
-
+<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCmbF6uYFf7VtnKF3u0h7AqIs7gnEmzEds",
+    authDomain: "politik-geht-anders.firebaseapp.com",
+    databaseURL: "https://politik-geht-anders.firebaseio.com",
+    storageBucket: "politik-geht-anders.appspot.com",
+    messagingSenderId: "343364984323"
+  };
+  firebase.initializeApp(config);
+</script>
 </html>
