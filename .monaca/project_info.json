@@ -32,7 +32,7 @@
         "cordova-custom-config@2.0.3"
     ],
     "title-ja": "",
-    "title-en": "12",
+    "title-en": "Deutsche Mitte",
     "description-ja": "",
     "description-en": "",
     "category": "User Template",
@@ -42,5 +42,5 @@
         "winrt",
         "chrome"
     ],
-    "name": "generated-1484441015-583824227e2193c166b5ca93"
+    "name": "generated-1484688344-583824227e2193c166b5ca93"
 }
