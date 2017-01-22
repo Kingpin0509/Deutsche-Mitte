@@ -1,0 +1,503 @@
+{
+  "project": {
+    "creationData": {
+      "type": "Import",
+      "projectTypeName": "com.intel.xdk.projecttype.jsapp",
+      "src": "",
+      "projectGuid": "1e6cd319-1142-4cde-96bc-5b88c5257a18",
+      "lastModifiedDate": 1484928089989,
+      "creationDate": 1484053920810
+    },
+    "testDirectory": "test",
+    "projectTags": [
+      "XDK-disallow-legacy-whitelist"
+    ],
+    "projectFiles": {},
+    "projectDirectories": {
+      "xdk": {
+        "settings": {
+          "project": {
+            "XDK-generated": "true"
+          }
+        }
+      }
+    },
+    "buildConfigurations": {
+      "Android": {
+        "platform_": "android",
+        "runtime_": "Crosswalk with Cordova 3.x",
+        "name_": "Android",
+        "preferences_": {
+          "android-minSdkVersion": "14",
+          "android-targetSdkVersion": "23",
+          "android-installLocation": "auto",
+          "android-signed": true,
+          "Fullscreen": true
+        },
+        "isActive_": true,
+        "certificateId_": "AU3Ru9JGb0isUSeOBw7FIw2",
+        "appName_": "Deutsche Mitte (Partei)",
+        "appID_": "com.ie.deutschemitte",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": [],
+          "properties": {}
+        },
+        "addlPermissions_": "",
+        "icons_": [
+          {
+            "density": "ldpi",
+            "relPath": "package-assets/ldpi.png",
+            "width": 36,
+            "height": 36
+          },
+          {
+            "density": "mdpi",
+            "relPath": "package-assets/mdpi.png",
+            "width": 48,
+            "height": 48
+          },
+          {
+            "density": "hdpi",
+            "relPath": "package-assets/hdpi.png",
+            "width": 72,
+            "height": 72
+          },
+          {
+            "density": "xhdpi",
+            "relPath": "package-assets/xhdpi.png",
+            "width": 96,
+            "height": 96
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "package-assets/Default~iphone.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/xmdpi.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/shdpi.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/xhmdpi.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/Default-Landscape960-720.png",
+            "density": "xhdpi",
+            "height": 720,
+            "width": 960,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/Default-Landscape640-480.png",
+            "density": "hdpi",
+            "height": 480,
+            "width": 640,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/Default-Landscape470-320.png",
+            "density": "mdpi",
+            "height": 320,
+            "width": 470,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/Default-Landscape426-320.png",
+            "density": "ldpi",
+            "height": 320,
+            "width": 426,
+            "orientation": "landscape"
+          }
+        ],
+        "appVersion_": "6.0.1",
+        "appVersionCode_": "50000003",
+        "signed_": true,
+        "crosswalkVersion_": "19",
+        "cordovaCLIVersion_": "6.2.0",
+        "appAuthor_": "Michael Humann",
+        "appDescription_": "Alles Wissenswerte über die Partei \"Deutsche-Mitte\" Politik geht anders ...! Das was die Damen und Herren in Berlin abziehen ist keine Form von Politik, sondern eine auf dem Gewaltmonopol aufbauende Art von Verbrechertum. Systematisch strukturiert und Planvoll umgesetzt, in ihrer Umsetzung klar als ausführendes Organ eines Mafiakartells anzusehen.  Das Kurzprogramm vermittelt in verständlicher Sprache, den klaren und deutlichen Standpunkt dieser politischen Partei in der Bundesrepublik Deutschlands. Aktuelles von der Partei liefert diese App über Youtube, Facebook und Twitter. Weiterhin sind Links zu der Onlinepräsenz der Deutschen Mitte zu finden und verschiedene weitere Informationen.  Die \"Deutsche Mitte\" steht für ethische Politik im Sinne der Bewahrung der Schöpfung: mit Herz, Augenmaß und Vernunft Politik soll fragen: Was ist gut für alle? Für Deutschland, für Europa, für die Welt. Für Mensch und Natur. Für ein glückliches und erfolgreiches Miteinander aller in Frieden, Gerechtigkeit und fairem Interessenausgleich.  Wir sind alle miteinander verbunden!  Aufrichtige Wahlversprechen: Wir halten was wir sagen – auch nach der Wahl. Deshalb ordnen wir als einzige Partei unser Programm direkt nach Ministerien. So gilt: Parteiprogramm = Wahlprogramm = Regierungsprogramm. Und für mögliche Koalitionen wird darüber nicht verhandelt: Allenfalls führen wir „Ressortabgrenzungsgespräche“ – denn in „unseren“ Ministerien werden wir exakt umsetzen, was wir angekündigt hatten. Wir machen Politik für die große Mehrheit der Bevölkerung, die in allen Bereichen mit Recht die Regierungspolitik kritisiert.  Wir drängen das globale Finanzkartell zurück – fahren schrittweise, voraussichtlich binnen vier Jahren, Zinsen herunter und bringen die Geldschöpfung unter öffentliche Kontrolle. Spekulationsblasen dulden wir nicht, Nahrungsmittel und Wasser sind Menschenrecht. Wir beenden jede deutsche Beteiligung an Bundeswehr-Kampfeinsätzen außerhalb des Nato-Verteidigungsgebietes.  Deutschland verdient einen Friedensvertrag, endlich volle Souveränität und eine umfassende Verfassungsreform, vor allem für mehr Bürgerrechte, die Selbstbestimmung und Selbstverantwortung des Menschen auf allen Ebenen ermöglichen – und den Überwachungsstaat beenden.  Deutschland ist ein christlich geprägtes Land – die Deutsche Mitte eine säkulare Partei; wir fordern die strikte Trennung von Staat und Kirche."
+      },
+      "iOS": {
+        "platform_": "ios",
+        "runtime_": "Cordova 3.x",
+        "name_": "iOS",
+        "preferences_": {
+          "deployment-target": "8.0",
+          "ios-configuration": "production",
+          "Fullscreen": true
+        },
+        "isActive_": true,
+        "certificateId_": "znJBUxx-qkS1Uvk2mw_KwQ2",
+        "appName_": "Deutsche Mitte",
+        "appID_": "com.ie.deutschemitte",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": [],
+          "properties": {}
+        },
+        "addlPermissions_": "",
+        "icons_": [
+          {
+            "relPath": "package-assets/icon-small.png",
+            "width": 29,
+            "height": 29
+          },
+          {
+            "relPath": "package-assets/icon-small@2x.png",
+            "width": 58,
+            "height": 58
+          },
+          {
+            "relPath": "package-assets/icon-small@3x.png",
+            "width": 87,
+            "height": 87
+          },
+          {
+            "relPath": "package-assets/icon-60.png",
+            "width": 60,
+            "height": 60
+          },
+          {
+            "relPath": "package-assets/icon-60@2x.png",
+            "width": 120,
+            "height": 120
+          },
+          {
+            "relPath": "package-assets/icon-60@3x.png",
+            "width": 180,
+            "height": 180
+          },
+          {
+            "relPath": "package-assets/icon-76.png",
+            "width": 76,
+            "height": 76
+          },
+          {
+            "relPath": "package-assets/icon-76@2x.png",
+            "width": 152,
+            "height": 152
+          },
+          {
+            "relPath": "package-assets/icon-40.png",
+            "width": 40,
+            "height": 40
+          },
+          {
+            "relPath": "package-assets/icon-40@2x.png",
+            "width": 80,
+            "height": 80
+          },
+          {
+            "relPath": "package-assets/icon.png",
+            "width": 57,
+            "height": 57
+          },
+          {
+            "relPath": "package-assets/icon@2x.png",
+            "width": 114,
+            "height": 114
+          },
+          {
+            "relPath": "package-assets/icon-72.png",
+            "width": 72,
+            "height": 72
+          },
+          {
+            "relPath": "package-assets/xxhdpi.png",
+            "width": 144,
+            "height": 144
+          },
+          {
+            "relPath": "package-assets/package_logo_winrt.png",
+            "width": 50,
+            "height": 50
+          },
+          {
+            "relPath": "package-assets/icon-50@2x.png",
+            "width": 100,
+            "height": 100
+          },
+          {
+            "relPath": "package-assets/icon-83.5@2x~ipad.png",
+            "width": 167,
+            "height": 167
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "package-assets/Default~iphone.png",
+            "height": 480,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/Default@2x~iphone.png",
+            "height": 960,
+            "width": 640,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/Default-568h@2x~iphone.png",
+            "height": 1136,
+            "width": 640,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/Default-667h.png",
+            "height": 1334,
+            "width": 750,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/Default-Portrait~ipad.png",
+            "height": 1024,
+            "width": 768,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/Default-736h.png",
+            "height": 2208,
+            "width": 1242,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/Default-Portrait@2x~ipad.png",
+            "height": 2048,
+            "width": 1536,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/Default-Landscape~ipad.png",
+            "height": 768,
+            "width": 1024,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/Default-Landscape@2x~ipad.png",
+            "height": 1536,
+            "width": 2048,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/Default-Landscape-736h.png",
+            "height": 1242,
+            "width": 2208,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/Default-Portrait2048-2732.png",
+            "height": 2732,
+            "width": 2048,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "package-assets/Default-Landscape1334-750.png",
+            "height": 750,
+            "width": 1334,
+            "orientation": "landscape"
+          },
+          {
+            "relPath": "package-assets/Default-Landscape2048-2732.png",
+            "height": 2048,
+            "width": 2732,
+            "orientation": "landscape"
+          }
+        ],
+        "appVersion_": "6.0.1",
+        "iosProvs_": [
+          {
+            "relPath": "package-assets/Deutsche_Mitte_IntelDist_comiedeutschemitte.mobileprovision",
+            "type": "production"
+          },
+          {
+            "relPath": "package-assets/Deutsche_Mitte_IntelAdhoc_comiedeutschemitte.mobileprovision",
+            "type": "adhoc"
+          }
+        ],
+        "cordovaCLIVersion_": "6.2.0",
+        "appDescription_": "Alles Wissenswerte über die Partei \"Deutsche-Mitte\" in dieser App Politik geht anders ...! Das was die Damen und Herren in Berlin abziehen ist keine Form von Politik, sondern eine auf dem Gewaltmonopol aufbauende Art von Verbrechertum. Systematisch strukturiert und Planvoll umgesetzt, in ihrer Umsetzung klar als ausführendes Organ eines Mafiakartells anzusehen.  Die Deutsche Mitte ist eine, in der Bundesrepublik Deutschland, zugelassene Partei deren vorrangiges Ziel die Beendigung der Zinssklaverei ist. Das Kurzprogramm vermittelt in verständlicher Sprache, den klaren und deutlichen Standpunkt dieser politischen Partei in der Bundesrepublik Deutschlands. Aktuelles von der Partei liefert diese App über Youtube, Facebook und Twitter. Weiterhin sind Links zu der Onlinepräsenz der Deutschen Mitte zu finden und verschiedene weitere Informationen.  Als politische Kraft in Deutschland sind Zinsen und Schuldgeld zügig binnen vier Jahren abzuschaffen und dadurch den Einfluss des Finanzkartells zu brechen. Darauf folgend die globale Kartellmacht der Konzernnetze in diesen vier weiteren Branchen möglichst schnell zu beenden: Medien, Energie, Rüstung und Chemie/Pharma/Gesundheit.  Die Deutsche Mitte steht für ethische Politik im Sinne der Bewahrung der Schöpfung: mit Herz, Augenmaß und Vernunft.  Politik soll fragen: Was ist gut für alle? Für Deutschland, für Europa, für die Welt. Für Mensch und Natur. Für ein glückliches und erfolgreiches Miteinander aller in Frieden, Gerechtigkeit und fairem Interessenausgleich.  Wir sind alle miteinander verbunden!  Aufrichtige Wahlversprechen: Wir halten was wir sagen – auch nach der Wahl. Deshalb ordnen wir als einzige Partei unser Programm direkt nach Ministerien. So gilt: Parteiprogramm = Wahlprogramm = Regierungsprogramm. Und für mögliche Koalitionen wird darüber nicht verhandelt: Allenfalls führen wir „Ressortabgrenzungsgespräche“ – denn in „unseren“ Ministerien werden wir exakt umsetzen, was wir angekündigt hatten. Wir machen Politik für die große Mehrheit der Bevölkerung, die in allen Bereichen mit Recht die Regierungspolitik kritisiert.  Wir drängen das globale Finanzkartell zurück – fahren schrittweise, voraussichtlich binnen vier Jahren, Zinsen herunter und bringen die Geldschöpfung unter öffentliche Kontrolle. Spekulationsblasen dulden wir nicht, Nahrungsmittel und Wasser sind Menschenrecht. Wir beenden jede deutsche Beteiligung an Bundeswehr-Kampfeinsätzen außerhalb des Nato-Verteidigungsgebietes.  Deutschland verdient einen Friedensvertrag, endlich volle Souveränität und eine umfassende Verfassungsreform, vor allem für mehr Bürgerrechte, die Selbstbestimmung und Selbstverantwortung des Menschen auf allen Ebenen ermöglichen – und den Überwachungsstaat beenden.  Deutschland ist ein christlich geprägtes Land – die Deutsche Mitte eine säkulare Partei; wir fordern die strikte Trennung von Staat und Kirche.",
+        "appAuthor_": "2017 - Michael Humann",
+        "appVersionCode_": "6.0.1"
+      },
+      "Windows8": {
+        "platform_": "windows8",
+        "runtime_": "Cordova 3.x",
+        "name_": "Windows8",
+        "preferences_": {
+          "windows-publisher-id": "47AF69ED-2732-47DA-B13E-0E7FFFE045CA",
+          "windows-publisher-display-name": "West Weedtze Development - Michael Humann",
+          "Fullscreen": true
+        },
+        "isActive_": true,
+        "certificateId_": "",
+        "appName_": "Deutsche Mitte",
+        "appID_": "17701WestWeedtzeDevelopme.DeutscheMitte",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": [
+            "http://deutsche-mitte.de/*",
+            "https://dm-stammtisch.de/*"
+          ],
+          "properties": {}
+        },
+        "addlPermissions_": "",
+        "icons_": [
+          {
+            "relPath": "package-assets/package_logo_winrt.png",
+            "width": 50,
+            "height": 50
+          },
+          {
+            "relPath": "package-assets/app_logo_winrt.png",
+            "width": 150,
+            "height": 150
+          },
+          {
+            "relPath": "package-assets/app_tile_wide_logo_winrt.png",
+            "width": 310,
+            "height": 150
+          },
+          {
+            "relPath": "package-assets/icon-310310.png",
+            "width": 310,
+            "height": 310
+          },
+          {
+            "relPath": "package-assets/icon-71.png",
+            "width": 71,
+            "height": 71
+          },
+          {
+            "relPath": "package-assets/icon-44.png",
+            "width": 44,
+            "height": 44
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "package-assets/app_splash_screen_winrt.png",
+            "height": 300,
+            "width": 620,
+            "orientation": "landscape"
+          }
+        ],
+        "appVersion_": "6.0.1",
+        "cordovaCLIVersion_": "6.2.0",
+        "appDescription_": "In dieser App finden sie ein kleines Resumé der \"Deutschen Mitte\". Das Kurzprogramm vermittelt in verständlicher Sprache, den klaren und deutlichen Standpunkt dieser politischen Partei in der Bundesrepublik Deutschlands. Aktuelles von der Partei liefert diese App über Youtube, Facebook und Twitter. Weiterhin sind Links zu der Onlinepräsenz der Deutschen Mitte zu finden und verschiedene weitere Informationen.  Die \"Deutsche Mitte\" steht für ethische Politik im Sinne der Bewahrung der Schöpfung: mit Herz, Augenmaß und Vernunft Politik soll fragen: Was ist gut für alle? Für Deutschland, für Europa, für die Welt. Für Mensch und Natur. Für ein glückliches und erfolgreiches Miteinander aller in Frieden, Gerechtigkeit und fairem Interessenausgleich.  Wir sind alle miteinander verbunden!  Aufrichtige Wahlversprechen: Wir halten was wir sagen – auch nach der Wahl. Deshalb ordnen wir als einzige Partei unser Programm direkt nach Ministerien. So gilt: Parteiprogramm = Wahlprogramm = Regierungsprogramm. Und für mögliche Koalitionen wird darüber nicht verhandelt: Allenfalls führen wir „Ressortabgrenzungsgespräche“ – denn in „unseren“ Ministerien werden wir exakt umsetzen, was wir angekündigt hatten. Wir machen Politik für die große Mehrheit der Bevölkerung, die in allen Bereichen mit Recht die Regierungspolitik kritisiert.  Wir drängen das globale Finanzkartell zurück – fahren schrittweise, voraussichtlich binnen vier Jahren, Zinsen herunter und bringen die Geldschöpfung unter öffentliche Kontrolle. Spekulationsblasen dulden wir nicht, Nahrungsmittel und Wasser sind Menschenrecht. Wir beenden jede deutsche Beteiligung an Bundeswehr-Kampfeinsätzen außerhalb des Nato-Verteidigungsgebietes.  Deutschland verdient einen Friedensvertrag, endlich volle Souveränität und eine umfassende Verfassungsreform, vor allem für mehr Bürgerrechte, die Selbstbestimmung und Selbstverantwortung des Menschen auf allen Ebenen ermöglichen – und den Überwachungsstaat beenden.  Deutschland ist ein christlich geprägtes Land – die Deutsche Mitte eine säkulare Partei; wir fordern die strikte Trennung von Staat und Kirche.",
+        "appAuthor_": "West Weedtze Development - Michael Humann"
+      },
+      "WebApp": {
+        "platform_": "webapp",
+        "runtime_": "W3C",
+        "name_": "WebApp",
+        "preferences_": {},
+        "isActive_": true,
+        "certificateId_": "",
+        "appVersion_": "0.0.1"
+      },
+      "Firefox": {
+        "platform_": "firefoxos",
+        "runtime_": "W3C on Firefox OS",
+        "name_": "Firefox",
+        "preferences_": {},
+        "isActive_": false,
+        "certificateId_": "",
+        "appVersion_": "0.0.1"
+      },
+      "Chrome": {
+        "platform_": "chromeos",
+        "runtime_": "W3C on Chrome OS",
+        "name_": "Chrome",
+        "preferences_": {},
+        "isActive_": true,
+        "certificateId_": "",
+        "appName_": "Deutsche Mitte",
+        "appID_": "not.yet.specified",
+        "icons_": [
+          {
+            "relPath": "package-assets/icon96-128.png",
+            "width": 128,
+            "height": 128
+          },
+          {
+            "relPath": "package-assets/icon-small16.png",
+            "width": 16,
+            "height": 16
+          }
+        ],
+        "splashes_": [],
+        "appVersion_": "6.0.1",
+        "appDescription_": "Wir bringen Gerechtigkeit in die Politik, aus Unordnung wird wieder Ordnung."
+      },
+      "Facebook": {
+        "platform_": "facebook",
+        "runtime_": "W3C on Facebook",
+        "name_": "Facebook",
+        "preferences_": {},
+        "isActive_": false,
+        "certificateId_": "",
+        "appVersion_": "0.0.1"
+      },
+      "WP81": {
+        "platform_": "wp81",
+        "runtime_": "Cordova 3.x",
+        "name_": "WP81",
+        "preferences_": {},
+        "isActive_": true,
+        "certificateId_": "",
+        "appName_": "DeutscheMitte",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
+        "addlPermissions_": "",
+        "icons_": [],
+        "splashes_": [],
+        "appVersion_": "0.0.0.1",
+        "cordovaCLIVersion_": "6.2.0"
+      }
+    },
+    "serviceMethods": [],
+    "cordovaPluginsDirectory": "plugins",
+    "cordovaPlugins": [],
+    "sourceDirectory": "www",
+    "startFile": "index.html",
+    "projectSettingsVersion": "3.0.0"
+  }
+}

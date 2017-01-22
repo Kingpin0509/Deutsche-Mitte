@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Die Deutsche Mitte",
+    "description": "Politik geht anders!",
+    "version": "5.0.0",
+    "app": {
+        "background": {
+            "scripts": [
+                "background.js"
+            ]
+        }
+    },
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": [
+        "http://deutsche-mitte.de/*",
+        "https://deutsche-mitte.de/*",
+        "http://dm-stammtisch.de/*",
+        "https://dm-stammtisch.de/*"
+    ],
+    "short_name": "DeutschMitte",
+    "offline_enabled": false,
+    "optional_permissions": [],
+    "externally_connectable": {
+        "ids": [],
+        "matches": [],
+        "accepts_tls_channel_id": false
+    }
+}

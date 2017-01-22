@@ -1,0 +1,82 @@
+{
+  "categorization": {
+    "type": "APPLICATION",
+    "category": "Newspapers"
+  },
+  "description": {
+    "texts": {
+      "title": "Deutsche Mitte",
+      "features": [
+        "Information",
+        "Politics",
+        "Short program",
+        "Application for membership",
+        "Objectives"
+      ],
+      "short-description": "In this app you will find a small resumé of the \"German Center\". The German Center is a party admitted in the Federal Republic of Germany whose primary objective is to terminate interest slavery. As a political force in Germany interest and debt should be abolished rapidly within four years, thereby breaking the impact of the financial cartel. Subsequently, the global cartel power of the Group's networks in these four other sectors should be terminated as quickly as possible: media, energy, armaments and chemicals / pharmaceuticals / health.",
+      "full-description": "In this app you will find a small resumé of the \"German Center\". The German Center is a party admitted in the Federal Republic of Germany whose primary objective is to terminate interest slavery. As a political force in Germany interest and debt should be abolished rapidly within four years, thereby breaking the impact of the financial cartel. Subsequently, the global cartel power of the Group's networks in these four other sectors should be terminated as quickly as possible: media, energy, armaments and chemicals / pharmaceuticals / health. The German Center stands for ethical policy in the sense of the preservation of creation: with heart, eye and reason. Politics should ask: What is good for all? For Germany, for Europe, for the world. For people and nature. For a happy and successful co-existence of all in peace, justice and a fair balance of interests. We are all connected! Sincere electoral promises: We keep what we say - even after the election. That is why we are the only party to direct our program directly to ministries. Thus: Party program = election program = government program. And for possible coalitions, this is not negotiated: At most, we are conducting \"delimitation talks\" - because in \"our\" ministries we will implement exactly what we had announced. We are making policies for the vast majority of the population, who rightly criticizes government policy in all areas. We are pushing back the global financial cartel - driving down gradually, presumably within four years, lowering interest rates and bringing the money under public control. We do not tolerate speculation bubbles, food and water are human rights. We will terminate any German participation in Bundeswehr battlefields outside the NATO defense area. Germany deserves a peace treaty, finally full sovereignty and a comprehensive constitutional reform, especially for more civil rights, which enable self-determination and self-responsibility at all levels - and end the monitoring state. Germany is a Christian country - the German center is a secular party; We demand the strict separation of state and church.",
+      "keywords": "Election, Germany, Government, Hörstel, Movement, Party, Politics, Program",
+      "recent-changes": "",
+      "privacy-policy": "",
+      "eula": ""
+    },
+    "images": {
+      "screenshots": [
+        "../91bce387.png",
+        "../e7125dde.png",
+        "../91bce3871.png"
+      ],
+      "app-icon-small": "package-assets/icon@2x.png",
+      "app-icon": "package-assets/splash-port-mdpi.png",
+      "small-promo": "../180120.png",
+      "large-promo": "../BQMG10071.png"
+    },
+    "videos": {
+      "video-url": ""
+    }
+  },
+  "packages": {
+    "apk-file": "/C/Users/Kingp/Downloads/cordova_project-armv7.android.20170120162232.apk",
+    "zip-xdk-compliant": false,
+    "zip-file": "",
+    "secondary-apk-file": ""
+  },
+  "support": {
+    "email": "Kingpin0509@gmail.com",
+    "website": "https://daskonstrukt.xyz/Deutsche-Mitte/"
+  },
+  "description-de": {
+    "texts": {
+      "title": "Deutsche Mitte (Partei)",
+      "features": [
+        "Kurzprogramm der Deutschen Mitte",
+        "Flyer der Partei Deutsche Mitte",
+        "DM Flugblatt",
+        "Ziele der Partei",
+        "Stammtisch Videos, Vorträge, Fragerunden Youtube/Vimeo",
+        "Anforderungen und Vorraussetzung zum Beitritt zur Deutschen-Mitte"
+      ],
+      "short-description": "Wir bringen Gerechtigkeit in die Politik, aus Unordnung wird wieder Ordnung.",
+      "full-description": "Alles Wissenswerte über die Partei \"Deutsche-Mitte\"\nPolitik geht anders ...! Das was die Damen und Herren in Berlin abziehen ist keine Form von Politik, sondern eine auf dem Gewaltmonopol aufbauende Art von Verbrechertum. Systematisch strukturiert und Planvoll umgesetzt, in ihrer Umsetzung klar als ausführendes Organ eines Mafiakartells anzusehen.\n\nDas Kurzprogramm vermittelt in verständlicher Sprache, den klaren und deutlichen Standpunkt dieser politischen Partei in der Bundesrepublik Deutschlands. Aktuelles von der Partei liefert diese App über Youtube, Facebook und Twitter. Weiterhin sind Links zu der Onlinepräsenz der Deutschen Mitte zu finden und verschiedene weitere Informationen.\n\nDie \"Deutsche Mitte\" steht für ethische Politik im Sinne der Bewahrung der Schöpfung: mit Herz, Augenmaß und Vernunft\nPolitik soll fragen: Was ist gut für alle? Für Deutschland, für Europa, für die Welt. Für Mensch und Natur. Für ein glückliches und erfolgreiches Miteinander aller in Frieden, Gerechtigkeit und fairem Interessenausgleich.\n\nWir sind alle miteinander verbunden!\n\nAufrichtige Wahlversprechen:\nWir halten was wir sagen – auch nach der Wahl.\nDeshalb ordnen wir als einzige Partei unser Programm direkt nach Ministerien. So gilt: Parteiprogramm = Wahlprogramm = Regierungsprogramm. Und für mögliche Koalitionen wird darüber nicht verhandelt: Allenfalls führen wir „Ressortabgrenzungsgespräche“ – denn in „unseren“ Ministerien werden wir exakt umsetzen, was wir angekündigt hatten. Wir machen Politik für die große Mehrheit der Bevölkerung, die in allen Bereichen mit Recht die Regierungspolitik kritisiert.\n\nWir drängen das globale Finanzkartell zurück – fahren schrittweise, voraussichtlich binnen vier Jahren, Zinsen herunter und bringen die Geldschöpfung unter öffentliche Kontrolle. Spekulationsblasen dulden wir nicht, Nahrungsmittel und Wasser sind Menschenrecht. Wir beenden jede deutsche Beteiligung an Bundeswehr-Kampfeinsätzen außerhalb des Nato-Verteidigungsgebietes.\n\nDeutschland verdient einen Friedensvertrag, endlich volle Souveränität und eine umfassende Verfassungsreform, vor allem für mehr Bürgerrechte, die Selbstbestimmung und Selbstverantwortung des Menschen auf allen Ebenen ermöglichen – und den Überwachungsstaat beenden.\n\nDeutschland ist ein christlich geprägtes Land – die Deutsche Mitte eine säkulare Partei; wir fordern die strikte Trennung von Staat und Kirche.",
+      "keywords": "Bildung, Deutsche, Informationen, Mitte, Politik, Stammtisch",
+      "recent-changes": "",
+      "privacy-policy": "",
+      "eula": ""
+    },
+    "images": {
+      "screenshots": [
+        "../91bce387.png",
+        "../e7125dde.png",
+        "../91bce3871.png"
+      ],
+      "app-icon-small": "package-assets/icon@2x.png",
+      "app-icon": "package-assets/splash-port-xhdpi.png",
+      "small-promo": "../180120.png",
+      "large-promo": "../BQMG10071.png"
+    },
+    "videos": {
+      "video-url": ""
+    }
+  },
+  "testing-instructions": "Neue Icons, Menu, Programm Übersicht.\n\nApp wird laufend weiterentwickelt und befindet sich noch in der Testphase."
+}
