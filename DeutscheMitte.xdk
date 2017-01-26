@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "1e6cd319-1142-4cde-96bc-5b88c5257a18",
-      "lastModifiedDate": 1484928089989,
+      "lastModifiedDate": 1485403476438,
       "creationDate": 1484053920810
     },
     "testDirectory": "test",
@@ -132,8 +132,8 @@
             "orientation": "landscape"
           }
         ],
-        "appVersion_": "6.0.1",
-        "appVersionCode_": "50000003",
+        "appVersion_": "6.0.2",
+        "appVersionCode_": "60000014",
         "signed_": true,
         "crosswalkVersion_": "19",
         "cordovaCLIVersion_": "6.2.0",

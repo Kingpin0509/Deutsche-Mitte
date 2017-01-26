@@ -1,0 +1,8 @@
+{
+  "name": "DeutscheMitte",
+  "dependencies": {
+    "ionic": "2.0.0",
+    "angular": "1.6.1",
+    "jQuery": "3.1.1"
+  }
+}

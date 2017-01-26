@@ -1027,8 +1027,11 @@ $(document).ready(function () {
             loop: true
         });
         var swiper_quote_slider = new Swiper('.quote-slider', {
-            autoplay: 4000,
-            loop: true
+            autoplay: 5000,
+            loop: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev'
+
         });
         var swiper_text_slider = new Swiper('.text-slider', {
             autoplay: 2000,
