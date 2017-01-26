@@ -21,18 +21,20 @@
         "cordova-plugin-crosswalk-webview": {
             "variables": [
                 "XWALK_VERSION=19.49.514.5"
-            ]
+            ],
+            "additional_params": {
+                "arch": "arm"
+            }
         }
     },
     "external_plugins": [
         "cordova-plugin-whitelist@1.2.2",
         "cordova-plugin-splashscreen@4.0.1",
-        "cordova-custom-config@2.0.1",
-        "cordova-plugin-crosswalk-webview@1.8.0",
-        "cordova-custom-config@2.0.3"
+        "cordova-custom-config@2.0.3",
+        "cordova-plugin-crosswalk-webview@1.8.0"
     ],
     "title-ja": "",
-    "title-en": "Deutsche Mitte",
+    "title-en": "l",
     "description-ja": "",
     "description-en": "",
     "category": "User Template",
@@ -42,5 +44,5 @@
         "winrt",
         "chrome"
     ],
-    "name": "generated-1484927034-583824227e2193c166b5ca93"
+    "name": "generated-1485085716-583824227e2193c166b5ca93"
 }
