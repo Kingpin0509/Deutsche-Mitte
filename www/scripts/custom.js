@@ -546,7 +546,7 @@ $(document).ready(function () {
             });
             //Fade Animations
             sr.reveal('.center-socials a, .footer-socials, .footer p', {
-                origin: 'top',
+                origin: 'bottom',
                 easing: 'ease-in-out'
             });
         }
@@ -1238,7 +1238,7 @@ $(document).ready(function () {
             blacklist: '.default-link',
             forms: 'contactForm',
             onStart: {
-                duration: 1500, // Duration of our animation
+                duration: 3000, // Duration of our animation
                 render: function ($container) {
                     // Add your CSS animation reversing class
                     $container.addClass('is-exiting');
@@ -1248,7 +1248,7 @@ $(document).ready(function () {
                     $('.page-preloader').addClass('show-preloader');
                     $('#page-transitions').css({
                         "opacity": "0",
-                        "transition": "all 750ms ease-in-out"
+                        "transition": "all 1000ms ease-in-out"
                     });
                     $('#sidebar-left').removeClass('active-sidebar');
                     $('#sidebar-right').removeClass('active-sidebar');
@@ -1277,7 +1277,7 @@ $(document).ready(function () {
                     $('.page-preloader').addClass('show-preloader');
                     $('#page-transitions').css({
                         "opacity": "1",
-                        "transition": "all 750ms ease-in-out"
+                        "transition": "all 1000ms ease-in-out"
                     });
                     $('#page-transitions').removeClass('page-fade');
                     $('#sidebar-left').removeClass('active-sidebar');
@@ -1299,7 +1299,7 @@ $(document).ready(function () {
                 $('.page-preloader').removeClass('show-preloader');
                 $('#page-content').css({
                     "opacity": "1",
-                    "transition": "all 750ms ease-out"
+                    "transition": "all 100ms ease-out"
                 });
             }
         };

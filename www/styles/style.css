@@ -2,20 +2,29 @@
 
 body{
     background-image:url(../images/pictures_vertical/bg1.jpg);
-    background-position:left;
+    background-position:top center;
     background-attachment: fixed;
-    background-size: cover;
-}
+    background-repeat:  repeat;
 
+}
+ 
 #sidebar-left{
-    background-image:url(../images/pictures_vertical/bg1.png);
+    background-image:url(../images/pictures_vertical/bg1l.jpg);
+    background-position:left;
+    background-size: cover;
     transform:translateX(-300px);
+    background-attachment: absolute;
+
+
 }
 
 #sidebar-right{
-    background-image:url(../images/pictures_vertical/bg1.png);
+    background-image:url(../images/pictures_vertical/bg1r.jpg);
     transform:translateX(250px);
-    background-size:cover!important;
+    background-attachment: absolute;
+    background-size: cover;
+    background-position:right;
+
 }
 
 .sidebar-image{
@@ -52,12 +61,13 @@ body{
 
 .page-fade{ 
     opacity:0;
-    transition:all 1000ms ease;
+    transition:all 750ms ease;
+    transition-delay:100ms;
 }
 
 .page-show{
     opacity:1;
-    transition: all 750ms cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    transition:all 750ms ease;
 }
 
 .active-sidebar{transform:translateX(0px)!important;}
@@ -85,6 +95,7 @@ body{
 }
 
 .sidebar-menu{
+    background-color:rgba(20,20,28,0.3);
     margin-top:20px;
     margin-bottom:30px;
 }
@@ -119,30 +130,28 @@ body{
     text-align:center;
     font-size:22px;
     position:absolute;
-    color:#cacaca;
 }
 
 .sidebar-menu a .ion-record{
     font-size:3px;
     position:absolute;
     right:32px;
-        color:#cacaca!important;
-
 }
 
 .active-item .ion-record{
-    color:#ff8b00!important;
+    color:#00498a!important;
     font-size:6px!important;
     right:32px!important
 }
 
 .active-item{
-    background-color:rgba(250,125,9,0.5);
+    background-color:rgba(250,125,9,0.4);
     color:#FFFFFF!important;
     font-weight:500!important;
 }
 
-.active-item em{
+.active-item em{    
+    box-shadow:0px 0px 1px 1px #e7a61a;
     background-color:#005397!important;
     height:3px;
     transition:all 500ms ease;
@@ -160,7 +169,8 @@ body{
     text-transform: capitalize;
     opacity:0;
     transform:translateX(50px);
-    margin-bottom:10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .sidebar-small-menu a em{
@@ -196,6 +206,7 @@ body{
 .submenu a .ion-ios-arrow-right{
     margin-left:0px;
     font-size:10px!important;
+    
 }
 
 .submenu .sidebar-item:last-child{

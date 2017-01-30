@@ -3,29 +3,7 @@
  * Please do not edit by hand.
  */
 
-/*** <GENERATED> ***//*** <Start:monaca-cordova-loader> ***/
-/*** <Start:monaca-cordova-loader LoadJs:"components/monaca-cordova-loader/cordova-loader.js"> ***/
-(function(){
-  if ((navigator.userAgent.match(/Android/i)) || (navigator.userAgent.match(/iPhone|iPad|iPod/i))) {
-    if (typeof location.href === "string") {
-      var relativePath = location.href.split("/www")[1];
-      var paths = relativePath.split("/");
-      var cordovaJsUrl = ""; 
-      for (var i = 0; i < paths.length - 2; i++) {
-        cordovaJsUrl += "../";
-      }
-      document.write("<script src=\"" + cordovaJsUrl+ "cordova.js" + "\"></script>");
-    }
-  } else if ((navigator.userAgent.match(/MSIE\s10.0/)) && (navigator.userAgent.match(/Windows\sNT\s6.2/))) {
-    var elm = document.createElement('script');
-    elm.setAttribute("src", "cordova.js");
-    document.getElementsByTagName("head")[0].appendChild(elm);
-  };
-})();
-/*** <End:monaca-cordova-loader LoadJs:"components/monaca-cordova-loader/cordova-loader.js"> ***/
-/*** <End:monaca-cordova-loader> ***/
-
-/*** <Start:monaca-core-utils> ***/
+/*** <GENERATED> ***//*** <Start:monaca-core-utils> ***/
 /*** <Start:monaca-core-utils LoadJs:"components/monaca-core-utils/monaca-core-utils.js"> ***/
 /**
  * Monaca Core Utility Library
@@ -54,11 +32,11 @@ window.monaca = window.monaca || {};
         if (params) {
             window.cordova.exec(
                 function(r) {
-                  if (typeof params[0] === 'function') params[0](r); 
+                  if (typeof params[0] === 'function') params[0](r);
                   monaca.apiQueue.next();
                 },
                 function(r) {
-                  if (typeof params[1] === 'function') params[1](r); 
+                  if (typeof params[1] === 'function') params[1](r);
                   monaca.apiQueue.next();
                 },
                 params[2],
@@ -103,27 +81,27 @@ window.monaca = window.monaca || {};
             }
         }
     };
-    
+
     if (isAndroid) {
         monaca.retrieveUIStyle = function(id, name, success, failure) {
             monaca.apiQueue.exec(
-                function(style) { success(style[name]); } || function() { }, 
-                failure || function() { }, 
+                function(style) { success(style[name]); } || function() { },
+                failure || function() { },
                 "mobi.monaca.nativecomponent",
-                "retrieve", 
+                "retrieve",
                 [id]
             );
         };
-            
+
         monaca.updateUIStyle = function(id, name, value, success, failure) {
             var style = {};
             style[name] = value;
-            
+
             monaca.apiQueue.exec(
-                success || function() { }, 
-                failure || function() { }, 
+                success || function() { },
+                failure || function() { },
                 "mobi.monaca.nativecomponent",
-                "update", 
+                "update",
                 [id, style]
             );
         };
@@ -155,7 +133,7 @@ window.monaca = window.monaca || {};
     };
 
     var transitionPluginName = "Transit";
-    
+
     /**
      * Open new page.
      */
@@ -191,7 +169,7 @@ window.monaca = window.monaca || {};
         monaca.apiQueue.exec(null, null, transitionPluginName, "browse", [url]);
     };
 
-    /** 
+    /**
      * Load in current page.
      */
     monaca.load = function(path, options, param) {
@@ -233,13 +211,17 @@ window.monaca = window.monaca || {};
             }
 
             if (isIOS) {
-                var head = message.substr(0, 5);
-                if (window.monaca.isDeviceReady !== true || (head != 'ERROR' && head != 'WARN:')) {
-                    var xhr = new XMLHttpRequest();
-                    var path = "monaca://log?level=" + encodeURIComponent(level) + "&message=" + encodeURIComponent(message);
-                    xhr.open("GET", path);
-                    xhr.send();
+                // not checked yet  or  confirmed MonacaDebugger
+                if (! monaca.isMonacaDebuggerChecked || monaca.isMonacaDebugger ) {
+                  var head = message.substr(0, 5);
+                  if (window.monaca.isDeviceReady !== true || (head != 'ERROR' && head != 'WARN:')) {
+                      var xhr = new XMLHttpRequest();
+                      var path = "monaca://log?level=" + encodeURIComponent(level) + "&message=" + encodeURIComponent(message) + "&at=" + (new Date()).getTime();
+                      xhr.open("GET", path);
+                      xhr.send();
+                  }
                 }
+                window.orig_console[level](message);
             } else {
                 window.console[level](message);
             }
@@ -258,10 +240,17 @@ window.monaca = window.monaca || {};
             };
         }(method);
     }
-    
+
     /** Replace window.console if iOS **/
     if (isIOS) {
+      window.orig_console = window.console;
       window.console = window.monaca.console;
+      window.addEventListener( "error" , function (desc, page, line, char) {
+          monaca.console.sendLog("error", null, null, null, [ { "message" : desc.message , "page" : desc.filename , "line" : desc.lineno , "char" : desc.colno   } ]);
+      } , false );
+      // window.onerror = function (desc, page, line, char) {
+      //    monaca.console.sendLog("error", page, line, char, [ { "message" : desc , "page" : page , "line" : line, "char" : char } ] );
+      // };
     }
     /* Comment out for now
     window.onerror = function (desc, page, line, char) {
@@ -298,6 +287,19 @@ window.monaca = window.monaca || {};
         monaca.apiQueue.exec(function(result) { callback(result.deviceId); }, null, "Monaca", "getRuntimeConfiguration", []);
     };
 
+    monaca.getRuntimeConfiguration = function(success,failure) {
+        monaca.apiQueue.exec( success , failure , "Monaca" , "getRuntimeConfiguration" , []);
+    };
+
+    monaca.isMonacaDebuggerChecked = false;
+    monaca.isMonacaDebugger = null;
+
+    monaca.getRuntimeConfiguration( function(result) {
+        monaca.isMonacaDebuggerChecked = true;
+        monaca.isMonacaDebugger = !! result.isMonacaDebugger;
+    });
+
+
 })();
 
 /**
@@ -326,7 +328,7 @@ window.StatusBar = window.StatusBar || {};
     monaca.apiQueue.exec(null, null, "mobi.monaca.nativecomponent", 'showStatusBar', []);
   }
 
-  /* 
+  /*
     statusBarStyleDefault
     support : iOS6,iOS7
   */
@@ -334,7 +336,7 @@ window.StatusBar = window.StatusBar || {};
     monaca.apiQueue.exec(null, null, "mobi.monaca.nativecomponent", 'statusBarStyleDefault', []);
   }
 
-  /* 
+  /*
     statusBarStyleLightContent
     support : iOS7
   */
@@ -342,7 +344,7 @@ window.StatusBar = window.StatusBar || {};
     monaca.apiQueue.exec(null, null, "mobi.monaca.nativecomponent", 'statusBarStyleLightContent', []);
   }
 
-  /* 
+  /*
     statusBarStyleBlackOpaque
     support : iOS6
   */
@@ -350,7 +352,7 @@ window.StatusBar = window.StatusBar || {};
     monaca.apiQueue.exec(null, null, "mobi.monaca.nativecomponent", 'statusBarStyleBlackOpaque', []);
   }
 
-  /* 
+  /*
     statusBarStyleBlackTranslucent
     support : iOS6
   */
@@ -395,8 +397,8 @@ window.monaca.cloud = window.monaca.cloud || {};
                 monaca.cloud.Push.callbackData = null;
             }
         }
-    }; 
-    
+    };
+
 })();
 
 
@@ -1418,3 +1420,46 @@ window.monaca.cloud = window.monaca.cloud || {};
 
 /*** <End:monaca-core-utils LoadJs:"components/monaca-core-utils/monaca-core-utils.js"> ***/
 /*** <End:monaca-core-utils> ***/
+
+/*** <Start:monaca-cordova-loader> ***/
+/*** <Start:monaca-cordova-loader LoadJs:"components/monaca-cordova-loader/cordova-loader.js"> ***/
+(function(){
+  function getDeviceObjectForPreview() {
+    var raw_values = window.location.search.substring(1).split('&');
+    var values = {};
+    var device = { platform: "" };
+    
+    if (raw_values) {
+      for (var key in raw_values) {
+        var tmp = raw_values[key].split('=');
+        values[tmp[0]] = decodeURIComponent(tmp[1]);
+      }
+      device.platform = values.platform;
+    }
+    
+    return device;
+  }
+    
+  if (location && typeof location.href === "string" && /^https:\/\/preview-.+monaca\.(local||mobi)/.test(location.href)) {
+    window.device = getDeviceObjectForPreview();
+  }
+
+  if ((navigator.userAgent.match(/Android/i)) || (navigator.userAgent.match(/iPhone|iPad|iPod/i))) {
+    if (typeof location.href === "string") {
+      var relativePath = location.href.split("/www")[1];
+      var paths = relativePath.split("/");
+      var cordovaJsUrl = ""; 
+      for (var i = 0; i < paths.length - 2; i++) {
+        cordovaJsUrl += "../";
+      }
+      document.write("<script src=\"" + cordovaJsUrl+ "cordova.js" + "\"></script>");
+    }
+  } else if ( (navigator.userAgent.match(/MSIE\s10.0/) && navigator.userAgent.match(/Windows\sNT\s6.2/)) || navigator.userAgent.match(/MSAppHost/)) {
+    var elm = document.createElement('script');
+    elm.setAttribute("src", "cordova.js");
+    document.getElementsByTagName("head")[0].appendChild(elm);
+  };
+})();
+
+/*** <End:monaca-cordova-loader LoadJs:"components/monaca-cordova-loader/cordova-loader.js"> ***/
+/*** <End:monaca-cordova-loader> ***/

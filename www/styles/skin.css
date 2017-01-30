@@ -1,6 +1,8 @@
 /*Light Skin */
 
-#page-content{background-color:rgba(255,255,255,1);}
+#page-content{
+    background-color:rgba(255,255,255,0.99);
+}
 
 /*General - Reset*/
 p{color:#868686;}

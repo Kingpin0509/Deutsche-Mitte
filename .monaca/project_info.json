@@ -34,15 +34,10 @@
         "cordova-plugin-crosswalk-webview@1.8.0"
     ],
     "title-ja": "",
-    "title-en": "l",
+    "title-en": "",
     "description-ja": "",
     "description-en": "",
     "category": "User Template",
-    "platform": [
-        "android",
-        "ios",
-        "winrt",
-        "chrome"
-    ],
-    "name": "generated-1485085716-583824227e2193c166b5ca93"
+    "platform": [],
+    "name": "generated-1485661867-583824227e2193c166b5ca93"
 }
