@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>Die Deutsche Mitte - Politik geht anders ...! | Wir bringen Ethik zurück in die Regierung!</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/framework.css" />
+    <link rel="stylesheet" type="text/css" href="styles/skin.css" class="switch_style" />
+    <link rel="stylesheet" type="text/css" href="styles/ionicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/deutschemitte.css" />
+    <link rel="stylesheet" type="text/css" href="components/loader.css" />
+    <link rel="stylesheet" type="text/css" href="css/onsenui.css" />
+    <link rel="stylesheet" type="text/css" href="css/onsen-css-components.css" />
+
+    <script type="text/javascript" src="components/loader.js"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/plugins.js"></script>
+    <script type="text/javascript" src="scripts/custom.js"></script>
+    <script type="text/javascript" src="scripts/vue.js"></script>
+    <script type="text/javascript" src="scripts/onsenui.js"></script>
+    <script type="text/javascript" src="scripts/vue-onsenui.js"></script>
+</head>
+<body>
+
+<ons-splitter>
+  <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="fn.load('fnhome.html')" tappable>
+          FnHome
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('fndm-arbeit-und-soziales.html')" tappable>
+          Arbeit und Soziales
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('fnalleinstellungsmerkmale.html')" tappable>
+          Alleinstellungsmerkmale
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('home.html')" tappable>
+          Home
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          About
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  </ons-splitter-side>
+<ons-splitter-side id="menu" side="right" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+        <ons-list-item onclick="fn.load('fnsettings.html')" tappable>
+          Settings
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('fnalleinstellungsmerkmale.html')" tappable>
+          Alleinstellungsmerkmale
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('home.html')" tappable>
+          Home
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('about.html')" tappable>
+          About
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+</ons-splitter-side>
+
+  <ons-splitter-content>
+    <ons-navigator id="navi" page="home.html"></ons-navigator>
+  </ons-splitter-content>
+</ons-splitter>
+
+
+<ons-template id="home.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+        <div class="center">Index1</div>
+        
+        <div class="right">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    
+    <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+      Swipe right to open the menu!
+    <h3 style="text-align: center; opacity: 0.9 ">
+    Politik geht anders ...!
+    </h3>
+    </p>
+        <p class="half-top center-boxed-text center-text">
+            Der Wähler kann sich darauf Verlassen, WIR setzen genau das um was wir vor der Wahl versprechen. Die selbstangemaßte Machtvollkommenheit
+            der etablierten Apparate in Deutschland hat die Demokratie schon wesentlich beschädigt, das muss
+            aufhören.
+        </p>
+                    <div class="decoration deco-dmo decoration-small"></div>
+                    <div class="content-center-buttons full-bottom">
+                        <h5 class="small-text">Zur Partei:</h5>
+                        <a href="standpunkte.html" class="button button-dm button-round button-bold button-xs">GRUNDLEGENDES</a>
+                        <a href="alleinstellungsmerkmale.html" class="button button-dm button-round button-bold button-xs">BESONDERHEITEN</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+      </ons-page>
+</ons-template>
+
+
+
+<ons-template id="about.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+      </div>
+      <div class="center">
+        About
+      </div>
+    </ons-toolbar>
+  </ons-page>
+</ons-template>
+
+</body>
+</html>
