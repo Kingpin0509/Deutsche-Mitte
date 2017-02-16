@@ -1228,48 +1228,6 @@ $(document).ready(function () {
         })
     }
     
-        //Window.fn
-window.fn = {};
-
-window.fn.open = function() {
-  var menu = document.getElementById('menu');
-  menu.open();
-};
-
-window.fn.load = function(page) {
-  var menu = document.getElementById('menu');
-  var navi = document.getElementById('navi');
-
-  menu.close();
-  navi.resetToPage(page, { animation: 'fade' });
-};
-window.fn.load = function(page) {
-  var menu = document.getElementById('menu');
-  var navi = document.getElementById('navi');
-
-  menu.close();
-  navi.bringPageTop(page, { animation: 'fade' });
-};
-
-        //carousel
-var prev = function() {
-  var carousel = document.getElementById('carousel');
-  carousel.prev();
-};
-
-var next = function() {
-  var carousel = document.getElementById('carousel');
-  carousel.next();
-};
-
-ons.ready(function() {
-  var carousel = document.addEventListener('postchange', function(event) {
-    console.log('Changed to ' + event.activeIndex)
-  });
-});
-
-
-
  //Init Template Function
     setTimeout(init_template, 0); //Activating all the plugins
     $(function () {

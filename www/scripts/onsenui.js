@@ -27254,6 +27254,8 @@ window.addEventListener('load', function () {
   ons$1.fastClick = FastClick.attach(document.body);
 }, false);
 
+
+
 // ons._defaultDeviceBackButtonHandler
 window.addEventListener('DOMContentLoaded', function () {
   ons$1._deviceBackButtonDispatcher.enable();

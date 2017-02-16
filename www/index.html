@@ -3,62 +3,312 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <title>Die Deutsche Mitte - Politik geht anders ...! | Wir bringen Ethik zurück in die Regierung!</title>
-    <link rel="stylesheet" type="text/css" href="components/loader.css" />
+    <link rel="stylesheet" type="text/css" href="css/onsenui.css" />
+    <link rel="stylesheet" type="text/css" href="css/onsen-css-components.css" />
+        <link rel="stylesheet" type="text/css" href="css/deutschemitte.css" />
+
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/framework.css" />
     <link rel="stylesheet" type="text/css" href="styles/skin.css" class="switch_style" />
     <link rel="stylesheet" type="text/css" href="styles/ionicons.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/deutschemitte.css" />
-    <link rel="stylesheet" type="text/css" href="css/onsenui.css" />
-    <link rel="stylesheet" type="text/css" href="css/onsen-css-components.css" />
-    <script type="text/javascript" src="components/loader.js"></script>
-    <script type="text/javascript" src="scripts/jquery.js"></script>
-    <script type="text/javascript" src="scripts/custom.js"></script>
-    <script type="text/javascript" src="scripts/plugins.js"></script>
-    <script type="text/javascript" src="scripts/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="components/loader.css" />
     <script type="text/javascript" src="scripts/onsenui.js"></script>
-    <script type="text/javascript" src="scripts/vue-onsenui.js"></script>
+    <script type="text/javascript" src="scripts/angular-onsenui.js"></script>
+    <!--
+    <script type="text/javascript" src="scripts/angular.js"></script>
+    -->
+
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/plugins.js"></script>
+    <script type="text/javascript" src="scripts/custom.js"></script>
+    <script type="text/javascript" src="components/loader.js"></script>
+    <script type="text/javascript" src="scripts/ons-custom.js"></script>
+
 
 </head>
-<body>
-    <div id="app"></div></body>
-<template>
-  <v-ons-page>
-    <v-ons-toolbar>
-      <div class="left">
-        <v-ons-back-button :on-click="pop">Back</v-ons-back-button>
-      </div>
-      <div class="center">Title</div>
-    </v-ons-toolbar>
 
-    Content
-    <v-ons-button @click="push">Push</v-ons-button>
-    <v-ons-button @click="replace">Replace</v-ons-button>
-  </v-ons-page>
-</template>
+<body ng-app="myApp">
+    <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="300px" collapse swipeable>
+            <ons-page>
+                <ons-toolbar class="center" style="margin-bottom:15px; background-color:#00498a">
+                        <div class="left"><span class="list__item__title">
+                            <img src="images/main-logo.png"></span>
+                        </div>
+                        <div class="center"></div>
+                        <div class="right">
+                        </div>
+                </ons-toolbar>
+                <ons-list class="menu-list">
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_accordion.html')" active-item tappable>
+                        <div class="left">
+                            <ons-icon class="list__item__icon" icon="ion-ios-star-outline"></ons-icon>
+                        </div>
+                        <div class="center"><span class="list__item__title">Willkommen</span></div>
+                        <div class="right">
+                            <ons-icon class="list__item__icon" size="3px" icon="ion-record"></ons-icon>
+                        </div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-kurzprogramm-2016.html')" tappable>
+                        <div class="left">
+                            <ons-icon class="list__item__icon" icon="ion-ios-list"></ons-icon>
+                        </div>
+                        <div class="center"><span class="list__item__title">Das Kurzprogramm</span></div>
+                        <div class="right">
+                            <ons-icon class="list__item__icon" size="3px" icon="ion-record"></ons-icon>
+                        </div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_yt-stammtisch-videos.html')" tappable>
+                        <div class="left">
+                            <ons-icon class="list__item__icon" icon="ion-ios-videocam-outline"></ons-icon>
+                        </div>
+                        <div class="center"><span class="list__item__title">Stammtisch Videos</span></div>
+                        <div class="right">
+                            <ons-icon class="list__item__icon" size="3px" icon="ion-record"></ons-icon>
+                        </div>
+                    </ons-list-item>
+                </ons-list>
+                <ons-list class="menu-list">
+                    <ons-list-header><h4 class="list__item__title">Programm</h4></ons-list-header>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_menu.html')" tappable>
+                        <div class="center"><span class="list__item__title">Programmübersicht</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_flyer120816.html')" tappable>
+                        <div class="center"><span class="list__item__title">Flyer</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_flugblatt201501.html')" tappable>
+                        <div class="center"><span class="list__item__title">Flugblatt</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-kurzprogramm-2016.html')" tappable>
+                        <div class="center"><span class="list__item__title">Kurzprogramm 2016</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_vimeo-videos.html')" tappable>
+                        <div class="center"><span class="list__item__title">Videos</span></div>
+                    </ons-list-item>
+                </ons-list>
+                <ons-list class="menu-list">
+                    <ons-list-header><h4 class="list__item__title">Politik</h4></ons-list-header>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_home.html')" tappable>
+                        <div class="center"><span class="list__item__title">Freundschaft DE/RU</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_home.html')" tappable>
+                        <div class="center"><span class="list__item__title">Naher Osten</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_home.html')" tappable>
+                        <div class="center"><span class="list__item__title">Finanzierung</span></div>
+                    </ons-list-item>
+                </ons-list>
+                <ons-list class="menu-list">
+                    <ons-list-header><h4 class="list__item__title">Partei</h4></ons-list-header>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_alleinstellungsmerkmale.html')" tappable>
+                        <div class="center"><span class="list__item__title"><div class="notification menu-notification">10</div>Alleinstellungsmerkmale</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_grundlegendes.html')" tappable>
+                        <div class="center"><span class="list__item__title">Grundlegendes</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_flugblatt201501.html')" tappable>
+                        <div class="center"><span class="list__item__title">Pers. Verantwortung</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_politikerkriterienliste.html')" tappable>
+                        <div class="center"><span class="list__item__title">Kritierien f. Führungskräfte</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_beitrag.html')" tappable>
+                        <div class="center"><span class="list__item__title">Beiträge</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_spenden.html')" tappable>
+                        <div class="center"><span class="list__item__title">Spenden</span></div>
+                    </ons-list-item>
+                </ons-list>
+                <ons-list class="menu-list">
+                    <ons-list-header><h4 class="list__item__title">App</h4></ons-list-header>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_splash-screen.html')" tappable>
+                        <div class="center"><span class="list__item__title">Splash Screen</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_countdown2017.html')" tappable>
+                        <div class="center"><span class="list__item__title">...Wahl 2017</span></div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_sitemap.html')" tappable>
+                        <div class="center"><span class="list__item__title">Sitemap</span></div>
+                    </ons-list-item>
+                </ons-list>
+                <ons-list-header><h4 class="list__item__title"></h4></ons-list-header>
+                <ons-list class="bottom-menu-list">
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_faq.html')" tappable>
+                        <div class="left">
+                            <ons-icon class="list__item__icon" icon="ion-ios-list-outline"></ons-icon>
+                        </div>
+                        <div class="center"><span class="list__item__title">FAQ</span></div>
+                        <div class="right">
+                            <ons-icon class="list__item__icon" size="3px" icon="ion-record"></ons-icon>
+                        </div>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_kontakt.html')" tappable>
+                        <div class="left">
+                            <ons-icon class="list__item__icon" icon="ion-ios-email-outline"></ons-icon>
+                        </div>
+                        <div class="center"><span class="list__item__title">Kontakt</span></div>
+                        <div class="right">
+                            <ons-icon class="list__item__icon" size="3px" icon="ion-record"></ons-icon>
+                        </div>
+                    </ons-list-item>
+                </ons-list>
+                    </ons-list-item>
+            <div style="font-size:10px; background-color: rgba(249, 249, 249, 0.85); margin: 20px 0px; text-align:center">
+                <h5 style="font-size:10px"><em class="color-dm-dark">Copyright <span class="copyright-year"></span>. All rights reserved.</em></h5>
+            </div>
+                    </ons-list-item>
+  </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-side id="menu" side="right" width="150px" collapse swipeable>
+            <ons-page>
+                <ons-list class="menu-list">
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-aussenpolitik.html')" tappable>
+                        <ons-icon class="list__item__icon dm-aussenpolitik_02"></ons-icon>
+                        <span class="list__item__subtitle">Außenpolitik</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-innenpolitik.html')" tappable>
+                        <ons-icon class="list__item__icon dm-innenpolitik-wf"></ons-icon>
+                        <span class="list__item__subtitle">Innenpolitik</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-finanzpolitik.html')" tappable>
+                        <ons-icon class="list__item__icon dm-finanzpolitik"></ons-icon>
+                        <span class="list__item__subtitle">Finanzpolitik</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-wirtschaftspolitik.html')" tappable>
+                        <ons-icon class="list__item__icon dm-wirtschaftspolitik-wf"></ons-icon>
+                        <span class="list__item__subtitle">Wirtschaft</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-arbeit-und-soziales.html')" tappable>
+                        <ons-icon class="list__item__icon dm-verkehr-02-wf"></ons-icon>
+                        <span class="list__item__subtitle">Arbeit und Soziales</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-verteidigung.html')" tappable>
+                        <ons-icon class="list__item__icon dm-verteidigung-wf"></ons-icon>
+                        <span class="list__item__subtitle">Verteidigung</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-bildung-und-forschung.html')" tappable>
+                        <ons-icon class="list__item__icon dm-bildung"></ons-icon>
+                        <span class="list__item__subtitle">Bildung & Forschung</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-familie-senioren-frauen-und-jugend.html')" tappable>
+                        <ons-icon class="list__item__icon dm-familie-wf"></ons-icon>
+                        <span class="list__item__subtitle">Familie,Senioren, Frauen & Jugend</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-gesundheit.html')" tappable>
+                        <ons-icon class="list__item__icon dm-gesundheit-wf"></ons-icon>
+                        <span class="list__item__subtitle">Gesundheit</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-umwelt-naturschutz-und-reaktorsicherheit.html')" tappable>
+                        <ons-icon class="list__item__icon dm-energie"></ons-icon>
+                        <span class="list__item__subtitle">Umwelt-/Natursch., Reaktorsicherheit</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-ernaehrung-landwirtschaft-und-verbraucherschutz.html')" tappable>
+                        <ons-icon class="list__item__icon dm-ernahrung"></ons-icon>
+                        <span class="list__item__subtitle">Ernaehrung, Verbraucherschutz</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-verkehr-bau-und-stadtentwicklung.html')" tappable>
+                        <ons-icon class="list__item__icon dm-verkehr-01-wf"></ons-icon>
+                        <span class="list__item__subtitle">Verkehr, Bau & Stadtentwicklung</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-wirtschaftliche-zusammenarbeit-und-entwicklung.html')" tappable>
+                        <ons-icon class="list__item__icon dm-zusammenarbeit"></ons-icon>
+                        <span class="list__item__subtitle">Zusammenarbeit & Entwicklung</span>
+                    </ons-list-item>
+                    <ons-list-item class="menu-item" onclick="fn.load('ons_dm-justiz.html')" tappable>
+                        <ons-icon class="list__item__icon dm-justiz-wf"></ons-icon>
+                        <span class="list__item__subtitle">Justiz</span>
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content>
+            <ons-navigator  title="Navigator" var="myNavigator" id="navi" page="ons_home.html"></ons-navigator>
+        </ons-splitter-content>
+    </ons-splitter>
+    <ons-template id="home.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">Home</div>
+                <div class="right">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+            </ons-toolbar>
+            <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+                Swipe right to open the menu!
+                <h3 style="text-align: center; opacity: 0.9 ">
+                    Politik geht anders ...!
+                </h3>
+            </p>
+            <p class="half-top center-boxed-text center-text">
+                Der Wähler kann sich darauf Verlassen, WIR setzen genau das um was wir vor der Wahl versprechen. Die selbstangemaßte Machtvollkommenheit
+                der etablierten Apparate in Deutschland hat die Demokratie schon wesentlich beschädigt, das muss aufhören.
+            </p>
+            <div class="decoration deco-dmo decoration-small"></div>
+            <div class="content-center-buttons full-bottom">
+                <h5 class="small-text">Zur Partei:</h5>
+                <a href="standpunkte.html" class="button button-dm button-round button-bold button-xs">GRUNDLEGENDES</a>
+                <a href="alleinstellungsmerkmale.html" class="button button-dm button-round button-bold button-xs">BESONDERHEITEN</a>
+            </div>
+            <div class="clear"></div>
+        </ons-page>
+    </ons-template>
+    <ons-template id="about.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">About</div>
+                <div class="right">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+            </ons-toolbar>
+        </ons-page>
+    </ons-template>
+</body>
+    <script>
+  ons.ready(function() {
+navigator.splashscreen.hide()
+//   ons.notification.alert('Welcome to Onsen UI!');
+  angular.module('myApp',['onsen','ngAnimate'])
+  });
 
+
+</script> 
 <script>
-  export const page2 = {
-    methods: {
-      push() {
-        this.pageStack.push(page3);
-      },
-      pop() {
-        this.pageStack.pop();
-      },
-      replace() {
-        this.pageStack.pop();
-        this.pageStack.push(page3);
-        // Or use this.pageStack.splice(...)
+//ons.notification.alert('Hello, world!');
+// 
+  ons.notification.confirm('Are you ready?')
+    .then(
+      function(answer) {
+        if (answer === 1) {
+          ons.notification.alert('Let\'s go!')
       }
-    },
-    props: ['pageStack']
-  };
-</script>
-    
-    
+        }
+    );
+ 
+//  ons.notification.prompt('How old are ?')
+//    .then(
+//      function(age) {
+//        ons.notification.alert('You are ' + age + ' years old.');
+//      }
+//    );
+        
+    </script> 
+
 </html>

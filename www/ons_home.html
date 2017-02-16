@@ -1,24 +1,17 @@
-  <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-      <div class="center">
-        FnHome
-      </div>
-    </ons-toolbar>
-    <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-      Swipe right to open the menu!
-    </p>
 
-        <div id="page-content" class="header-clear">
+<ons-page id="ons_home.html">
+    <ons-toolbar>
+        <div class="left">
+        <ons-toolbar-button onclick="fn.open()"><i class="ion-navicon"></i></ons-toolbar-button>
+        </div>
+        <div class="center"><ons-toolbar-title>Herzlich Willkommen</ons-toolbar-title>
+        </div>
+        <div class="right">
+        <ons-toolbar-button onclick="fn.open()"><i class="ion-ios-more"></i></ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+        <div style="background-color:white">
             <div id="page-content-scroll">
-                <div class="animate-fade heading-strip deco-dm notification-medium tap-hide">
-                    <h4 class="animate-top animate-delay-250 center-text">Herzlich Willkommen</h4>
-                    <a href="#" class="hide-notification"><i class="fa fa-times"></i></a>
-                </div>
                 <div class="content center-boxed-content">
                     <div class="home-fader animate-zoom animate-time-1000">
                         <div class="swiper-wrapper">
@@ -423,50 +416,64 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="footer footer-dark">
-                    <a href="index.html" class="footer-logo scale-hover"></a>
-                    <p>
-                        Ethik zur Bewahrung der Schöpfung, eine andere Politik ist möglich und notwendig!
-                    </p>
-                    <div class="footer-socials">
-                        <a href="https://www.facebook.com/hoersteldeutschemitte/" class="icon icon-round icon-xs facebook-bg"><i class="ion-social-facebook"></i></a>
-                        <a href="https://twitter.com/DeutscheMitte" class="icon icon-round icon-xs twitter-bg"><i class="ion-social-twitter"></i></a>
-                        <a href="https://dm-stammtisch.de/" class="icon icon-round icon-xs google-bg"><i class="ion-home"></i></a>
-                        <a href="https://www.youtube.com/channel/UCLC_9zmyYs5wFX46KBJz95w/" class="icon icon-round icon-xs youtube-bg"><i class="ion-social-youtube"></i></a>
-                        <a href="#" class="icon icon-round icon-xs show-share-bottom bg-blue-light"><i class="ion-android-share"></i></a>
-                    </div>
-                    <div class="decoration"></div>
-                    <p class="copyright-text">GEHEN SIE jetzt MIT <span id="copyright-year"></span>. WIR sind die Zukunft..</p>
-                </div>
-            </div>
+                </div>  
+    <div class="footer footer-dark">
+        <a href="index.html" class="footer-logo scale-hover"></a>
+        <div style="font-size:10px; background-color: rgba(249, 249, 249, 0.85); margin: 20px 0px; text-align:center">
+            <h4 class="center-text">Machen Sie mehr Leute auf uns aufmerksam...</h4>
         </div>
-        <a href="#" class="back-to-top-badge"><i class="ion-ios-arrow-up"></i></a>
-        <div class="share-bottom share-dark">
-            <h3>Machen Sie mehr Leute auf uns aufmerksam...</h3>
-            <div class="share-socials-bottom">
+
+<ons-speed-dial>
+  <ons-fab>
+Teilen  </ons-fab>        <div class="share-socials-bottom icon">
+
+  <ons-speed-dial-item>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://deutsche-mitte.de/">
-                    <i class="ion-social-facebook-outline facebook-bg"></i> Facebook
-                </a>
+                <i class="ion-social-facebook-outline facebook-bg"></i> Facebook
+            </a>
+  </ons-speed-dial-item>
+  <ons-speed-dial-item>
                 <a href="https://twitter.com/home?status=Schluss%20mit%20der%20Kartellherrschaft.%20Deutsche-Mitte%20https://deutsche-mitte.de/">
-                    <i class="ion-social-twitter-outline twitter-bg"></i> Twitter
-                </a>
+                <i class="ion-social-twitter-outline twitter-bg"></i> Twitter
+            </a>
+  </ons-speed-dial-item>
+  <ons-speed-dial-item>
                 <a href="https://plus.google.com/share?url=https://deutsche-mitte.de/">
-                    <i class="ion-social-googleplus-outline google-bg"></i> Google
-                </a>
-                <a href="https://pinterest.com/pin/create/button/?url=https://deutsche-mitte.de/&media=https://deutsche-mitte.de/wp-content/uploads/2016/01/logo-e1452107476876.png&description=Deutsche%20Mitte%20">
-                    <i class="ion-social-pinterest-outline pinterest-bg"></i> Pinterest
-                </a>
-                <a href="#">
-                    <i class="ion-ios-chatboxes-outline sms-bg"></i>
-                </a>
-                <a href="mailto:?&subject=Schluss mit der Kartellherrschaft! Deutsche-Mitte!&body=Die Deutsche Mitte bereitet sich auf die Bundestagswahl 2017 vor. Wenn Sie nicht einverstanden sind mit der unsäglichen Politik, die in Berlin verbrochen wird, sind Sie bei uns genau richtig: Für mehr Informationen schauen sie doch mal auf unserer Internetseite vorbei:   https:/deutsche-mitte.de/   -  
+                <i class="ion-social-googleplus-outline google-bg"></i> Google
+            </a>
+  </ons-speed-dial-item>
+    <ons-speed-dial-item>
+            <a href="https://pinterest.com/pin/create/button/?url=https://deutsche-mitte.de/&media=https://deutsche-mitte.de/wp-content/uploads/2016/01/logo-e1452107476876.png&description=Deutsche%20Mitte%20">
+                <i class="ion-social-pinterest-outline pinterest-bg"></i> Pinterest
+            </a>
+  </ons-speed-dial-item>
+    <ons-speed-dial-item>
+            <a href="mailto:?&subject=Schluss mit der Kartellherrschaft! Deutsche-Mitte!&body=Die Deutsche Mitte bereitet sich auf die Bundestagswahl 2017 vor. Wenn Sie nicht einverstanden sind mit der unsäglichen Politik, die in Berlin verbrochen wird, sind Sie bei uns genau richtig: Für mehr Informationen schauen sie doch mal auf unserer Internetseite vorbei:   https:/deutsche-mitte.de/   -  
                 Wir reden nicht nur, wir handeln; wir sagen exakt was wir wollen - und genau das werden wir auch tun. Haben Sie Fragen? An unserem Online-Stammtisch ist jeder Willkommen:   https://dm-stammtisch.de/">
-                    <i class="ion-ios-email-outline mail-bg"></i> Email
-                    </a>
-                    <div class="clear"></div>
-            </div>
+                <i class="ion-ios-email-outline mail-bg"></i> Email
+            </a>
+
+</ons-speed-dial-item>        </div>  
+</ons-speed-dial>
+
+
+
+
+
+
+        <div class="decoration"></div>
+        <p>Wir wollen nicht nur reden, wir wollen handeln, und genau das werden wir auch tun. Machen Sie uns Handlungsfähig!
+            Unterstützen Sie uns! Treten Sie der DM bei!</p>
+        <div style=" background-color: rgba(249, 249, 249, 0.85); margin: 20px 0px; text-align:center">
+            <p class="copyright-text"><em class="color-dm-dark">GEHEN SIE jetzt MIT <span class="copyright-year"></span>. WIR sind die Zukunft..</em></p>
+            <h5 style="font-size:10px"><em class="color-dm-dark">Deutsche Mitte</em></h5>
+        </div><ons
+        <div class="footer-socials column-icon">
+            <a href="https://www.facebook.com/hoersteldeutschemitte/" class="icon icon-round icon-xs facebook-bg"><i class="ion-social-facebook"></i></a>
+            <a href="https://twitter.com/DeutscheMitte" class="icon icon-round icon-xs twitter-bg"><i class="ion-social-twitter"></i></a>
+            <a href="#" class="icon icon-round icon-xs dmo-bg"></a>
+            <a href="https://dm-stammtisch.de/" class="icon icon-round icon-xs google-bg"><i class="ion-home"></i></a>
+            <a href="https://www.youtube.com/channel/UCLC_9zmyYs5wFX46KBJz95w/" class="icon icon-round icon-xs youtube-bg"><i class="ion-social-youtube"></i></a>
         </div>
     </div>
-    
-      </ons-page>
+</ons-page>

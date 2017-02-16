@@ -9,7 +9,7 @@ font-style: normal;
 [class^="dm-"], [class*=" dm-"] {
 font-family: 'Deutsche Mitte' !important;
 speak: none;
-font-size: 55px;
+font-size: 20px;
 font-style: normal;
 font-weight: normal;
 font-variant: normal;
@@ -44,3 +44,4 @@ line-height: 1;
 .dm-familie-wf:before { content: "\d11"; }
 .dm-gesundheit-wf:before { content: "\e718"; }
 .dm-energie:before { content: "\e719"; }
+

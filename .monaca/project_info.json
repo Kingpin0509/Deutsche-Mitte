@@ -27,9 +27,9 @@
         "cordova-custom-config@2.0.3"
     ],
     "title-ja": "",
-    "title-en": "Deutsche Mitte",
+    "title-en": "A",
     "description-ja": "",
-    "description-en": "Monaca",
+    "description-en": "",
     "category": "User Template",
     "platform": [
         "android",
@@ -37,5 +37,5 @@
         "winrt",
         "chrome"
     ],
-    "name": "generated-1485884665-583824227e2193c166b5ca93"
+    "name": "generated-1487252411-583824227e2193c166b5ca93"
 }

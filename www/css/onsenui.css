@@ -76,8 +76,9 @@ ons-bottom-toolbar {
 }
 
 .page, .page__content {
-  background-color: transparent !important;
-  background: transparent !important;
+/*  background-color: transparent !important;
+  background: transparent !important;*/
+  background-image: url(../images/pictures_vertical/bg1.jpg)
 }
 
 .page__content {
@@ -90,6 +91,7 @@ ons-bottom-toolbar {
 .navigation-bar + .page__background + .page__content {
   margin-top: -1px;
   top: 44px;
+  z-index: 9999;
 }
 
 .navigation-bar--material + .page__background + .page__content {
@@ -172,19 +174,24 @@ ons-splitter, ons-splitter-mask, ons-splitter-content, ons-splitter-side {
 }
 
 ons-splitter-mask {
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 102;
+  background-color: rgba(0, 0, 0, 0.3);
   display: none;
   opacity: 0;
 }
 
 ons-splitter-content {
-  z-index: 1;
+  z-index: 101;
+  background: white;
 }
 
 ons-splitter-side {
-  right: auto;
-  z-index: 1;
+    right: auto;
+    z-index: 101;
+    background-image:url(../images/pictures_vertical/bg1l.jpg);
+    background-position:left;
+    background-size: cover;
+    background-attachment: absolute;
 }
 
 ons-splitter-side[side="right"] {
@@ -193,7 +200,7 @@ ons-splitter-side[side="right"] {
 }
 
 ons-splitter-side[mode="collapse"] {
-  z-index: 3;
+  z-index: 103;
   left: auto;
   right: 100%;
 }

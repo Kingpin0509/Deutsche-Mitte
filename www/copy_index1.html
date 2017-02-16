@@ -3,131 +3,570 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <title>Die Deutsche Mitte - Politik geht anders ...! | Wir bringen Ethik zurück in die Regierung!</title>
+    <link rel="stylesheet" type="text/css" href="components/loader.css" />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/framework.css" />
     <link rel="stylesheet" type="text/css" href="styles/skin.css" class="switch_style" />
     <link rel="stylesheet" type="text/css" href="styles/ionicons.min.css" />
     <link rel="stylesheet" type="text/css" href="css/deutschemitte.css" />
-    <link rel="stylesheet" type="text/css" href="components/loader.css" />
+    <!--
     <link rel="stylesheet" type="text/css" href="css/onsenui.css" />
     <link rel="stylesheet" type="text/css" href="css/onsen-css-components.css" />
-
+    -->
     <script type="text/javascript" src="components/loader.js"></script>
     <script type="text/javascript" src="scripts/jquery.js"></script>
-    <script type="text/javascript" src="scripts/plugins.js"></script>
     <script type="text/javascript" src="scripts/custom.js"></script>
-    <script type="text/javascript" src="scripts/vue.js"></script>
+    <script type="text/javascript" src="scripts/plugins.js"></script>
     <script type="text/javascript" src="scripts/onsenui.js"></script>
-    <script type="text/javascript" src="scripts/vue-onsenui.js"></script>
 </head>
+
 <body>
-
-<ons-splitter>
-  <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
-    <ons-page>
-      <ons-list>
-        <ons-list-item onclick="fn.load('fnhome.html')" tappable>
-          FnHome
-        </ons-list-item>
-        <ons-list-item onclick="fn.load('fndm-arbeit-und-soziales.html')" tappable>
-          Arbeit und Soziales
-        </ons-list-item>
-        <ons-list-item onclick="fn.load('fnalleinstellungsmerkmale.html')" tappable>
-          Alleinstellungsmerkmale
-        </ons-list-item>
-        <ons-list-item onclick="fn.load('home.html')" tappable>
-          Home
-        </ons-list-item>
-        <ons-list-item onclick="fn.load('about.html')" tappable>
-          About
-        </ons-list-item>
-      </ons-list>
-    </ons-page>
-  </ons-splitter-side>
-<ons-splitter-side id="menu" side="right" width="220px" collapse swipeable>
-    <ons-page>
-      <ons-list>
-        <ons-list-item onclick="fn.load('fnsettings.html')" tappable>
-          Settings
-        </ons-list-item>
-        <ons-list-item onclick="fn.load('fnalleinstellungsmerkmale.html')" tappable>
-          Alleinstellungsmerkmale
-        </ons-list-item>
-        <ons-list-item onclick="fn.load('home.html')" tappable>
-          Home
-        </ons-list-item>
-        <ons-list-item onclick="fn.load('about.html')" tappable>
-          About
-        </ons-list-item>
-      </ons-list>
-    </ons-page>
-</ons-splitter-side>
-
-  <ons-splitter-content>
-    <ons-navigator id="navi" page="home.html"></ons-navigator>
-  </ons-splitter-content>
-</ons-splitter>
-
-
-<ons-template id="home.html">
-  <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-        <div class="center">Index1</div>
-        
-        <div class="right">
-          <ons-toolbar-button onclick="fn.open()">
-            <ons-icon icon="md-menu"></ons-icon>
-          </ons-toolbar-button>
+    <div id="page-transitions">
+        <div class="page-preloader page-preloader-dark">
+            <div class="spinner"></div>
         </div>
-    </ons-toolbar>
-    
-    <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-      Swipe right to open the menu!
-    <h3 style="text-align: center; opacity: 0.9 ">
-    Politik geht anders ...!
-    </h3>
-    </p>
-        <p class="half-top center-boxed-text center-text">
-            Der Wähler kann sich darauf Verlassen, WIR setzen genau das um was wir vor der Wahl versprechen. Die selbstangemaßte Machtvollkommenheit
-            der etablierten Apparate in Deutschland hat die Demokratie schon wesentlich beschädigt, das muss
-            aufhören.
-        </p>
-                    <div class="decoration deco-dmo decoration-small"></div>
+        <div id="header">
+            <a href="#" class="open-left-sidebar"><i class="ion-navicon"></i></a>
+            <a href="index.html" class="page-logo"></a>
+            <a href="#" class="open-right-sidebar"><i class="ion-ios-more"></i></a>
+        </div>
+        <div id="sidebar-tap-close"></div>
+        <div id="sidebar-left">
+            <div class="sidebar-scroll">
+                <a href="index.html" class="sidebar-logo sidebar-item"></a>
+                <a href="#" class="sidebar-item sidebar-close"><i class="ion-ios-close-empty"></i></a>
+                <div class="sidebar-item sidebar-divider"></div>
+                <div class="sidebar-menu">
+                    <a class="sidebar-item" href="ons_index.html">Ons</a>
+                    <a class="sidebar-item active-item" href="index.html"><i class="ion-ios-star-outline"></i>Willkommen</a>
+                    <a class="sidebar-item" href="dm-kurzprogramm-2016.html"><i class="ion-ios-list-outline"></i>Das Kurzprogramm<i class="ion-record"></i></a>
+                    <a class="sidebar-item" href="yt-stammtisch-videos.html"><i class="ion-ios-videocam-outline"></i>Stammtisch Videos<i class="ion-record"></i></a>
+                    <a class="sidebar-item" data-sub="sub-1" href="#"><i class="ion-log-in"></i>Politik</a>
+                    <div id="sub-1" class="submenu">
+                        <a class="sidebar-item" href="freundschaftderu.html">Freundschaft DE/RU</a>
+                        <a class="sidebar-item" href="freundschaftdeir.html">Nahostkonflikt</a>
+                        <a class="sidebar-item" href="finanzierung.html">Finanzierung</a>
+                    </div>
+                    <a class="sidebar-item" data-sub="sub-2" href="#"><i class="ion-ios-people-outline"></i>Partei</a>
+                    <div id="sub-2" class="submenu">
+                        <a class="sidebar-item" href="alleinstellungsmerkmale.html">Alleinstellungsmerkmale</a>
+                        <a class="sidebar-item" href="standpunkte.html">Grundlegendes</a>
+                        <a class="sidebar-item" href="aktiv-werden.html">Pers. Verantwortung</a>
+                        <a class="sidebar-item" href="politikerkriterienliste.html">Kriterien f. Führungskräfte</a>
+                        <a class="sidebar-item" href="beitrag.html">Beiträge</a>
+                        <a class="sidebar-item" href="spenden.html">Spenden</a>
+                    </div>
+                    <a class="sidebar-item" data-sub="sub-3" href="#"><i class="ion-arrow-expand"></i>Programm</a>
+                    <div id="sub-3" class="submenu">
+                        <a class="sidebar-item" href="menu.html">Übersicht</a>
+                        <a class="sidebar-item" href="flyer120816.html">Flyer</a>
+                        <a class="sidebar-item" href="flugblatt201501.html">Flugblatt</a>
+                        <a class="sidebar-item" href="vimeo-videos.html">Videos</a>
+                    </div>
+                    <a class="sidebar-item" data-sub="sub-4" href="#"><i class="ion-iphone"></i>App</a>
+                    <div id="sub-4" class="submenu">
+                        <a class="sidebar-item" href="portfolio.html">Portfolio</a>
+                        <a class="sidebar-item" href="gallery.html">Gallerie</a>
+                        <a class="sidebar-item" href="splash-screen.html">Splash Screen</a>
+                        <a class="sidebar-item" href="countdown2017.html">Countdown Wahl 2017</a>
+                        <a class="sidebar-item" href="sitemap.html">Sitemap</a>
+                    </div>
+                    <a class="sidebar-item" href="faq.html"><i class="ion-ios-list-outline"></i>FAQ<i class="ion-record"></i></a>
+                    <a class="sidebar-item" href="kontakt.html"><i class="ion-ios-email-outline"></i>Kontakt<i class="ion-record"></i></a>
+                </div>
+                <div class="sidebar-item sidebar-divider"></div>
+                <div class="sidebar-item sidebar-copyright">
+                    <em>Copyright <span class="copyright-year"></span>. All rights reserved.</em>
+                </div>
+                <div class="sidebar-item sidebar-divider"></div>
+            </div>
+        </div>
+        <div id="sidebar-right">
+            <div class="sidebar-scroll">
+                <div class="sidebar-small-menu">
+                    <a class="sidebar-item" href="dm-aussenpolitik.html"><i class="dm-aussenpolitik_02 icon"></i><em>Außenpolitik</em></a>
+                    <a class="sidebar-item" href="dm-innenpolitik.html"><i class="dm-innenpolitik-wf icon"></i><em>Innenpolitik</em></a>
+                    <a class="sidebar-item" href="dm-finanzpolitik.html"><i class="dm-finanzpolitik icon"></i><em>Finanzpolitik</em></a>
+                    <a class="sidebar-item" href="dm-wirtschaftspolitik.html"><i class="dm-wirtschaftspolitik-wf icon"></i><em>Wirtschaft</em></a>
+                    <a class="sidebar-item" href="dm-arbeit-und-soziales.html"><i class="dm-verkehr-02-wf icon"></i><em>Arbeit & Soziales</em></a>
+                    <a class="sidebar-item" href="dm-verteidigung.html"><i class="dm-verteidigung-wf icon"></i><em>Verteidigung</em></a>
+                    <a class="sidebar-item" href="dm-bildung-und-forschung.html"><i class="dm-bildung icon"></i><em>Bildung & Forschung</em></a>
+                    <a class="sidebar-item" href="dm-familie-senioren-frauen-und-jugend.html"><i class="dm-familie-wf icon"></i><em>Familie,Senioren, Frauen & Jugend</em></a>
+                    <a class="sidebar-item" href="dm-gesundheit.html"><i class="dm-gesundheit-wf icon"></i><em>Gesundheit</em></a>
+                    <a class="sidebar-item" href="dm-umwelt-naturschutz-und-reaktorsicherheit.html"><i class="dm-energie icon"></i><em>Umwelt-/Natursch., Reaktorsicherheit</em></a>
+                    <a class="sidebar-item" href="dm-ernaehrung-landwirtschaft-und-verbraucherschutz.html"><i class="dm-ernahrung icon"></i><em>Ernaehrung, Verbraucherschutz</em></a>
+                    <a class="sidebar-item" href="dm-verkehr-bau-und-stadtentwicklung.html"><i class="dm-verkehr-01-wf icon"></i><em>Verkehr, Bau & Stadtentwicklung</em></a>
+                    <a class="sidebar-item" href="dm-wirtschaftliche-zusammenarbeit-und-entwicklung.html"><i class="dm-zusammenarbeit icon"></i><em>Zusammenarbeit & Entwicklung</em></a>
+                    <a class="sidebar-item" href="dm-justiz.html"><i class="dm-justiz-wf icon"></i><em>Justiz</em></a>
+                    <!-- <a href="https://deutsche-mitte.de" class="sidebar-item"><i class="ion-ios-home-outline"></i><em>DM-Homepage</em></a>
+                    <a href="http://dm-stammtisch.de/" class="sidebar-item"><i class="ion-ios-chatbubble-outline"></i><em>DM-Stammtisch</em></a>
+                    <a href="https://www.youtube.com/channel/UCLC_9zmyYs5wFX46KBJz95w" class="sidebar-item"><i class="ion-social-youtube-outline"></i><em>YouTube</em></a>
+                    <a href="https://www.facebook.com/pg/hoersteldeutschemitte/" class="sidebar-item"><i class="ion-social-facebook-outline"></i><em>Facebook</em></a>
+                    <a href="https://twitter.com/DeutscheMitte" class="sidebar-item"><i class="ion-social-twitter-outline"></i><em>Twitter</em></a>
+                    <a href="https://hangouts.google.com/call/gsbr2gwwq5aepvxjscaxuqxfuqa" class="sidebar-item"><i class="ion-social-googleplus-outline"></i><em>G+ Hangout</em></a>
+                    <a href="http://jotform.com/form/52177179285364/" class="sidebar-item"><i class="ion-ios-email-outline"></i><em>Mitgliedsantrag</em></a> -->
+                </div>
+            </div>
+        </div>
+        <div id="page-content" class="header-clear">
+            <div id="page-content-scroll">
+                <div class="animate-fade heading-strip deco-dm notification-medium tap-hide">
+                    <h4 class="animate-top animate-delay-250 center-text">Herzlich Willkommen</h4>
+                    <a href="#" class="hide-notification"><i class="fa fa-times"></i></a>
+                </div>
+                <div class="content center-boxed-content">
+                    <div class="home-fader animate-zoom animate-time-1000">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/banner/A1Demokratie.jpg" class="responsive-image" alt="img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/banner/A1Euro.jpg" class="responsive-image" alt="img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/banner/A1Sozialpolitik.jpg" class="responsive-image" alt="img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/banner/A1TTIP.jpg" class="responsive-image" alt="img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/banner/A1Verfassung.jpg" class="responsive-image" alt="img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/banner/A1Zinssystem.jpg" class="responsive-image" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-gradient"></div>
+                    <div class="profile-page-1-header center-text">
+                        <h3 class="animate-zoom animate-delay-750">Politik geht anders ...!</h3>
+                    </div>
+                    <div class="animate-fade">
+                        <p class="animate-bottom half-top animate-delay-750 center-boxed-text center-text">
+                            Der Wähler kann sich darauf Verlassen, WIR setzen genau das um was wir vor der Wahl versprechen. Die selbstangemaßte Machtvollkommenheit
+                            der etablierten Apparate in Deutschland hat die Demokratie schon wesentlich beschädigt, das muss
+                            aufhören.
+                        </p>
+                    </div>
+                    <div class="decoration deco-dmo decoration-small animate-zoom"></div>
                     <div class="content-center-buttons full-bottom">
-                        <h5 class="small-text">Zur Partei:</h5>
-                        <a href="standpunkte.html" class="button button-dm button-round button-bold button-xs">GRUNDLEGENDES</a>
-                        <a href="alleinstellungsmerkmale.html" class="button button-dm button-round button-bold button-xs">BESONDERHEITEN</a>
+                        <h5 class="small-text animate-fade animate-time-1000">Zur Partei:</h5>
+                        <a href="standpunkte.html" class="button button-dm button-round button-bold button-xs animate-left">GRUNDLEGENDES</a>
+                        <a href="alleinstellungsmerkmale.html" class="button button-dm button-round button-bold button-xs animate-right">BESONDERHEITEN</a>
                     </div>
                     <div class="clear"></div>
                 </div>
-      </ons-page>
-</ons-template>
-
-
-
-<ons-template id="about.html">
-  <ons-page>
-    <ons-toolbar>
-      <div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu"></ons-icon>
-        </ons-toolbar-button>
-      </div>
-      <div class="center">
-        About
-      </div>
-    </ons-toolbar>
-  </ons-page>
-</ons-template>
-
+                <div class="decoration-zig-zag"></div>
+                <div class="heading-block bg-5 animate-fade animate-delay-100">
+                    <h2 class="thin no-bottom animate-zoom">Wir von der Deutschen Mitte wissen:</h2>
+                    <h5 class="small-text animate-fade">verzweifeln, zögern, debattieren: Das können wir uns gar mehr nicht leisten!</h5>
+                    <div class="decoration-line-fade deco-dmo"></div>
+                    <p class="larger-text thin half-top full-bottom animate-fade">
+                        Ausschließlich eine durch alle politischen Fragestellungen und Herausforderungen kompromisslos durchdeklinierte ethische
+                        Politik-Ausrichtung bietet noch eine letzte Chance, die blitzschnelle Reise in die Sackgasse vor
+                        dem unausweichlichen Crash zu bremsen und womöglich rechtzeitig zu stoppen.
+                    </p>
+                    <div class="overlay dark-overlay"></div>
+                </div>
+                <div class="content-fullscreen">
+                    <div class="column-half-image-left one-half-responsive">
+                        <img class="preload-image" data-original="images/jpg/arbeit10001000.jpg" alt="img">
+                        <h4>Keine Koalitionsverhandlungen</h4>
+                        <p>
+                            Bei uns gibt es keinen „politischen Rabatt“, kein Nachlassen im Qualitätsstreben bei Politik und Satzung: „Deutsche Mitte
+                            light“ hat keine Zukunft, wird es nicht geben.
+                        </p>
+                    </div>
+                    <div class="decoration-line-fade hide-if-responsive"></div>
+                    <div class="column-half-image-right one-half-responsive last-column">
+                        <img class="preload-image" data-original="images/jpg/hinterzimmer10001000.jpg" alt="img">
+                        <h4>Rückhaltlos, fristlos, – FURCHTLOS</h4>
+                        <p>
+                            Kein Schielen nach taktischen Vorteilen, Winkelzügen und Anbiederungen – einfach schlicht nach vorn gehen, mit allem was
+                            da und in uns ist.
+                        </p>
+                    </div>
+                    <div class="decoration-line-fade hide-if-responsive"></div>
+                    <div class="column-half-image-left one-half-responsive">
+                        <img class="preload-image" data-original="images/jpg/zeit10001000.jpg" alt="img">
+                        <h4>Wir haben NUR EINE CHANCE!</h4>
+                        <p>
+                            Wir müssen jeden Tag hinlangen, als ob’s der letzte wäre: umsichtig, verbindlich, gemeinschaftlich! Kein „hätte“, „könnte“,
+                            „wollte“, „würde“, kein „wenn“ und kein „aber“!
+                        </p>
+                    </div>
+                    <div class="decoration-line-fade hide-if-responsive"></div>
+                    <div class="column-half-image-right one-half-responsive last-column">
+                        <img class="preload-image" data-original="images/jpg/kampf10001000.jpg" alt="img">
+                        <h4>Wir brauchen SIE – JETZT!!</h4>
+                        <p>
+                            Das multikriminelle System, das wir bekämpfen, ist nicht nur viel mörderischer als alles was die Menschheitsgeschichte hergibt;
+                            vor allem ist es aber auch unendlich viel morscher als es z.b. die Sowjetunion je war.
+                        </p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="decoration deco-dm decoration-small animate-zoom animate-delay-250"></div>
+                <p class="center-text larger-text bold">
+                    Um einen schnellen, ersten Eindruck in unsere Bestrebungen zu erhalten, steht der zweiseitige Flyer zur Verfügung.
+                </p>
+                <a href="flyer120816.html" class="button button-dm button-center button-round button-bold button-xs full-bottom animate-zoom animate-delay-100">FLYER</a>
+                <div class="clear"></div>
+                <div class="decoration-zig-zag"></div>
+                <div class="heading-strip bg-2">
+                    <h4 class=" center-text no-bottom animate-zoom">Erlauben sie eine Frage? – bitte seien Sie nicht gram aber: Wann beherzigen SIE den Ruf der Stunde?</h4>
+                    <p class="center-text"></p>
+                    <div class="overlay dark-overlay"></div>
+                </div>
+                <div class="content">
+                    <p class="center-text thin half-top full-bottom animate-fade">Wir ordnen unser Programm als einzige Partei direkt nach den jeweiligen Ministerien. Desweiteren gilt:</p>
+                    <h5 class="center-text thin small-bottom">Parteiprogramm = Wahlprogramm = Regierungsprogramm</h5>
+                    <div class="decoration"></div>
+                    <div class="decoration deco-dm decoration-small animate-zoom"></div>
+                    <div class="one-half-responsive">
+                        <div class="column-home-center one-half animate-left animate-delay-250">
+                            <i class="ion-social-euro-outline color-green-dark"></i>
+                            <h5 class="color-dmo-light thin">Finanzen</h5>
+                            <p class="color-dm-dark">Die Zinssklaverei und Finanzoligarchie endet</p>
+                        </div>
+                        <div class="column-home-center one-half last-column animate-right animate-delay-250">
+                            <i class="ion-jet color-red-dark"></i>
+                            <h5 class="color-dmo-light thin">Verteidigung</h5>
+                            <p class="color-dm-dark">Aufrüstung der BW - Full Spectrum Defence</p>
+                        </div>
+                    </div>
+                    <div class="one-half-responsive last-column">
+                        <div class="column-home-center one-half animate-left animate-delay-250">
+                            <i class="ion-gear-a color-blue-dark"></i>
+                            <h5 class="color-dmo-light thin">Wirtschafts</h5>
+                            <p class="color-dm-dark">Förderung ethischer Unternehmenskulturen</p>
+                        </div>
+                        <div class="column-home-center one-half last-column animate-right animate-delay-250">
+                            <i class="ion-ios-medkit-outline color-orange-dark"></i>
+                            <h5 class="color-dmo-light thin">Gesundheit</h5>
+                            <p class="color-dm-dark">Aufbau ganzheitlicher Gesundheitszentren</p>
+                        </div>
+                    </div>
+                    <div class="decoration deco-dm decoration-small animate-bottom"></div>
+                    <div class="decoration decoration-margins"></div>
+                    <div class="clear"></div>
+                    <p class="center-text larger-text bold animate-bottom">
+                        Das 2-seitige "Flugblatt" bietet eine kurze, knappe und zusammenfassende Übersicht der Strategiepläne einzelner Ministerressorts.
+                    </p>
+                    <a href="flugblatt201501.html" class="button button-dm button-center button-round button-bold full-bottom animate-bottom animate-time-1000 animate-delay-100">FLUGBLATT</a>
+                </div>
+                <div class="clear"></div>
+                <div class="decoration-zig-zag"></div>
+                <div class="background-block background-block-fullscreen bg-5">
+                    <h2 class="thin no-bottom animate-zoom">Nehmen sie uns beim Wort!</h2>
+                    <h5 class="small-text full-bottom animate-fade"></h5>
+                    <div class="quote-slider background-block-slider full-bottom animate-zoom">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="review-3">
+                                    <i class="color-yellow-dark review-icon ion-quote"></i>
+                                    <p>
+                                        Frau Merkel, der Wähler hat anders als sie sagen sehr wohl einen Anspruch darauf das jedes Versprechen nach bestem Wissen
+                                        und Gewissen gegeben und gehalten wird.
+                                    </p>
+                                    <div class="review-stars">
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                    </div>
+                                    <a href="#" class="color-dm-dark">Christoph Hörstel | Deutsche Mitte</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="review-3">
+                                    <i class="color-yellow-dark review-icon ion-quote"></i>
+                                    <p>
+                                        In jedem Ministerium wird gelogen, betrogen, Hochverrats-Politik gemacht und betrieben. Das lassen wir uns auf keinen Fall
+                                        bieten. Da wird nachgemessen und zwar cm für cm!
+                                    </p>
+                                    <div class="review-stars">
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                    </div>
+                                    <a href="#" class="color-dm-dark">Christoph Hörstel | Deutsche Mitte</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="review-3">
+                                    <i class="color-yellow-dark review-icon ion-quote"></i>
+                                    <p>
+                                        Je frustrierter WIR sind, desto mehr Handlungsfreiheit und Macht bedeutet dies für SIE.
+                                    </p>
+                                    <div class="review-stars">
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                    </div>
+                                    <a href="#" class="color-dm-dark">Hans U. P. Tolzin, Sprecher Gesundheitspolitik, Deutsche Mitte</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="review-3">
+                                    <i class="color-yellow-dark review-icon ion-quote"></i>
+                                    <p>
+                                        Wir werden das machen. Wir werden das machen, wir haben nämlich auch gar keine Wahl!
+                                        <br>Entweder sind wir völlig frustriert und verzweifelt – oder wir versuchen es auf
+                                        Teufel komm raus...
+                                    </p>
+                                    <div class="review-stars">
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                    </div>
+                                    <a href="#" class="color-dm-dark">Christoph Hörstel | Deutsche Mitte</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="review-3">
+                                    <i class="color-yellow-dark review-icon ion-quote"></i>
+                                    <p>
+                                        ...und ehrlich gesagt, genau das möchte ich. Ich möchte dass der Teufel aus diesem Land ‚rausgeht. Wir wollen ihn zusammen
+                                        rausjagen.
+                                    </p>
+                                    <div class="review-stars">
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                    </div>
+                                    <a href="#" class="color-dm-dark">Christoph Hörstel | Deutsche Mitte</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="review-3">
+                                    <i class="color-yellow-dark review-icon ion-quote"></i>
+                                    <p>
+                                        Wir werden aufstehen, uns gerade hinstellen und die Prinzipien nennen für die wir gemeinsam stehen und notfalls sterben wollen.
+                                    </p>
+                                    <div class="review-stars">
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                        <i class="ion-ios-star"></i>
+                                    </div>
+                                    <a href="#" class="color-dm-dark">Christoph Hörstel | Deutsche Mitte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <a href="yt-stammtisch-videos.html" class="button-ghost button-center-large button-bold button-round animate-zoom animate-delay-300">VORTÄGE + FRAGERUNDEN</a>
+                    <div class="overlay dark-overlay"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="decoration-margins"></div>
+                <h3 class="thin center-text animate-left">Das Kurzprogramm</h3>
+                <p class="small-text center-text animate-right">6-Seitig </p>
+                <img class="responsive-image center-boxed-text animate-zoom animate-delay-100" src="images/2.gif" alt="img">
+                <div class="clear"></div>
+                <div class="decoration decoration-margins"></div>
+                <div class="decoration deco-dm decoration-small animate-bottom animate-delay-250"></div>
+                <p class="center-text larger-text bold animate-bottom">
+                    Noch Umfassender informiert das 6-seitige Kurzprogramm, als weiterer Schritt der Herarchie in der Programm-Gestaltung.
+                </p>
+                <a href="dm-kurzprogramm-2016.html" class="button button-dm button-center button-round button-bold full-bottom animate-top animate-1000">KURZPROGRAMM</a>
+                <div class="clear"></div>
+                <div class="decoration-zig-zag deco-dmo"></div>
+                <div class="heading-strip bg-6 center-text deco-dmo">
+                    <i class="ion-person-stalker color-dmo-light"></i>
+                    <h4>Bundesvorstand</h4>
+                    <p>Zusammen überwinden wir das System!</p>
+                    <div class="overlay dark-overlay"></div>
+                </div>
+                <div class="decoration decoration-margins"></div>
+                <div class="content-fullscreen">
+                    <div class="staff-slider animate-fade">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="column-center-image">
+                                    <img class="col-img-1" src="images/parteispitze/ProfDrFranzHoermann.jpg" alt="img">
+                                    <img class="col-img-2" src="images/parteispitze/ChristophRHoerstel.jpg" alt="img">
+                                    <img class="col-img-3" src="images/parteispitze/ClaasFischer.jpg" alt="img">
+                                    <h3>Christoph R. Hörstel</h3>
+                                    <h4>BUNDESVORSITZENDER</h4>
+                                    <p class="half-bottom">
+                                        Experte für Zentral- & Südasien, Nah- & Mittelost, Sicherheitsfragen - Geboren 1956 in Bremen, verheiratet, vier Kinder.
+                                        <br> Nach dem Wehrdienst Ausbildung bei der Deutschen Bank und Studium in München:
+                                        Sinologie und Romanistik. Ab 1985 Mitarbeit beim ARD-Fernsehen als Sonderkorrespondent,
+                                        Nachrichtenmoderator (2.500 live Sendungen) und Chef vom Dienst.
+                                    </p>
+                                    <div class="two-column-icons no-bottom">
+                                        <a href="http://www.deutsche-mitte.de/wp-content/uploads/2015/11/ho%CC%88rstel-selbstvorstellung.pdf" class="icon icon-round icon-s dm-bg"><i class="ion-ios-person"></i></a>
+                                        <a href="http://dm-stammtisch.de/index.php?r=user%2Fprofile&uguid=f613a591-a6cf-4d81-81b9-e2ffcdb12870" class="icon icon-round icon-s dmo-bg"><i class="ion-disc"></i></a>
+                                    </div>
+                                    <div class="two-column-icons no-bottom">
+                                        <a href="https://www.facebook.com/pg/hoersteldeutschemitte/" class="icon icon-round icon-s facebook-bg"><i class="ion-social-facebook"></i></a>
+                                        <a href="https://www.youtube.com/channel/UC141nSav5cjmTXN7B70ts0g" class="icon icon-round icon-s youtube-bg"><i class="ion-social-youtube"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="column-center-image">
+                                    <img class="col-img-1" src="images/parteispitze/ChristophRHoerstel.jpg" alt="img">
+                                    <img class="col-img-2" src="images/parteispitze/ClaasFischer.jpg" alt="img">
+                                    <img class="col-img-3" src="images/parteispitze/JeanetteUzkas.jpg" alt="img">
+                                    <h3>Claas Fischer</h3>
+                                    <h4>Stv. Bundesvorsitzender</h4>
+                                    <p class="half-bottom">
+                                        Verfechter von Menschlichkeit und Natürlichkeit - Geboren 1972 in Lüdenscheid, verheiratet, zwei Kinder.
+                                        <br> Abitur & Zivildienst, 1994 Friedensstudien in Neumexiko (USA), 1995 Studium
+                                        der Geoökologie. Weiterbildungen in Natur- und Landschaftspflege, Geomantie, Baubiologie,
+                                        Coaching, Jugendarbeit und Gewaltprävention.2001 Mitarbeit im Nationalpark Unteres
+                                        Odertal, 2004 Gründung von „Natürlich Stimmig – Bildungsarbeit für Natur- und Selbstkompetenz“
+                                        in Potsdam
+                                    </p>
+                                    <div class="two-column-icons no-bottom">
+                                        <a href="http://www.deutsche-mitte.de/wp-content/uploads/2015/11/fischer-selbstvorstellung.pdf" class="icon icon-round icon-s dm-bg"><i class="ion-ios-person"></i></a>
+                                        <a href="http://dm-stammtisch.de/index.php?r=user%2Fprofile&uguid=23a2c5b5-b8fc-460a-bdb9-b20bb0c71c3d" class="icon icon-round icon-s dmo-bg"><i class="ion-disc"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="column-center-image">
+                                    <img class="col-img-1" src="images/parteispitze/ClaasFischer.jpg" alt="img">
+                                    <img class="col-img-2" src="images/parteispitze/JeanetteUzkas.jpg" alt="img">
+                                    <img class="col-img-3" src="images/parteispitze/JohannesGerhardMadsen.jpg" alt="img">
+                                    <h3>Jeanette Uzkas</h3>
+                                    <h4>Generalsekretär</h4>
+                                    <p class="half-bottom">
+                                        Künstlerin mit abgeschlossenen Studium der Staatlichen Hochschule der bildenden Künste.- Geboren 1959 in Kenzingen/Breisgau,
+                                        1 Kind.
+                                        <br> Ausbildung zur Kauffrau beim Lebensversicherer Allianz. Nach Sonderbegabtenprüfung
+                                        Studium der Bildhauerei an der Staatlichen Hochschule der bildenden Künste, Stuttgart
+                                        mit abgeschlossenem Studium 2004 Lehrtätigkeit: Internationale Schule Henke, Stuttgart,
+                                        im Fach Kunst 2015 Lehrtätigkeit an Gymnasien, Kirchheim/Teck, im Fach Kunst
+                                    </p>
+                                    <div class="two-column-icons no-bottom">
+                                        <a href="http://www.deutsche-mitte.de/wp-content/uploads/2016/02/Uzkas.pdf" class="icon icon-round icon-s dm-bg"><i class="ion-ios-person"></i></a>
+                                        <a href="http://dm-stammtisch.de/index.php?r=user%2Fprofile&uguid=e6ccb3c6-fe85-4ab4-bafa-5a8f032ab735" class="icon icon-round icon-s dmo-bg"><i class="ion-disc"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="column-center-image">
+                                    <img class="col-img-1" src="images/parteispitze/JeanetteUzkas.jpg" alt="img">
+                                    <img class="col-img-2" src="images/parteispitze/JohannesGerhardMadsen.jpg" alt="img">
+                                    <img class="col-img-3" src="images/parteispitze/HansUPTolzin.png" alt="img">
+                                    <h3>Johannes Gerhard Madsen</h3>
+                                    <h4>Bundesschatzmeister</h4>
+                                    <p class="half-bottom">
+                                        Geboren 1953 in Castrop-Rauxel, verheiratet, vier Kinder.
+                                        <br> Nach Abitur und Wehrpflicht Physik-Studium in Münster, Programmiersprachen-Weiterbildung
+                                        in Münster und Gießen Tätigkeit als Programmierer.
+                                    </p>
+                                    <div class="two-column-icons no-bottom">
+                                        <a href="http://www.deutsche-mitte.de/wp-content/uploads/2015/11/Madsen.pdf" class="icon icon-round icon-s dm-bg"><i class="ion-ios-person"></i></a>
+                                        <a href="http://dm-stammtisch.de/index.php?r=user%2Fprofile&uguid=cb9af61e-252e-4ff1-9df9-052f9e42e19e" class="icon icon-round icon-s dmo-bg"><i class="ion-disc"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="column-center-image">
+                                    <img class="col-img-1" src="images/parteispitze/JohannesGerhardMadsen.jpg" alt="img">
+                                    <img class="col-img-2" src="images/parteispitze/HansUPTolzin.png" alt="img">
+                                    <img class="col-img-3" src="images/parteispitze/ProfDrFranzHoermann.jpg" alt="img">
+                                    <h3>Hans U. P. Tolzin</h3>
+                                    <h4>Sprecher für Gesundheitspolitik</h4>
+                                    <p class="half-bottom">
+                                        Medizin-Journalist, Autor und Impfkritiker
+                                        <br> Ziel einer Gesundheitspolitik, die den Menschen diene und nicht den Kartellen,
+                                        müsse die völlige Therapiefreiheit sein, so dass der Krankenversicherte, dem seine
+                                        Gesundheit wichtig ist, hochwirksame und kosteneffektive Alternativ- und Naturmedizin
+                                        wählen kann, sofern er dies wünscht.
+                                    </p>
+                                    <div class="two-column-icons no-bottom">
+                                        <a href="http://www.deutsche-mitte.de/wp-content/uploads/2015/11/Madsen.pdf" class="icon icon-round icon-s dm-bg"><i class="ion-ios-person"></i></a>
+                                        <a href="http://dm-stammtisch.de/index.php?r=user%2Fprofile&uguid=cb9af61e-252e-4ff1-9df9-052f9e42e19e" class="icon icon-round icon-s dmo-bg"><i class="ion-disc"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="column-center-image">
+                                    <img class="col-img-1" src="images/parteispitze/HansUPTolzin.png" alt="img">
+                                    <img class="col-img-2" src="images/parteispitze/ProfDrFranzHoermann.jpg" alt="img">
+                                    <img class="col-img-3" src="images/parteispitze/ChristophRHoerstel.jpg" alt="img">
+                                    <h3>Prof. Dr. Franz Hörmann</h3>
+                                    <h4>Sprecher für Finanzpolitik</h4>
+                                    <p class="half-bottom">
+                                        Seine Aufgabe wird es sein, basierend auf seinen umfassenden Kenntnissen des aktuellen Finanzsystems, einen für alle Gesellschaftsgruppen
+                                        verständlichen und akzeptablen Weg vom Nullsummenspiel des verzinsten Schuldgeldsystems
+                                        in ein Geldsystem zur positiven Motivation zur Zusammenarbeit und persönlichen Entfaltung
+                                        auszuarbeiten und in einen konstruktiven Multilog einzubringen.
+                                    </p>
+                                    <div class="two-column-icons no-bottom">
+                                        <a href="https://www.youtube.com/watch?v=5yLCSnx0PoY" class="icon icon-round icon-s youtube-bg"><i class="ion-social-youtube"></i></a>
+                                        <a href="http://quer-denken.tv/wp-content/uploads/mp3/hoermann_qdk16.mp3" class="icon icon-round icon-s dmo-bg"><i class="ion-disc"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer footer-dark">
+                    <a href="index.html" class="footer-logo scale-hover"></a>
+                    <p>
+                        Ethik zur Bewahrung der Schöpfung, eine andere Politik ist möglich und notwendig!
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/hoersteldeutschemitte/" class="icon icon-round icon-xs facebook-bg"><i class="ion-social-facebook"></i></a>
+                        <a href="https://twitter.com/DeutscheMitte" class="icon icon-round icon-xs twitter-bg"><i class="ion-social-twitter"></i></a>
+                        <a href="https://dm-stammtisch.de/" class="icon icon-round icon-xs google-bg"><i class="ion-home"></i></a>
+                        <a href="https://www.youtube.com/channel/UCLC_9zmyYs5wFX46KBJz95w/" class="icon icon-round icon-xs youtube-bg"><i class="ion-social-youtube"></i></a>
+                        <a href="#" class="icon icon-round icon-xs show-share-bottom bg-blue-light"><i class="ion-android-share"></i></a>
+                    </div>
+                    <div class="decoration"></div>
+                    <p class="copyright-text">GEHEN SIE jetzt MIT <span id="copyright-year"></span>. WIR sind die Zukunft..</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="back-to-top-badge"><i class="ion-ios-arrow-up"></i></a>
+        <div class="share-bottom share-dark">
+            <h3>Machen Sie mehr Leute auf uns aufmerksam...</h3>
+            <div class="share-socials-bottom">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://deutsche-mitte.de/">
+                    <i class="ion-social-facebook-outline facebook-bg"></i> Facebook
+                </a>
+                <a href="https://twitter.com/home?status=Schluss%20mit%20der%20Kartellherrschaft.%20Deutsche-Mitte%20https://deutsche-mitte.de/">
+                    <i class="ion-social-twitter-outline twitter-bg"></i> Twitter
+                </a>
+                <a href="https://plus.google.com/share?url=https://deutsche-mitte.de/">
+                    <i class="ion-social-googleplus-outline google-bg"></i> Google
+                </a>
+                <a href="https://pinterest.com/pin/create/button/?url=https://deutsche-mitte.de/&media=https://deutsche-mitte.de/wp-content/uploads/2016/01/logo-e1452107476876.png&description=Deutsche%20Mitte%20">
+                    <i class="ion-social-pinterest-outline pinterest-bg"></i> Pinterest
+                </a>
+                <a href="#">
+                    <i class="ion-ios-chatboxes-outline sms-bg"></i>
+                </a>
+                <a href="mailto:?&subject=Schluss mit der Kartellherrschaft! Deutsche-Mitte!&body=Die Deutsche Mitte bereitet sich auf die Bundestagswahl 2017 vor. Wenn Sie nicht einverstanden sind mit der unsäglichen Politik, die in Berlin verbrochen wird, sind Sie bei uns genau richtig: Für mehr Informationen schauen sie doch mal auf unserer Internetseite vorbei:   https:/deutsche-mitte.de/   -  
+                Wir reden nicht nur, wir handeln; wir sagen exakt was wir wollen - und genau das werden wir auch tun. Haben Sie Fragen? An unserem Online-Stammtisch ist jeder Willkommen:   https://dm-stammtisch.de/">
+                    <i class="ion-ios-email-outline mail-bg"></i> Email
+                    </a>
+                    <div class="clear"></div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

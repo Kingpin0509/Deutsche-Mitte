@@ -55,7 +55,7 @@ body{
 .footer-logo,
 .footer p,
 .heading-block .button{
-    visibility: hidden;
+    /*visibility: hidden;*/
     transition:inherit;
 }
 
