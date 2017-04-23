@@ -3,7 +3,10 @@
  * Please do not edit by hand.
  */
 
-/*** <GENERATED> ***//*** <Start:monaca-core-utils> ***/
+/*** <GENERATED> ***/
+
+
+/*** <Start:monaca-core-utils> ***/
 /*** <Start:monaca-core-utils LoadJs:"components/monaca-core-utils/monaca-core-utils.js"> ***/
 /**
  * Monaca Core Utility Library
@@ -1463,6 +1466,3 @@ window.monaca.cloud = window.monaca.cloud || {};
 
 /*** <End:monaca-cordova-loader LoadJs:"components/monaca-cordova-loader/cordova-loader.js"> ***/
 /*** <End:monaca-cordova-loader> ***/
-
-
-

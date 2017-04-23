@@ -17,17 +17,20 @@
             "additional_params": {
                 "arch": "arm"
             }
+        },
+        "mobi.monaca.plugins.Monaca": {
+            "variables": []
         }
     },
     "external_plugins": [
         "cordova-plugin-whitelist@1.2.2",
         "mobi.monaca.plugins.Monaca",
-        "cordova-plugin-splashscreen@4.0.1",
+        "cordova-plugin-splashscreen@4.0.2",
         "cordova-plugin-crosswalk-webview@1.8.0",
         "cordova-custom-config@2.0.3"
     ],
     "title-ja": "",
-    "title-en": "A",
+    "title-en": "1",
     "description-ja": "",
     "description-en": "",
     "category": "User Template",
@@ -37,5 +40,5 @@
         "winrt",
         "chrome"
     ],
-    "name": "generated-1487252411-583824227e2193c166b5ca93"
+    "name": "generated-1492979492-583824227e2193c166b5ca93"
 }
