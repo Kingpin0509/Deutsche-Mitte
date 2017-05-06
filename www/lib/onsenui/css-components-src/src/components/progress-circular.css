@@ -1,10 +1,11 @@
-/*!
+/*~
   name: Progress Circle
   category: Progress Circle
   elements: ons-progress-circular
   markup: |
     <svg class="progress-circular progress-circular--indeterminate">
       <circle class="progress-circular__primary progress-circular--indeterminate__primary"/>
+      <circle class="progress-circular__secondary progress-circular--indeterminate__secondary"/>
     </svg>
 
     <svg class="progress-circular">
@@ -22,7 +23,7 @@
   position: relative;
   width: 32px;
   transform: rotate(270deg);
-  animatino: none;
+  animation: none;
 }
 
 .progress-circular__primary,
@@ -56,6 +57,10 @@
   animation: progress__dash 1.5s ease-in-out infinite;
 }
 
+.progress-circular--indeterminate__secondary {
+  display: none;
+}
+
 @keyframes progress__rotate {
   100% {
     transform: rotate(360deg);
@@ -65,12 +70,14 @@
 @keyframes progress__dash {
   0% {
     stroke-dasharray: 10%, 241.32%;
-    stroke-dashoffset: 0%;
+    stroke-dashoffset: 0;
   }
+
   50% {
     stroke-dasharray: 201%, 50.322%;
-    stroke-dashoffset: -100.0%;
+    stroke-dashoffset: -100%;
   }
+
   100% {
     stroke-dasharray: 10%, 241.32%;
     stroke-dashoffset: -251.32%;

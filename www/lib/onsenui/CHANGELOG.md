@@ -2,6 +2,91 @@
 CHANGELOG
 ====
 
+v2.2.5
+----
+
+### New Features
+
+ * css-components: Added `list-title` component ([#1960](https://github.com/OnsenUI/OnsenUI/issues/1960)).
+ * core: Added `ons-list-title` element.
+ * ons-splitter: Added `push` and `reveal` animations ([#1916](https://github.com/OnsenUI/OnsenUI/issues/1916)).
+
+### Bug Fixes
+
+ * core: Polyfill `Set` and `Map` in order to support old browsers ([#1967](https://github.com/OnsenUI/OnsenUI/issues/1967)).
+ * ons-navigator: Discard toolbars inside tabbars for ios-slide.
+ * ons-carousel: Fixed [#1952](https://github.com/OnsenUI/OnsenUI/issues/1952).
+ * ons-pull-hook: Fixed [#1970](https://github.com/OnsenUI/OnsenUI/issues/1970).
+ * angular1: Page loader now throws `destroy` event when page is unloaded ([#1934](https://github.com/OnsenUI/OnsenUI/issues/1934)).
+ * angular1: `myNavigator.topPage.data` should now be ready by the time the controller runs. Fixed [#1854](https://github.com/OnsenUI/OnsenUI/issues/1854).
+
+### Misc
+
+ * Restored `bower.json`.
+ * Refactored `ons-alert-dialog`, `ons-dialog`, `ons-modal` and `ons-popover` ([#1935](https://github.com/OnsenUI/OnsenUI/issues/1935)).
+
+v2.2.4
+----
+
+### Bug Fixes
+
+ * core: Fixed broken parts of CE1 polyfill which caused a broken behavior of `vue-onsenui` ([#1925](https://github.com/OnsenUI/OnsenUI/issues/1925)).
+ * ons-splitter-content: Fixed [#1772](https://github.com/OnsenUI/OnsenUI/issues/1772) and [#1930](https://github.com/OnsenUI/OnsenUI/issues/1930).
+ * ons-input: Added initial date value support. Fixed [#1603](https://github.com/OnsenUI/OnsenUI/issues/1603).
+ * ons-switch: Fixed [#1920](https://github.com/OnsenUI/OnsenUI/issues/1920).
+ * ons-progress-circular: Fixed [#1921](https://github.com/OnsenUI/OnsenUI/issues/1921).
+
+### Misc
+
+ * Removed `bower.json`.
+
+v2.2.3
+----
+
+### Bug Fixes
+
+ * core: Improve overall stability of the core on iOS by replacing Custom Elements v1 polyfill ([#1892](https://github.com/OnsenUI/OnsenUI/issues/1892)).
+
+v2.2.2
+----
+
+### New Features
+
+ * angular1: `ons-back-button` default behavior is now overriden if `ng-click` is provided ([#1749](https://github.com/OnsenUI/OnsenUI/issues/1749)).
+
+### Bug Fixes
+
+ * css-components: Fixed [#1896](https://github.com/OnsenUI/OnsenUI/issues/1896).
+ * core: Use `self` in `setImmediate` polyfill ([#1903](https://github.com/OnsenUI/OnsenUI/issues/1903)).
+ * core: Make `ons.platform.isSafari()` compatible with Safari 10 ([#1910](https://github.com/OnsenUI/OnsenUI/issues/1910)).
+ * ons-lazy-repeat: Fixed [#1899](https://github.com/OnsenUI/OnsenUI/issues/1899) and [#1871](https://github.com/OnsenUI/OnsenUI/issues/1871).
+ * ons-splitter: Overlay animation correctly hides mask when entering split mode if the menu was visible before.
+ * angular1: Fixed [#1884](https://github.com/OnsenUI/OnsenUI/issues/1884).
+
+v2.2.1
+----
+
+### New Features
+
+ * css-components: Add minimized css-components file on `build/css/onsen-css-components.min.css`.
+
+### Bug Fixes
+
+ * ons-navigator: iOS Slide animation can now find toolbars that are not immediate children of the pages.
+ * ons-splitter: mask is hidden only if all splitter-sides are in split mode.
+ * ons-tab: It shows the last visible page instead of the initial one when reattached.
+ * ons-pull-hook: Its content is not visible anymore during toolbar transitions.
+ * ons-fab: It is now initally hidden and shown only when its page container is pushed. This fixes page transitions.
+ * ons-fab: Covers the toolbar.
+ * ons-fab: Hide animation on popPage is now visible.
+ * ons-speed-dial: Hide items animation on popPage is now visible.
+ * ons-input: text selection in Firefox.
+ * ons-icon: Fixed [#1890](https://github.com/OnsenUI/OnsenUI/issues/1890).
+
+### Misc
+
+ * css-components: Refactored some components.
+
 v2.2.0
 ----
 
@@ -45,6 +130,7 @@ v2.2.0
  * css-components: Renamed `.navigation-bar` to `.toolbar`.
  * css-components: Renamed `.list__item` to `.list-item`.
  * css-components: Renamed `.list__header` to `.list-header`.
+ * css-components: Changed `.button-bar__item > input` to `.button-bar__input`.
  * ons-tabbar: loadPage method has been deprecated.
  * ons-popover: Changed internal DOM structure.
  * ons-range: Changed internal DOM structure.

@@ -3,21 +3,20 @@
         <div class="left">
             <ons-toolbar-button onclick="fn.open()"><i class="ion-navicon"></i></ons-toolbar-button>
         </div>
-        <div class="center animated slideInDown">
+        <div class="center animated slideInRight">
             <ons-toolbar-title>DM-Kurzprogramm</ons-toolbar-title>
         </div>
         <div class="right">
             <ons-toolbar-button onclick="fn.openr()"><i class="ion-ios-more"></i></ons-toolbar-button>
         </div>
     </ons-toolbar>
-    <div id="page-content" class="header">
+    <div class="page-content" class="header">
         <div class="heading-strip bg-4">
             <h1 class="animated zoomIn">6-seitiges Kurzprogramm</h1>
             <p class="deco-dmo"></p>
             <i class="fa ion-ios-list-outline"></i>
             <div class="overlay dark-overlay"></div>
         </div>
-        <div id="page-content-scroll">
             <div class="profile-page-1-header">
                 <div class="profile-page-1-image animated slideInDown">
                     <img class="preload-image responsive-image" src="images/flugblatt2015.png" alt="img">
@@ -34,8 +33,8 @@
                     </p>
                 </div>
             </div>
-            <div class="profile-page-1">
-                <div class="profile-page-1-content">
+            <div>
+                <div class="content">
                     <div class="decoration full-top"></div>
                     <ons-list-item class="accordion color-dmo-dark" tappable onclick="fn.toggle(this)">
                         Aufrichtige Wahlversprechen:
@@ -243,6 +242,4 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="back-to-top-badge"><i class="ion-ios-arrow-up"></i></a>
-    </div>
 </ons-page>

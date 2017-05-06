@@ -1,12 +1,9 @@
 // Window.fn
 window.fn = {};
-
 window.fn.open = function() {
     var menu = document.getElementById('menu');
-    var navi = document.getElementById('navi');
     menu.open();
 };
-
 window.fn.openr = function() {
     var menur = document.getElementById('menur');
     menur.open();
@@ -16,15 +13,16 @@ window.fn.close = function() {
     var menu = document.getElementById('menu');
     menu.close();
 };
-
+window.fn.closesplitter = function() {
+    splitter.right.close();
+};
 window.fn.load = function(page) {
-    var menu = document.getElementById('menu');
     var navi = document.getElementById('navi');
+    navi.resetToPage(page, {
+        animation: 'fade'
+    });
     splitter.left.close();
     splitter.right.close();
-    navi.resetToPage(page, {
-        animation: 'slide'
-    });
 };
 
 // Collapsible Accordion customDropAnimation
@@ -41,15 +39,36 @@ window.fn.togglemenu = function(el) {
     });
     el.nextElementSibling.classList.toggle("show");
 };
+  
+window.fn.togglepanels = function(el) {
+    var btns = document.querySelectorAll(".panel");
+    Array.prototype.forEach.call(btns, function(el) {
+        el.classList.remove("show");
+    });
+};
 
 window.fn.active = function(el) {
-    var btns = document.querySelectorAll(".active-item");
+    var btns = document.querySelectorAll('.active-item');
+    Array.prototype.forEach.call(btns, function(el) {
+        el.classList.remove('active-item');
+    });
+    var btns1 = document.querySelectorAll('panel');
+    Array.prototype.forEach.call(btns1, function(el) {
+        el.classList.remove('show');
+    });
+    el.classList.add('active-item');
+};
+window.fn.activemenu = function(el) {
+    var btns = document.querySelectorAll("ons-list-header.list-header");
     Array.prototype.forEach.call(btns, function(el) {
         el.classList.remove("active-item");
     });
-    var btns1 = document.querySelectorAll(".panel");
-    Array.prototype.forEach.call(btns1, function(el) {
-        el.classList.remove("show");
+    el.classList.add('active-item');
+};
+window.fn.activesub = function(el) {
+    var btns = document.querySelectorAll(".active-item");
+    Array.prototype.forEach.call(btns, function(el) {
+        el.classList.remove("active-item");
     });
     el.classList.add("active-item");
 };

@@ -100,11 +100,9 @@ ons-bottom-toolbar {
 
 .toolbar+.page__background+.page__content {
     margin-top: -1px;
-    top: 0px;
 }
 
 .toolbar--material+.page__background+.page__content {
-    top: 0px;
 }
 
 .page[status-bar-fill]>.page__content {
