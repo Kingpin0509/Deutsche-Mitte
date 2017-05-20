@@ -30,6 +30,12 @@ window.fn.push = function(page) {
         animation: 'slide'
     });
 };
+window.fn.replace = function(page) {
+    var navi = document.getElementById('navi');
+    navi.replacePage(page, {
+        animation: 'fade'
+    });
+};
 // Collapsible Accordion customDropAnimation
 window.fn.toggle = function(el) {
     el.classList.toggle("active-item");

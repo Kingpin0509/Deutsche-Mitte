@@ -108,10 +108,9 @@ h5 {
 /*--------------------*/
 
 .heading-strip {
-    padding: 25px;
-    margin-bottom: 30px;
+    padding: 20px;
     background-size: cover;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'roboto','Oswald', sans-serif;
     text-transform: uppercase;
 }
 
@@ -127,7 +126,6 @@ h5 {
     z-index: 99;
     position: relative;
 }
-
 .heading-strip p {
     color: #ff8b00;
     z-index: 99;
@@ -137,13 +135,13 @@ h5 {
 }
 
 .heading-strip i {
-    position: absolute;
+    position: relative;
     z-index: 99;
     color: #FFFFFF;
-    font-size: 35px;
-    line-height: 60px;
-    width: 80px;
-    top: 10px;
+    font-size: 45px;
+    width: 60px;
+    top: 5px;
+    bottom: 5px
     right: 0px;
 }
 
@@ -165,7 +163,6 @@ h5 {
     display: block;
     width: 100%;
     padding: 40px 25px;
-    margin-bottom: 30px;
     background-size: cover;
 }
 
@@ -203,7 +200,7 @@ h5 {
     color: #FFFFFF;
     z-index: 99;
     position: relative;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'roboto','Oswald', sans-serif;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -216,7 +213,6 @@ h5 {
     position: relative;
     text-align: center;
     margin-right: 60px;
-    margin-bottom: 0px;
 }
 
 .heading-block h4,
