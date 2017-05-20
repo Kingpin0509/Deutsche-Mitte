@@ -1,11 +1,9 @@
-  <ons-page id="ons_dm-gesundheit.html">
+  <ons-page id="ons_dm-gesundheit.html" ng-controller="GesundheitspolitikController as page">
         <ons-toolbar>
             <div class="left animated rotateInDownLeft">
                 <ons-toolbar-button onclick="fn.open()"><i class="ion-navicon"></i></ons-toolbar-button>
             </div>
-            <div class="center animated slideInDown">
-                <ons-toolbar-title>Gesundheitspolitik</ons-toolbar-title>
-            </div>
+        <div class="center animated slideInDown"><ons-back-button></ons-back-button>{{page.title}}</div>
             <div class="right animated rotateInDownRight">
                 <ons-toolbar-button onclick="fn.openr()"><i class="ion-ios-more"></i></ons-toolbar-button>
             </div>
@@ -14,33 +12,33 @@
             <div class="header">
                 <div class="heading-block center-text bg-gesundheit">
                     <div class="heading-strip">
-                        <h3>Gesundheitspolitik</h3>
+                        <h3>{{page.title}}</h3>
                     <i class="dm-gesundheit-wf icon color-red-dark"></i>
                         <div class="overlay dark-overlay"></div>
                     </div>
                 </div>
             </div>
                 <div class="content">
-                <h6>Gesundheitspolitik der Deutschen Mitte auf Vimeo</h6>
+                <h6>{{page.title}} der Deutschen Mitte auf Vimeo</h6>
                     <div class="one-half-responsive">
                         <div class="responsive-video half-bottom">
                             <iframe src="https://player.vimeo.com/video/74334383"></iframe>
                         </div>
                     </div>
                     <div class="one-half-responsive-last">
-                        <p class="animate-fade center-text full-top thin">
+                        <p class="center-text full-top thin">
                             Die Deutsche Mitte fördert ganzheitliche Heilkunde und alternative Medizin. Überteuerte Kartellmedizin
                             wird durch wirkungsvollere, höherwertige und preisgünstigere natürliche Methoden ersetzt.</p>
                     </div>
                 <div class="decoration decoration-margins"></div>
                 <div class="content">
                     <div class="heading-text">
-                        <h3 class="animate-fade color-dmo-dark">Kurzfassung</h3>
+                        <h3 class="color-dmo-dark">Kurzfassung</h3>
                         <div class="heading-line-1"></div>
                         <i class="ion-android-star-outline color-dm-light"></i>
                         <div class="heading-line-2"></div>
                     </div>
-                    <p class="animate-fade center-text color-dm-dark">
+                    <p class="center-text color-dm-dark">
                         Aufbau ganzheitlicher Gesundheitszentren undFörderung von Solidargemeinschaften und alternativer Absicherungen im Krankheitsfall
                         mit demRecht auf freie Therapiewahl.Reform und Weiterentwicklung des Nahrungsmittelstandards Codex
                         Alimentarius zur nachhaltigen und ökologischen Ausrichtung.Kritischer Umgang mit Impfungen, vor allem
@@ -52,8 +50,8 @@
                         <br>Endlich bessere Bezahlung für Pflegeberufe und Hebammen!
                     </p>
                     <div class="heading-text">
-                        <h4 class="animate-fade center-zoom">Vollprogramm Gesundheitspolitik</h4>
-                        <a href="#" class="button button-red button-center button-round button-xs uppercase bold full-bottom animate-zoom">...in Arbeit</a>
+                        <h4>Vollprogramm {{page.title}}</h4>
+                        <a href="#" class="button button-red button-center button-round button-xs uppercase bold full-bottom">...in Arbeit</a>
                     </div>
                     <div class="heading-text">
                         <i class="ion-android-star-outline color-dmo-dark"></i>

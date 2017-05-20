@@ -1,12 +1,9 @@
-<ons-page id="ons_aussenpolitik.html">
+<ons-page id="ons_aussenpolitik.html" ng-controller="AussenpolitikController as page">
     <ons-toolbar>
         <div class="left animated rotateInDownLeft">
             <ons-toolbar-button onclick="fn.open()"><i class="ion-navicon"></i></ons-toolbar-button>
-            <ons-back-button>Back</ons-back-button>
         </div>
-        <div class="center animated slideInRight">
-            <ons-toolbar-title>Aussenpolitik</ons-toolbar-title>
-        </div>
+        <div class="center animated slideInDown"><ons-back-button></ons-back-button>{{page.title}}</div>
         <div class="right animated rotateInDownRight">
             <ons-toolbar-button onclick="fn.openr()"><i class="ion-ios-more"></i></ons-toolbar-button>
         </div>
@@ -15,7 +12,7 @@
         <div class="header">
             <div class="heading-block center-text bg-aussenpolitik">
                 <div class="heading-strip">
-                    <h3>Aussenpolitik</h3>
+                    <h3>{{page.title}}</h3>
                     <i class="dm-verkehr-02-wf icon color-magenta-dark"></i>
                     <div class="overlay dark-overlay"></div>
                 </div>
@@ -25,7 +22,7 @@
             <ons-icon icon="md-plus"></ons-icon>
         </ons-fab>
         <div class="content">
-            <h6>Außenpolitik von Deutsche Mitte on Vimeo</h6>
+            <h6>{{page.title}} von Deutsche Mitte on Vimeo</h6>
             <div class="one-half-responsive">
                 <div class="responsive-video half-bottom">
                     <iframe src="https://player.vimeo.com/video/74293746"></iframe>
@@ -60,10 +57,10 @@
                     <br> Wir sind und bleiben enge Freunde und Verbündete unserer EU-Nachbarn und Nato-Partner, diese Beziehungen wollen wir vorrangig besonders pflegen, vor allem im Interesse der Völker – doch deutsche Außenpolitik kann mehr als nur
                     Bündnis- oder EU-Politik.Mit Russland und anderen Staaten oder Staatengruppen werden friedenswahrende Rückversicherungsverträge abgeschlossen.</p>
                 <div class="heading-text">
-                    <h4 class="animated center-zoom">Vollprogramm Aussenpolitik</h4>
-                    <a href="http://deutsche-mitte.de/wp-content/uploads/2014/08/2014_august_DM-AA-1neu.pdf" class="button button-green button-center button-round button-xs uppercase bold full-bottom animate-zoom">Öffnen</a>
+                    <h4 class="animated center-zoom">Vollprogramm {{page.title}}</h4>
+                    <a href="http://deutsche-mitte.de/wp-content/uploads/2014/08/2014_august_DM-AA-1neu.pdf" class="button button-green button-center button-round button-xs uppercase bold full-bottom">Öffnen</a>
                     <h4 class="animated center-zoom">Vollprogramm InApp Version</h4>
-                    <a href="programm-aussenpolitik.html" class="button button-dmo button-center button-round button-xs uppercase bold full-bottom animate-zoom">InApp</a>
+                    <a href="programm-aussenpolitik.html" class="button button-dmo button-center button-round button-xs uppercase bold full-bottom">InApp</a>
                 </div>
                 <div class="heading-text">
                     <i class="ion-android-star-outline color-dmo-dark"></i>

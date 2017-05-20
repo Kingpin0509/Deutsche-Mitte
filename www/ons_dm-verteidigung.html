@@ -1,11 +1,9 @@
-<ons-page id="ons_dm-verteidigung.html">
+<ons-page id="ons_dm-verteidigung.html" ng-controller="VerteidigungspolitikController as page">
         <ons-toolbar>
             <div class="left animated rotateInDownLeft">
                 <ons-toolbar-button onclick="fn.open()"><i class="ion-navicon"></i></ons-toolbar-button>
             </div>
-            <div class="center animated slideInDown">
-                <ons-toolbar-title>Verteidigung</ons-toolbar-title>
-            </div>
+        <div class="center animated slideInDown"><ons-back-button></ons-back-button>{{page.title}}</div>
             <div class="right animated rotateInDownRight">
                 <ons-toolbar-button onclick="fn.openr()"><i class="ion-ios-more"></i></ons-toolbar-button>
             </div>
@@ -14,21 +12,21 @@
             <div class="header">
                 <div class="heading-block center-text bg-verteidigung">
                     <div class="heading-strip">
-                        <h3>Verteidigung</h3>
+                        <h3>{{page.title}}</h3>
                         <i class="dm-verteidigung-wf icon color-night-light"></i>
                         <div class="overlay dark-overlay"></div>
                     </div>
                 </div>
             </div>
                 <div class="content">
-                    <h6 class="animated fadeIn">Verteidigungspolitik der Deutschen Mitte auf Vimeo</h6>
+                    <h6 class="animated fadeIn">{{page.title}} der Deutschen Mitte auf Vimeo</h6>
                     <div class="one-half-responsive">
                         <div class="responsive-video half-bottom">
                             <iframe src="https://player.vimeo.com/video/74316236"></iframe>
                         </div>
                     </div>
                     <div class="one-half-responsive-last">
-                        <p class="animate-fade center-text full-top thin">
+                        <p class="center-text full-top thin">
                             Eine Berufsarmee ist mit der bewährten Idee des Bürgers in Uniform schwer vereinbar.
                             <br> Die großen Herausforderungen der Zukunft, auch an die künftig erweiterte Freiheit und Mitsprache der Bürger, sind deshalb bei einer Wehrpflichtarmee besser aufgehoben: Deutschland kehrt zu diesem Modell zurück. Das bewährte
                             Prinzip der Inneren Führung, das jedem Soldaten Gewissensfreiheit garantiert, wird wieder bestärkt.</p>
@@ -36,20 +34,20 @@
                     <div class="decoration decoration-margins"></div>
                     <div class="content">
                         <div class="heading-text">
-                            <h3 class="animate-fade color-dmo-dark">Kurzfassung</h3>
+                            <h3 class="color-dmo-dark">Kurzfassung</h3>
                             <div class="heading-line-1"></div>
                             <i class="ion-android-star-outline color-dm-light"></i>
                             <div class="heading-line-2"></div>
                         </div>
-                        <p class="animate-fade center-text color-dm-dark">
+                        <p class="center-text color-dm-dark">
                             Bundeswehreinsätze im Inneren sind ausgeschlossen – auch in anderen Ländern. Wer gemäß seiner Gewissensfreiheit keinen Wehrdienst leistet, wird zu einem Sozialen oder Ökologischen Jahr nach eigener Wahl verpflichtet. Die Bundeswehr wird eine starke, gut
                             gerüstete, mobile und vernetzte Verteidigungsarmee – mit voller Solidarität aller Bürger.
                         </p>
                         <div class="decoration"></div>
                         <div class="heading-text">
-                            <h4 class="animate-fade center-zoom">Vollprogramm Verteidigung</h4>
+                            <h4>Vollprogramm {{page.title}}</h4>
                             <i class="ion-android-star-outline color-dmo-dark"></i>
-                            <a href="http://deutsche-mitte.de/wp-content/uploads/2015/06/2015_DM_BmVg1.pdf" class="button button-green button-center button-round button-xs uppercase bold full-bottom animate-zoom">Öffnen</a>
+                            <a href="http://deutsche-mitte.de/wp-content/uploads/2015/06/2015_DM_BmVg1.pdf" class="button button-green button-center button-round button-xs uppercase bold full-bottom">Öffnen</a>
                         </div>
                     </div>
                 </div>

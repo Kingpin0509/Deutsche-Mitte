@@ -1,11 +1,9 @@
-<ons-page id="ons_dm-innenpolitik.html">
+<ons-page id="ons_dm-innenpolitik.html" ng-controller="InnenpolitikController as page">
         <ons-toolbar>
             <div class="left animated rotateInDownLeft">
                 <ons-toolbar-button onclick="fn.open()"><i class="ion-navicon"></i></ons-toolbar-button>
             </div>
-            <div class="center animated slideInRightDown">
-                <ons-toolbar-title>Inneres</ons-toolbar-title>
-            </div>
+        <div class="center animated slideInDown"><ons-back-button></ons-back-button>{{page.title}}</div>
             <div class="right animated rotateInDownRight">
                 <ons-toolbar-button onclick="fn.openr()"><i class="ion-ios-more"></i></ons-toolbar-button>
             </div>
@@ -14,7 +12,7 @@
             <div class="header">
                 <div class="heading-block center-text bg-innenpolitik">
                     <div class="heading-strip">
-                        <h3>Innennpolitik</h3>
+                        <h3>{{page.title}}</h3>
                         <i class="dm-innenpolitik-wf icon color-magenta-dark"></i>
                         <div class="overlay dark-overlay"></div>
                     </div>
@@ -39,7 +37,7 @@
                         </p>
                         <div class="decoration"></div>
                 <div class="content">
-                    <h6 class="animated fadeInRight">Innennpolitik von Deutsche Mitte on Vimeo</h6>
+                    <h6 class="animated fadeInRight">{{page.title}} von Deutsche Mitte on Vimeo</h6>
                     <div class="one-half-responsive">
                         <div class="responsive-video half-bottom">
                             <iframe src="https://player.vimeo.com/video/74576976"></iframe>
@@ -50,7 +48,7 @@
                     </div>
                     </div>
                         <div class="heading-text">
-                            <h4 class="center-zoom">Vollprogramm Innenpolitik</h4>
+                            <h4 class="center-zoom">Vollprogramm {{page.title}}</h4>
                             <a href="http://www.deutsche-mitte.de/wp-content/uploads/2013/09/Innenpolitik.pdf" class="button button-green button-center button-round button-xs uppercase bold full-bottom">ÖFFNEN</a>
                         </div>
                     </div>

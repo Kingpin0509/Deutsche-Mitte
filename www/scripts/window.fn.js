@@ -24,7 +24,12 @@ window.fn.load = function(page) {
     splitter.left.close();
     splitter.right.close();
 };
-
+window.fn.push = function(page) {
+    var navi = document.getElementById('navi');
+    navi.pushPage(page, {
+        animation: 'slide'
+    });
+};
 // Collapsible Accordion customDropAnimation
 window.fn.toggle = function(el) {
     el.classList.toggle("active-item");
@@ -39,7 +44,7 @@ window.fn.togglemenu = function(el) {
     });
     el.nextElementSibling.classList.toggle("show");
 };
-  
+
 window.fn.togglepanels = function(el) {
     var btns = document.querySelectorAll(".panel");
     Array.prototype.forEach.call(btns, function(el) {

@@ -1,72 +1,68 @@
-<ons-page id="ons_home.html">
+<ons-page id="ons_home.html" ng-controller="HomeController as page">
     <ons-toolbar>
         <div class="left">
-            <ons-toolbar-button onclick="fn.open()"><i class="ion-navicon"></i></ons-toolbar-button>
+            <ons-toolbar-button onclick="fn.open()"><i class="ion-navicon"></i>
+            </ons-toolbar-button>
         </div>
-        <div class="center animated slideInDown">
-            <ons-toolbar-title>Herzlich Willkommen</ons-toolbar-title>
+        <div class="center animated slideInDown">{{page.title}}
         </div>
         <div class="right">
-            <ons-toolbar-button onclick="fn.openr()"><i class="ion-ios-more"></i></ons-toolbar-button>
+            <ons-toolbar-button onclick="fn.openr()"><i class="ion-ios-more"></i>
+            </ons-toolbar-button>
         </div>
     </ons-toolbar>
-<div class="page-content">
-        <ons-list>
-            <div class="profile-page-1">
-                <div class="profile-page-1-image">
-                    <ons-list-item modifier="nodivider" class="center-boxed-content">
-                        <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="width: 100%; margin-bottom: -15px; height: 500px">
-                            <ons-carousel-item>
-                                <img src="images/banner/A1Demokratie.jpg" class="responsive-image" alt="img">
-                            </ons-carousel-item>
-                            <ons-carousel-item>
-                                <img src="images/banner/A1Euro.jpg" class="responsive-image" alt="img">
-                            </ons-carousel-item>
-                            <ons-carousel-item>
-                                <img src="images/banner/A1Sozialpolitik.jpg" class="responsive-image" alt="img">
-                            </ons-carousel-item>
-                            <ons-carousel-item>
-                                <img src="images/banner/A1TTIP.jpg" class="responsive-image" alt="img">
-                            </ons-carousel-item>
-                            <ons-carousel-item>
-                                <img src="images/banner/A1Verfassung.jpg" class="responsive-image" alt="img">
-                            </ons-carousel-item>
-                            <ons-carousel-item>
-                                <img src="images/banner/A1Zinssystem.jpg" class="responsive-image" alt="img">
-                            </ons-carousel-item>
-                        </ons-carousel>
-                        <div class="swiper-button-prev animated fadeInLeftBig" style="margin:auto" ripple onclick="prev(carousel)" tappable></div>
-                        <div class="swiper-button-next animated fadeInRightBig" style="margin:auto" ripple onclick="next(carousel)" tappable></div>
-                        <div class="profile-gradient"></div>
-                    </ons-list-item>
-                </div>
-            <a href="#" class="back-to-top-badge"><i class="ion-ios-arrow-up"></i></a>
-
-                <ons-list-item modifier="nodivider" style="max-width:700px; margin:auto;">
-<div class="center-text">
-
-                        <h2 class="animated text-pop-up-top">Politik geht anders ...!</h2>
-                        <div class="decoration decoration-line-fade decoration-small deco-dmo"></div>
-                        <p class="animated fadeInUpHeader">Der Wähler kann sich darauf Verlassen, WIR setzen genau das um was wir vor der Wahl versprechen. Die selbstangemaßte Machtvollkommenheit der etablierten Apparate in Deutschland hat die Demokratie schon wesentzlich beschädigt, das
-                            muss aufhören.
-                        </p>
-                    </div>
-                    <div class="decoration decoration-small deco-dmo"></div>
-                </ons-list-item>
-
-                <ons-list-item modifier="nodivider" style="max-width:500px; margin:auto;">
-                    <h5 class="small-text" style="text-align:left;width:300px">Zur Partei:</h5>
-                </ons-list-item>
-                <ons-list-item>
-                    <ons-button tappable ripple class="animated bounceInLeft" onclick="fn.load('ons_grundlegendes.html')">GRUNDLEGENDES</ons-button>
-                    <ons-button tappable ripple class="animated bounceInRight" onclick="fn.load('ons_alleinstellungsmerkmale.html')">BESONDERHEITEN</ons-button>
-                </ons-list-item>
+    <div class="page-content">
+        <div class="profile-page-1" style="position:fixed;width:100%;">
+            <div class="profile-page-1-image center-boxed-content">
+                <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="width: 100%;min-height:600px">
+                    <ons-carousel-item>
+                        <img src="images/banner/A1Demokratie.jpg" class="responsive-image" alt="img">
+                    </ons-carousel-item>
+                    <ons-carousel-item>
+                        <img src="images/banner/A1Euro.jpg" class="responsive-image" alt="img">
+                    </ons-carousel-item>
+                    <ons-carousel-item>
+                        <img src="images/banner/A1Sozialpolitik.jpg" class="responsive-image" alt="img">
+                    </ons-carousel-item>
+                    <ons-carousel-item>
+                        <img src="images/banner/A1TTIP.jpg" class="responsive-image" alt="img">
+                    </ons-carousel-item>
+                    <ons-carousel-item>
+                        <img src="images/banner/A1Verfassung.jpg" class="responsive-image" alt="img">
+                    </ons-carousel-item>
+                    <ons-carousel-item>
+                        <img src="images/banner/A1Zinssystem.jpg" class="responsive-image" alt="img">
+                    </ons-carousel-item>
+                </ons-carousel>
+                <div class="swiper-button-prev animated fadeInLeftBig" style="margin:auto" ripple onclick="prev(carousel)" tappable></div>
+                <div class="swiper-button-next animated fadeInRightBig" style="margin:auto" ripple onclick="next(carousel)" tappable></div>
             </div>
-        </ons-list>
+          </div>          
+          <div class="profile-page-1" style="width:100%;min-height:600px"></div>
+          <div class="profile-page-1 bg-white">
+            <div style="max-width:700px; margin:auto;">
+                <div class="center-text">
+                    <h3 class="animated text-pop-up-top">Politik geht anders ...!</h3>
+                    <div class="decoration decoration-line-fade decoration-small deco-dmo"></div>
+                    <p class="animated fadeInUpHeader">Der Wähler kann sich darauf Verlassen, WIR setzen genau das um was wir vor der Wahl versprechen. Die selbstangemaßte Machtvollkommenheit der etablierten Apparate in Deutschland hat die Demokratie schon wesentlich beschädigt, das muss
+                        aufhören.
+                    </p>
+                </div>
+                <div class="decoration decoration-small deco-dmo"></div>
+            </div>
+
+            <div modifier="nodivider" style="max-width:500px; margin:auto;">
+                <h5 class="small-text" style="text-align:left;width:300px">Zur Partei:</h5>
+            </div>
+            <div class="center-text">
+                <ons-button tappable ripple class="animated bounceInLeft" onclick="fn.load('ons_grundlegendes.html')">GRUNDLEGENDES</ons-button>
+                <ons-button tappable ripple class="animated bounceInRight" onclick="fn.load('ons_alleinstellungsmerkmale.html')">BESONDERHEITEN</ons-button>
+            </div>
+        </div>
 
         <div class="decoration-zig-zag"></div>
         <div class="heading-block bg-5">
-            <h2 class="thin no-bottom animated fadeInUp">Wir von der Deutschen Mitte wissen:</h2>
+            <h2 class="thin no-bottom animated fadeInUp"></h2>
             <h5 class="small-text">verzweifeln, zögern, debattieren: Das können wir uns gar mehr nicht leisten!</h5>
             <p class="larger-text thin half-top full-bottom">
                 Ausschließlich eine durch alle politischen Fragestellungen und Herausforderungen kompromisslos durchdeklinierte ethische Politik-Ausrichtung bietet noch eine letzte Chance, die blitzschnelle Reise in die Sackgasse vor dem unausweichlichen Crash zu bremsen
@@ -122,40 +118,44 @@
             <p class="center-text"></p>
             <div class="overlay dark-overlay"></div>
         </div>
-        <div class="content">
-            <p class="center-text thin half-top full-bottom">Wir ordnen unser Programm als einzige Partei direkt nach den jeweiligen Ministerien. Desweiteren gilt:
+        <div class="content center-text">
+            <p class="thin half-top full-bottom">Die Deutsche Mitte ordnet ihr Programm als einzige Partei direkt nach den jeweiligen Ministerien. Desweiteren gilt:
             </p>
-            <h5 class="center-text thin small-bottom">Parteiprogramm = Wahlprogramm = Regierungsprogramm</h5>
+            <h5 class="thin small-bottom">Parteiprogramm = Wahlprogramm = Regierungsprogramm</h5>
             <div class="decoration"></div>
             <div class="decoration deco-dm decoration-small"></div>
             <div class="one-half-responsive">
                 <div class="column-home-center one-half">
                     <i class="ion-social-euro-outline color-green-dark"></i>
                     <h5 class="color-dmo-light thin">Finanzen</h5>
-                    <p class="color-dm-dark"><em>Die Zinssklaverei und Finanzoligarchie endet</em></p>
+                    <p class="color-dm-dark"><em>Die Zinssklaverei und Finanzoligarchie endet</em>
+                    </p>
                 </div>
                 <div class="column-home-center one-half last-column">
                     <i class="ion-jet color-red-dark"></i>
                     <h5 class="color-dmo-light thin">Verteidigung</h5>
-                    <p class="color-dm-dark"><em>Aufrüstung der BW - Full Spectrum Defence</em></p>
+                    <p class="color-dm-dark"><em>Aufrüstung der BW - Full Spectrum Defence</em>
+                    </p>
                 </div>
             </div>
             <div class="one-half-responsive last-column">
                 <div class="column-home-center one-half">
                     <i class="ion-gear-a color-blue-dark"></i>
                     <h5 class="color-dmo-light thin">Wirtschafts</h5>
-                    <p class="color-dm-dark"><em>Förderung ethischer Unternehmenskulturen</em></p>
+                    <p class="color-dm-dark"><em>Förderung ethischer Unternehmenskulturen</em>
+                    </p>
                 </div>
                 <div class="column-home-center one-half last-column">
                     <i class="ion-ios-medkit-outline color-orange-dark"></i>
                     <h5 class="color-dmo-light thin">Gesundheit</h5>
-                    <p class="color-dm-dark"><em>Aufbau ganzheitlicher Gesundheitszentren</em></p>
+                    <p class="color-dm-dark"><em>Aufbau ganzheitlicher Gesundheitszentren</em>
+                    </p>
                 </div>
             </div>
             <div class="decoration deco-dm decoration-small"></div>
             <div class="decoration decoration-margins"></div>
             <div class="clear"></div>
-            <p class="center-text larger-text bold">
+            <p class="larger-text bold">
                 Das 2-seitige "Flugblatt" bietet eine kurze, knappe und zusammenfassende Übersicht der Strategiepläne einzelner Ministerressorts.
             </p>
             <ons-button ripple class="button button-dm button-center button-round button-bold button-s full-bottom" onclick="fn.load('ons_flugblatt201501.html')" tappable>
@@ -306,8 +306,8 @@
                             <h4>BUNDESVORSITZENDER</h4>
                             <p class="half-bottom">
                                 Experte für Zentral- & Südasien, Nah- & Mittelost, Sicherheitsfragen - Geboren 1956 in Bremen, verheiratet, vier Kinder.
-                                <br> Nach dem Wehrdienst Ausbildung bei der Deutschen Bank und Studium in München: Sinologie und Romanistik. Ab 1985 Mitarbeit beim ARD-Fernsehen als Sonderkorrespondent, Nachrichtenmoderator (2.500 live Sendungen) und
-                                Chef vom Dienst.
+                                <br>Nach dem Wehrdienst Ausbildung bei der Deutschen Bank und Studium in München: Sinologie und Romanistik. Ab 1985 Mitarbeit beim ARD-Fernsehen als Sonderkorrespondent, Nachrichtenmoderator (2.500 live Sendungen) und Chef
+                                vom Dienst.
                             </p>
                             <div class="two-column-icons no-bottom">
                                 <a href="http://www.deutsche-mitte.de/wp-content/uploads/2015/11/ho%CC%88rstel-selbstvorstellung.pdf" class="icon icon-round icon-s dm-bg"><i class="ion-ios-person"></i></a>
@@ -328,8 +328,8 @@
                             <h4>Stv. Bundesvorsitzender</h4>
                             <p class="half-bottom">
                                 Verfechter von Menschlichkeit und Natürlichkeit - Geboren 1972 in Lüdenscheid, verheiratet, zwei Kinder.
-                                <br> Abitur & Zivildienst, 1994 Friedensstudien in Neumexiko (USA), 1995 Studium der Geoökologie. Weiterbildungen in Natur- und Landschaftspflege, Geomantie, Baubiologie, Coaching, Jugendarbeit und Gewaltprävention.2001
-                                Mitarbeit im Nationalpark Unteres Odertal, 2004 Gründung von „Natürlich Stimmig – Bildungsarbeit für Natur- und Selbstkompetenz“ in Potsdam
+                                <br>Abitur & Zivildienst, 1994 Friedensstudien in Neumexiko (USA), 1995 Studium der Geoökologie. Weiterbildungen in Natur- und Landschaftspflege, Geomantie, Baubiologie, Coaching, Jugendarbeit und Gewaltprävention.2001 Mitarbeit
+                                im Nationalpark Unteres Odertal, 2004 Gründung von „Natürlich Stimmig – Bildungsarbeit für Natur- und Selbstkompetenz“ in Potsdam
                             </p>
                             <div class="two-column-icons no-bottom">
                                 <a href="http://www.deutsche-mitte.de/wp-content/uploads/2015/11/fischer-selbstvorstellung.pdf" class="icon icon-round icon-s dm-bg"><i class="ion-ios-person"></i></a>
@@ -346,8 +346,8 @@
                             <h4>Generalsekretär</h4>
                             <p class="half-bottom">
                                 Künstlerin mit abgeschlossenen Studium der Staatlichen Hochschule der bildenden Künste.- Geboren 1959 in Kenzingen/Breisgau, 1 Kind.
-                                <br> Ausbildung zur Kauffrau beim Lebensversicherer Allianz. Nach Sonderbegabtenprüfung Studium der Bildhauerei an der Staatlichen Hochschule der bildenden Künste, Stuttgart mit abgeschlossenem Studium 2004 Lehrtätigkeit:
-                                Internationale Schule Henke, Stuttgart, im Fach Kunst 2015 Lehrtätigkeit an Gymnasien, Kirchheim/Teck, im Fach Kunst
+                                <br>Ausbildung zur Kauffrau beim Lebensversicherer Allianz. Nach Sonderbegabtenprüfung Studium der Bildhauerei an der Staatlichen Hochschule der bildenden Künste, Stuttgart mit abgeschlossenem Studium 2004 Lehrtätigkeit: Internationale
+                                Schule Henke, Stuttgart, im Fach Kunst 2015 Lehrtätigkeit an Gymnasien, Kirchheim/Teck, im Fach Kunst
                             </p>
                             <div class="two-column-icons no-bottom">
                                 <a href="http://www.deutsche-mitte.de/wp-content/uploads/2016/02/Uzkas.pdf" class="icon icon-round icon-s dm-bg"><i class="ion-ios-person"></i></a>
@@ -364,7 +364,7 @@
                             <h4>Bundesschatzmeister</h4>
                             <p class="half-bottom">
                                 Geboren 1953 in Castrop-Rauxel, verheiratet, vier Kinder.
-                                <br> Nach Abitur und Wehrpflicht Physik-Studium in Münster, Programmiersprachen-Weiterbildung in Münster und Gießen Tätigkeit als Programmierer.
+                                <br>Nach Abitur und Wehrpflicht Physik-Studium in Münster, Programmiersprachen-Weiterbildung in Münster und Gießen Tätigkeit als Programmierer.
                             </p>
                             <div class="two-column-icons no-bottom">
                                 <a href="http://www.deutsche-mitte.de/wp-content/uploads/2015/11/Madsen.pdf" class="icon icon-round icon-s dm-bg"><i class="ion-ios-person"></i></a>
@@ -381,7 +381,7 @@
                             <h4>Sprecher für Gesundheitspolitik</h4>
                             <p class="half-bottom">
                                 Medizin-Journalist, Autor und Impfkritiker
-                                <br> Ziel einer Gesundheitspolitik, die den Menschen diene und nicht den Kartellen, müsse die völlige Therapiefreiheit sein, so dass der Krankenversicherte, dem seine Gesundheit wichtig ist, hochwirksame und kosteneffektive
+                                <br>Ziel einer Gesundheitspolitik, die den Menschen diene und nicht den Kartellen, müsse die völlige Therapiefreiheit sein, so dass der Krankenversicherte, dem seine Gesundheit wichtig ist, hochwirksame und kosteneffektive
                                 Alternativ- und Naturmedizin wählen kann, sofern er dies wünscht.
                             </p>
                             <div class="two-column-icons no-bottom">
@@ -461,7 +461,8 @@
                 <a href="https://www.youtube.com/channel/UCLC_9zmyYs5wFX46KBJz95w/" class="icon icon-round icon-xs youtube-bg"><i class="ion-social-youtube"></i></a>
             </div>
             <div class="last-container">
-                <p class="color-dm-dark">Gehen SIE JETZT mit<em class="color-dmo-dark"> WIR sind die Zukunft..</em></p>
+                <p class="color-dm-dark">Gehen SIE JETZT mit<em class="color-dmo-dark"> WIR sind die Zukunft..</em>
+                </p>
                 <h5 class="color-dm-dark">2017 - Deutsche Mitte</h5>
             </div>
         </div>

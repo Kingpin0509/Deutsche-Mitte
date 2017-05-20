@@ -1,11 +1,9 @@
-<ons-page id="ons_dm-ernaehrung-landwirtschaft-und-verbraucherschutz.html">
+<ons-page id="ons_dm-ernaehrung-landwirtschaft-und-verbraucherschutz.html" ng-controller="VerbraucherschutzpolitikController as page">
         <ons-toolbar>
             <div class="left animated rotateInDownLeft">
                 <ons-toolbar-button onclick="fn.open()"><i class="ion-navicon"></i></ons-toolbar-button>
             </div>
-            <div class="center animated slideInDown">
-                <ons-toolbar-title>Ernährung</ons-toolbar-title>
-            </div>
+        <div class="center animated slideInDown"><ons-back-button></ons-back-button>{{page.title}}</div>
             <div class="right animated rotateInDownRight">
                 <ons-toolbar-button onclick="fn.openr()"><i class="ion-ios-more"></i></ons-toolbar-button>
             </div>
@@ -14,7 +12,7 @@
             <div class="header">
                 <div class="heading-block center-text bg-ernaehrung">
                     <div class="heading-strip">
-                        <h3>VErnährung, Landwirtschaft und Verbraucherschutz</h3>
+                        <h3>{{page.title}}</h3>
                         <i class="dm-ernahrung icon color-magenta-dark"></i>
                         <div class="overlay dark-overlay"></div>
                     </div>
@@ -34,12 +32,12 @@
                 <div class="decoration decoration-margins"></div>
                 <div class="content">
                     <div class="heading-text">
-                        <h3 class="animate-fade color-dmo-dark">Kurzfassung</h3>
+                        <h3 class="color-dmo-dark">Kurzfassung</h3>
                         <div class="heading-line-1"></div>
                         <i class="ion-android-star-outline color-dm-light"></i>
                         <div class="heading-line-2"></div>
                     </div>
-                    <p class="animate-fade center-text color-dm-dark">
+                    <p class="center-text color-dm-dark">
                         Schrittweise Umstellung auf ökologische, pestizid- und gentechnikfreie Landwirtschaft (Höchststandard: Demeter.) Dies geschieht
                         freiwillig und mit steuerlicher Förderung. Junge Menschen helfen dabei in ihrem sozialen/ökologischen
                         Jahr und erlernen so den Bezug zur Natur.
@@ -53,8 +51,8 @@
                         und Naturschutz werden verboten, die Unabhängigkeit der Forschung wird bestärkt und kontrolliert.
                     </p>
                     <div class="heading-text">
-                        <h4 class="animate-fade center-zoom">Vollprogramm Ernährung, Landwirtschaft und Verbraucherschutz</h4>
-                        <a href="#" class="button button-red button-center button-round button-xs uppercase bold full-bottom animate-zoom">...in Arbeit</a>
+                        <h4>Vollprogramm {{page.title}}</h4>
+                        <a href="#" class="button button-red button-center button-round button-xs uppercase bold full-bottom">...in Arbeit</a>
                     </div>
                     <div class="heading-text">
                         <i class="ion-android-star-outline color-dmo-dark"></i>
