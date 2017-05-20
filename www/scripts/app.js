@@ -68,27 +68,26 @@
             console.log("Onsen UI is ready!");
             ////////////////////////////////////////////////
             // Hide Page
-
             document.addEventListener('hide', function(event) {
-                document.getElementById('navi').classList.remove('navi-unhide');
                 document.getElementById('navi').classList.add('navi-hide');
+                document.getElementById('navi').classList.remove('navi-unhide');
                 document.getElementById('navi').classList.remove('navi-show');
-                console.log('hide');
+            //     console.log('hide');
             });
             // Init Page
             document.addEventListener('init', function(event) {
-                console.log('init');
+            //     console.log('init');
             });
             // Destroy Page
             document.addEventListener('destroy', function(event) {
                 document.getElementById('navi').classList.add('navi-unhide');
-                console.log('destroy');
+            //     console.log('destroy');
             });
             // Show Page
             document.addEventListener('show', function(event) {
                 document.getElementById('navi').classList.remove('navi-hide');
                 document.getElementById('navi').classList.add('navi-show');
-                console.log('show');
+            //     console.log('show');
             });
             ////////////////////////////////////////////////
             // Menu Left
@@ -154,8 +153,8 @@
             document.getElementById('beitrag').style.color = "white";
             document.getElementById('spenden').style.color = "white";
             // App
-            document.getElementById('splashscreen').style.color = "white";
-            document.getElementById('wahl2017').style.color = "white";
+            // document.getElementById('splashscreen').style.color = "white";
+            // document.getElementById('wahl2017').style.color = "white";
             document.getElementById('sitemap').style.color = "white";
             // Last Items
             document.getElementById('faq').style.color = "white";
@@ -239,26 +238,4 @@
             document.getElementById('app').style.backgroundColor = "rgb(0, 73, 138)";
             document.getElementById(id).style.color = "white";
             document.getElementById(id).style.backgroundColor = "rgba(210, 115, 39, 1)";
-        };
-
-        var showPopover = function(target) {
-            document
-                .getElementById('popover')
-                .show(target);
-        };
-        var hidePopover = function() {
-            document
-                .getElementById('popover')
-                .hide();
-        };
-
-        var showPopover1 = function(target) {
-            document
-                .getElementById('popover1')
-                .show(target);
-        };
-        var hidePopover1 = function() {
-            document
-                .getElementById('popover1')
-                .hide();
         };

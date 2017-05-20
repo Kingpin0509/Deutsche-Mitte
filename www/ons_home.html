@@ -1,3 +1,4 @@
+
 <ons-page id="ons_home.html" ng-controller="HomeController as page">
     <ons-toolbar>
         <div class="left">
@@ -12,7 +13,13 @@
         </div>
     </ons-toolbar>
     <div class="page-content">
-        <div class="profile-page-1" style="position:fixed;width:100%;">
+        <div class="profile-page-1" style="position:fixed;width:100%">
+            <div class="profile-page-1-image center-boxed-content">
+                <div class="swiper-button-prev animated fadeInLeftBig" style="margin:auto" ripple onclick="prev(carousel)" tappable></div>
+                <div class="swiper-button-next animated fadeInRightBig" style="margin:auto" ripple onclick="next(carousel)" tappable></div>
+            </div>
+          </div>
+          <div class="profile-page-1" style="position:fixed;width:100%;">
             <div class="profile-page-1-image center-boxed-content">
                 <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="width: 100%;min-height:600px">
                     <ons-carousel-item>
@@ -34,11 +41,11 @@
                         <img src="images/banner/A1Zinssystem.jpg" class="responsive-image" alt="img">
                     </ons-carousel-item>
                 </ons-carousel>
-                <div class="swiper-button-prev animated fadeInLeftBig" style="margin:auto" ripple onclick="prev(carousel)" tappable></div>
-                <div class="swiper-button-next animated fadeInRightBig" style="margin:auto" ripple onclick="next(carousel)" tappable></div>
             </div>
-          </div>          
-          <div class="profile-page-1" style="width:100%;min-height:600px"></div>
+          </div>
+
+          <div class="profile-page-1" style="width:100%;min-height:400px"></div>
+          <div class="profile-gradient"></div>
           <div class="profile-page-1 bg-white">
             <div style="max-width:700px; margin:auto;">
                 <div class="center-text">
@@ -62,15 +69,15 @@
 
         <div class="decoration-zig-zag"></div>
         <div class="heading-block bg-5">
-            <h2 class="thin no-bottom animated fadeInUp"></h2>
-            <h5 class="small-text">verzweifeln, zögern, debattieren: Das können wir uns gar mehr nicht leisten!</h5>
+            <h2 class="thin no-bottom animated fadeInUp">verzweifeln, zögern, debattieren:</h2>
+            <h5 class="small-text">Das können wir uns gar mehr nicht leisten!</h5>
             <p class="larger-text thin half-top full-bottom">
                 Ausschließlich eine durch alle politischen Fragestellungen und Herausforderungen kompromisslos durchdeklinierte ethische Politik-Ausrichtung bietet noch eine letzte Chance, die blitzschnelle Reise in die Sackgasse vor dem unausweichlichen Crash zu bremsen
                 und womöglich rechtzeitig zu stoppen.
             </p>
             <div class="overlay dark-overlay"></div>
         </div>
-        <div class="content-fullscreen animated fadeInUpBig">
+        <div class="content-fullscreen bg-white animated fadeInUpBig">
             <div class="column-half-image-left one-half-responsive">
                 <img class="preload-image" src="images/jpg/arbeit10001000.jpg" alt="img">
                 <h4>Keine Koalitionsverhandlungen</h4>
@@ -102,7 +109,6 @@
                     Das multikriminelle System, das wir bekämpfen, ist nicht nur viel mörderischer als alles was die Menschheitsgeschichte hergibt; vor allem ist es aber auch unendlich viel morscher als es z.b. die Sowjetunion je war.
                 </p>
             </div>
-        </div>
         <div class="clear"></div>
         <div class="decoration deco-dm decoration-small"></div>
         <p class="center-text larger-text bold">
@@ -111,14 +117,14 @@
         <ons-button ripple class="button button-dm button-center button-round button-bold button-s full-bottom" onclick="fn.load('ons_flyer120816.html')" tappable>
             FLYER
         </ons-button>
-        <div class="clear"></div>
         <div class="decoration-zig-zag"></div>
         <div class="heading-strip bg-2">
-            <h4 class=" center-text no-bottom">Erlauben sie eine Frage? – bitte seien Sie nicht gram aber: Wann beherzigen SIE den Ruf der Stunde?</h4>
+            <h4 class=" center-text no-bottom">Wann beherzigen SIE den Ruf der Stunde?</h4>
             <p class="center-text"></p>
             <div class="overlay dark-overlay"></div>
         </div>
-        <div class="content center-text">
+
+        <div class="content center-text bg-white">
             <p class="thin half-top full-bottom">Die Deutsche Mitte ordnet ihr Programm als einzige Partei direkt nach den jeweiligen Ministerien. Desweiteren gilt:
             </p>
             <h5 class="thin small-bottom">Parteiprogramm = Wahlprogramm = Regierungsprogramm</h5>
@@ -273,7 +279,8 @@
             <!--<a href="yt-stammtisch-videos.html" class="button-ghost button-center-large button-bold button-round">VORTÄGE + FRAGERUNDEN</a>-->
             <div class="overlay dark-overlay"></div>
         </div>
-        <div class="clear"></div>
+        <div class="content center-text bg-white">
+        <div class="decoration-zig-zag"></div>
         <div class="decoration-margins"></div>
         <h3 class="thin center-text">Das Kurzprogramm</h3>
         <p class="small-text center-text">6-Seitig</p>
@@ -285,7 +292,9 @@
             Noch Umfassender informiert das 6-seitige Kurzprogramm, als weiterer Schritt der Herarchie in der Programm-Gestaltung.
         </p>
         <a href="dm-kurzprogramm-2016.html" class="button button-dm button-center button-round button-bold full-bottom">KURZPROGRAMM</a>
-        <div class="clear"></div>
+        <div class="decoration-line-fade"></div>
+          
+        </div>
         <div class="decoration-zig-zag deco-dmo"></div>
         <div class="heading-strip bg-6 center-text deco-dmo">
             <i class="ion-person-stalker color-dmo-light"></i>
@@ -293,8 +302,7 @@
             <p>Zusammen überwinden wir das System!</p>
             <div class="overlay dark-overlay"></div>
         </div>
-        <div class="decoration decoration-margins"></div>
-        <div class="content-fullscreen">
+        <div class="content-fullscreen bg-white">
             <div class="staff-slider">
                 <ons-carousel swipeable auto-scroll overscrollable id="carousel2" style="width:100%; margin:auto; height:680px">
                     <ons-carousel-item>
@@ -409,14 +417,15 @@
                     </ons-carousel-item>
                 </ons-carousel>
             </div>
-        </div>
         <div class="swiper-button-prev" style="margin:auto" ripple onclick="prev2(carousel2)" tappable></div>
         <div class="swiper-button-next" style="margin:auto" ripple onclick="next2(carousel2)" tappable></div>
-        <div class="clear"></div>
         <div class="decoration-line-fade hide-if-responsive"></div>
-        <div class="decoration deco-dm decoration-small"></div>
+        </div>
+</div>                <div class="decoration deco-dm decoration-small"></div>
         <div class="decoration-zig-zag"></div>
+
         <div class="footer footer-dark">
+
             <a href="index.html" class="footer-logo scale-hover"></a>
             <div style="background-color: rgba(249, 249, 249, 0.85); margin: 20px 0px; text-align:center">
                 <h4 class="center-text">Machen Sie mehr Leute auf uns aufmerksam...</h4>

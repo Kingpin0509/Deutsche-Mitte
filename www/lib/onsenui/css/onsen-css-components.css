@@ -79,7 +79,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   background-color: #f9f9f9;
   position: absolute;
   top: 0;
@@ -116,16 +115,34 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
 }
 .page--material__content {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   font-weight: 400;
 }
-/* FIXME */
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5 {
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  font-weight: bold;
+  margin: 0.6em 0;
+  padding: 0;
+}
+.page__content h1 {
+  font-size: 28px;
+}
+.page__content h2 {
+  font-size: 24px;
+}
+.page__content h3 {
+  font-size: 20px;
+}
 .page--material__content h1,
 .page--material__content h2,
 .page--material__content h3,
@@ -134,8 +151,18 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
-  font-weight: 400;
+  font-weight: bold;
+  margin: 0.6em 0;
+  padding: 0;
+}
+.page--material__content h1 {
+  font-size: 28px;
+}
+.page--material__content h2 {
+  font-size: 24px;
+}
+.page--material__content h3 {
+  font-size: 20px;
 }
 .page--material__background {
   background-color: #ffffff;
@@ -657,7 +684,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -697,7 +723,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   box-sizing: border-box;
   background-clip: padding-box;
   white-space: nowrap;
@@ -880,7 +905,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   box-sizing: border-box;
   background-clip: padding-box;
   white-space: nowrap;
@@ -1012,7 +1036,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   font-size: 20px;
   font-weight: 500;
   color: #ffffff;
@@ -1025,7 +1048,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   font-size: 20px;
   font-weight: 500;
   color: #ffffff;
@@ -1124,7 +1146,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1232,7 +1253,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1307,7 +1327,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1412,7 +1431,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1491,7 +1509,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1568,7 +1585,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1596,7 +1612,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   min-height: 36px;
   line-height: 36px;
   padding: 0 16px;
@@ -1650,7 +1665,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1678,7 +1692,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   min-height: 36px;
   line-height: 36px;
   padding: 0 16px;
@@ -1738,7 +1751,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1758,7 +1770,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   border-radius: 0;
   width: 100%;
   padding: 0;
@@ -1772,7 +1783,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   border-radius: 0;
   background-color: transparent;
   color: rgba(18, 114, 224, .77);
@@ -1853,7 +1863,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1873,7 +1882,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   border-radius: 0;
   width: 100%;
   padding: 0;
@@ -1907,7 +1915,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   border-radius: 0;
   background-color: transparent;
   color: rgba(18, 114, 224, .77);
@@ -1991,7 +1998,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   font-size: 14px;
   height: 32px;
   line-height: 32px;
@@ -2087,7 +2093,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   display: table;
   table-layout: fixed;
   position: absolute;
@@ -2117,7 +2122,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   position: relative;
   display: table-cell;
   width: auto;
@@ -2148,7 +2152,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   box-sizing: border-box;
   background-clip: padding-box;
   padding: 0;
@@ -2200,7 +2203,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
 }
 .tabbar__badge.notification { /* FIXME */
   position: absolute;
@@ -2421,7 +2423,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
 }
 .tabbar--material__button:after {
   content: '';
@@ -2512,13 +2513,11 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
 }
 .tabbar--material__label:first-child {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   letter-spacing: 0.015em;
   font-weight: 500;
   font-size: 14px;
@@ -2545,7 +2544,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   padding: 4px 10px;
   letter-spacing: 0;
   color: rgba(38, 100, 171, .81);
@@ -2697,7 +2695,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   line-height: 24px;
 }
 .checkbox__checkmark {
@@ -2715,7 +2712,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   position: relative;
   height: 24px;
   width: 24px;
@@ -2830,7 +2826,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   line-height: 24px;
   position: relative;
 }
@@ -2949,7 +2944,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
 }
 .checkbox--material__checkmark {
   width: 18px;
@@ -3085,7 +3079,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   position: relative;
   position: relative;
   width: 24px;
@@ -3161,7 +3154,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
 }
 .radio-button--material__checkmark {
   width: 20px;
@@ -3252,7 +3244,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   list-style-type: none;
   text-align: left;
   display: block;
@@ -3869,7 +3860,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   background-image: none;
 }
 .list-item--material {
@@ -4187,7 +4177,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   display: block;
   color: #6d6d72;
   text-align: left;
@@ -4216,7 +4205,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   color: #757575;
   font-size: 14px;
   margin: 0;
@@ -4246,7 +4234,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   -webkit-appearance: textfield;
      -moz-appearance: textfield;
           appearance: textfield;
@@ -4257,7 +4244,7 @@ h4, h5, h6 {
   box-shadow: none;
   color: #1f1f21;
   line-height: 1.3;
-  padding: 0 0 0 28px;
+  padding: 0 8px 0 28px;
   margin: 0;
   border-radius: 5.5px;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTNweCIgaGVpZ2h0PSIxNHB4IiB2aWV3Qm94PSIwIDAgMTMgMTQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQyICgzNjc4MSkgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+aW9zLXNlYXJjaC1pbnB1dC1pY29uPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9ImNvbXBvbmVudHMiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJpb3Mtc2VhcmNoLWlucHV0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDguMDAwMDAwLCAtNDMuMDAwMDAwKSIgZmlsbD0iIzdBNzk3QiI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAuMDAwMDAwLCAzNi4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNi45OTcyNDgyLDE1LjUwNDE0NjYgQzE3LjA3NzM2NTcsMTUuNTQwNTkzOCAxNy4xNTIyNzMxLDE1LjU5MTYxMjkgMTcuMjE3NzUxNiwxNS42NTcwOTE0IEwyMC42NDk5OTEsMTkuMDg5MzMwOCBDMjAuOTQ0ODQ0OSwxOS4zODQxODQ3IDIwLjk0ODQ3NjQsMTkuODU4NjA2IDIwLjY1MzU0MTIsMjAuMTUzNTQxMiBDMjAuMzYwNjQ4LDIwLjQ0NjQzNDQgMTkuODgxMjcxNiwyMC40NDE5MzE3IDE5LjU4OTMzMDgsMjAuMTQ5OTkxIEwxNi4xNTcwOTE0LDE2LjcxNzc1MTYgQzE2LjA5MTM3LDE2LjY1MjAzMDEgMTYuMDQwMTE3MSwxNi41NzczODc0IDE2LjAwMzQxNDEsMTYuNDk3Nzk5NSBDMTUuMTY3MTY5NCwxNy4xMjcwNDExIDE0LjEyNzEzOTMsMTcuNSAxMywxNy41IEMxMC4yMzg1NzYzLDE3LjUgOCwxNS4yNjE0MjM3IDgsMTIuNSBDOCw5LjczODU3NjI1IDEwLjIzODU3NjMsNy41IDEzLDcuNSBDMTUuNzYxNDIzNyw3LjUgMTgsOS43Mzg1NzYyNSAxOCwxMi41IEMxOCwxMy42Mjc0Njg1IDE3LjYyNjgyMzIsMTQuNjY3Nzc2OCAxNi45OTcyNDgyLDE1LjUwNDE0NjYgWiBNMTMsMTYuNSBDMTUuMjA5MTM5LDE2LjUgMTcsMTQuNzA5MTM5IDE3LDEyLjUgQzE3LDEwLjI5MDg2MSAxNS4yMDkxMzksOC41IDEzLDguNSBDMTAuNzkwODYxLDguNSA5LDEwLjI5MDg2MSA5LDEyLjUgQzksMTQuNzA5MTM5IDEwLjc5MDg2MSwxNi41IDEzLDE2LjUgWiIgaWQ9Imlvcy1zZWFyY2gtaW5wdXQtaWNvbiI+PC9wYXRoPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=');
@@ -4316,7 +4303,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   border-radius: 2px;
   height: 48px;
   background-color: #fafafa;
@@ -4324,7 +4310,7 @@ h4, h5, h6 {
   background-size: 18px;
   background-position: 18px center;
   font-size: 14px;
-  padding: 0 0 0 64px;
+  padding: 0 24px 0 64px;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, .12), 0 2px 2px 0 rgba(0, 0, 0, .24), 0 1px 0 0 rgba(255, 255, 255, .6) inset;
 }
 /*~
@@ -4351,7 +4337,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   border: none;
   background-color: transparent;
   letter-spacing: 0;
@@ -4434,7 +4419,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   border: none;
   background-color: transparent;
   letter-spacing: 0;
@@ -4523,11 +4507,9 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   color: #212121;
   background-image: -webkit-linear-gradient(bottom, transparent 1px, #afafaf 1px);
   background-image: linear-gradient(to top, transparent 1px, #afafaf 1px);
@@ -4548,7 +4530,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   color: #afafaf;
   position: absolute;
   left: 0;
@@ -4634,7 +4615,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   border: none;
   background-color: transparent;
   letter-spacing: 0;
@@ -4673,7 +4653,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   vertical-align: top;
   resize: none;
   outline: none;
@@ -4728,7 +4707,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   vertical-align: top;
   resize: none;
   outline: none;
@@ -4798,7 +4776,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4854,7 +4831,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   text-align: left;
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14),
       0 6px 30px 5px rgba(0, 0, 0, .12),
@@ -4906,7 +4882,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4930,7 +4905,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   font-size: 17px;
   font-weight: 500;
   padding: 0 8px;
@@ -4963,7 +4937,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -5161,7 +5134,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   text-align: left;
   font-size: 20px;
   font-weight: 500;
@@ -5172,7 +5144,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   text-align: left;
   font-size: 16px;
   font-weight: 400;
@@ -5191,7 +5162,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   text-transform: uppercase;
   display: inline-block;
   width: auto;
@@ -5330,7 +5300,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   display: block;
   width: 220px;
   overflow: auto;
@@ -5679,7 +5648,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -5688,7 +5656,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   width: 56px;
   height: 56px;
   text-decoration: none;
@@ -5833,7 +5800,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   overflow: hidden;
   background-color: rgba(0, 0, 0, .7);
   position: absolute;
@@ -5865,7 +5831,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -5898,7 +5863,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   border: none;
   background-color: transparent;
   position: relative;
@@ -5983,11 +5947,9 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   color: rgba(0, 0, 0, 1);
   background-image: -webkit-linear-gradient(bottom, transparent 1px, rgba(0, 0, 0, .81) 1px);
   background-image: linear-gradient(to top, transparent 1px, rgba(0, 0, 0, .81) 1px);
@@ -6008,7 +5970,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   color: rgba(0, 0, 0, .81);
   position: absolute;
   left: 0;
@@ -6094,7 +6055,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   border: none;
   background-color: transparent;
   position: relative;
@@ -6180,7 +6140,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   cursor: default;
   position: absolute;
   left: 9px;
@@ -6290,7 +6249,7 @@ h4, h5, h6 {
   name: Material Action Sheet
   category: Action Sheet
   markup: |
-    <div class="action-sheet-mask action-sheet-mask--material">
+    <div class="action-sheet-mask action-sheet-mask--material"></div>
     <div class="action-sheet action-sheet--material">
       <button class="action-sheet-button action-sheet-button--material"><i class="ion-android-checkbox-blank action-sheet-icon--material"></i>Label</button>
       <button class="action-sheet-button action-sheet-button--material"><i class="ion-android-checkbox-blank action-sheet-icon--material"></i>Label</button>
@@ -6301,7 +6260,7 @@ h4, h5, h6 {
   name: Material Action Sheet with Title
   category: Action Sheet
   markup: |
-    <div class="action-sheet-mask action-sheet-mask--material">
+    <div class="action-sheet-mask action-sheet-mask--material"></div>
     <div class="action-sheet action-sheet--material">
       <div class="action-sheet-title action-sheet-title--material">Title</div>
       <button class="action-sheet-button action-sheet-button--material"><i class="ion-android-checkbox-blank action-sheet-icon--material"></i>Label</button>
@@ -6320,7 +6279,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   border-radius: 0;
   background-image: none;
   text-align: left;
@@ -6339,7 +6297,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   border-radius: 0;
   background-image: none;
   height: 52px;
@@ -6391,11 +6348,11 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, .12);
   border-radius: 8px;
   background-color: white;
   box-sizing: border-box;
+  display: block;
   margin: 8px;
   padding: 16px;
   text-align: left;
@@ -6422,7 +6379,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   font-weight: 400;
   font-size: 20px;
   margin: 4px 0 8px 0;
@@ -6449,7 +6405,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
 }
 .card--material__content {
   font-size: 14px;
@@ -6471,7 +6426,6 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   font-size: 24px;
   margin: 8px 0 12px 0;
 }
@@ -6489,7 +6443,6 @@ h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 17px;
   position: absolute;
   z-index: 2;
   left: 8px;
@@ -6560,13 +6513,11 @@ h4, h5, h6 {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   margin: 0 24px 0 0;
 }
 .toast--material__button {
   font-family: 'Roboto', 'Noto', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 17px;
   color: #80cbc4;
 }
