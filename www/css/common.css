@@ -175,6 +175,7 @@ ons-splitter-content,
 ons-splitter-side {
     display: block;
     position: absolute;
+    transform: translate3d(0px, 0px, 0px);
     left: 0;
     right: 0;
     top: 0;
@@ -184,10 +185,13 @@ ons-splitter-side {
 }
 
 ons-splitter-mask {
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.6);
     display: none;
-    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
 }
 
 ons-splitter-content {
