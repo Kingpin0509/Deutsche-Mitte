@@ -12,7 +12,7 @@
         },
         "cordova-plugin-crosswalk-webview": {
             "variables": [
-                "XWALK_VERSION=19.49.514.5"
+                "XWALK_VERSION=23.53.589.4"
             ],
             "additional_params": {
                 "arch": "arm"
@@ -23,16 +23,19 @@
         },
         "cordova-plugin-ms-azure-mobile-apps": {
             "variables": [
-                "uwp=aefab589-8ec8-4fb5-aefb-381c8c86d5ab;"
+                "uwp=aefab589-8ec8-4fb5-aefb-381c8c86d5ab"
             ]
+        },
+        "cordova-custom-config": {
+            "variables": []
         }
     },
     "external_plugins": [
         "cordova-plugin-whitelist@1.2.2",
         "mobi.monaca.plugins.Monaca",
         "cordova-plugin-splashscreen@4.0.3",
-        "cordova-plugin-crosswalk-webview@1.8.0",
-        "cordova-custom-config@2.0.3",
+        "cordova-plugin-crosswalk-webview@2.3.0",
+        "cordova-custom-config@3.2.0",
         "cordova-plugin-ms-azure-mobile-apps@2.0.0"
     ],
     "title-ja": "",
