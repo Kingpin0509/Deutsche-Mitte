@@ -14,7 +14,6 @@
   <preference name="SplashScreen" value="screen"/>
   <preference name="AllowInlineMediaPlayback" value="false"/>
   <preference name="BackupWebStorage" value="cloud"/>
-  <preference name="FadeSplashScreenDuration" value="2"/>
   <preference name="KeyboardDisplayRequiresUserAction" value="true"/>
   <preference name="MediaPlaybackRequiresUserAction" value="true"/>
   <preference name="SuppressesIncrementalRendering" value="true"/>
@@ -31,6 +30,9 @@
   <preference name="monaca:targetFamilyiPad" value="1"/>
   <platform name="ios">
     <preference name="orientation" value="all"/>
+  <preference name="FadeSplashScreen" value="true"/>
+  <preference name="ShowSplashScreenSpinner" value="true"/>
+  <preference name="FadeSplashScreenDuration" value="750"/>
     <icon src="/res/ios/icon/icon.png" width="57" height="57"/>
     <icon src="/res/ios/icon/icon@2x.png" width="114" height="114"/>
     <icon src="/res/ios/icon/icon-72.png" width="72" height="72"/>
@@ -65,7 +67,9 @@
     </config-file>
   </platform>
   <platform name="android">
-    <icon src="/res/android/icon/ldpi.png" density="ldpi"/>
+  <preference name="SplashMaintainAspectRatio" value="true" />
+  <preference name="SplashShowOnlyFirstTime" value="true" />
+  <icon src="/res/android/icon/ldpi.png" density="ldpi"/>
     <icon src="/res/android/icon/mdpi.png" density="mdpi"/>
     <icon src="/res/android/icon/hdpi.png" density="hdpi"/>
     <icon src="/res/android/icon/xhdpi.png" density="xhdpi"/>
@@ -88,10 +92,16 @@
   <platform name="chrome">
     <icon src="/platforms/chrome/icon.png" width="128" height="128"/>
   </platform>
+<platform name="browser">
+    <preference name="SplashScreen" value="/res/winrt/screen/app_splash_screen_winrt.png" /> <!-- defaults to "/img/logo.png" -->
+    <preference name="SplashScreenDelay" value="3000" /> <!-- defaults to "3000" -->
+    <preference name="SplashScreenBackgroundColor" value="white" /> <!-- defaults to "#464646" -->
+    <preference name="ShowSplashScreen" value="true" /> <!-- defaults to "true" -->
+    <preference name="SplashScreenWidth" value="620" /> <!-- defaults to "170" -->
+    <preference name="SplashScreenHeight" value="300" /> <!-- defaults to "200" -->
+</platform>
   <preference name="ios-XCBuildConfiguration-TARGETED_DEVICE_FAMILY" value="1,2"/>
-  <preference name="AutoHideSplashScreen" value="false"/>
-  <preference name="FadeSplashScreen" value="true"/>
-  <preference name="ShowSplashScreenSpinner" value="true"/>
+  <preference name="AutoHideSplashScreen" value="true"/>
   <preference name="EnableViewportScale" value="true"/>
   <access origin="*"/>
   <preference name="KeepRunning" value="true"/>
@@ -100,6 +110,7 @@
   <preference name="Orientation" value="default"/>
   <preference name="SplashScreenDelay" value="3000"/>
   <preference name="Fullscreen" value="true"/>
+
   <preference name="WindowsStorePublisherName" value="West Weedtze Development - Michael Humann"/>
   <preference name="WindowsStoreIdentityName" value="17701WestWeedtzeDevelopme.DeutscheMitte"/>
 </widget>

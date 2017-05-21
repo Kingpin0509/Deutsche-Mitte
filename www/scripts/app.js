@@ -63,16 +63,19 @@
                 // Inside MyApp controller
                 $scope.handler = function($event) {};
             });
+////////////////////////////////////////////////
 
         ons.ready(function() {
+            window.setTimeout(function() {
+                navigator.splashscreen.hide();
+            }, 3000 - 750);
             console.log("Onsen UI is ready!");
-            ////////////////////////////////////////////////
             // Hide Page
             document.addEventListener('hide', function(event) {
+            //     console.log('hide');
                 document.getElementById('navi').classList.add('navi-hide');
                 document.getElementById('navi').classList.remove('navi-unhide');
                 document.getElementById('navi').classList.remove('navi-show');
-            //     console.log('hide');
             });
             // Init Page
             document.addEventListener('init', function(event) {
@@ -80,16 +83,16 @@
             });
             // Destroy Page
             document.addEventListener('destroy', function(event) {
-                document.getElementById('navi').classList.add('navi-unhide');
             //     console.log('destroy');
+                document.getElementById('navi').classList.add('navi-unhide');
             });
             // Show Page
             document.addEventListener('show', function(event) {
+            //     console.log('show');
                 document.getElementById('navi').classList.remove('navi-hide');
                 document.getElementById('navi').classList.add('navi-show');
-            //     console.log('show');
             });
-            ////////////////////////////////////////////////
+////////////////////////////////////////////////
             // Menu Left
             document.querySelector('ons-splitter-side')
                 .addEventListener('preopen', function(e) {
@@ -131,7 +134,6 @@
                     document.getElementById('navi').classList.remove("blursl");
                     document.getElementById('menu-right').classList.remove("ons-splitter-shadow-menur");
                 });
-            navigator.splashscreen.hide();
         });
 ////////////////////////////////////////////////
         function setColor(id) {
