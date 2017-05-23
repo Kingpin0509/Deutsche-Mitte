@@ -66,9 +66,6 @@
 ////////////////////////////////////////////////
 
         ons.ready(function() {
-            window.setTimeout(function() {
-                navigator.splashscreen.hide();
-            }, 3000 - 750);
             console.log("Onsen UI is ready!");
             // Hide Page
             document.addEventListener('hide', function(event) {

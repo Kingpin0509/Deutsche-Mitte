@@ -96,7 +96,7 @@
   <preference name="ShowSplashScreenSpinner" value="true"/>
   <preference name="EnableViewportScale" value="true"/>
   <access origin="*"/>
-  <preference name="KeepRunning" value="true"/>
+  <preference name="KeepRunning" value="false"/>
   <preference name="monaca:AndroidIsPackageNameSeparate" value="true"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="Orientation" value="default"/>

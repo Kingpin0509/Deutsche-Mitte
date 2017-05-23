@@ -30,7 +30,7 @@
         "mobi.monaca.plugins.Monaca",
         "cordova-plugin-splashscreen@4.0.3",
         "cordova-plugin-crosswalk-webview@2.3.0",
-        "cordova-custom-config@2.0.0"
+        "cordova-custom-config@3.0.0"
     ],
     "title-ja": "",
     "title-en": "123",

@@ -25,13 +25,13 @@ window.fn.load = function (page) {
 window.fn.push = function (page) {
     var navi = document.getElementById('navi');
     navi.pushPage(page, {
-        animation: 'custom'
+        animation: 'slide'
     });
 };
 window.fn.replace = function (page) {
     var navi = document.getElementById('navi');
     navi.replacePage(page, {
-        animation: 'custom'
+        animation: 'fade'
     });
 };
 
