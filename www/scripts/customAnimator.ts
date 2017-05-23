@@ -4,11 +4,11 @@
  * Custom Changes an der onsenui v2.1.0 - 2017-02-01
  */
 // CUSTOM ANIMATOR
- 
+/* 
 (function() {
     'use strict;';
     var module = angular.module('onsen');
-    module.factory('customDropAnimation', function(NavigatorTransitionAnimator) {
+    (module.factory('customDropAnimation', function(NavigatorTransitionAnimator) {
         var customDropAnimation = NavigatorTransitionAnimator.extend({
             backgroundMask: angular.element(
                 '<div style="position: absolute; width: 100%;' +
@@ -39,7 +39,7 @@
                         duration: 0.4,
                         timing: 'cubic-bezier(.47,0,.47,1)'
                     })
-                    // .wait(0.2) -> causes flicker sometimes
+                     .wait(0.2)
                     .resetStyle()
                     .queue(function(done) {
                         callback();
@@ -85,8 +85,8 @@
             }
         });
         return customDropAnimation;
-    });
-})();
+    }));
+})();*/
 
 //
 //var customAnimator = function(options) {

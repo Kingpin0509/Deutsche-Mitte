@@ -21,11 +21,6 @@
         "mobi.monaca.plugins.Monaca": {
             "variables": []
         },
-        "cordova-plugin-ms-azure-mobile-apps": {
-            "variables": [
-                "uwp=aefab589-8ec8-4fb5-aefb-381c8c86d5ab"
-            ]
-        },
         "cordova-custom-config": {
             "variables": []
         }
@@ -35,11 +30,10 @@
         "mobi.monaca.plugins.Monaca",
         "cordova-plugin-splashscreen@4.0.3",
         "cordova-plugin-crosswalk-webview@2.3.0",
-        "cordova-custom-config@3.2.0",
-        "cordova-plugin-ms-azure-mobile-apps@2.0.0"
+        "cordova-custom-config@2.0.0"
     ],
     "title-ja": "",
-    "title-en": "DM",
+    "title-en": "123",
     "description-ja": "",
     "description-en": "",
     "category": "User Template",
@@ -49,5 +43,5 @@
         "winrt",
         "chrome"
     ],
-    "name": "generated-1495295139-583824227e2193c166b5ca93"
+    "name": "generated-1495533013-583824227e2193c166b5ca93"
 }

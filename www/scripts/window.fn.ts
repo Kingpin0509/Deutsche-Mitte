@@ -18,7 +18,7 @@ window.fn.closesplitter = function() {
 window.fn.load = function(page) {
     var navi = document.getElementById('navi');
     navi.resetToPage(page, {
-        animation: 'fade'
+        animation: 'slide'
     });
     splitter.left.close();
     splitter.right.close();
@@ -26,13 +26,13 @@ window.fn.load = function(page) {
 window.fn.push = function(page) {
     var navi = document.getElementById('navi');
     navi.pushPage(page, {
-        animation: 'slide'
+        animation: 'custom'
     });
 };
 window.fn.replace = function(page) {
     var navi = document.getElementById('navi');
     navi.replacePage(page, {
-        animation: 'fade'
+        animation: 'custom'
     });
 };
 // Collapsible Accordion customDropAnimation
