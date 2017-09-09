@@ -30,7 +30,7 @@ import animationOptionsParser from './animation-options-parser';
 import autoStyle from './autostyle';
 import DoorLock from './doorlock';
 import contentReady from './content-ready';
-import {defaultPageLoader, PageLoader} from './page-loader';
+import { defaultPageLoader, PageLoader } from './page-loader';
 import BaseAnimator from './base-animator';
 
 /**
@@ -77,7 +77,7 @@ waitDeviceReady();
  *   [ja]Onsen UIがすでに初期化されているかどうかを返すメソッドです。[/ja]
  */
 ons.isReady = () => {
-  return !ons._readyLock.isLocked();
+    return !ons._readyLock.isLocked();
 };
 
 /**
@@ -103,11 +103,11 @@ ons.isWebView = ons.platform.isWebView;
  *   [ja]Onsen UIが初期化が完了した後に呼び出される関数オブジェクトを指定します。[/ja]
  */
 ons.ready = callback => {
-  if (ons.isReady()) {
-    callback();
-  } else {
-    ons._readyLock.waitUnlock(callback);
-  }
+    if (ons.isReady()) {
+        callback();
+    } else {
+        ons._readyLock.waitUnlock(callback);
+    }
 };
 
 /**
@@ -121,7 +121,7 @@ ons.ready = callback => {
  *   [ja]デバイスのバックボタンのためのデフォルトのハンドラを設定します。[/ja]
  */
 ons.setDefaultDeviceBackButtonListener = function(listener) {
-  ons._defaultDeviceBackButtonHandler.setListener(listener);
+    ons._defaultDeviceBackButtonHandler.setListener(listener);
 };
 
 /**
@@ -132,7 +132,7 @@ ons.setDefaultDeviceBackButtonListener = function(listener) {
  * [ja]デバイスのバックボタンのイベントを受け付けないようにします。[/ja]
  */
 ons.disableDeviceBackButtonHandler = function() {
-  ons._deviceBackButtonDispatcher.disable();
+    ons._deviceBackButtonDispatcher.disable();
 };
 
 /**
@@ -143,7 +143,7 @@ ons.disableDeviceBackButtonHandler = function() {
  * [ja]デバイスのバックボタンのイベントを受け付けるようにします。[/ja]
  */
 ons.enableDeviceBackButtonHandler = function() {
-  ons._deviceBackButtonDispatcher.enable();
+    ons._deviceBackButtonDispatcher.enable();
 };
 
 
@@ -155,10 +155,10 @@ ons.enableDeviceBackButtonHandler = function() {
  *   [ja]iOS7以上で、ステータスバー部分の高さを自動的に埋める処理を有効にします。[/ja]
  */
 ons.enableAutoStatusBarFill = () => {
-  if (ons.isReady()) {
-    throw new Error('This method must be called before ons.isReady() is true.');
-  }
-  ons._internal.config.autoStatusBarFill = true;
+    if (ons.isReady()) {
+        throw new Error('This method must be called before ons.isReady() is true.');
+    }
+    ons._internal.config.autoStatusBarFill = true;
 };
 
 /**
@@ -169,10 +169,10 @@ ons.enableAutoStatusBarFill = () => {
  *   [ja]iOS7以上で、ステータスバー部分の高さを自動的に埋める処理を無効にします。[/ja]
  */
 ons.disableAutoStatusBarFill = () => {
-  if (ons.isReady()) {
-    throw new Error('This method must be called before ons.isReady() is true.');
-  }
-  ons._internal.config.autoStatusBarFill = false;
+    if (ons.isReady()) {
+        throw new Error('This method must be called before ons.isReady() is true.');
+    }
+    ons._internal.config.autoStatusBarFill = false;
 };
 
 /**
@@ -183,7 +183,7 @@ ons.disableAutoStatusBarFill = () => {
  *   [ja]アニメーションを全て無効にします。テストの際に便利です。[/ja]
  */
 ons.disableAnimations = () => {
-  ons._internal.config.animationsDisabled = true;
+    ons._internal.config.animationsDisabled = true;
 };
 
 /**
@@ -194,15 +194,15 @@ ons.disableAnimations = () => {
  *   [ja]アニメーションを有効にします。[/ja]
  */
 ons.enableAnimations = () => {
-  ons._internal.config.animationsDisabled = false;
+    ons._internal.config.animationsDisabled = false;
 };
 
 ons._disableWarnings = () => {
-  ons._internal.config.warningsDisabled = true;
+    ons._internal.config.warningsDisabled = true;
 };
 
 ons._enableWarnings = () => {
-  ons._internal.config.warningsDisabled = false;
+    ons._internal.config.warningsDisabled = false;
 };
 
 /**
@@ -232,20 +232,20 @@ ons.enableAutoStyling = ons._autoStyle.enable;
  * @param {string} platform New platform to style the elements.
  */
 ons.forcePlatformStyling = newPlatform => {
-  ons.enableAutoStyling();
-  ons.platform.select(newPlatform || 'ios');
+    ons.enableAutoStyling();
+    ons.platform.select(newPlatform || 'ios');
 
-  ons._util.arrayFrom(document.querySelectorAll('*'))
-    .forEach(function(element) {
-      if (element.tagName.toLowerCase() === 'ons-if') {
-        element._platformUpdate();
-      } else if (element.tagName.match(/^ons-/i)) {
-        ons._autoStyle.prepare(element, true);
-        if (element.tagName.toLowerCase() === 'ons-tabbar') {
-          element._updatePosition();
-        }
-      }
-    });
+    ons._util.arrayFrom(document.querySelectorAll('*'))
+        .forEach(function(element) {
+            if (element.tagName.toLowerCase() === 'ons-if') {
+                element._platformUpdate();
+            } else if (element.tagName.match(/^ons-/i)) {
+                ons._autoStyle.prepare(element, true);
+                if (element.tagName.toLowerCase() === 'ons-tabbar') {
+                    element._updatePosition();
+                }
+            }
+        });
 };
 
 /**
@@ -271,25 +271,25 @@ ons.forcePlatformStyling = newPlatform => {
  *   [ja][/ja]
  */
 ons.createElement = (template, options = {}) => {
-  template = template.trim();
+    template = template.trim();
 
-  const create = html => {
-    const element = ons._util.createElement(html);
-    element.remove();
+    const create = html => {
+        const element = ons._util.createElement(html);
+        element.remove();
 
-    if (options.append) {
-      const target = options.append instanceof HTMLElement ? options.append : document.body;
-      target.insertBefore(element, options.insertBefore || null);
+        if (options.append) {
+            const target = options.append instanceof HTMLElement ? options.append : document.body;
+            target.insertBefore(element, options.insertBefore || null);
 
-      if (options.link instanceof Function) {
-        options.link(element);
-      }
-    }
+            if (options.link instanceof Function) {
+                options.link(element);
+            }
+        }
 
-    return element;
-  };
+        return element;
+    };
 
-  return template.charAt(0) === '<' ? create(template) : ons._internal.getPageHTMLAsync(template).then(create);
+    return template.charAt(0) === '<' ? create(template) : ons._internal.getPageHTMLAsync(template).then(create);
 };
 
 /**
@@ -395,64 +395,64 @@ ons.openActionSheet = actionSheet;
  *   [ja]ons-loading-placeholderの属性値としてページが指定されていない場合は、ページロード前に呼ばれるons.resolveLoadingPlaceholder処理が行われるまで表示されません。[/ja]
  */
 ons.resolveLoadingPlaceholder = (page, link) => {
-  const elements = ons._util.arrayFrom(window.document.querySelectorAll('[ons-loading-placeholder]'));
-  if (elements.length === 0) {
-    throw new Error('No ons-loading-placeholder exists.');
-  }
+    const elements = ons._util.arrayFrom(window.document.querySelectorAll('[ons-loading-placeholder]'));
+    if (elements.length === 0) {
+        throw new Error('No ons-loading-placeholder exists.');
+    }
 
-  elements
-    .filter(element => !element.getAttribute('page'))
-    .forEach(element => {
-      element.setAttribute('ons-loading-placeholder', page);
-      ons._resolveLoadingPlaceholder(element, page, link);
-    });
+    elements
+        .filter(element => !element.getAttribute('page'))
+        .forEach(element => {
+            element.setAttribute('ons-loading-placeholder', page);
+            ons._resolveLoadingPlaceholder(element, page, link);
+        });
 };
 
 
 ons._setupLoadingPlaceHolders = function() {
-  ons.ready(() => {
-    const elements = ons._util.arrayFrom(window.document.querySelectorAll('[ons-loading-placeholder]'));
+    ons.ready(() => {
+        const elements = ons._util.arrayFrom(window.document.querySelectorAll('[ons-loading-placeholder]'));
 
-    elements.forEach(element => {
-      const page = element.getAttribute('ons-loading-placeholder');
-      if (typeof page === 'string') {
-        ons._resolveLoadingPlaceholder(element, page);
-      }
+        elements.forEach(element => {
+            const page = element.getAttribute('ons-loading-placeholder');
+            if (typeof page === 'string') {
+                ons._resolveLoadingPlaceholder(element, page);
+            }
+        });
     });
-  });
 };
 
 ons._resolveLoadingPlaceholder = function(element, page, link) {
-  link = link || function(element, done) { done(); };
-  ons._internal.getPageHTMLAsync(page).then(html => {
+    link = link || function(element, done) { done(); };
+    ons._internal.getPageHTMLAsync(page).then(html => {
 
-    while (element.firstChild) {
-      element.removeChild(element.firstChild);
-    }
+        while (element.firstChild) {
+            element.removeChild(element.firstChild);
+        }
 
-    const contentElement = ons._util.createElement('<div>' + html + '</div>');
-    contentElement.style.display = 'none';
+        const contentElement = ons._util.createElement('<div>' + html + '</div>');
+        contentElement.style.display = 'none';
 
-    element.appendChild(contentElement);
+        element.appendChild(contentElement);
 
-    link(contentElement, function() {
-      contentElement.style.display = '';
+        link(contentElement, function() {
+            contentElement.style.display = '';
+        });
+
+    }).catch(error => {
+        throw new Error('Unabled to resolve placeholder: ' + error);
     });
-
-  }).catch(error => {
-    throw new Error('Unabled to resolve placeholder: ' + error);
-  });
 };
 
 function waitDeviceReady() {
-  const unlockDeviceReady = ons._readyLock.lock();
-  window.addEventListener('DOMContentLoaded', () => {
-    if (ons.isWebView()) {
-      window.document.addEventListener('deviceready', unlockDeviceReady, false);
-    } else {
-      unlockDeviceReady();
-    }
-  }, false);
+    const unlockDeviceReady = ons._readyLock.lock();
+    window.addEventListener('DOMContentLoaded', () => {
+        if (ons.isWebView()) {
+            window.document.addEventListener('deviceready', unlockDeviceReady, false);
+        } else {
+            unlockDeviceReady();
+        }
+    }, false);
 }
 
 window._superSecretOns = ons;

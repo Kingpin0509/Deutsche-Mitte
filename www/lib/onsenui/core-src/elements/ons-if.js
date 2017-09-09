@@ -47,74 +47,74 @@ import contentReady from '../ons/content-ready';
  */
 export default class IfElement extends BaseElement {
 
-  /**
-   * @attribute platform
-   * @initonly
-   * @type {string}
-   * @description
-   *  [en]Space-separated platform names. Possible values are `"ios"`, `"android"`, `"windows"` and `"other"`.[/en]
-   *  [ja][/ja]
-   */
+    /**
+     * @attribute platform
+     * @initonly
+     * @type {string}
+     * @description
+     *  [en]Space-separated platform names. Possible values are `"ios"`, `"android"`, `"windows"` and `"other"`.[/en]
+     *  [ja][/ja]
+     */
 
-  /**
-   * @attribute orientation
-   * @type {string}
-   * @description
-   *  [en]Either `"portrait"` or `"landscape"`.[/en]
-   *  [ja]portraitもしくはlandscapeを指定します[/ja]
-   */
+    /**
+     * @attribute orientation
+     * @type {string}
+     * @description
+     *  [en]Either `"portrait"` or `"landscape"`.[/en]
+     *  [ja]portraitもしくはlandscapeを指定します[/ja]
+     */
 
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    contentReady(this, () => {
-      if (platform._renderPlatform !== null) {
-        this._platformUpdate();
-      } else if (!this._isAllowedPlatform()) {
-        while (this.childNodes[0]) {
-          this.childNodes[0].remove();
+        contentReady(this, () => {
+            if (platform._renderPlatform !== null) {
+                this._platformUpdate();
+            } else if (!this._isAllowedPlatform()) {
+                while (this.childNodes[0]) {
+                    this.childNodes[0].remove();
+                }
+                this._platformUpdate();
+            }
+        });
+
+        this._onOrientationChange();
+    }
+
+    connectedCallback() {
+        orientation.on('change', this._onOrientationChange.bind(this));
+    }
+
+    static get observedAttributes() {
+        return ['orientation'];
+    }
+
+    attributeChangedCallback(name) {
+        if (name === 'orientation') {
+            this._onOrientationChange();
         }
-        this._platformUpdate();
-      }
-    });
-
-    this._onOrientationChange();
-  }
-
-  connectedCallback() {
-    orientation.on('change', this._onOrientationChange.bind(this));
-  }
-
-  static get observedAttributes() {
-    return ['orientation'];
-  }
-
-  attributeChangedCallback(name) {
-    if (name === 'orientation') {
-      this._onOrientationChange();
     }
-  }
 
-  disconnectedCallback() {
-    orientation.off('change', this._onOrientationChange);
-  }
-
-  _platformUpdate() {
-    this.style.display = this._isAllowedPlatform() ? '' : 'none';
-  }
-
-  _isAllowedPlatform() {
-    return !this.getAttribute('platform') || this.getAttribute('platform').split(/\s+/).indexOf(platform.getMobileOS()) >= 0;
-  }
-
-  _onOrientationChange() {
-    if (this.hasAttribute('orientation') && this._isAllowedPlatform()) {
-      const conditionalOrientation = this.getAttribute('orientation').toLowerCase();
-      const currentOrientation = orientation.isPortrait() ? 'portrait' : 'landscape';
-
-      this.style.display = (conditionalOrientation === currentOrientation) ? '' : 'none';
+    disconnectedCallback() {
+        orientation.off('change', this._onOrientationChange);
     }
-  }
+
+    _platformUpdate() {
+        this.style.display = this._isAllowedPlatform() ? '' : 'none';
+    }
+
+    _isAllowedPlatform() {
+        return !this.getAttribute('platform') || this.getAttribute('platform').split(/\s+/).indexOf(platform.getMobileOS()) >= 0;
+    }
+
+    _onOrientationChange() {
+        if (this.hasAttribute('orientation') && this._isAllowedPlatform()) {
+            const conditionalOrientation = this.getAttribute('orientation').toLowerCase();
+            const currentOrientation = orientation.isPortrait() ? 'portrait' : 'landscape';
+
+            this.style.display = (conditionalOrientation === currentOrientation) ? '' : 'none';
+        }
+    }
 }
 
 customElements.define('ons-if', IfElement);

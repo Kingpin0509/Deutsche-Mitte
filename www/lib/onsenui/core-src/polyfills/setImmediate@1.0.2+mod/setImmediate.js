@@ -21,7 +21,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
-(function (global, undefined) {
+(function(global, undefined) {
     "use strict";
 
     if (global.setImmediate) {
@@ -148,7 +148,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
             // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
             var script = doc.createElement("script");
-            script.onreadystatechange = function () {
+            script.onreadystatechange = function() {
                 runIfPresent(handle);
                 script.onreadystatechange = null;
                 html.removeChild(script);

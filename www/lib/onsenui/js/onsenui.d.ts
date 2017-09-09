@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 // module declaration
-declare module 'onsenui' { 
+declare module 'onsenui' {
   export = ons;
 }
 
@@ -288,7 +288,7 @@ declare namespace ons {
    */
   class PageLoader {
     internalLoader: Function;
-    load(options: {page: any, parent: Element, params?: Object}, done: Function): void;
+    load(options: { page: any, parent: Element, params?: Object }, done: Function): void;
   }
 }
 
@@ -310,7 +310,7 @@ interface OnsPageElement {
   data: any;
 }
 
-interface CarouselOptions{
+interface CarouselOptions {
   callback?: Function;
   animation?: String;
   animationOptions?: Object;
@@ -329,24 +329,24 @@ interface OnsCarouselElement {
   * @return The current carousel item index.
   */
   getActiveIndex(): void;
-   /**
-   * @description Show next ons-carousel item
-   * @return Resolves to the carousel element
-   */
+  /**
+  * @description Show next ons-carousel item
+  * @return Resolves to the carousel element
+  */
   next(options?: CarouselOptions): Promise<HTMLElement>;
-   /**
-   * @description Show previous ons-carousel item
-   * @return Resolves to the carousel element
-   */
+  /**
+  * @description Show previous ons-carousel item
+  * @return Resolves to the carousel element
+  */
   prev(options?: CarouselOptions): Promise<HTMLElement>;
-   /**
-   * @description Update the layout of the carousel. Used when adding ons-carousel-items dynamically or to automatically adjust the size.
-   */
+  /**
+  * @description Update the layout of the carousel. Used when adding ons-carousel-items dynamically or to automatically adjust the size.
+  */
   refresh(): void;
-   /**
-   * @description Show first ons-carousel item
-   * @Resolves to the carousel element
-   */
+  /**
+  * @description Show first ons-carousel item
+  * @Resolves to the carousel element
+  */
   first(): Promise<HTMLElement>;
   /**
    * @description Show last ons-carousel item
@@ -386,7 +386,7 @@ interface OnsCarouselElement {
 /**
  * @description Component that adds "pull-to-refresh" to an <ons-page> element
  */
- //later should be updated
+//later should be updated
 interface OnsPullHookElement {
   /**
   * @description The height of the pull hook in pixels. The default value is `64px`.
@@ -442,13 +442,13 @@ interface OnsAlertDialogElement {
    * @description Hide the alert dialog
    */
   hide(options?: dialogOptions): Promise<HTMLElement>;
-   /**
-    * @description A boolean value that specifies whether the dialog is disabled or not.
-    */
+  /**
+   * @description A boolean value that specifies whether the dialog is disabled or not.
+   */
   disabled: boolean;
-   /**
-    * @description A boolean value that specifies whether the dialog is cancelable or not. When the dialog is cancelable it can be closed by tapping the background or by pressing the back button on Android devices.
-    */
+  /**
+   * @description A boolean value that specifies whether the dialog is cancelable or not. When the dialog is cancelable it can be closed by tapping the background or by pressing the back button on Android devices.
+   */
   cancelable: boolean;
 }
 
@@ -479,13 +479,13 @@ interface OnsDialogElement {
    * @description Destroy the dialog and remove it from the DOM tree
    */
   destroy(): void;
-   /**
-    * @description A boolean value that specifies whether the dialog is disabled or not.
-    */
+  /**
+   * @description A boolean value that specifies whether the dialog is disabled or not.
+   */
   disabled: boolean;
-   /**
-    * @description A boolean value that specifies whether the dialog is cancelable or not. When the dialog is cancelable it can be closed by tapping the background or by pressing the back button on Android devices.
-    */
+  /**
+   * @description A boolean value that specifies whether the dialog is cancelable or not. When the dialog is cancelable it can be closed by tapping the background or by pressing the back button on Android devices.
+   */
   cancelable: boolean;
 }
 
@@ -509,13 +509,13 @@ interface OnsSwitchElement {
 
 
 interface ModalOptions {
-   /**
-    * @description Animation name. Available animations are `"none"` and `"fade"`.
-    */
+  /**
+   * @description Animation name. Available animations are `"none"` and `"fade"`.
+   */
   animation?: string;
-   /**
-    * @description Specify the animation's duration, delay and timing. E.g. `{duration: 0.2, delay: 0.4, timing: 'ease-in'}`.
-    */
+  /**
+   * @description Specify the animation's duration, delay and timing. E.g. `{duration: 0.2, delay: 0.4, timing: 'ease-in'}`.
+   */
   animationOptions?: string;
 }
 
@@ -524,7 +524,7 @@ interface ModalOptions {
  *   Modal component that masks current screen
  *   Underlying components are not subject to any events while the modal component is shown
  */
-interface OnsModalElement{
+interface OnsModalElement {
   /**
    * @return Device back button handler
    * @param {String} [options.animation] Animation name. Available animations are `"none"` and `"fade"`.
@@ -546,28 +546,28 @@ interface OnsModalElement{
    * @description Hide modal
    */
   hide(options?: ModalOptions): Promise<HTMLElement>;
-   /**
-    * @description Back-button handler.
-    */
+  /**
+   * @description Back-button handler.
+   */
   onDeviceBackButton: any;
-   /**
-    * @description Whether the dialog is visible or not.
-    */
+  /**
+   * @description Whether the dialog is visible or not.
+   */
   visible: boolean;
 }
 
 interface navigatorOptions {
-   /**
-   * @description Animation name. Available animations are `"slide"`, `"lift"`, `"fade"` and `"none"`. These are platform based animations. For fixed animations, add `"-ios"` or `"-md"` suffix to the animation name. E.g. `"lift-ios"`, `"lift-md"`. Defaults values are `"slide-ios"` and `"fade-md"`.
-   */
+  /**
+  * @description Animation name. Available animations are `"slide"`, `"lift"`, `"fade"` and `"none"`. These are platform based animations. For fixed animations, add `"-ios"` or `"-md"` suffix to the animation name. E.g. `"lift-ios"`, `"lift-md"`. Defaults values are `"slide-ios"` and `"fade-md"`.
+  */
   animation?: string;
-   /**
-   * @description Specify the animation's duration, delay and timing. E.g. `{duration: 0.2, delay: 0.4, timing: 'ease-in'}`.
-   */
+  /**
+  * @description Specify the animation's duration, delay and timing. E.g. `{duration: 0.2, delay: 0.4, timing: 'ease-in'}`.
+  */
   animationOptions?: string;
-   /**
-   * @description If this parameter is `true`, the previous page will be refreshed (destroyed and created again) before `popPage()` action.
-   */
+  /**
+  * @description If this parameter is `true`, the previous page will be refreshed (destroyed and created again) before `popPage()` action.
+  */
   refresh?: boolean;
   /**
    * @description Function that is called when the transition has ended.

@@ -27,9 +27,9 @@ import './ons-toolbar'; // ensures that 'ons-toolbar' element is registered
 
 const defaultClassName = 'page';
 const scheme = {
-  '': 'page--*',
-  '.page__content': 'page--*__content',
-  '.page__background': 'page--*__background'
+    '': 'page--*',
+    '.page__content': 'page--*__content',
+    '.page__background': 'page--*__background'
 };
 
 const nullToolbarElement = document.createElement('ons-toolbar'); // requires that 'ons-toolbar' element is registered
@@ -100,339 +100,339 @@ const nullToolbarElement = document.createElement('ons-toolbar'); // requires th
  */
 export default class PageElement extends BaseElement {
 
-  /**
-   * @event init
-   * @description
-   *   [en]Fired right after the page is attached.[/en]
-   *   [ja]ページがアタッチされた後に発火します。[/ja]
-   * @param {Object} event [en]Event object.[/en]
-   */
+    /**
+     * @event init
+     * @description
+     *   [en]Fired right after the page is attached.[/en]
+     *   [ja]ページがアタッチされた後に発火します。[/ja]
+     * @param {Object} event [en]Event object.[/en]
+     */
 
-  /**
-   * @event show
-   * @description
-   *   [en]Fired right after the page is shown.[/en]
-   *   [ja]ページが表示された後に発火します。[/ja]
-   * @param {Object} event [en]Event object.[/en]
-   */
+    /**
+     * @event show
+     * @description
+     *   [en]Fired right after the page is shown.[/en]
+     *   [ja]ページが表示された後に発火します。[/ja]
+     * @param {Object} event [en]Event object.[/en]
+     */
 
-  /**
-   * @event hide
-   * @description
-   *   [en]Fired right after the page is hidden.[/en]
-   *   [ja]ページが隠れた後に発火します。[/ja]
-   * @param {Object} event [en]Event object.[/en]
-   */
+    /**
+     * @event hide
+     * @description
+     *   [en]Fired right after the page is hidden.[/en]
+     *   [ja]ページが隠れた後に発火します。[/ja]
+     * @param {Object} event [en]Event object.[/en]
+     */
 
-  /**
-   * @event destroy
-   * @description
-   *   [en]Fired right before the page is destroyed.[/en]
-   *   [ja]ページが破棄される前に発火します。[/ja]
-   * @param {Object} event [en]Event object.[/en]
-   */
+    /**
+     * @event destroy
+     * @description
+     *   [en]Fired right before the page is destroyed.[/en]
+     *   [ja]ページが破棄される前に発火します。[/ja]
+     * @param {Object} event [en]Event object.[/en]
+     */
 
-  /**
-   * @attribute modifier
-   * @type {String}
-   * @description
-   *   [en]Specify modifier name to specify custom styles.[/en]
-   *   [ja]スタイル定義をカスタマイズするための名前を指定します。[/ja]
-   */
+    /**
+     * @attribute modifier
+     * @type {String}
+     * @description
+     *   [en]Specify modifier name to specify custom styles.[/en]
+     *   [ja]スタイル定義をカスタマイズするための名前を指定します。[/ja]
+     */
 
-  /**
-   * @attribute on-infinite-scroll
-   * @type {String}
-   * @description
-   *   [en]Path of the function to be executed on infinite scrolling. Example: `app.loadData`. The function receives a done callback that must be called when it's finished.[/en]
-   *   [ja][/ja]
-   */
+    /**
+     * @attribute on-infinite-scroll
+     * @type {String}
+     * @description
+     *   [en]Path of the function to be executed on infinite scrolling. Example: `app.loadData`. The function receives a done callback that must be called when it's finished.[/en]
+     *   [ja][/ja]
+     */
 
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.classList.add(defaultClassName);
-    this._initialized = false;
+        this.classList.add(defaultClassName);
+        this._initialized = false;
 
-    contentReady(this, () => {
-      this._compile();
+        contentReady(this, () => {
+            this._compile();
 
-      this._isShown = false;
-      this._contentElement = this._getContentElement();
-    });
-  }
-
-  connectedCallback() {
-    if (this._initialized) {
-      return;
+            this._isShown = false;
+            this._contentElement = this._getContentElement();
+        });
     }
 
-    this._initialized = true;
-
-    contentReady(this, () => {
-      setImmediate(() => util.triggerElementEvent(this, 'init'));
-
-      if (!util.hasAnyComponentAsParent(this)) {
-        setImmediate(() => this._show());
-      }
-
-      this._tryToFillStatusBar();
-
-      if (this.hasAttribute('on-infinite-scroll')) {
-        this.attributeChangedCallback('on-infinite-scroll', null, this.getAttribute('on-infinite-scroll'));
-      }
-    });
-  }
-
-  updateBackButton(show) {
-    if (this.backButton) {
-      show ? this.backButton.show() : this.backButton.hide();
-    }
-  }
-
-  set name(str) {
-    this.setAttribute('name', str);
-  }
-
-  get name() {
-    return this.getAttribute('name');
-  }
-
-  get backButton() {
-    return this.querySelector('ons-back-button');
-  }
-
-  _tryToFillStatusBar(){
-    internal.autoStatusBarFill(() => {
-      const filled = util.findParent(this, e => e.hasAttribute('status-bar-fill'));
-      util.toggleAttribute(this, 'status-bar-fill', !filled && (this._canAnimateToolbar() || !this._hasAPageControlChild()));
-    });
-  }
-
-  _hasAPageControlChild() {
-    return util.findChild(this._contentElement, e => e.nodeName.match(/ons-(splitter|sliding-menu|navigator|tabbar)/i));
-  }
-
-  /**
-   * @property onInfiniteScroll
-   * @description
-   *  [en]Function to be executed when scrolling to the bottom of the page. The function receives a done callback as an argument that must be called when it's finished.[/en]
-   *  [ja][/ja]
-   */
-  set onInfiniteScroll(value) {
-    if (value === null) {
-      this._onInfiniteScroll = null;
-      this._contentElement.removeEventListener('scroll', this._boundOnScroll);
-      return;
-    }
-    if (!(value instanceof Function)) {
-      throw new Error('onInfiniteScroll must be a function or null');
-    }
-    if (!this._onInfiniteScroll) {
-      this._infiniteScrollLimit = 0.9;
-      this._boundOnScroll = this._onScroll.bind(this);
-      setImmediate(() => this._contentElement.addEventListener('scroll', this._boundOnScroll));
-    }
-    this._onInfiniteScroll = value;
-  }
-
-  get onInfiniteScroll() {
-    return this._onInfiniteScroll;
-  }
-
-  _onScroll() {
-    const c = this._contentElement,
-      overLimit = (c.scrollTop + c.clientHeight) / c.scrollHeight >= this._infiniteScrollLimit;
-
-    if (this._onInfiniteScroll && !this._loadingContent && overLimit) {
-      this._loadingContent = true;
-      this._onInfiniteScroll(() => this._loadingContent = false);
-    }
-  }
-
-
-  /**
-   * @property onDeviceBackButton
-   * @type {Object}
-   * @description
-   *   [en]Back-button handler.[/en]
-   *   [ja]バックボタンハンドラ。[/ja]
-   */
-  get onDeviceBackButton() {
-    return this._backButtonHandler;
-  }
-
-  set onDeviceBackButton(callback) {
-    if (this._backButtonHandler) {
-      this._backButtonHandler.destroy();
-    }
-
-    this._backButtonHandler = deviceBackButtonDispatcher.createHandler(this, callback);
-  }
-
-  /**
-   * @return {HTMLElement}
-   */
-  _getContentElement() {
-    const result = util.findChild(this, '.page__content');
-    if (result) {
-      return result;
-    }
-    throw Error('fail to get ".page__content" element.');
-  }
-
-  /**
-   * @return {Boolean}
-   */
-  _canAnimateToolbar() {
-    if (util.findChild(this, 'ons-toolbar')) {
-      return true;
-    }
-    return !!util.findChild(this._contentElement, el => {
-      return util.match(el, 'ons-toolbar') && !el.hasAttribute('inline');
-    });
-  }
-
-  /**
-   * @return {HTMLElement}
-   */
-  _getBackgroundElement() {
-    const result = util.findChild(this, '.page__background');
-    if (result) {
-      return result;
-    }
-    throw Error('fail to get ".page__background" element.');
-  }
-
-  /**
-   * @return {HTMLElement}
-   */
-  _getBottomToolbarElement() {
-    return util.findChild(this, 'ons-bottom-toolbar') || internal.nullElement;
-  }
-
-
-  /**
-   * @return {HTMLElement}
-   */
-  _getToolbarElement() {
-    return util.findChild(this, 'ons-toolbar') || nullToolbarElement;
-  }
-
-  static get observedAttributes() {
-    return ['modifier', 'on-infinite-scroll', 'class'];
-  }
-
-  attributeChangedCallback(name, last, current) {
-    switch (name) {
-      case 'class':
-        if (!this.classList.contains(defaultClassName)) {
-          this.className = defaultClassName + ' ' + current;
+    connectedCallback() {
+        if (this._initialized) {
+            return;
         }
-        break;
-      case 'modifier':
-        ModifierUtil.onModifierChanged(last, current, this, scheme);
-        break;
-      case 'on-infinite-scroll':
-        if (current === null) {
-          this.onInfiniteScroll = null;
-        } else {
-          this.onInfiniteScroll = (done) => {
-            const f = util.findFromPath(current);
-            this.onInfiniteScroll = f;
-            f(done);
-          };
+
+        this._initialized = true;
+
+        contentReady(this, () => {
+            setImmediate(() => util.triggerElementEvent(this, 'init'));
+
+            if (!util.hasAnyComponentAsParent(this)) {
+                setImmediate(() => this._show());
+            }
+
+            this._tryToFillStatusBar();
+
+            if (this.hasAttribute('on-infinite-scroll')) {
+                this.attributeChangedCallback('on-infinite-scroll', null, this.getAttribute('on-infinite-scroll'));
+            }
+        });
+    }
+
+    updateBackButton(show) {
+        if (this.backButton) {
+            show ? this.backButton.show() : this.backButton.hide();
         }
-        break;
-    }
-  }
-
-  _compile() {
-    autoStyle.prepare(this);
-
-    if (util.findChild(this, '.content')) {
-      util.findChild(this, '.content').classList.add('page__content');
     }
 
-    if (util.findChild(this, '.background')) {
-      util.findChild(this, '.background').classList.add('page__background');
+    set name(str) {
+        this.setAttribute('name', str);
     }
 
-    if (!util.findChild(this, '.page__content')) {
-      const content = util.create('.page__content');
+    get name() {
+        return this.getAttribute('name');
+    }
 
-      util.arrayFrom(this.childNodes).forEach(node => {
-        if (node.nodeType !== 1 || this._elementShouldBeMoved(node)) {
-          content.appendChild(node);
+    get backButton() {
+        return this.querySelector('ons-back-button');
+    }
+
+    _tryToFillStatusBar() {
+        internal.autoStatusBarFill(() => {
+            const filled = util.findParent(this, e => e.hasAttribute('status-bar-fill'));
+            util.toggleAttribute(this, 'status-bar-fill', !filled && (this._canAnimateToolbar() || !this._hasAPageControlChild()));
+        });
+    }
+
+    _hasAPageControlChild() {
+        return util.findChild(this._contentElement, e => e.nodeName.match(/ons-(splitter|sliding-menu|navigator|tabbar)/i));
+    }
+
+    /**
+     * @property onInfiniteScroll
+     * @description
+     *  [en]Function to be executed when scrolling to the bottom of the page. The function receives a done callback as an argument that must be called when it's finished.[/en]
+     *  [ja][/ja]
+     */
+    set onInfiniteScroll(value) {
+        if (value === null) {
+            this._onInfiniteScroll = null;
+            this._contentElement.removeEventListener('scroll', this._boundOnScroll);
+            return;
         }
-      });
-
-      const prevNode = util.findChild(this, '.page__background') || util.findChild(this, 'ons-toolbar');
-
-      this.insertBefore(content, prevNode && prevNode.nextSibling);
+        if (!(value instanceof Function)) {
+            throw new Error('onInfiniteScroll must be a function or null');
+        }
+        if (!this._onInfiniteScroll) {
+            this._infiniteScrollLimit = 0.9;
+            this._boundOnScroll = this._onScroll.bind(this);
+            setImmediate(() => this._contentElement.addEventListener('scroll', this._boundOnScroll));
+        }
+        this._onInfiniteScroll = value;
     }
 
-    if (!util.findChild(this, '.page__background')) {
-      const background = util.create('.page__background');
-      this.insertBefore(background, util.findChild(this, '.page__content'));
+    get onInfiniteScroll() {
+        return this._onInfiniteScroll;
     }
 
-    ModifierUtil.initModifier(this, scheme);
-  }
+    _onScroll() {
+        const c = this._contentElement,
+            overLimit = (c.scrollTop + c.clientHeight) / c.scrollHeight >= this._infiniteScrollLimit;
 
-  _elementShouldBeMoved(el) {
-    if (el.classList.contains('page__background')) {
-      return false;
-    }
-    const tagName = el.tagName.toLowerCase();
-    if (tagName === 'ons-fab') {
-      return !el.hasAttribute('position');
-    }
-    const fixedElements = ['ons-toolbar', 'ons-bottom-toolbar', 'ons-modal', 'ons-speed-dial', 'ons-dialog', 'ons-alert-dialog', 'ons-popover', 'ons-action-sheet'];
-    return el.hasAttribute('inline') || fixedElements.indexOf(tagName) === -1;
-  }
-
-  _show() {
-    if (!this._isShown && util.isAttached(this)) {
-      this._isShown = true;
-      util.triggerElementEvent(this, 'show');
-      util.propagateAction(this, '_show');
-    }
-  }
-
-  _hide() {
-    if (this._isShown) {
-      this._isShown = false;
-      util.triggerElementEvent(this, 'hide');
-      util.propagateAction(this, '_hide');
-    }
-  }
-
-  _destroy() {
-    this._hide();
-
-    util.triggerElementEvent(this, 'destroy');
-
-    if (this.onDeviceBackButton) {
-      this.onDeviceBackButton.destroy();
+        if (this._onInfiniteScroll && !this._loadingContent && overLimit) {
+            this._loadingContent = true;
+            this._onInfiniteScroll(() => this._loadingContent = false);
+        }
     }
 
-    util.propagateAction(this, '_destroy');
 
-    this.remove();
-  }
+    /**
+     * @property onDeviceBackButton
+     * @type {Object}
+     * @description
+     *   [en]Back-button handler.[/en]
+     *   [ja]バックボタンハンドラ。[/ja]
+     */
+    get onDeviceBackButton() {
+        return this._backButtonHandler;
+    }
 
-  static get events() {
-    return ['init', 'show', 'hide', 'destroy'];
-  }
+    set onDeviceBackButton(callback) {
+        if (this._backButtonHandler) {
+            this._backButtonHandler.destroy();
+        }
 
-  /**
-   * @property data
-   * @type {*}
-   * @description
-   *   [en]User's custom data passed to `pushPage()`-like methods.[/en]
-   *   [ja][/ja]
-   */
+        this._backButtonHandler = deviceBackButtonDispatcher.createHandler(this, callback);
+    }
+
+    /**
+     * @return {HTMLElement}
+     */
+    _getContentElement() {
+        const result = util.findChild(this, '.page__content');
+        if (result) {
+            return result;
+        }
+        throw Error('fail to get ".page__content" element.');
+    }
+
+    /**
+     * @return {Boolean}
+     */
+    _canAnimateToolbar() {
+        if (util.findChild(this, 'ons-toolbar')) {
+            return true;
+        }
+        return !!util.findChild(this._contentElement, el => {
+            return util.match(el, 'ons-toolbar') && !el.hasAttribute('inline');
+        });
+    }
+
+    /**
+     * @return {HTMLElement}
+     */
+    _getBackgroundElement() {
+        const result = util.findChild(this, '.page__background');
+        if (result) {
+            return result;
+        }
+        throw Error('fail to get ".page__background" element.');
+    }
+
+    /**
+     * @return {HTMLElement}
+     */
+    _getBottomToolbarElement() {
+        return util.findChild(this, 'ons-bottom-toolbar') || internal.nullElement;
+    }
+
+
+    /**
+     * @return {HTMLElement}
+     */
+    _getToolbarElement() {
+        return util.findChild(this, 'ons-toolbar') || nullToolbarElement;
+    }
+
+    static get observedAttributes() {
+        return ['modifier', 'on-infinite-scroll', 'class'];
+    }
+
+    attributeChangedCallback(name, last, current) {
+        switch (name) {
+            case 'class':
+                if (!this.classList.contains(defaultClassName)) {
+                    this.className = defaultClassName + ' ' + current;
+                }
+                break;
+            case 'modifier':
+                ModifierUtil.onModifierChanged(last, current, this, scheme);
+                break;
+            case 'on-infinite-scroll':
+                if (current === null) {
+                    this.onInfiniteScroll = null;
+                } else {
+                    this.onInfiniteScroll = (done) => {
+                        const f = util.findFromPath(current);
+                        this.onInfiniteScroll = f;
+                        f(done);
+                    };
+                }
+                break;
+        }
+    }
+
+    _compile() {
+        autoStyle.prepare(this);
+
+        if (util.findChild(this, '.content')) {
+            util.findChild(this, '.content').classList.add('page__content');
+        }
+
+        if (util.findChild(this, '.background')) {
+            util.findChild(this, '.background').classList.add('page__background');
+        }
+
+        if (!util.findChild(this, '.page__content')) {
+            const content = util.create('.page__content');
+
+            util.arrayFrom(this.childNodes).forEach(node => {
+                if (node.nodeType !== 1 || this._elementShouldBeMoved(node)) {
+                    content.appendChild(node);
+                }
+            });
+
+            const prevNode = util.findChild(this, '.page__background') || util.findChild(this, 'ons-toolbar');
+
+            this.insertBefore(content, prevNode && prevNode.nextSibling);
+        }
+
+        if (!util.findChild(this, '.page__background')) {
+            const background = util.create('.page__background');
+            this.insertBefore(background, util.findChild(this, '.page__content'));
+        }
+
+        ModifierUtil.initModifier(this, scheme);
+    }
+
+    _elementShouldBeMoved(el) {
+        if (el.classList.contains('page__background')) {
+            return false;
+        }
+        const tagName = el.tagName.toLowerCase();
+        if (tagName === 'ons-fab') {
+            return !el.hasAttribute('position');
+        }
+        const fixedElements = ['ons-toolbar', 'ons-bottom-toolbar', 'ons-modal', 'ons-speed-dial', 'ons-dialog', 'ons-alert-dialog', 'ons-popover', 'ons-action-sheet'];
+        return el.hasAttribute('inline') || fixedElements.indexOf(tagName) === -1;
+    }
+
+    _show() {
+        if (!this._isShown && util.isAttached(this)) {
+            this._isShown = true;
+            util.triggerElementEvent(this, 'show');
+            util.propagateAction(this, '_show');
+        }
+    }
+
+    _hide() {
+        if (this._isShown) {
+            this._isShown = false;
+            util.triggerElementEvent(this, 'hide');
+            util.propagateAction(this, '_hide');
+        }
+    }
+
+    _destroy() {
+        this._hide();
+
+        util.triggerElementEvent(this, 'destroy');
+
+        if (this.onDeviceBackButton) {
+            this.onDeviceBackButton.destroy();
+        }
+
+        util.propagateAction(this, '_destroy');
+
+        this.remove();
+    }
+
+    static get events() {
+        return ['init', 'show', 'hide', 'destroy'];
+    }
+
+    /**
+     * @property data
+     * @type {*}
+     * @description
+     *   [en]User's custom data passed to `pushPage()`-like methods.[/en]
+     *   [ja][/ja]
+     */
 }
 
 customElements.define('ons-page', PageElement);

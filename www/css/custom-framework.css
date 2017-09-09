@@ -110,7 +110,7 @@ h5 {
 .heading-strip {
     padding: 20px;
     background-size: cover;
-    font-family: 'roboto','Oswald', sans-serif;
+    font-family: 'roboto', 'Oswald', sans-serif;
     text-transform: uppercase;
 }
 
@@ -126,6 +126,7 @@ h5 {
     z-index: 99;
     position: relative;
 }
+
 .heading-strip p {
     color: #ff8b00;
     z-index: 99;
@@ -141,7 +142,7 @@ h5 {
     font-size: 45px;
     width: 60px;
     top: 5px;
-    bottom: 5px
+    bottom: 5px;
     right: 0px;
 }
 
@@ -200,7 +201,7 @@ h5 {
     color: #FFFFFF;
     z-index: 99;
     position: relative;
-    font-family: 'roboto','Oswald', sans-serif;
+    font-family: 'roboto', 'Oswald', sans-serif;
     text-align: center;
     margin-bottom: 10px;
 }

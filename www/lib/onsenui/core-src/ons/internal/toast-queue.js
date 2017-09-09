@@ -16,25 +16,25 @@ limitations under the License.
 */
 
 class ToastQueue {
-  constructor() {
-    this.queue = [];
-  }
-
-  add(fn, promise) {
-    this.queue.push(fn);
-
-    if (this.queue.length === 1) {
-      setImmediate(this.queue[0]);
+    constructor() {
+        this.queue = [];
     }
 
-    promise.then(() => {
-      this.queue.shift();
+    add(fn, promise) {
+        this.queue.push(fn);
 
-      if (this.queue.length > 0) {
-        setTimeout(this.queue[0], 1000/30); // Apply some visual delay
-      }
-    });
-  }
+        if (this.queue.length === 1) {
+            setImmediate(this.queue[0]);
+        }
+
+        promise.then(() => {
+            this.queue.shift();
+
+            if (this.queue.length > 0) {
+                setTimeout(this.queue[0], 1000 / 30); // Apply some visual delay
+            }
+        });
+    }
 }
 
 export default new ToastQueue();

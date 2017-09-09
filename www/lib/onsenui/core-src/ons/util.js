@@ -26,7 +26,7 @@ const util = {};
  * @return {Function}
  */
 util.prepareQuery = (query) => {
-  return query instanceof Function ? query : (element) => util.match(element, query);
+    return query instanceof Function ? query : (element) => util.match(element, query);
 };
 
 /**
@@ -42,19 +42,19 @@ util.match = (e, s) => (e.matches || e.webkitMatchesSelector || e.mozMatchesSele
  * @return {HTMLElement/null}
  */
 util.findChild = (element, query) => {
-  const match = util.prepareQuery(query);
+    const match = util.prepareQuery(query);
 
-  // Caution: `element.children` is `undefined` in some environments if `element` is `svg`
-  for (let i = 0; i < element.childNodes.length; i++) {
-    const node = element.childNodes[i];
-    if (node.nodeType !== Node.ELEMENT_NODE) { // process only element nodes
-      continue;
+    // Caution: `element.children` is `undefined` in some environments if `element` is `svg`
+    for (let i = 0; i < element.childNodes.length; i++) {
+        const node = element.childNodes[i];
+        if (node.nodeType !== Node.ELEMENT_NODE) { // process only element nodes
+            continue;
+        }
+        if (match(node)) {
+            return node;
+        }
     }
-    if (match(node)) {
-      return node;
-    }
-  }
-  return null;
+    return null;
 };
 
 /**
@@ -63,18 +63,18 @@ util.findChild = (element, query) => {
  * @return {HTMLElement/null}
  */
 util.findParent = (element, query) => {
-  const match = util.prepareQuery(query);
+    const match = util.prepareQuery(query);
 
-  let parent = element.parentNode;
-  for (;;) {
-    if (!parent || parent === document) {
-      return null;
+    let parent = element.parentNode;
+    for (;;) {
+        if (!parent || parent === document) {
+            return null;
+        }
+        if (match(parent)) {
+            return parent;
+        }
+        parent = parent.parentNode;
     }
-    if (match(parent)) {
-      return parent;
-    }
-    parent = parent.parentNode;
-  }
 };
 
 /**
@@ -82,13 +82,13 @@ util.findParent = (element, query) => {
  * @return {boolean}
  */
 util.isAttached = (element) => {
-  while (document.documentElement !== element) {
-    if (!element) {
-      return false;
+    while (document.documentElement !== element) {
+        if (!element) {
+            return false;
+        }
+        element = element.parentNode;
     }
-    element = element.parentNode;
-  }
-  return true;
+    return true;
 };
 
 /**
@@ -96,13 +96,13 @@ util.isAttached = (element) => {
  * @return {boolean}
  */
 util.hasAnyComponentAsParent = (element) => {
-  while (element && document.documentElement !== element) {
-    element = element.parentNode;
-    if (element && element.nodeName.toLowerCase().match(/(ons-navigator|ons-tabbar|ons-modal|ons-sliding-menu|ons-split-view)/)) {
-      return true;
+    while (element && document.documentElement !== element) {
+        element = element.parentNode;
+        if (element && element.nodeName.toLowerCase().match(/(ons-navigator|ons-tabbar|ons-modal|ons-sliding-menu|ons-split-view)/)) {
+            return true;
+        }
     }
-  }
-  return false;
+    return false;
 };
 
 /**
@@ -110,14 +110,14 @@ util.hasAnyComponentAsParent = (element) => {
  * @param {String} action to propagate
  */
 util.propagateAction = (element, action) => {
-  for (let i = 0; i < element.childNodes.length; i++) {
-    const child = element.childNodes[i];
-    if (child[action] instanceof Function) {
-      child[action]();
-    } else {
-      util.propagateAction(child, action);
+    for (let i = 0; i < element.childNodes.length; i++) {
+        const child = element.childNodes[i];
+        if (child[action] instanceof Function) {
+            child[action]();
+        } else {
+            util.propagateAction(child, action);
+        }
     }
-  }
 };
 
 /**
@@ -132,16 +132,16 @@ util.camelize = string => string.toLowerCase().replace(/-([a-z])/g, (m, l) => l.
  * @param {Element}
  */
 util.create = (selector = '', style = {}) => {
-  const classList = selector.split('.');
-  const element = document.createElement(classList.shift() || 'div');
+    const classList = selector.split('.');
+    const element = document.createElement(classList.shift() || 'div');
 
-  if (classList.length) {
-    element.className = classList.join(' ');
-  }
+    if (classList.length) {
+        element.className = classList.join(' ');
+    }
 
-  util.extend(element.style, style);
+    util.extend(element.style, style);
 
-  return element;
+    return element;
 };
 
 /**
@@ -149,14 +149,14 @@ util.create = (selector = '', style = {}) => {
  * @return {Element}
  */
 util.createElement = (html) => {
-  const wrapper = document.createElement('div');
-  wrapper.innerHTML = html;
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = html;
 
-  if (wrapper.children.length > 1) {
-    throw new Error('"html" must be one wrapper element.');
-  }
+    if (wrapper.children.length > 1) {
+        throw new Error('"html" must be one wrapper element.');
+    }
 
-  return wrapper.children[0];
+    return wrapper.children[0];
 };
 
 /**
@@ -164,15 +164,15 @@ util.createElement = (html) => {
  * @return {HTMLFragment}
  */
 util.createFragment = (html) => {
-  const wrapper = document.createElement('div');
-  wrapper.innerHTML = html;
-  const fragment = document.createDocumentFragment();
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = html;
+    const fragment = document.createDocumentFragment();
 
-  while (wrapper.firstChild) {
-    fragment.appendChild(wrapper.firstChild);
-  }
+    while (wrapper.firstChild) {
+        fragment.appendChild(wrapper.firstChild);
+    }
 
-  return fragment;
+    return fragment;
 };
 
 /*
@@ -181,17 +181,17 @@ util.createFragment = (html) => {
  * @returns {Object} Reference to `dst`.
  */
 util.extend = (dst, ...args) => {
-  for (let i = 0; i < args.length; i++) {
-    if (args[i]) {
-      const keys = Object.keys(args[i]);
-      for (let j = 0; j < keys.length; j++) {
-        const key = keys[j];
-        dst[key] = args[i][key];
-      }
+    for (let i = 0; i < args.length; i++) {
+        if (args[i]) {
+            const keys = Object.keys(args[i]);
+            for (let j = 0; j < keys.length; j++) {
+                const key = keys[j];
+                dst[key] = args[i][key];
+            }
+        }
     }
-  }
 
-  return dst;
+    return dst;
 };
 
 /**
@@ -199,7 +199,7 @@ util.extend = (dst, ...args) => {
  * @return {Array}
  */
 util.arrayFrom = (arrayLike) => {
-  return Array.prototype.slice.apply(arrayLike);
+    return Array.prototype.slice.apply(arrayLike);
 };
 
 /**
@@ -208,15 +208,15 @@ util.arrayFrom = (arrayLike) => {
  * @return {Object}
  */
 util.parseJSONObjectSafely = (jsonString, failSafe = {}) => {
-  try {
-    const result = JSON.parse('' + jsonString);
-    if (typeof result === 'object' && result !== null) {
-      return result;
+    try {
+        const result = JSON.parse('' + jsonString);
+        if (typeof result === 'object' && result !== null) {
+            return result;
+        }
+    } catch (e) {
+        return failSafe;
     }
-  } catch(e) {
     return failSafe;
-  }
-  return failSafe;
 };
 
 /**
@@ -224,12 +224,13 @@ util.parseJSONObjectSafely = (jsonString, failSafe = {}) => {
  * @return {Any} - whatever is located at that path
  */
 util.findFromPath = (path) => {
-  path = path.split('.');
-  var el = window, key;
-  while (key = path.shift()) { // eslint-disable-line no-cond-assign
-    el = el[key];
-  }
-  return el;
+    path = path.split('.');
+    var el = window,
+        key;
+    while (key = path.shift()) { // eslint-disable-line no-cond-assign
+        el = el[key];
+    }
+    return el;
 };
 
 /**
@@ -243,22 +244,22 @@ util.getTopPage = container => container && (container.tagName.toLowerCase() ===
  * @return {HTMLElement|null} - Page element that contains the visible toolbar or null.
  */
 util.findToolbarPage = container => {
-  const page = util.getTopPage(container);
+    const page = util.getTopPage(container);
 
-  if (page) {
-    if (page._canAnimateToolbar()) {
-      return page;
+    if (page) {
+        if (page._canAnimateToolbar()) {
+            return page;
+        }
+
+        for (let i = 0; i < page._contentElement.children.length; i++) {
+            const nextPage = util.getTopPage(page._contentElement.children[i]);
+            if (nextPage && !/ons-tabbar/i.test(page._contentElement.children[i].tagName)) {
+                return util.findToolbarPage(nextPage);
+            }
+        }
     }
 
-    for (let i = 0; i < page._contentElement.children.length; i++) {
-      const nextPage = util.getTopPage(page._contentElement.children[i]);
-      if (nextPage && !/ons-tabbar/i.test(page._contentElement.children[i].tagName)) {
-        return util.findToolbarPage(nextPage);
-      }
-    }
-  }
-
-  return null;
+    return null;
 };
 
 /**
@@ -269,19 +270,19 @@ util.findToolbarPage = container => {
  */
 util.triggerElementEvent = (target, eventName, detail = {}) => {
 
-  const event = new CustomEvent(eventName, {
-    bubbles: true,
-    cancelable: true,
-    detail: detail
-  });
+    const event = new CustomEvent(eventName, {
+        bubbles: true,
+        cancelable: true,
+        detail: detail
+    });
 
-  Object.keys(detail).forEach(key => {
-    event[key] = detail[key];
-  });
+    Object.keys(detail).forEach(key => {
+        event[key] = detail[key];
+    });
 
-  target.dispatchEvent(event);
+    target.dispatchEvent(event);
 
-  return event;
+    return event;
 };
 
 /**
@@ -290,10 +291,10 @@ util.triggerElementEvent = (target, eventName, detail = {}) => {
  * @return {Boolean}
  */
 util.hasModifier = (target, modifierName) => {
-  if (!target.hasAttribute('modifier')) {
-    return false;
-  }
-  return target.getAttribute('modifier').split(/\s+/).some(e => e === modifierName);
+    if (!target.hasAttribute('modifier')) {
+        return false;
+    }
+    return target.getAttribute('modifier').split(/\s+/).some(e => e === modifierName);
 };
 
 /**
@@ -304,18 +305,18 @@ util.hasModifier = (target, modifierName) => {
  * @return {Boolean} Whether it was added or not.
  */
 util.addModifier = (target, modifierName, options = {}) => {
-  if (options.autoStyle) {
-    modifierName = autoStyle.mapModifier(modifierName, target, options.forceAutoStyle);
-  }
+    if (options.autoStyle) {
+        modifierName = autoStyle.mapModifier(modifierName, target, options.forceAutoStyle);
+    }
 
-  if (util.hasModifier(target, modifierName)) {
-    return false;
-  }
+    if (util.hasModifier(target, modifierName)) {
+        return false;
+    }
 
-  modifierName = modifierName.trim();
-  const modifierAttribute = target.getAttribute('modifier') || '';
-  target.setAttribute('modifier', (modifierAttribute + ' ' + modifierName).trim());
-  return true;
+    modifierName = modifierName.trim();
+    const modifierAttribute = target.getAttribute('modifier') || '';
+    target.setAttribute('modifier', (modifierAttribute + ' ' + modifierName).trim());
+    return true;
 };
 
 /**
@@ -326,45 +327,45 @@ util.addModifier = (target, modifierName, options = {}) => {
  * @return {Boolean} Whether it was found or not.
  */
 util.removeModifier = (target, modifierName, options = {}) => {
-  if (!target.getAttribute('modifier')) {
-    return false;
-  }
+    if (!target.getAttribute('modifier')) {
+        return false;
+    }
 
-  if (options.autoStyle) {
-    modifierName = autoStyle.mapModifier(modifierName, target, options.forceAutoStyle);
-  }
+    if (options.autoStyle) {
+        modifierName = autoStyle.mapModifier(modifierName, target, options.forceAutoStyle);
+    }
 
-  const modifiers = target.getAttribute('modifier').split(/\s+/);
+    const modifiers = target.getAttribute('modifier').split(/\s+/);
 
-  const newModifiers = modifiers.filter(item => item && item !== modifierName);
-  target.setAttribute('modifier', newModifiers.join(' '));
+    const newModifiers = modifiers.filter(item => item && item !== modifierName);
+    target.setAttribute('modifier', newModifiers.join(' '));
 
-  return modifiers.length !== newModifiers.length;
+    return modifiers.length !== newModifiers.length;
 };
 
 // TODO: FIX
 util.updateParentPosition = (el) => {
-  if (!el._parentUpdated && el.parentElement) {
-    if (window.getComputedStyle(el.parentElement).getPropertyValue('position') === 'static') {
-      el.parentElement.style.position = 'relative';
+    if (!el._parentUpdated && el.parentElement) {
+        if (window.getComputedStyle(el.parentElement).getPropertyValue('position') === 'static') {
+            el.parentElement.style.position = 'relative';
+        }
+        el._parentUpdated = true;
     }
-    el._parentUpdated = true;
-  }
 };
 
 util.toggleAttribute = (element, name, value) => {
-  if (value) {
-    element.setAttribute(name, value);
-  } else {
-    element.removeAttribute(name);
-  }
+    if (value) {
+        element.setAttribute(name, value);
+    } else {
+        element.removeAttribute(name);
+    }
 };
 
 util.bindListeners = (element, listenerNames) => {
-  listenerNames.forEach(name => {
-    const boundName = name.replace(/^_[a-z]/, '_bound' + name[1].toUpperCase());
-    element[boundName] = element[boundName] || element[name].bind(element);
-  });
+    listenerNames.forEach(name => {
+        const boundName = name.replace(/^_[a-z]/, '_bound' + name[1].toUpperCase());
+        element[boundName] = element[boundName] || element[name].bind(element);
+    });
 };
 
 util.each = (obj, f) => Object.keys(obj).forEach(key => f(key, obj[key]));
@@ -375,19 +376,19 @@ util.each = (obj, f) => Object.keys(obj).forEach(key => f(key, obj[key]));
  * @param {Element} hasRipple
  */
 util.updateRipple = (target, hasRipple) => {
-  if (hasRipple === undefined) {
-    hasRipple = target.hasAttribute('ripple');
-  }
-
-  const rippleElement = util.findChild(target, 'ons-ripple');
-
-  if (hasRipple) {
-    if (!rippleElement) {
-      target.insertBefore(document.createElement('ons-ripple'), target.firstChild);
+    if (hasRipple === undefined) {
+        hasRipple = target.hasAttribute('ripple');
     }
-  } else if (rippleElement) {
-    rippleElement.remove();
-  }
+
+    const rippleElement = util.findChild(target, 'ons-ripple');
+
+    if (hasRipple) {
+        if (!rippleElement) {
+            target.insertBefore(document.createElement('ons-ripple'), target.firstChild);
+        }
+    } else if (rippleElement) {
+        rippleElement.remove();
+    }
 };
 
 /**
@@ -400,21 +401,21 @@ util.animationOptionsParse = animationOptionsParse;
  * @param {*} value
  */
 util.isInteger = (value) => {
-  return typeof value === 'number' &&
-    isFinite(value) &&
-    Math.floor(value) === value;
+    return typeof value === 'number' &&
+        isFinite(value) &&
+        Math.floor(value) === value;
 };
 
 /**
  * @return {Obejct} Deferred promise.
  */
 util.defer = () => {
-  const deferred = {};
-  deferred.promise = new Promise((resolve, reject) => {
-    deferred.resolve = resolve;
-    deferred.reject = reject;
-  });
-  return deferred;
+    const deferred = {};
+    deferred.promise = new Promise((resolve, reject) => {
+        deferred.resolve = resolve;
+        deferred.reject = reject;
+    });
+    return deferred;
 };
 
 /**
@@ -423,9 +424,9 @@ util.defer = () => {
  * @param {*} arguments to console.warn
  */
 util.warn = (...args) => {
-  if (!internal.config.warningsDisabled) {
-    console.warn(...args);
-  }
+    if (!internal.config.warningsDisabled) {
+        console.warn(...args);
+    }
 };
 
 export default util;

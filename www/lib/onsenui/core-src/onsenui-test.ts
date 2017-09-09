@@ -1,7 +1,7 @@
 /// <reference path="onsenui.d.ts" />
 
 function onsStatic(): void {
-  ons.ready(function(): void {
+  ons.ready(function (): void {
     alert('Ready!');
   });
   var onsOptions: onsOptions = {
@@ -87,7 +87,7 @@ function onsPullHook(pullHook: OnsPullHookElement): void {
 function onsAlertDialog(alertDialog: OnsAlertDialogElement): void {
   var options: dialogOptions = {
     animation: 'default',
-    callback: function myFunction(){}
+    callback: function myFunction() { }
   };
   alertDialog.cancelable;
   alertDialog.disabled;
@@ -132,7 +132,7 @@ function onsNavigator(navigator: OnsNavigatorElement): void {
     animation: 'slide',
     animationOptions: "{duration: 0.2, delay: 0.4, timing: 'ease-in'}",
     refresh: true,
-    callback: function myFunction() {}
+    callback: function myFunction() { }
   };
 
   var pushOptions: PushPageOptions;
@@ -219,7 +219,7 @@ function onsSplitterSide(splitterSide: OnsSplitterSideElement): void {
   splitterSide.isOpen;
 
   var options: SplitterSideOptions = {
-    callback: function myFunction() {}
+    callback: function myFunction() { }
   };
 
   splitterSide.open(options);
@@ -276,7 +276,7 @@ function onsRipple(ripple: OnsRippleElement): void {
 
 function onsSplitterContent(splitterContent: OnsSplitterContentElement): void {
   var options: SplitterContentOptions = {
-    callback: function myFunction() {}
+    callback: function myFunction() { }
   };
   splitterContent.load('myPage.html', options);
   splitterContent.load({}, options);
@@ -293,7 +293,7 @@ function onsBackButton(backButton: OnsBackButtonElement): void {
   var options: BackButtonOptions = {
     animation: 'string',
     animationOptions: 'string',
-    callback: function myFunction() {},
+    callback: function myFunction() { },
     refresh: true
   };
 }
@@ -313,6 +313,6 @@ function onsProgressCircular(progressCircular: OnsProgressCircularElement): void
 function onsPageLoader(): void {
   const loader: ons.PageLoader = new ons.PageLoader();
 
-  loader.load({page: 'foobar.html', parent: document.createElement('div')}, function({unload, element}) {});
-  loader.internalLoader = function() {};
+  loader.load({ page: 'foobar.html', parent: document.createElement('div') }, function ({ unload, element }) { });
+  loader.internalLoader = function () { };
 }
