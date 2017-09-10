@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="com.ie.deutschemitte" version="8.4.1">
+<widget 
+  xmlns="http://www.w3.org/ns/widgets" id="com.ie.deutschemitte" version="8.4.1">
   <name>Deutsche Mitte</name>
   <description>In dieser App finden sie ein kleines Resumé der "Deutschen Mitte". Klar und deutlich ist der Standpunkt dieser politischen Partei in der Bundesrepublik. Kein Ministerressort ist ohne schwere Fehlentwicklungen daher werden wir sämtliche Ressorts ausmisten.</description>
   <author>Michael Humann - West Weedtze Development</author>
