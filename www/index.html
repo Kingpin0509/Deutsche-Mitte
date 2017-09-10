@@ -4,22 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <link rel="stylesheet" href="css/deutschemitte.css">
-    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <!--<link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="lib/angular/angular-csp.css" />-->
     <link rel="stylesheet" href="css/custom-framework.css">
     <link rel="stylesheet" href="css/onsen-custom.css">
-    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="styles/framework.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="lib/angular/angular-csp.css" />
     <link rel="stylesheet" href="components/loader.css">
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/jquery-3.2.1.js"></script>
-    <script src="lib/onsenui/js/onsenui.js"></script>
-    <script src="lib/onsenui/js/angular-onsenui.js"></script>
     <script src="components/loader.js"></script>
+    <!--<script src="lib/angular/angular.js"></script>
+    <script src="lib/onsenui/js/onsenui.js"></script>
+    <script src="lib/onsenui/js/angular-onsenui.js"></script>-->
+    <script src="lib/jquery-3.2.1.js"></script>
     <script src="lib/velocity.js"></script>
     <script src="lib/velocity.ui.js"></script>
     <script src="scripts/angular-animate.js"></script>
@@ -58,7 +58,7 @@
                         <div class="right">
                         </div>
                     </ons-list-item>
-                    <ons-list-item modifier="large--quiet longdivider" class="list-item menu-item menu-left-item" onclick="fn.active(this);fn.togglepanels(mnleft);fn.load('ons_pr-kurzprogramm-2016.html');setColorleftmain('kurzprogramm')" tappable>
+                    <ons-list-item modifier="large--quiet longdivider" class="list-item menu-item menu-left-item" onclick="fn.active(this);fn.togglepanels(mnleft);fn.load('ons_pr-kurzprogramm-2017.html');setColorleftmain('kurzprogramm')" tappable>
                         <div class="left">
                             <ons-icon icon="ion-ios-list-outline"></ons-icon>
                         </div>
@@ -96,12 +96,12 @@
                                     <div class="center"><span id="flyer" class="menu-item-subtitle">Flyer</span>
                                     </div>
                                 </ons-list-item>
-                                <ons-list-item class="menu-item" onclick="fn.activesub(this);fn.load('ons_pr-flugblatt201501.html');setColorleftmain('flugblatt')" tappable>
+                                <ons-list-item class="menu-item" onclick="fn.activesub(this);fn.load('ons_pr-flugblatt2017.html');setColorleftmain('flugblatt')" tappable>
                                     <div class="center"><span id="flugblatt" class="menu-item-subtitle">Flugblatt</span>
                                     </div>
                                 </ons-list-item>
-                                <ons-list-item class="menu-item" onclick="fn.activesub(this);fn.load('ons_pr-kurzprogramm-2016.html');setColorleftmain('kurzprogrammsub')" tappable>
-                                    <div class="center"><span id="kurzprogrammsub" class="menu-item-subtitle">Kurzprogramm 2016</span>
+                                <ons-list-item class="menu-item" onclick="fn.activesub(this);fn.load('ons_pr-kurzprogramm-2017.html');setColorleftmain('kurzprogrammsub')" tappable>
+                                    <div class="center"><span id="kurzprogrammsub" class="menu-item-subtitle">Kurzprogramm</span>
                                     </div>
                                 </ons-list-item>
                                 <ons-list-item class="menu-item" onclick="fn.activesub(this);fn.load('ons_pr-vimeo-videos.html');setColorleftmain('videos')" tappable>
@@ -235,84 +235,72 @@
                         <h5 class="menu-item-txt">Innenpolitik</h5>
                     </ons-icon>
                 </ons-button>
-
                 <ons-button modifier="quiet" class="menu-right-item" onclick="fn.replace('ons_dm-finanzpolitik.html');fn.closesplitter();setColor('finanzpolitik')">
                     <ons-icon id="finanzpolitik" icon="dm-finanzpolitik" class="dm-finanzpolitik menu-item-header">
                         <br>
                         <h5 class="menu-item-txt">Finanzpolitik</h5>
                     </ons-icon>
                 </ons-button>
-
                 <ons-button modifier="quiet" class="menu-right-item" onclick="fn.replace('ons_dm-wirtschaftspolitik.html');fn.closesplitter();setColor('wirtschaft')">
                     <ons-icon id="wirtschaft" icon="dm-wirtschaftspolitik-wf" class="dm-wirtschaftspolitik-wf menu-item-header">
                         <br>
                         <h5 class="menu-item-txt">Wirtschaft</h5>
                     </ons-icon>
                 </ons-button>
-
                 <ons-button modifier="quiet" class="menu-right-item" onclick="fn.replace('ons_dm-arbeit-und-soziales.html');fn.closesplitter();setColor('arbeit')">
                     <ons-icon id="arbeit" icon="dm-verkehr-02-wf" class="dm-verkehr-02-wf menu-item-header">
                         <br>
                         <h5 class="menu-item-txt">Arbeit & Soziales</h5>
                     </ons-icon>
                 </ons-button>
-
                 <ons-button modifier="quiet" class="menu-right-item" onclick="fn.replace('ons_dm-verteidigung.html');fn.closesplitter();setColor('verteidigung')">
                     <ons-icon id="verteidigung" icon="dm-verteidigung-wf" class="dm-verteidigung-wf menu-item-header">
                         <br>
                         <h5 class="menu-item-txt">Verteidigung</h5>
                     </ons-icon>
                 </ons-button>
-
                 <ons-button modifier="quiet" class="menu-right-item" onclick="fn.replace('ons_dm-bildung-und-forschung.html');fn.closesplitter();setColor('bildung')">
                     <ons-icon id="bildung" icon="dm-bildung" class="dm-bildung menu-item-header">
                         <br>
                         <h5 class="menu-item-txt">Bildung & Forschung</h5>
                     </ons-icon>
                 </ons-button>
-
                 <ons-button modifier="quiet" class="menu-right-item" onclick="fn.replace('ons_dm-familie-senioren-frauen-und-jugend.html');fn.closesplitter();setColor('familie')">
                     <ons-icon id="familie" icon="dm-familie-wf" class="dm-familie-wf menu-item-header">
                         <br>
                         <h5 class="menu-item-txt">Familie, Senioren<br>Frauen & Jugend</h5>
                     </ons-icon>
                 </ons-button>
-
                 <ons-button modifier="quiet" class="menu-right-item" onclick="fn.replace('ons_dm-gesundheit.html');fn.closesplitter();setColor('gesundheit')">
                     <ons-icon id="gesundheit" icon="dm-gesundheit" class="dm-gesundheit menu-item-header">
                         <br>
                         <h5 class="menu-item-txt">Gesundheit</h5>
                     </ons-icon>
                 </ons-button>
-
                 <ons-button modifier="quiet" class="menu-right-item" onclick="fn.replace('ons_dm-umwelt-naturschutz-und-reaktorsicherheit.html');fn.closesplitter();setColor('umwelt')">
                     <ons-icon id="umwelt" icon="dm-energie" class="dm-energie menu-item-header">
                         <br>
                         <h5 class="menu-item-txt">Umwelt-/Naturschutz<br>Reaktorsicherheit</h5>
                     </ons-icon>
                 </ons-button>
-
                 <ons-button modifier="quiet" class="menu-right-item" onclick="fn.replace('ons_dm-ernaehrung-landwirtschaft-und-verbraucherschutz.html');fn.closesplitter();setColor('ernahrung')">
                     <ons-icon id="ernahrung" icon="dm-ernahrung" class="dm-ernahrung menu-item-header">
                         <br>
                         <h5 class="menu-item-txt">Ernährung &<br>Verbraucherschutz</h5>
                     </ons-icon>
                 </ons-button>
-
                 <ons-button modifier="quiet" class="menu-right-item" onclick="fn.replace('ons_dm-verkehr-bau-und-stadtentwicklung.html');fn.closesplitter();setColor('verkehr')">
                     <ons-icon id="verkehr" icon="dm-verkehr-01-wf" class="dm-verkehr-01-wf menu-item-header">
                         <br>
                         <h5 class="menu-item-txt">Verkehr, Bau<br>& Stadtentwicklung</h5>
                     </ons-icon>
                 </ons-button>
-
                 <ons-button modifier="quiet" class="menu-right-item" onclick="fn.replace('ons_dm-wirtschaftliche-zusammenarbeit-und-entwicklung.html');fn.closesplitter();setColor('zusammenarbeit')">
                     <ons-icon id="zusammenarbeit" icon="dm-zusammenarbeit" class="dm-zusammenarbeit menu-item-header">
                         <br>
                         <h5 class="menu-item-txt">Zusammenarbeit<br>& Entwicklung</h5>
                     </ons-icon>
                 </ons-button>
-
                 <ons-button modifier="quiet" class="menu-right-item" onclick="fn.replace('ons_dm-justiz.html');fn.closesplitter();setColor('justiz')">
                     <ons-icon id="justiz" icon="dm-justiz" class="dm-justiz menu-item-header">
                         <br>
@@ -322,7 +310,6 @@
             </ons-page>
         </ons-splitter-side>
     </ons-splitter>
-
 </body>
 
 </html>

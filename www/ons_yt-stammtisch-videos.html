@@ -29,7 +29,7 @@
             </div>
             <ons-list>
                 <ons-list-item tappable>
-                    <ons-button  onclick="showPopover(this)">Video</ons-button>
+                    <ons-button onclick="showPopover(this)">Video</ons-button>
                 </ons-list-item>
             </ons-list>
         </div>
@@ -50,13 +50,13 @@
         </div>
         <div class="content center-boxed-content">
             <div class="center-text">
-            <ons-list>
-                <ons-list-item tappable>
-                    <ons-button  onclick="showPopover1(this)">Playliste</ons-button>
-                </ons-list-item>
-            </ons-list>
+                <ons-list>
+                    <ons-list-item tappable>
+                        <ons-button onclick="showPopover1(this)">Playliste</ons-button>
+                    </ons-list-item>
+                </ons-list>
+            </div>
         </div>
-      </div>
 
         <div class="decoration decoration-margins"></div>
 
@@ -133,20 +133,20 @@
                         <iframe width="640" height="360" src="https://www.youtube.com/embed/XOV1hdBvMIs" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </ons-list-item>
-                        <ons-list-item tappable id="youtube-playlist" class="accordion" onclick="fn.toggle(this)">
-            <ons-button>Video</ons-button>
-        </ons-list-item>
-        <div class="panel">
-            <ons-list-item tappable>
-                <div class="responsive-video">
-                    <iframe width="640" height="360" src="https://www.youtube.com/embed/XOV1hdBvMIs" frameborder="0" allowfullscreen></iframe>
+                <ons-list-item tappable id="youtube-playlist" class="accordion" onclick="fn.toggle(this)">
+                    <ons-button>Video</ons-button>
+                </ons-list-item>
+                <div class="panel">
+                    <ons-list-item tappable>
+                        <div class="responsive-video">
+                            <iframe width="640" height="360" src="https://www.youtube.com/embed/XOV1hdBvMIs" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </ons-list-item>
                 </div>
-            </ons-list-item>
-        </div>
             </div>
         </div>
     </ons-popover>
-        <ons-popover cancelable animation="fade-md" mask-color="rgba(0, 0, 0, 0.6)" id="popover1">
+    <ons-popover cancelable animation="fade-md" mask-color="rgba(0, 0, 0, 0.6)" id="popover1">
         <ons-list-item tappable id="youtube-playlist" class="accordion" onclick="fn.toggle(this)">
             <ons-button>Video Playlist</ons-button>
         </ons-list-item>
@@ -157,7 +157,6 @@
                 </div>
             </ons-list-item>
         </div>
-            </ons-popover>
+    </ons-popover>
 
 </ons-page>
-

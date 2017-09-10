@@ -1253,9 +1253,6 @@ textarea {
 }
 
 
-
-
-
 /*-----------*/
 
 
@@ -1746,8 +1743,6 @@ ol ol ol {
 }
 
 
-
-
 /*Hover Effects + Rotate Effects*/
 
 .rotate-45 {
@@ -1906,7 +1901,7 @@ ol ol ol {
         -webkit-transform: scale(0.75);
     }
     100% {
-        -webkit-transform: scale(1.0) opacity: 0;
+        -webkit-transform: scale(1.0) opacity(0);
     }
 }
 
@@ -2138,6 +2133,7 @@ ol ol ol {
     width: 50px;
     float: right;
     margin-top: -28px;
+    user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -2200,6 +2196,7 @@ ol ol ol {
     margin-top: -25px;
     position: relative;
     width: 50px;
+    user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -2266,6 +2263,7 @@ ol ol ol {
     margin-top: -30px;
     position: relative;
     width: 50px;
+    user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -2678,8 +2676,6 @@ ol ol ol {
     width: 110px;
     margin: 0 auto;
 }
-
-
 
 
 /*--------------*/
@@ -3283,6 +3279,7 @@ ol ol ol {
 .p100 {
     width: 98.3%;
 }
+
 
 /*
 /*-------------*/
@@ -4687,7 +4684,7 @@ ul.tabs li.current {
 }
 
 .back-to-top-badge {
-    opacity:0;
+    opacity: 0;
     width: 32px;
     height: 32px;
     border-radius: 18px;
@@ -4741,7 +4738,7 @@ ul.tabs li.current {
 }
 
 .back-to-top-badge-visible {
-    opacity:1;
+    opacity: 1;
     pointer-events: all;
     -moz-transform: translateY(-1px);
     -webkit-transform: translateY(-1px);
@@ -4754,7 +4751,6 @@ ul.tabs li.current {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
     z-index: 10;
-
 }
 
 
@@ -4945,18 +4941,15 @@ ul.tabs li.current {
 }
 
 .portfolio-adaptive-three .portfolio-item:nth-child(3n+1) {
-    margin-right: 4%;
-    !important;
+    margin-right: 4% !important;
 }
 
 .portfolio-adaptive-three .portfolio-item:nth-child(3n+2) {
-    margin-right: 0%;
-    !important;
+    margin-right: 0% !important;
 }
 
 .portfolio-adaptive-three .portfolio-item:nth-child(3n+3) {
-    margin-left: 4%;
-    !important;
+    margin-left: 4% !important;
 }
 
 
@@ -6622,7 +6615,6 @@ date-years em {
     font-weight: 400;
     padding-left: 45px;
     margin-top: 20px;
-    vertical-align: bottom;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
@@ -7585,7 +7577,6 @@ date-years em {
 }
 
 .user-list-4 .ion-ios-arrow-forward {
-    float: right;
     display: inline-block;
     margin-top: 10px;
 }
@@ -8037,7 +8028,7 @@ calendar* {
 
 .transparent-background {
     background-color: rgba(255, 255, 255, 0.3)!important;
-    backdrop-filter: blur(5px);
+    filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
 
@@ -8145,7 +8136,6 @@ calendar* {
 }
 
 .speach-left {
-    float: left;
     display: inline;
     text-align: left;
     max-width: 75%;
@@ -8187,8 +8177,6 @@ calendar* {
 .speach-status {
     font-size: 11px;
     font-weight: 500;
-    float: right;
-    margin-top: -25px;
     position: relative;
     display: inline;
 }
@@ -8204,7 +8192,6 @@ calendar* {
     float: right;
     margin-top: 7px;
     margin-left: 10px;
-    display: inline;
 }
 
 .speach-read i {
@@ -8633,6 +8620,7 @@ calendar* {
 
 .swiper-slide {
     -webkit-flex-shrink: 0;
+    flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex-shrink: 0;
     width: 100%;
@@ -8779,7 +8767,6 @@ button.swiper-pagination-bullet {
     -moz-appearance: none;
     -ms-appearance: none;
     -webkit-appearance: none;
-    appearance: none;
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -8946,6 +8933,7 @@ button.swiper-pagination-bullet {
 
 .swiper-container-coverflow .swiper-wrapper,
 .swiper-container-flip .swiper-wrapper {
+    perspective: 1200px;
     -ms-perspective: 1200px;
 }
 
@@ -9057,6 +9045,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
+    touch-action: none;
     -ms-touch-action: none;
     background: rgba(0, 0, 0, 0.1);
 }
@@ -9343,13 +9332,39 @@ button.swiper-pagination-bullet {
 }
 
 #swipebox-slider.rightSpring {
+    animation: rightSpring 0.3s;
     -moz-animation: rightSpring 0.3s;
     -webkit-animation: rightSpring 0.3s;
 }
 
 #swipebox-slider.leftSpring {
+    animation: leftSpring 0.3s;
     -moz-animation: leftSpring 0.3s;
     -webkit-animation: leftSpring 0.3s;
+}
+
+@keyframes rightSpring {
+    0% {
+        margin-left: 0px;
+    }
+    50% {
+        margin-left: -30px;
+    }
+    100% {
+        margin-left: 0px;
+    }
+}
+
+@keyframes leftSpring {
+    0% {
+        margin-left: 0px;
+    }
+    50% {
+        margin-left: 30px;
+    }
+    100% {
+        margin-left: 0px;
+    }
 }
 
 @-moz-keyframes rightSpring {
