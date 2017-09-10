@@ -1,1 +1,4 @@
-{}
+{
+  "exclude": ["\res"],
+"include": ["*"]
+}

@@ -11,7 +11,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
-
 /*@import url("ionicons/css/ionicons.min.css");
 @import url("material-design-iconic-font/css/material-design-iconic-font.min.css");*/
 
@@ -25,23 +24,23 @@ ons-split-view,
 ons-sliding-menu,
 ons-tabbar,
 ons-gesture-detector {
-    display: block;
+  display: block;
 }
 
 ons-navigator,
 ons-tabbar,
 ons-dialog,
 ons-alert-dialog {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
 }
 
 ons-tab {
-    transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 ons-page,
@@ -51,204 +50,215 @@ ons-sliding-menu,
 ons-split-view,
 ons-dialog,
 ons-alert-dialog {
-    z-index: 2;
+  z-index: 2;
 }
 
 ons-fab,
 ons-speed-dial {
-    z-index: 10001;
+  z-index: 10001;
 }
 
 * {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 }
 
 input,
 textarea {
-    user-select: none;
-    -webkit-user-select: auto;
-    -moz-user-select: text;
+  user-select: none;
+  -webkit-user-select: auto;
+  -moz-user-select: text;
 }
 
 ons-toolbar:not([inline]),
 ons-bottom-toolbar {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 10000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10000;
 }
 
 ons-toolbar:not([inline]) {
-    top: 0;
+  top: 0;
 }
 
 ons-bottom-toolbar {
-    bottom: 0;
+  bottom: 0;
 }
 
 .page,
 .page__content {
-    background-color: transparent;
-    background: transparent;
+  background-color: transparent;
+  background: transparent;
 }
 
 .page__content {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    z-index: 0;
-    touch-action: pan-y;
-    -ms-touch-action: pan-y;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  touch-action: pan-y;
+  -ms-touch-action: pan-y;
 }
 
-.toolbar+.page__background+.page__content {
-    margin-top: -1px;
+.toolbar + .page__background + .page__content {
+  margin-top: -1px;
 }
 
-.toolbar--material+.page__background+.page__content {
-    top: 0;
+.toolbar--material + .page__background + .page__content {
+  top: 0;
 }
 
-.page[status-bar-fill]>.page__content {
-    top: 20px;
+.page[status-bar-fill] > .page__content {
+  top: 20px;
 }
 
-.page[status-bar-fill]>.toolbar {
-    padding-top: 20px;
-    box-sizing: content-box;
+.page[status-bar-fill] > .toolbar {
+  padding-top: 20px;
+  box-sizing: content-box;
 }
 
-.page[status-bar-fill]>.toolbar+.page__background+.page__content {
-    top: 64px;
+.page[status-bar-fill] > .toolbar + .page__background + .page__content {
+  top: 64px;
 }
 
-.page[status-bar-fill]>.toolbar--material+.page__background+.page__content {
-    top: 76px;
+.page[status-bar-fill]
+  > .toolbar--material
+  + .page__background
+  + .page__content {
+  top: 76px;
 }
 
-ons-tabbar[status-bar-fill]>.tabbar--top__content {
-    top: 71px;
+ons-tabbar[status-bar-fill] > .tabbar--top__content {
+  top: 71px;
 }
 
-ons-tabbar[status-bar-fill]>.tabbar--top {
-    padding-top: 22px;
+ons-tabbar[status-bar-fill] > .tabbar--top {
+  padding-top: 22px;
 }
 
-ons-tabbar[position="top"] .page[status-bar-fill]>.page__content {
-    top: 0px;
+ons-tabbar[position="top"] .page[status-bar-fill] > .page__content {
+  top: 0px;
 }
 
-.toolbar+.page__background+.page__content ons-tabbar[status-bar-fill]>.tabbar--top {
-    top: 0px;
+.toolbar
+  + .page__background
+  + .page__content
+  ons-tabbar[status-bar-fill]
+  > .tabbar--top {
+  top: 0px;
 }
 
-.toolbar+.page__background+.page__content ons-tabbar[status-bar-fill]>.tabbar--top__content {
-    top: 49px;
+.toolbar
+  + .page__background
+  + .page__content
+  ons-tabbar[status-bar-fill]
+  > .tabbar--top__content {
+  top: 49px;
 }
 
-.page-with-bottom-toolbar>.page__content {
-    bottom: 44px;
+.page-with-bottom-toolbar > .page__content {
+  bottom: 44px;
 }
 
-ons-dialog[disabled]>.dialog,
+ons-dialog[disabled] > .dialog,
 ons-alert-dialog[disabled],
 ons-popover[disabled] {
-    pointer-events: none;
-    opacity: 0.75;
+  pointer-events: none;
+  opacity: 0.75;
 }
 
 ons-list-item[disabled] {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 ons-pull-hook {
-    position: relative;
-    display: block;
-    margin: auto;
-    text-align: center;
-    z-index: 20002;
+  position: relative;
+  display: block;
+  margin: auto;
+  text-align: center;
+  z-index: 20002;
 }
 
 ons-splitter {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 ons-splitter,
 ons-splitter-mask,
 ons-splitter-content,
 ons-splitter-side {
-    display: block;
-    position: absolute;
-    transform: translate3d(0px, 0px, 0px);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    box-sizing: border-box;
-    z-index: 0;
+  display: block;
+  position: absolute;
+  transform: translate3d(0px, 0px, 0px);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  z-index: 0;
 }
 
 ons-splitter-mask {
-    -webkit-transition: all .5s linear;
-    transition: all .5s linear;
-    z-index: 2;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  z-index: 2;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
 }
 
 ons-splitter-content {
-    z-index: 1;
+  z-index: 1;
 }
 
 ons-splitter-side {
-    right: auto;
-    z-index: 1;
+  right: auto;
+  z-index: 1;
 }
 
 ons-splitter-side[side="right"] {
-    right: 0;
-    left: auto;
-    box-shadow: inset -1px 0px 0px 0px black;
+  right: 0;
+  left: auto;
+  box-shadow: inset -1px 0px 0px 0px black;
 }
 
 ons-splitter-side[side="left"] {
-    box-shadow: inset -1px 0px 0px 0px black;
+  box-shadow: inset -1px 0px 0px 0px black;
 }
 
 ons-splitter-side[side="right"][mode="collapse"] {
-    right: auto;
-    left: 100%;
+  right: auto;
+  left: 100%;
 }
 
 ons-splitter-side[side="left"][mode="collapse"] {
-    z-index: 3;
-    left: auto;
-    right: 100%;
+  z-index: 3;
+  left: auto;
+  right: 100%;
 }
 
 ons-splitter-side[mode="split"] {
-    transform: none !important;
-    transition: none !important;
+  transform: none !important;
+  transition: none !important;
 }
 
-ons-toolbar-button>ons-icon[icon*="ion-"] {
-    font-size: 26px;
+ons-toolbar-button > ons-icon[icon*="ion-"] {
+  font-size: 26px;
 }
 
 ons-range,
 ons-select {
-    display: inline-block;
+  display: inline-block;
 }
 
-ons-range>input {
-    min-width: 50px;
-    width: 100%;
+ons-range > input {
+  min-width: 50px;
+  width: 100%;
 }
 
-ons-select>select {
-    width: 100%;
+ons-select > select {
+  width: 100%;
 }
