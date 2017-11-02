@@ -7,13 +7,10 @@
   "displayName": "Deutsche Mitte",
   "cordova": {
     "plugins": {},
-    "platforms": [
-      "android"
-    ]
+    "platforms": []
   },
   "dependencies": {
     "cordova": "7.1.0",
-    "cordova-android": "6.3.0",
     "onsenui": "2.7.0"
   }
 }
