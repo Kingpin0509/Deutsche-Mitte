@@ -9,8 +9,8 @@
         "parents": {
           "CFBundleLocalizations": [
             {
-              "xml": "<array><string>en</string><string>de</string></array>",
-              "count": 2
+              "xml": "<array><string>de</string><string>en</string></array>",
+              "count": 4
             }
           ],
           "UIBackgroundModes": [

@@ -55,8 +55,8 @@
     <splash height="1536" src="/res/ios/screen/Default-Landscape@2x~ipad.png" width="2048" />
     <config-file parent="CFBundleLocalizations" platform="ios" target="*-Info.plist">
         <array>
-            <string>en</string>
             <string>de</string>
+            <string>en</string>
         </array>
     </config-file>
     <preference name="DisallowOverscroll" value="true" />
