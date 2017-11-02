@@ -9,11 +9,15 @@
   "installed_plugins": {
     "cordova-plugin-ios-no-export-compliance": {
       "PACKAGE_NAME": "com.ie.deutschemitte"
+    },
+    "cordova-ios-plugin-no-export-compliance": {
+      "PACKAGE_NAME": "com.ie.deutschemitte"
     }
   },
   "dependent_plugins": {},
   "modules": [],
   "plugin_metadata": {
-    "cordova-plugin-ios-no-export-compliance": "0.0.2"
+    "cordova-plugin-ios-no-export-compliance": "0.0.2",
+    "cordova-ios-plugin-no-export-compliance": "0.0.5"
   }
 }
