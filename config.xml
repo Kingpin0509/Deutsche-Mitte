@@ -107,4 +107,5 @@
     <engine name="android" spec="^6.3.0" />
     <plugin name="cordova-plugin-ios-no-export-compliance" spec="0.0.1-security" />
     <plugin name="cordova-ios-plugin-no-export-compliance" spec="0.0.5" />
+    <engine name="ios" spec="~4.5.3" />
 </widget>
