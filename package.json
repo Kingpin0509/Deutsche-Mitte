@@ -9,9 +9,13 @@
     "plugins": {
       "cordova-plugin-ios-no-export-compliance": {}
     },
-    "platforms": []
+    "platforms": [
+      "android"
+    ]
   },
   "dependencies": {
+    "cordova": "^7.1.0",
+    "cordova-android": "^6.3.0",
     "cordova-ios-plugin-no-export-compliance": "0.0.5",
     "cordova-plugin-ios-no-export-compliance": "0.0.1-security",
     "onsenui": "^2.7.0"

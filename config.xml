@@ -105,4 +105,5 @@
     <preference name="WindowsStorePublisherName" value="West Weedtze Development - Michael Humann" />
     <preference name="WindowsStoreIdentityName" value="17701WestWeedtzeDevelopme.DeutscheMitte" />
     <plugin name="cordova-plugin-ios-no-export-compliance" spec="0.0.1-security" />
+    <engine name="android" spec="~6.3.0" />
 </widget>
