@@ -1,4 +1,0 @@
-#Thu Nov 02 02:06:54 CET 2017
-base.0=U\:\\Downloads\\Deutsche-Mitte-01112017\\Deutsche-Mitte-01112017\\platforms\\android\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
-renamed.0=classes.dex
-file.0=U\:\\Downloads\\Deutsche-Mitte-01112017\\Deutsche-Mitte-01112017\\platforms\\android\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

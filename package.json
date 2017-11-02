@@ -1,8 +1,14 @@
 {
   "name": "com.ie.deutschemitte",
+  "author": "Michael Humann",
+  "homepage": "http://news.westweedtzerecords.biz",
+  "private": true,
   "version": "8.6.0",
   "displayName": "Deutsche Mitte",
   "cordova": {
+    "plugins": {
+      "cordova-plugin-ios-no-export-compliance": {}
+    },
     "platforms": [
       "android",
       "ios"
@@ -10,6 +16,9 @@
   },
   "dependencies": {
     "cordova-android": "~6.3.0",
-    "cordova-ios": "~4.5.3"
+    "cordova-ios": "~4.5.3",
+    "cordova-ios-plugin-no-export-compliance": "0.0.5",
+    "cordova-plugin-ios-no-export-compliance": "0.0.1-security",
+    "onsenui": "^2.7.0"
   }
 }

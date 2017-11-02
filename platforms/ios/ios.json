@@ -10,13 +10,33 @@
           "CFBundleLocalizations": [
             {
               "xml": "<array><string>en</string><string>de</string></array>",
-              "count": 3
+              "count": 4
+            }
+          ],
+          "UIBackgroundModes": [
+            {
+              "xml": "<array><string>remote-notification</string></array>",
+              "count": 1
+            }
+          ],
+          "ITSAppUsesNonExemptEncryption": [
+            {
+              "xml": "<false />",
+              "count": 1
             }
           ]
         }
       }
     }
   },
-  "installed_plugins": {},
-  "dependent_plugins": {}
+  "installed_plugins": {
+    "cordova-plugin-ios-no-export-compliance": {
+      "PACKAGE_NAME": "com.ie.deutschemitte"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [],
+  "plugin_metadata": {
+    "cordova-plugin-ios-no-export-compliance": "0.0.2"
+  }
 }
