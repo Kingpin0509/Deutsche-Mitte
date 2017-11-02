@@ -11,9 +11,5 @@
             "PACKAGE_NAME": "com.ie.deutschemitte"
         }
     },
-    "dependent_plugins": {},
-    "modules": [],
-    "plugin_metadata": {
-        "cordova-ios-plugin-no-export-compliance": "0.0.5"
-    }
+    "dependent_plugins": {}
 }
