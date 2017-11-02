@@ -1,18 +1,1 @@
-{
-  "cordova-plugin-ios-no-export-compliance": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-ios-no-export-compliance@0.0.1-security"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-ios-plugin-no-export-compliance": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-ios-plugin-no-export-compliance@0.0.5"
-    },
-    "is_top_level": true,
-    "variables": {}
-  }
-}
+{}
