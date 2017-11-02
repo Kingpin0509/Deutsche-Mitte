@@ -105,4 +105,5 @@
     <preference name="WindowsStorePublisherName" value="West Weedtze Development - Michael Humann" />
     <preference name="WindowsStoreIdentityName" value="17701WestWeedtzeDevelopme.DeutscheMitte" />
     <engine name="android" spec="~6.3.0" />
+    <engine name="ios" spec="~4.5.3" />
 </widget>

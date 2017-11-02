@@ -1,0 +1,14 @@
+{
+  "name": "com.ie.deutschemitte",
+  "version": "8.6.0",
+  "displayName": "Deutsche Mitte",
+  "cordova": {
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {
+    "cordova-android": "~6.3.0"
+  }
+}
