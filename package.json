@@ -9,10 +9,7 @@
     "plugins": {
       "cordova-plugin-ios-no-export-compliance": {}
     },
-    "platforms": [
-      "android",
-      "ios"
-    ]
+    "platforms": ["android", "ios"]
   },
   "dependencies": {
     "cordova-android": "~6.3.0",

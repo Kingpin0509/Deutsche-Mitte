@@ -15,11 +15,9 @@
     "saveSpec": null,
     "fetchSpec": "latest"
   },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/cordova-ios-plugin-no-export-compliance/-/cordova-ios-plugin-no-export-compliance-0.0.2.tgz",
+  "_requiredBy": ["#USER", "/"],
+  "_resolved":
+    "https://registry.npmjs.org/cordova-ios-plugin-no-export-compliance/-/cordova-ios-plugin-no-export-compliance-0.0.2.tgz",
   "_shasum": "69241a83a5980d2886ca772de3242f4bc66fe5e6",
   "_spec": "cordova-ios-plugin-no-export-compliance",
   "_where": "C:\\Deutsche-Mitte---Aktuelle-News2\\node_modules",
@@ -27,33 +25,32 @@
     "name": "mikaoelitiana"
   },
   "bugs": {
-    "url": "https://github.com/mikaoelitiana/cordova-plugin-ios-no-export-compliance/issues"
+    "url":
+      "https://github.com/mikaoelitiana/cordova-plugin-ios-no-export-compliance/issues"
   },
   "bundleDependencies": false,
   "cordova": {
     "id": "cordova-plugin-ios-no-export-compliance",
-    "platforms": [
-      "ios"
-    ]
+    "platforms": ["ios"]
   },
   "deprecated": false,
-  "description": "This plugin sets ITSAppUsesNonExemptEncryption to false in *-Info.plist file",
+  "description":
+    "This plugin sets ITSAppUsesNonExemptEncryption to false in *-Info.plist file",
   "engines": [
     {
       "name": "cordova",
       "version": ">=3.0.0"
     }
   ],
-  "homepage": "https://github.com/mikaoelitiana/cordova-plugin-ios-no-export-compliance#readme",
-  "keywords": [
-    "ecosystem:cordova",
-    "cordova-ios"
-  ],
+  "homepage":
+    "https://github.com/mikaoelitiana/cordova-plugin-ios-no-export-compliance#readme",
+  "keywords": ["ecosystem:cordova", "cordova-ios"],
   "license": "BSD-3",
   "name": "cordova-ios-plugin-no-export-compliance",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikaoelitiana/cordova-plugin-ios-no-export-compliance.git"
+    "url":
+      "git+https://github.com/mikaoelitiana/cordova-plugin-ios-no-export-compliance.git"
   },
   "version": "0.0.2"
 }

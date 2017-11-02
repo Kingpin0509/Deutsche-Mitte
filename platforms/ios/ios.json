@@ -10,7 +10,7 @@
           "CFBundleLocalizations": [
             {
               "xml": "<array><string>en</string><string>de</string></array>",
-              "count": 4
+              "count": 5
             }
           ],
           "UIBackgroundModes": [
