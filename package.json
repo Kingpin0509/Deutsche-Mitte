@@ -10,7 +10,7 @@
     "platforms": []
   },
   "dependencies": {
-    "cordova": "7.1.0",
+    "cordova": "8.0.0",
     "onsenui": "2.8.3"
   }
 }
