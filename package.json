@@ -3,7 +3,7 @@
   "author": "Michael Humann",
   "homepage": "http://news.westweedtzerecords.biz",
   "private": true,
-  "version": "8.6.1",
+  "version": "8.6.6",
   "displayName": "Deutsche Mitte",
   "cordova": {
     "plugins": {},
@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "cordova": "7.1.0",
-    "onsenui": "2.7.0"
+    "onsenui": "2.8.3"
   }
 }
