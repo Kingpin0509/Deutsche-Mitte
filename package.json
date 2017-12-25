@@ -11,8 +11,9 @@
   },
   "dependencies": {
     "cordova": "8.0.0",
-    "cordova-ios": "^4.5.4",
     "cordova-android": "^7.0.0",
+    "cordova-ios": "^4.5.4",
+    "cordova-windows": "^5.0.0",
     "onsenui": "2.8.3"
   }
 }

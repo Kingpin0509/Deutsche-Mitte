@@ -1,0 +1,162 @@
+﻿<ons-page id="ons_pr-menu.html">
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button onclick="fn.open()"><i class="ion-navicon"></i>
+            </ons-toolbar-button>
+        </div>
+        <div class="center">Programmübersicht
+        </div>
+        <div class="right">
+            <ons-toolbar-button onclick="fn.openr()"><i class="ion-ios-more"></i>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div class="page-content bg-index bg-cover">
+        <div class="landing-homepage">
+            <div class="landing-page landing-dark">
+                <div class="landing-wrapper">
+                    <div class="left">
+                        <img src="images/main-logo.svg">
+                    </div>
+                    <div class="landing-header-logo">Programmübersicht</div>
+                    <div class="landing-header-icons">
+                        <a class="phone-bg" href="#"><i class="ion-ios-telephone-outline"></i></a>
+                        <a class="twitter-bg" href="#"><i class="ion-social-twitter-outline"></i></a>
+                        <a class="facebook-bg" href="#"><i class="ion-social-facebook-outline"></i></a>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="landing-header no-bottom">
+                    </div>
+                    <div class="content no-bottom">
+                        <div class="deco"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-aussenpolitik.html');setColor('aussenpolitik')">
+                                <ons-list-item tappable>
+                                    <i class="dm-aussenpolitik_02 icon bg-dmo-dark"></i>
+                                    <em class="list-item__subtitle">Außenpolitik</em>
+                                </ons-list-item>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-innenpolitik.html');setColor('innenpolitik')">
+                                <ons-list-item tappable>
+                                    <i class="dm-innenpolitik-wf icon bg-dm-dark"></i>
+                                    <em class="list-item__subtitle">Innenpolitik</em>
+                                </ons-list-item>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-finanzpolitik.html');setColor('finanzpolitik')">
+                                <ons-list-item tappable>
+                                    <i class="dm-finanzpolitik icon bg-dmo-light"></i>
+                                    <em class="list-item__subtitle">Finanzpolitik</em>
+                                </ons-list-item>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-wirtschaftspolitik.html');setColor('wirtschaft')">
+                                <ons-list-item tappable>
+                                    <i class="dm-wirtschaftspolitik-wf icon bg-magenta-dark"></i>
+                                    <em class="list-item__subtitle">Wirtschaft</em>
+                                </ons-list-item>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-arbeit-und-soziales.html');setColor('arbeit')">
+                                <ons-list-item tappable>
+                                    <i class="dm-verkehr-02-wf icon bg-orange-dark"></i>
+                                    <em class="list-item__subtitle">Arbeit u. Soziales</em>
+                                </ons-list-item>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-verteidigung.html');setColor('verteidigung')">
+                                <ons-list-item tappable>
+                                    <i class="dm-verteidigung-wf icon bg-night-light"></i>
+                                    <em class="list-item__subtitle">Verteidigung</em>
+                                </ons-list-item>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-bildung-und-forschung.html');setColor('bildung')">
+                                <ons-list-item tappable>
+                                    <i class="dm-bildung icon bg-teal-dark"></i><em class="list-item__subtitle">Bildg u. Forschg</em>
+                                </ons-list-item>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-familie-senioren-frauen-und-jugend.html');setColor('familie')">
+                                <ons-list-item tappable>
+                                    <i class="dm-familie-wf icon bg-dm-light"></i>
+                                    <em class="list-item__subtitle">Familie</em>
+                                </ons-list-item>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="myNavigator.pushPage('ons_dm-gesundheit.html');setColor('gesundheit')">
+                                <ons-list-item tappable>
+                                    <i class="dm-gesundheit-wf icon bg-red-dark"></i>
+                                    <em class="list-item__subtitle">Gesundheit</em>
+                                </ons-list-item>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-umwelt-naturschutz-und-reaktorsicherheit.html');setColor('umwelt')">
+                                <ons-list-item tappable>
+                                    <i class="dm-energie icon bg-night-dark"></i>
+                                    <em class="list-item__subtitle">Umwelt</em>
+                                </ons-list-item>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-ernaehrung-landwirtschaft-und-verbraucherschutz.html');setColor('ernaehrung')">
+                                <ons-list-item tappable>
+                                    <i class="dm-ernahrung icon bg-green-dark"></i>
+                                    <em class="list-item__subtitle">Ernährung</em>
+                                </ons-list-item>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-verkehr-bau-und-stadtentwicklung.html');setColor('verkehr')">
+                                <ons-list-item tappable>
+                                    <i class="dm-verkehr-01-wf icon bg-blue-dark"></i>
+                                    <em class="list-item__subtitle">Verkehr</em>
+                                </ons-list-item>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-wirtschaftliche-zusammenarbeit-und-entwicklung.html');setColor('zusammenarbeit')">
+                                <ons-list-item tappable>
+                                    <i class="dm-zusammenarbeit icon bg-dmo-light"></i>
+                                    <em class="list-item__subtitle">Zusammenarbeit</em>
+                                </ons-list-item>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fn.push('ons_dm-justiz.html');setColor('justiz')">
+                                <ons-list-item tappable>
+                                    <i class="dm-justiz-wf icon bg-blue-light"></i>
+                                    <em class="list-item__subtitle">Justiz</em>
+                                </ons-list-item>
+
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                    <div class="content no-bottom">
+                        <div class="deco"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="decoration-line-fade hide-if-responsive"></div>
+        <div class="decoration deco-dm decoration-small"></div>
+        <div class="decoration-zig-zag"></div>
+</ons-page>

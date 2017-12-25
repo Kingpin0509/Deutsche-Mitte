@@ -1,0 +1,112 @@
+﻿<ons-page id="ons_dm-bildung-und-forschung.html" ng-controller="BildungspolitikController as page">
+    <ons-toolbar>
+        <div class="left animated rotateInDownLeft">
+            <ons-toolbar-button onclick="fn.open()"><i class="ion-navicon"></i></ons-toolbar-button>
+        </div>
+        <div class="center animated slideInDown">
+            <ons-back-button></ons-back-button>{{page.title}}</div>
+        <div class="right animated rotateInDownRight">
+            <ons-toolbar-button onclick="fn.openr()"><i class="ion-ios-more"></i></ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div class="page-content">
+        <div class="header">
+            <div class="heading-block center-text bg-bildung">
+                <div class="heading-strip">
+                    <h3>{{page.title}}</h3>
+                    <i class="dm-bildung icon color-teal-dark"></i>
+                    <div class="overlay dark-overlay"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h6>{{page.title}} der Deutschen Mitte auf Vimeo</h6>
+            <div class="one-half-responsive">
+                <div class="responsive-video half-bottom">
+                    <iframe src="https://player.vimeo.com/video/74331137"></iframe>
+                </div>
+            </div>
+            <div class="one-half-responsive-last">
+                <p class="center-text full-top thin">
+                    Große Investitionen in Bildung und Forschung, in der Anfangszeit plus 50%, machen Deutschland wieder zur führenden Nation in diesem Bereich.Die Deutsche Mitte fordert KiTa-Plätze für alle Kinder, vorrangig ab drei Jahren, für jüngere nur auf Wunsch der
+                    Eltern. Die elterliche Kindererziehung bis zum Erreichen des dritten Lebensjahres wird gefördert.</p>
+            </div>
+            <div class="decoration decoration-margins"></div>
+            <div class="content">
+                <div class="heading-text">
+                    <h3 class="color-dmo-dark">Kurzfassung</h3>
+                    <div class="heading-line-1"></div>
+                    <i class="ion-android-star-outline color-dm-light"></i>
+                    <div class="heading-line-2"></div>
+                </div>
+                <p class="center-text color-dm-dark">
+                    Schulklassen unter 20 Kinder, große Erweiterungen bei den Universitäten, aufgestockte Budgets in der Forschung. Deutlich bessere bauliche und technische Ausstattungen überall. Förderung betrieblicher Verzahnung und deutlich mehr wissenschaftliche Freiheit
+                    und Unabhängigkeit gehören unbedingt zusammen: mit transparenter Finanzierung sowie allgemein zugänglichen Forschungsergebnissen.
+                    <br>Wir fordern die Abschaffung von Schulzwang und das Recht auf freies Lernen, Förderung selbstbestimmter, praxisbezogener, erlebnisorientierter Bildungsformen – mit Ergebniskontrolle.Wir fordern unabhängige, dem Gemeinwohl verpflichtete
+                    Mediennetzwerke mittransparenter Berichterstattung, dieAbschaffung des Zwangsbeitrags zur Finanzierung des derzeitigen öffentlich-rechtlichen Rundfunks und ein Verbot der Zusammenarbeit zwischen Meldebehörden und Gebühreneinzug.
+                </p>
+                <div class="heading-text">
+                    <h4>Vollprogramm {{page.title}}</h4>
+                    <a href="#" class="button button-red button-center button-round button-xs uppercase bold full-bottom">...in Arbeit</a>
+                </div>
+                <div class="heading-text">
+                    <i class="ion-android-star-outline color-dmo-dark"></i>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="decoration-line-fade hide-if-responsive"></div>
+        <div class="decoration deco-dm decoration-small"></div>
+        <div class="decoration-zig-zag"></div>
+        <div class="footer footer-dark">
+            <a href="index.html" class="footer-logo scale-hover"></a>
+            <div style="background-color: rgba(249, 249, 249, 0.85); margin: 20px 0px; text-align:center">
+                <h4 class="center-text">Machen Sie mehr Leute auf uns aufmerksam...</h4>
+            </div>
+            <div style="margin: 10px 0px;">
+                <ons-speed-dial ripple inline>
+                    <ons-fab class="button-center">Teilen</ons-fab>
+                    <ons-speed-dial-item>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://deutsche-mitte.de/">
+                            <i class="ion-social-facebook-outline facebook-bg"></i>
+                        </a>
+                    </ons-speed-dial-item>
+                    <ons-speed-dial-item>
+                        <a href="https://twitter.com/home?status=Schluss%20mit%20der%20Kartellherrschaft.%20Deutsche-Mitte%20https://deutsche-mitte.de/">
+                            <i class="ion-social-twitter-outline twitter-bg"></i>
+                        </a>
+                    </ons-speed-dial-item>
+                    <ons-speed-dial-item>
+                        <a href="https://plus.google.com/share?url=https://deutsche-mitte.de/">
+                            <i class="ion-social-googleplus-outline google-bg"></i>
+                        </a>
+                    </ons-speed-dial-item>
+                    <ons-speed-dial-item>
+                        <a href="https://pinterest.com/pin/create/button/?url=https://deutsche-mitte.de/&media=https://deutsche-mitte.de/wp-content/uploads/2016/01/logo-e1452107476876.png&description=Deutsche%20Mitte%20">
+                            <i class="ion-social-pinterest-outline pinterest-bg"></i>
+                        </a>
+                    </ons-speed-dial-item>
+                    <ons-speed-dial-item>
+                        <a href="mailto:?&subject=Schluss mit der Kartellherrschaft! Deutsche-Mitte!&body=Die Deutsche Mitte bereitet sich auf die Bundestagswahl 2017 vor. Wenn Sie nicht einverstanden sind mit der unsäglichen Politik, die in Berlin verbrochen wird, sind Sie bei uns genau richtig: Für mehr Informationen schauen sie doch mal auf unserer Internetseite vorbei:   https:/deutsche-mitte.de/   -  Wir reden nicht nur, wir handeln; wir sagen exakt was wir wollen - und genau das werden wir auch tun. Haben Sie Fragen? An unserem Online-Stammtisch ist jeder Willkommen:   https://dm-stammtisch.de/">
+                            <i class="ion-ios-email-outline mail-bg"></i>
+                        </a>
+                    </ons-speed-dial-item>
+                </ons-speed-dial>
+            </div>
+            <p>Wir wollen nicht nur reden, wir wollen handeln, und genau das werden wir auch tun. Machen Sie uns Handlungsfähig! Unterstützen Sie uns! Treten Sie der DM bei!</p>
+            <div style="margin-bottom:0px" class="decoration"></div>
+            <div class="footer-socials footer-bottom column-icon">
+                <a href="https://www.facebook.com/hoersteldeutschemitte/" class="icon icon-round icon-xs facebook-bg"><i class="ion-social-facebook"></i></a>
+                <a href="https://twitter.com/DeutscheMitte" class="icon icon-round icon-xs twitter-bg"><i class="ion-social-twitter"></i></a>
+                <a href="#" class="icon icon-round icon-xs ghost-bg"></a>
+                <a href="https://dm-stammtisch.de/" class="icon icon-round icon-xs google-bg"><i class="ion-home"></i></a>
+                <a href="https://www.youtube.com/channel/UCLC_9zmyYs5wFX46KBJz95w/" class="icon icon-round icon-xs youtube-bg"><i class="ion-social-youtube"></i></a>
+            </div>
+            <div class="last-container">
+                <p class="color-dm-dark">Gehen SIE JETZT mit<em class="color-dmo-dark"> WIR sind die Zukunft..</em></p>
+                <h5 class="color-dm-dark">2017 - Deutsche Mitte</h5>
+            </div>
+        </div>
+    </div>
+
+</ons-page>
