@@ -1,0 +1,15 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-ios-plugin-no-export-compliance": {
+            "PACKAGE_NAME": "com.ie.deutschemitte"
+        }
+    },
+    "dependent_plugins": {}
+}
