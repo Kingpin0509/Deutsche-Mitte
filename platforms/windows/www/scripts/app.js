@@ -1,34 +1,51 @@
-﻿ons.bootstrap().controller("HomeController", function () {
+ons
+    .bootstrap()
+    .controller("HomeController", function () {
     this.title = "Herzlich Willkommen";
-}).controller("AussenpolitikController", function () {
+})
+    .controller("AussenpolitikController", function () {
     this.title = "Aussenpolitik";
-}).controller("InnenpolitikController", function () {
+})
+    .controller("InnenpolitikController", function () {
     this.title = "Innenpolitik";
-}).controller("FinanzpolitikController", function () {
+})
+    .controller("FinanzpolitikController", function () {
     this.title = "Finanzpolitik";
-}).controller("WirtschaftspolitikController", function () {
+})
+    .controller("WirtschaftspolitikController", function () {
     this.title = "Wirtschaft";
-}).controller("ArbeitsozialpolitikController", function () {
+})
+    .controller("ArbeitsozialpolitikController", function () {
     this.title = "Arbeit & Soziales";
-}).controller("VerteidigungspolitikController", function () {
+})
+    .controller("VerteidigungspolitikController", function () {
     this.title = "Verteidigung";
-}).controller("BildungspolitikController", function () {
+})
+    .controller("BildungspolitikController", function () {
     this.title = "Bildung & Forschung";
-}).controller("FamilienpolitikController", function () {
+})
+    .controller("FamilienpolitikController", function () {
     this.title = "Familie, Senioren, Frauen & Jugend";
-}).controller("GesundheitspolitikController", function () {
+})
+    .controller("GesundheitspolitikController", function () {
     this.title = "Gesundheit";
-}).controller("EnergiepolitikController", function () {
+})
+    .controller("EnergiepolitikController", function () {
     this.title = "Umwelt-/Naturschutz, Reaktorsicherheit";
-}).controller("VerbraucherschutzpolitikController", function () {
+})
+    .controller("VerbraucherschutzpolitikController", function () {
     this.title = "Ernährung & Verbraucherschutz";
-}).controller("StrukturpolitikController", function () {
+})
+    .controller("StrukturpolitikController", function () {
     this.title = "Verkehr, Bau & Stadtentwicklung";
-}).controller("EntwicklungspolitikController", function () {
+})
+    .controller("EntwicklungspolitikController", function () {
     this.title = "Zusammenarbeit & Entwicklung";
-}).controller("JustizController", function () {
+})
+    .controller("JustizController", function () {
     this.title = "Justiz";
-}).controller("AppController", function ($scope) {
+})
+    .controller("AppController", function ($scope) {
     this.load = function (page) {
         $scope.splitter.content.load(page);
         $scope.splitter.left.close();
@@ -43,78 +60,121 @@
     this.toggle = function () {
         $scope.splitter.right.toggle();
     };
-
-    $scope.handler = function ($event) {
-    };
+    // inside MyApp controller
+    $scope.handler = function ($event) { };
 });
-
+////////////////////////////////////////////////
 ons.ready(function () {
     console.log("Onsen UI is ready!");
-
+    // hide Page
     document.addEventListener("hide", function (event) {
+        //     console.log('hide');
         document.getElementById("navi").classList.add("navi-hide");
         document.getElementById("navi").classList.remove("navi-unhide");
         document.getElementById("navi").classList.remove("navi-show");
     });
-
+    // init Page
     document.addEventListener("init", function (event) {
+        //     console.log('init');
     });
-
+    // destroy Page
     document.addEventListener("destroy", function (event) {
+        //     console.log('destroy');
         document.getElementById("navi").classList.add("navi-unhide");
     });
-
+    // show Page
     document.addEventListener("show", function (event) {
+        //     console.log('show');
         document.getElementById("navi").classList.remove("navi-hide");
         document.getElementById("navi").classList.add("navi-show");
     });
-
-    document.querySelector("ons-splitter-side").addEventListener("preopen", function (e) {
-        document.getElementById("menu-left").classList.add("ons-splitter-shadow-menu");
+    ////////////////////////////////////////////////
+    // menu Left
+    document
+        .querySelector("ons-splitter-side")
+        .addEventListener("preopen", function (e) {
+        document
+            .getElementById("menu-left")
+            .classList.add("ons-splitter-shadow-menu");
         document.getElementById("navi").classList.add("blursl");
     });
-
-    document.querySelector("ons-splitter-side").addEventListener("postclose", function (e) {
+    //            document.querySelector('ons-splitter-side')
+    //                .addEventListener('postopen', function(e) {
+    //                    document.getElementById('navi').classList.add('menu-left-open');
+    //                });
+    //            document.querySelector('ons-splitter-side')
+    //                .addEventListener('preclose', function(e) {
+    ////                    document.getElementById('navi').classList.remove('menu-left-open');
+    ////                    document.getElementById('navi').classList.add('menu-left-close');
+    //                    document.getElementById('navi').classList.remove('menu-left-close');
+    //                });
+    document
+        .querySelector("ons-splitter-side")
+        .addEventListener("postclose", function (e) {
         document.getElementById("navi").classList.remove("blursl");
-        document.getElementById("menu-left").classList.remove("ons-splitter-shadow-menu");
+        document
+            .getElementById("menu-left")
+            .classList.remove("ons-splitter-shadow-menu");
     });
-
-    document.querySelector("ons-splitter-side#menur").addEventListener("preopen", function (e) {
-        document.getElementById("menu-right").classList.add("ons-splitter-shadow-menur");
+    // menu Right
+    document
+        .querySelector("ons-splitter-side#menur")
+        .addEventListener("preopen", function (e) {
+        document
+            .getElementById("menu-right")
+            .classList.add("ons-splitter-shadow-menur");
         document.getElementById("navi").classList.add("blursl");
     });
-
-    document.querySelector("ons-splitter-side#menur").addEventListener("postclose", function (e) {
+    //            document.querySelector("ons-splitter-side#menur")
+    //                .addEventListener('postopen', function(e) {
+    //                    document.getElementById('navi').classList.add("menu-right-open");
+    //                    document.getElementById('navi').classList.add("menu-right-close");
+    //                    document.getElementById('navi').classList.remove("menu-right-open");});
+    //            document.querySelector("ons-splitter-side#menur")
+    //                .addEventListener('preclose', function(e) {
+    //                    document.getElementById('navi').classList.remove("menu-right-close");
+    //                  });
+    document
+        .querySelector("ons-splitter-side#menur")
+        .addEventListener("postclose", function (e) {
         document.getElementById("navi").classList.remove("blursl");
-        document.getElementById("menu-right").classList.remove("ons-splitter-shadow-menur");
+        document
+            .getElementById("menu-right")
+            .classList.remove("ons-splitter-shadow-menur");
     });
 });
-
+////////////////////////////////////////////////
 function setColor(id) {
+    // menu Left
+    // programm
     document.getElementById("ubersicht").style.color = "white";
     document.getElementById("flyer").style.color = "white";
     document.getElementById("flugblatt").style.color = "white";
     document.getElementById("kurzprogrammsub").style.color = "white";
     document.getElementById("videos").style.color = "white";
-
+    // politik
     document.getElementById("freundschaftderu").style.color = "white";
     document.getElementById("nahost").style.color = "white";
     document.getElementById("finanzierung").style.color = "white";
-
+    // partei
     document.getElementById("merkmale").style.color = "white";
     document.getElementById("grundlegendes").style.color = "white";
     document.getElementById("fuhrungskrafte").style.color = "white";
     document.getElementById("beitrag").style.color = "white";
     document.getElementById("spenden").style.color = "white";
-
+    // app
+    // document.getElementById('splashscreen').style.color = "white";
+    // document.getElementById('wahl2017').style.color = "white";
     document.getElementById("sitemap").style.color = "white";
-
+    // last Items
     document.getElementById("faq").style.color = "white";
     document.getElementById("kontakt").style.color = "white";
-
-    document.getElementById("aussenpolitik").style.color = "rgba(0, 83, 151, 0.8)";
+    // menu Right
+    document.getElementById("aussenpolitik").style.color =
+        "rgba(0, 83, 151, 0.8)";
     document.getElementById("innenpolitik").style.color = "rgba(0, 83, 151, 0.8)";
-    document.getElementById("finanzpolitik").style.color = "rgba(0, 83, 151, 0.8)";
+    document.getElementById("finanzpolitik").style.color =
+        "rgba(0, 83, 151, 0.8)";
     document.getElementById("wirtschaft").style.color = "rgba(0, 83, 151, 0.8)";
     document.getElementById("arbeit").style.color = "rgba(0, 83, 151, 0.8)";
     document.getElementById("verteidigung").style.color = "rgba(0, 83, 151, 0.8)";
@@ -124,7 +184,8 @@ function setColor(id) {
     document.getElementById("umwelt").style.color = "rgba(0, 83, 151, 0.8)";
     document.getElementById("ernahrung").style.color = "rgba(0, 83, 151, 0.8)";
     document.getElementById("verkehr").style.color = "rgba(0, 83, 151, 0.8)";
-    document.getElementById("zusammenarbeit").style.color = "rgba(0, 83, 151, 0.8)";
+    document.getElementById("zusammenarbeit").style.color =
+        "rgba(0, 83, 151, 0.8)";
     document.getElementById("justiz").style.color = "rgba(0, 83, 151, 0.8)";
     document.getElementById("programm").style.color = "white";
     document.getElementById("programm").style.backgroundColor = "rgb(0, 73, 138)";
@@ -134,26 +195,27 @@ function setColor(id) {
     document.getElementById("partei").style.backgroundColor = "rgb(0, 73, 138)";
     document.getElementById("app").style.color = "white";
     document.getElementById("app").style.backgroundColor = "rgb(0, 73, 138)";
-
+    // active Link
     document.getElementById(id).style.color = "rgba(250, 125, 9, 0.6)";
-
+    // first Items
     document.getElementById("willkommen").style.color = "white";
     document.getElementById("kurzprogramm").style.color = "white";
     document.getElementById("ytvideos").style.color = "white";
 }
-
 function setColorleftmain(id) {
     document.getElementById("programm-list").style.color = "white";
     document.getElementById("politik-list").style.color = "white";
     document.getElementById("partei-list").style.color = "white";
     document.getElementById("app-list").style.color = "white";
-
+    // last Items
     document.getElementById("faq").style.color = "white";
     document.getElementById("kontakt").style.color = "white";
-
-    document.getElementById("aussenpolitik").style.color = "rgba(0, 83, 151, 0.8)";
+    // menu Right
+    document.getElementById("aussenpolitik").style.color =
+        "rgba(0, 83, 151, 0.8)";
     document.getElementById("innenpolitik").style.color = "rgba(0, 83, 151, 0.8)";
-    document.getElementById("finanzpolitik").style.color = "rgba(0, 83, 151, 0.8)";
+    document.getElementById("finanzpolitik").style.color =
+        "rgba(0, 83, 151, 0.8)";
     document.getElementById("wirtschaft").style.color = "rgba(0, 83, 151, 0.8)";
     document.getElementById("arbeit").style.color = "rgba(0, 83, 151, 0.8)";
     document.getElementById("verteidigung").style.color = "rgba(0, 83, 151, 0.8)";
@@ -163,9 +225,10 @@ function setColorleftmain(id) {
     document.getElementById("umwelt").style.color = "rgba(0, 83, 151, 0.8)";
     document.getElementById("ernahrung").style.color = "rgba(0, 83, 151, 0.8)";
     document.getElementById("verkehr").style.color = "rgba(0, 83, 151, 0.8)";
-    document.getElementById("zusammenarbeit").style.color = "rgba(0, 83, 151, 0.8)";
+    document.getElementById("zusammenarbeit").style.color =
+        "rgba(0, 83, 151, 0.8)";
     document.getElementById("justiz").style.color = "rgba(0, 83, 151, 0.8)";
-
+    // first Items
     document.getElementById("willkommen").style.color = "white";
     document.getElementById("kurzprogramm").style.color = "white";
     document.getElementById("ytvideos").style.color = "white";
@@ -178,7 +241,6 @@ function setColorleftmain(id) {
     document.getElementById("app").style.color = "white";
     document.getElementById("app").style.backgroundColor = "rgb(0, 73, 138)";
 }
-
 function setColorleft(id) {
     document.getElementById("programm").style.color = "white";
     document.getElementById("programm").style.backgroundColor = "rgb(0, 73, 138)";

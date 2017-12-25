@@ -1,6 +1,6 @@
-﻿/// <reference path="onsenui.d.ts" />
+/// <reference path="onsenui.d.ts" />
 function onsStatic() {
-    ons.ready(function() {
+    ons.ready(function () {
         alert('Ready!');
     });
     var onsOptions = {
@@ -38,13 +38,11 @@ function onsStatic() {
     var ie = ons.platform.isIE();
     var ios7above = ons.platform.isIOS7above();
 }
-
 function onsPage(page) {
     page.backButtonHandler;
     page.onInfiniteScroll;
     page.data;
 }
-
 function onsCarousel(carousel, options) {
     var options = {
         animation: 'default',
@@ -66,7 +64,6 @@ function onsCarousel(carousel, options) {
     carousel.setActiveIndex(6, options.animationOptions);
     carousel.swipeable;
 }
-
 function onsPullHook(pullHook) {
     pullHook.disabled;
     pullHook.height;
@@ -75,18 +72,16 @@ function onsPullHook(pullHook) {
     pullHook.state;
     pullHook.thresholdHeight;
 }
-
 function onsAlertDialog(alertDialog) {
     var options = {
         animation: 'default',
-        callback: function myFunction() {}
+        callback: function myFunction() { }
     };
     alertDialog.cancelable;
     alertDialog.disabled;
     alertDialog.hide(options.animation);
     alertDialog.show();
 }
-
 function onsDialog(dialog) {
     var options = {
         animation: 'default',
@@ -98,13 +93,11 @@ function onsDialog(dialog) {
     dialog.hide(options);
     dialog.show(options.animation);
 }
-
 function onsSwitch(switchVar) {
     switchVar.checkbox;
     switchVar.checked;
     switchVar.disabled;
 }
-
 function onsModal(modal) {
     var options = {
         animation: 'fade',
@@ -116,13 +109,12 @@ function onsModal(modal) {
     modal.onDeviceBackButton;
     modal.visible;
 }
-
 function onsNavigator(navigator) {
     var options = {
         animation: 'slide',
         animationOptions: "{duration: 0.2, delay: 0.4, timing: 'ease-in'}",
         refresh: true,
-        callback: function myFunction() {}
+        callback: function myFunction() { }
     };
     var pushOptions;
     pushOptions.options.animation = 'left';
@@ -145,7 +137,6 @@ function onsNavigator(navigator) {
     navigator.replacePage('', replaceOptions.options.callback);
     navigator.pushPage('', 'string');
 }
-
 function onsTabbar(tabBar) {
     var options = {
         keepPage: true
@@ -155,7 +146,6 @@ function onsTabbar(tabBar) {
     tabBar.loadPage('myPage.html');
     tabBar.setTabbarVisibility(true);
 }
-
 function onsPopover(popover) {
     var options = {
         animation: 'fade'
@@ -166,7 +156,6 @@ function onsPopover(popover) {
     popover.cancelable;
     popover.visible;
 }
-
 function OnsSpeedDial(speedDial) {
     speedDial.disabled;
     speedDial.hide();
@@ -178,7 +167,6 @@ function OnsSpeedDial(speedDial) {
     speedDial.toggleItems();
     speedDial.visible;
 }
-
 function LazyRepeat(lazyRepeat) {
     lazyRepeat.refresh();
     lazyRepeat.delegate.calculateItemHeight;
@@ -187,7 +175,6 @@ function LazyRepeat(lazyRepeat) {
     lazyRepeat.delegate.createItemContent;
     lazyRepeat.delegate.destroyItem;
 }
-
 function SplitterContent(splitterContent) {
     var options = {
         callback: Function
@@ -196,20 +183,18 @@ function SplitterContent(splitterContent) {
     splitterContent.load({}, options);
     splitterContent.page;
 }
-
 function onsSplitterSide(splitterSide) {
     splitterSide.page;
     splitterSide.mode;
     splitterSide.isOpen;
     var options = {
-        callback: function myFunction() {}
+        callback: function myFunction() { }
     };
     splitterSide.open(options);
     splitterSide.close(options);
     splitterSide.toggle(options);
     splitterSide.load('string', options);
 }
-
 function onsLazyRepeat(lazyRepeat) {
     lazyRepeat.refresh();
     var content = document.getElementById('#my-content');
@@ -226,11 +211,9 @@ function onsLazyRepeat(lazyRepeat) {
     lazyRepeat.delegate.createItemContent;
     lazyRepeat.delegate.destroyItem;
 }
-
 function OnsButton(button) {
     button.disabled;
 }
-
 function FabElement(fab) {
     fab.hide();
     fab.show();
@@ -238,60 +221,53 @@ function FabElement(fab) {
     fab.disabled;
     fab.visible;
 }
-
 function onsInput(input) {
     input.value;
     input.checked;
     input.disabled;
 }
-
 function onsRange(range) {
     range.disabled;
     range.value;
 }
-
 function onsRipple(ripple) {
     ripple.disabled;
 }
-
 function onsSplitterContent(splitterContent) {
     var options = {
-        callback: function myFunction() {}
+        callback: function myFunction() { }
     };
     splitterContent.load('myPage.html', options);
     splitterContent.load({}, options);
 }
-
 function onsSplitter(splitter) {
     splitter.left;
     splitter.right;
     splitter.content;
     splitter.onDeviceBackButton;
 }
-
 function onsBackButton(backButton) {
     var options = {
         animation: 'string',
         animationOptions: 'string',
-        callback: function myFunction() {},
+        callback: function myFunction() { },
         refresh: true
     };
 }
-
 function onsProgressBar(progressBar) {
     progressBar.value;
     progressBar.secondaryValue;
     progressBar.indeterminate;
 }
-
 function onsProgressCircular(progressCircular) {
     progressCircular.value;
     progressCircular.secondaryValue;
     progressCircular.indeterminate;
 }
-
 function onsPageLoader() {
-    const loader = new ons.PageLoader();
-    loader.load({ page: 'foobar.html', parent: document.createElement('div') }, function({ unload, element }) {});
-    loader.internalLoader = function() {};
+    var loader = new ons.PageLoader();
+    loader.load({ page: 'foobar.html', parent: document.createElement('div') }, function (_a) {
+        var unload = _a.unload, element = _a.element;
+    });
+    loader.internalLoader = function () { };
 }

@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "mobi.monaca.plugins.Monaca@3.1.0"
+        "mobi.monaca.plugins.Monaca@3.1.0",
+        "cordova-custom-config@2.0.3"
     ],
     "framework_version": "3.5",
     "xcode_version": "9.1",
@@ -10,9 +11,6 @@
             "variables": []
         },
         "cordova-plugin-splashscreen": {
-            "variables": []
-        },
-        "cordova-custom-config": {
             "variables": []
         },
         "cordova-plugin-crosswalk-webview": {
@@ -26,12 +24,11 @@
     },
     "external_plugins": [
         "cordova-plugin-whitelist@1.3.1",
-        "cordova-plugin-splashscreen@4.0.3",
-        "cordova-custom-config@2.0.3",
+        "cordova-plugin-splashscreen@5.0.0",
         "cordova-plugin-crosswalk-webview@2.3.0"
     ],
     "title-ja": "",
-    "title-en": "exp",
+    "title-en": "Deutsche Mitte",
     "description-ja": "",
     "description-en": "",
     "category": "User Template",
@@ -41,5 +38,5 @@
         "winrt",
         "chrome"
     ],
-    "name": "generated-1495692233-583824227e2193c166b5ca93"
+    "name": "generated-1514199601-583824227e2193c166b5ca93"
 }

@@ -1,4 +1,5 @@
-﻿window.fn = {};
+// window.fn
+window.fn = {};
 window.fn.open = function () {
     var menu = document.getElementById("menu");
     menu.open();
@@ -34,12 +35,12 @@ window.fn.replace = function (page) {
         animation: "fade"
     });
 };
-
+// collapsible Accordion customDropAnimation
 window.fn.toggle = function (el) {
     el.classList.toggle("active-item");
     el.nextElementSibling.classList.toggle("show");
 };
-
+// menu Accordion
 window.fn.togglemenu = function (el) {
     var btns = document.querySelectorAll(".panel");
     Array.prototype.forEach.call(btns, function (el) {

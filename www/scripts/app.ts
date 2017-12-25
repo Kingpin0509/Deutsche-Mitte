@@ -51,7 +51,7 @@ ons
       $scope.splitter.left.close();
       $scope.splitter.right.close();
     };
-    this.clos = function() {
+    this.close = function() {
       $scope.splitter.right.close();
     };
     this.toggle = function() {

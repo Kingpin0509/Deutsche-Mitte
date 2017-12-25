@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Deutsche-Mitte\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\release\jars\classes.jar"
+        jumboMode="false"
+        revision="25.0.2"
+        sha1="40b4a6a69ab2dd4f13b7b403f4936e9c86630b02">
+        <dex dex="C:\Deutsche-Mitte\platforms\android\build\intermediates\pre-dexed\release\CordovaLib-unspecified-release_7b1ea8d6fc8a656b549353d3ea8f0b8c8df0dd16.jar" />
+    </item>
+    <item
+        jar="C:\Deutsche-Mitte\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\debug\jars\classes.jar"
+        jumboMode="false"
+        revision="25.0.2"
+        sha1="87ce639d2f8ce67524f272731de5768c639b90e5">
+        <dex dex="C:\Deutsche-Mitte\platforms\android\build\intermediates\pre-dexed\debug\CordovaLib-unspecified-debug_7f359318dd785fd788243da8b1dadbbd7ddd776c.jar" />
+    </item>
+
+</items>
